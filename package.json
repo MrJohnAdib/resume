@@ -1,0 +1,24 @@
+{
+  "name": "MrAdibResume",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "keywords": [
+    "MrAdib",
+    "tailwind",
+    "resume"
+  ],
+  "author": "Javad Adib",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^5.0.12",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^8.3.1"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development npx tailwindcss -i ./src/tailwind.css -o ./dist/style.min.css --watch",
+    "build": "NODE_ENV=production npx tailwindcss -i ./src/tailwind.css -o ./dist/style.min.css --watch --minify"
+  }
+}
