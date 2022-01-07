@@ -6,6 +6,10 @@
 	-webkit-print-color-adjust: exact;
 }
 @media screen{
+  body{
+    background-color: #f3f4f6;
+    padding: 20px;
+  }
   .printArea{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border: 1px #D3D3D3 solid;
@@ -17,5 +21,11 @@
   	min-height: 296mm;
   	height: 296mm;
   	overflow-x: auto;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
   }
 }

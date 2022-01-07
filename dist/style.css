@@ -453,6 +453,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -479,6 +487,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .basis-1\/2 {
   flex-basis: 50%;
+}
+
+.list-outside {
+  list-style-position: outside;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .flex-wrap {
@@ -511,11 +527,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded {
   border-radius: 0.25rem;
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -639,6 +650,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(120 113 108 / var(--tw-text-opacity));
 }
 
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -658,6 +674,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media screen{
+  body{
+    background-color: #f3f4f6;
+    padding: 20px;
+  }
+
   .printArea{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border: 1px #D3D3D3 solid;
@@ -669,5 +690,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     min-height: 296mm;
     height: 296mm;
     overflow-x: auto;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
   }
 }
