@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="printArea bg-white" data-size='A4'>
+  <div class="printArea bg-white" data-size='A4'>
     <header itemscope itemtype="http://schema.org/Person">
       <div class="flex flex-wrap items-center1 m-6">
         <div class="basis-36">
@@ -61,11 +61,11 @@
 
       </address>
     </header>
-    <div class="flex space-x-6 m-6">
+    <main class="flex space-x-6 m-6">
       <div class="basis-1/2">
-        <section class="mb-6">
+        <article class="mb-6">
           <h2 class="text-cyan-600 text-2xl leading-8 mb-2 underline underline-offset-8">Experience</h2>
-          <div class="mb-4" itemscope itemtype="https://schema.org/Organization">
+          <section class="mb-4" itemscope itemtype="https://schema.org/Organization">
             <h3 class="font-semibold text-lg leading-7">Founder, project lead and CEO</h3>
             <div class="flex items-center">
               <h4 class="grow flex items-center font-semibold text-base leading-6">
@@ -88,11 +88,11 @@
               <li><span class="text-stone-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</span></li>
               <li><span class="text-stone-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</span></li>
             </ul>
-          </div>
-        </section>
-        <section class="mb-6">
+          </section>
+        </article>
+        <article class="mb-6">
           <h2 class="text-cyan-600 text-2xl leading-8 mb-2 underline underline-offset-8">Education</h2>
-          <div class="mb-2">
+          <section class="mb-2">
             <h4 class="text-lg font-semibold">M.S. in IT Management</h4>
             <div class="flex flex-wrap text-xs">
               <div>IAU - Islamic Azad University - Central Tehran Branch</div>
@@ -103,8 +103,8 @@
                 <time datetime="2015-09-23">2015</time>-<time datetime="2022">2022</time>
               </div>
             </div>
-          </div>
-          <div>
+          </section>
+          <section>
             <h4 class="text-lg font-semibold">B.S. in Computer Software Engineering</h4>
             <div class="flex flex-wrap text-xs">
               <div>IAU - Islamic Azad University - Nour Branch</div>
@@ -115,22 +115,22 @@
                 <time datetime="2008-09-22">2008</time>-<time datetime="2014-02-19">2014</time>
               </div>
             </div>
-          </div>
+          </section>
 
-        </section>
-        <section class="mb-6">
+        </article>
+        <article class="mb-6">
           <h2 class="text-cyan-600 text-2xl leading-8 mb-2 underline underline-offset-8">Languages</h2>
           <div class="flex flex-wrap">
-            <div>
-              <span class="font-semibold">English</span>
-              <span class="text-stone-500">Fluent C1</span>
-            </div>
-            <div class="mx-6">
-              <span class="font-semibold">Persian</span>
-              <span class="text-stone-500">Native</span>
-            </div>
+            <section class="flex">
+              <h3 class="font-semibold">English</h3>
+              <span class="text-stone-500 px-1">Fluent C1</span>
+            </section>
+            <section class="flex mx-6">
+              <h3 class="font-semibold">Persian</h3>
+              <span class="text-stone-500 px-1">Native</span>
+            </section>
           </div>
-        </section>
+        </article>
       </div>
       <div class="basis-1/2">
         <section class="mb-6">
@@ -160,7 +160,7 @@
         </section>
 
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </body>
 </html>
