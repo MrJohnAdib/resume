@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  font-family: 'Muli Regular', ui-sans-serif;
+}
 .printArea{
 	-webkit-print-color-adjust: exact;
+  background-color: #fff;
 }
 @media screen{
   body{
