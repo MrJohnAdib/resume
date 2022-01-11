@@ -29,11 +29,11 @@
 <body>
   <div class="printArea" data-size='A4'>
     <header itemscope itemtype="https://schema.org/Person">
-      <div class="flex flex-wrap m-6">
+      <div class="flex m-6">
         <div class="basis-36">
           <img src="img/Javad-Adib-2016-Avatar.jpg" alt="MrAdib - Javad Adib" class="rounded-lg" itemprop="image">
         </div>
-        <div class="basis-7/12 px-6">
+        <div class="basis-7/12 ltr:pl-6 rtl:pr-6">
           <h1 class="text-black text-3xl font-bold leading-8" itemprop="name">Javad Adib</h1>
           <h2 class="text-cyan-600 text-xl leading-7 mb-1" itemprop="jobTitle">Engineer & Software Solution Designer</h2>
           <p class="text-stone-700 text-sm leading-4" itemprop="knowsAbout">15+ years of experience in programming. Open-source enthusiast. Built the infrastructure of several million dollar projects that are working and gained valuable experience from each of them. Learned how to learn, so just say; Trust me, I'm an engineer ;)
@@ -313,23 +313,34 @@
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Persistence</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Micro Management</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Analyst</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Negotiation</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Designing</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Debugging</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Collaboration</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Presentation</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Financial Accounting</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Teamwork</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Marketing</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Sales</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Risk Management</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Decision Making</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Teaching</li>
-            <!-- concepts -->
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Database Design</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Software Developer</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Presentation</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Collaboration</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Decision Making</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Git</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Teamwork</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Creativity</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Bug Finder</li>
+            <!-- concepts -->
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Design</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Database Design</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Wordpress</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Bug Hunter</li>
+            <!-- <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Debugging</li> -->
+
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">S3</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">PWA</li>
+            <!-- server -->
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">iLO</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">Cloud Storage</li>
+            <!-- others -->
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">Algorithm</li>
+            <!-- other software -->
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">VoIP</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Audacity</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Software Development</li>
           </ul>
 
 
@@ -360,7 +371,7 @@
             <span itemprop="name">GraphQL</span>
           </section>
 
-          <section class="leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
+          <section class="leading-5 text-xs hidden" itemscope itemtype="https://schema.org/ListItem">
             <h3 class="font-semibold inline-block">Back-end Web Frameworks</h3>
             <span itemprop="name" class="text-stone-300">Laravel</span>,
             <span itemprop="name" class="text-stone-300">Symfony</span>
@@ -387,10 +398,10 @@
 
           <section class="leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
             <h3 class="font-semibold inline-block">Build tools</h3>
-            <span itemprop="name">Alpine.js</span>,
-            <span itemprop="name" class="text-stone-300">React</span>,
-            <span itemprop="name" class="text-stone-300">Vue.js</span>,
-            <span itemprop="name">jQuery</span>
+            <span itemprop="name">Sass</span>,
+            <span itemprop="name">Grunt</span>,
+            <span itemprop="name">Gulp</span>,
+            <span itemprop="name">Gradle</span>
           </section>
 
           <section class="leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
@@ -408,8 +419,24 @@
           </section>
 
           <section class="leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
-            <h3 class="font-semibold inline-block">Version Control System</h3>
-            <span itemprop="name">Git</span>
+            <h3 class="font-semibold inline-block">Server Configuration Framework and UI</h3>
+            <span itemprop="name">cPanel</span>,
+            <span itemprop="name">DirectAdmin</span>
+          </section>
+
+          <section class="leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
+            <h3 class="font-semibold inline-block">OS</h3>
+            <span itemprop="name">Windows</span>,
+            <span itemprop="name">Ubuntu</span>,
+            <span itemprop="name">CentOS</span>,
+            <span itemprop="name">macOS</span>,
+            <span itemprop="name">VMware ESXi</span>
+          </section>
+
+          <section class="leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
+            <h3 class="font-semibold inline-block">Container</h3>
+            <span itemprop="name">Docker</span>,
+            <span itemprop="name" class="text-stone-300">Kubernetes</span>
           </section>
 
           <section class="leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
@@ -423,53 +450,14 @@
 
           <section class="leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
             <h3 class="font-semibold inline-block">Graphic Design Tools</h3>
-            <span itemprop="name">Adobe Photoshop</span>,
-            <span itemprop="name">Adobe Illustrator</span>,
-            <span itemprop="name">Adobe InDesign</span>,
-            <span itemprop="name">CorelDRAW</span>,
+            <span itemprop="name">Photoshop</span>,
+            <span itemprop="name">Illustrator</span>,
+            <span itemprop="name">InDesign</span>,
             <span itemprop="name">Figma</span>
           </section>
 
         </article>
 
-
-            <span itemprop="name">Responsive Design</span>,
-            <span itemprop="name">Pure JavaScript</span>,
-        <section class="mb-4">
-          <ul class="flex flex-wrap leading-5 text-xs" itemscope itemtype="https://schema.org/ListItem">
-            <!-- backend frameworks -->
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Wordpress</li>
-            <!-- frontend -->
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">SEO</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">PWA</li>
-            <!-- tools -->
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Sass</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Grunt</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Gulp</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Gradle</li>
-            <!-- os -->
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">Ubuntu</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">CentOS</li>
-            <!-- server -->
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">VMware ESXi</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">iLO</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">Cloud Storage</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">S3</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">cPanel</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">DirectAdmin</li>
-            <li itemprop="name" class="bg-cyan-500 rounded text-white px-1.5 m-0.5">Docker</li>
-            <li itemprop="name" class="bg-cyan-500 rounded text-white px-1.5 m-0.5">Kubernetes</li>
-
-            <!-- others -->
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">OOP</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">Algorithm</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">Flowchart</li>
-            <!-- other software -->
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">VoIP</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">CCTV</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Audacity</li>
-          </ul>
-        </section>
         <article class="mb-4">
           <h2 class="text-cyan-600 text-xl leading-5 mb-1 underline underline-offset-2">Honors & Awards</h2>
           <section class="mb-2">
