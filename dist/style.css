@@ -518,8 +518,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-grow: 0;
 }
 
-.basis-36 {
-  flex-basis: 9rem;
+.basis-full {
+  flex-basis: 100%;
 }
 
 .basis-7\/12 {
@@ -528,6 +528,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .basis-1\/2 {
   flex-basis: 50%;
+}
+
+.basis-36 {
+  flex-basis: 9rem;
 }
 
 .list-outside {
@@ -582,21 +586,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
 }
 
-.bg-cyan-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
-}
-
 .p-2 {
   padding: 0.5rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
-.p-1\.5 {
-  padding: 0.375rem;
 }
 
 .px-6 {
@@ -614,8 +605,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.375rem;
 }
 
-.text-right {
-  text-align: right;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .text-3xl {
@@ -683,10 +675,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   letter-spacing: 0.05em;
 }
 
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -707,11 +695,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(87 83 78 / var(--tw-text-opacity));
 }
 
-.text-stone-800 {
-  --tw-text-opacity: 1;
-  color: rgb(41 37 36 / var(--tw-text-opacity));
-}
-
 .text-stone-500 {
   --tw-text-opacity: 1;
   color: rgb(120 113 108 / var(--tw-text-opacity));
@@ -722,19 +705,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-stone-300 {
   --tw-text-opacity: 1;
   color: rgb(214 211 209 / var(--tw-text-opacity));
 }
 
-.text-stone-400 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(168 162 158 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -774,6 +752,7 @@ body{
     overflow: visible;
     max-width: 100%;
     width: 210mm;
+    min-width: 210mm;
     min-height: 296mm;
     height: 296mm;
     overflow-x: auto;
@@ -790,14 +769,20 @@ body{
   padding-left: 0.5rem;
 }
 
-[dir="ltr"] .ltr\:pl-6 {
-  padding-left: 1.5rem;
-}
-
 [dir="rtl"] .rtl\:pr-2 {
   padding-right: 0.5rem;
 }
 
-[dir="rtl"] .rtl\:pr-6 {
-  padding-right: 1.5rem;
+[dir="rtl"] .rtl\:text-right {
+  text-align: right;
+}
+
+@media (min-width: 1024px) {
+  .lg\:basis-36 {
+    flex-basis: 9rem;
+  }
+
+  .lg\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
 }

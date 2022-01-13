@@ -22,6 +22,7 @@ body{
     overflow: visible;
     max-width: 100%;
   	width: 210mm;
+    min-width: 210mm;
   	min-height: 296mm;
   	height: 296mm;
   	overflow-x: auto;
