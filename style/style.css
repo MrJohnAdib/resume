@@ -518,8 +518,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-grow: 0;
 }
 
-.basis-full {
-  flex-basis: 100%;
+.basis-36 {
+  flex-basis: 9rem;
 }
 
 .basis-7\/12 {
@@ -528,10 +528,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .basis-1\/2 {
   flex-basis: 50%;
-}
-
-.basis-36 {
-  flex-basis: 9rem;
 }
 
 .list-outside {
@@ -595,6 +591,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.5rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -603,11 +604,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1\.5 {
   padding-left: 0.375rem;
   padding-right: 0.375rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .text-3xl {
@@ -669,6 +665,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-3 {
   line-height: .75rem;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
 }
 
 .tracking-wider {
@@ -775,14 +775,4 @@ body{
 
 [dir="rtl"] .rtl\:text-right {
   text-align: right;
-}
-
-@media (min-width: 1024px) {
-  .lg\:basis-36 {
-    flex-basis: 9rem;
-  }
-
-  .lg\:flex-nowrap {
-    flex-wrap: nowrap;
-  }
 }
