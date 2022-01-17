@@ -30,52 +30,40 @@
   <div class="printArea" data-size='A4'>
     <header itemscope itemtype="https://schema.org/Person">
       <div class="flex m-6">
-        <div class="basis-36">
+        <div class="basis-36 w-36 h-36 flex-none">
           <img src="img/Javad-Adib-2016-Avatar.jpg" alt="MrAdib - Javad Adib" class="rounded-lg" itemprop="image">
         </div>
-        <div class="basis-7/12 px-6">
-          <h1 class="text-black text-3xl font-bold leading-8" itemprop="name">Javad Adib</h1>
+        <div class="basis-auto pl-6 rtl:pl-0 rtl:pr-6">
+          <div class="flex">
+            <div class="grow">
+              <h1 class="text-black text-3xl font-bold leading-8" itemprop="name">Javad Adib</h1>
+            </div>
+            <nav class="text-xs flex justify-end text-stone-700">
+              <a target="_blank" class="flex leading-4" href="https://github.com/MrJavadAdib" title="@MrJavadAdib">
+                <div class="rounded-lg bg-cyan-600 h-8 w-8 flex p-2">
+                  <img src="img/github.svg" alt="github">
+                </div>
+              </a>
+              <a target="_blank" class="flex leading-4 mx-1" href="https://twitter.com/MrAdib" title="@MrAdib">
+                <div class="rounded-lg bg-cyan-600 h-8 w-8 flex p-2">
+                  <img src="img/twitter.svg" alt="twitter">
+                </div>
+              </a>
+              <a target="_blank" class="flex leading-4" href="https://www.linkedin.com/in/MrAdib/" title="@MrAdib">
+                <div class="rounded-lg bg-cyan-600 h-8 w-8 flex p-2">
+                  <img src="img/linkedin.svg" alt="linkedin">
+                </div>
+              </a>
+            </nav>
+          </div>
           <h2 class="text-cyan-600 text-xl leading-7 mb-1" itemprop="jobTitle">Software Engineer</h2>
           <p class="text-stone-700 text-sm leading-4" itemprop="knowsAbout">15+ years of experience in programming. Open-source enthusiast. Built the infrastructure of 7+ multi-million dollar scalable web applications that are working, with brilliant collaboration gained valuable experience.</p>
         </div>
-        <nav class="text-xs flex flex-col justify-end text-stone-700">
-
-          <a target="_blank" class="block flex leading-4 mb-1" href="https://www.linkedin.com/in/MrAdib/">
-            <div class="rounded-lg bg-cyan-600 h-8 w-8 flex p-2">
-              <img src="img/linkedin.svg" alt="linkedin">
-            </div>
-            <div class="ltr:pl-2 rtl:pr-2">
-              <span class="block">https://linkedin.com/in</span>
-              <span class="block font-semibold">/MrAdib</span>
-            </div>
-          </a>
-
-          <a target="_blank" class="block flex leading-4 mb-1" href="https://twitter.com/MrAdib">
-            <div class="rounded-lg bg-cyan-600 h-8 w-8 flex p-2">
-              <img src="img/twitter.svg" alt="twitter">
-            </div>
-            <div class="ltr:pl-2 rtl:pr-2">
-              <span class="block">https://twitter.com</span>
-              <span class="block font-semibold">/MrAdib</span>
-            </div>
-          </a>
-
-          <a target="_blank" class="block flex leading-4 mb-1" href="https://github.com/MrJavadAdib">
-            <div class="rounded-lg bg-cyan-600 h-8 w-8 flex p-2">
-              <img src="img/github.svg" alt="github">
-            </div>
-            <div class="ltr:pl-2 rtl:pr-2">
-              <span class="block">https://github.com</span>
-              <span class="block font-semibold">/MrJavadAdib</span>
-            </div>
-          </a>
-
-        </nav>
       </div>
       <address class="bg-stone-100 leading-10 px-6 text-xs flex items-center justify-center text-stone-600 not-italic">
         <div class="flex items-center px-2">
           <img src="img/email.svg" alt="email">
-          <a class="px-1" href="mailto:mrjavadadib@gmail.com" itemprop="email">MrJavadAdib@gmail.com</a>
+          <a class="px-1" href="mailto:mrjavadadib@gmail.com" itemprop="email">mr.javad.adib@gmail.com</a>
         </div>
 
         <div class="flex items-center px-2">
@@ -93,10 +81,10 @@
           <a target="_blank" class="px-1" href="https://MrAdib.com/" itemprop="url">MrAdib.com</a>
         </div>
 
-        <div dir="ltr" class="leading-3 absolute right-5 select-none text-stone-200 text-xs">
+        <a target="_blank" href="https://mradib.com/resume" dir="ltr" class="leading-3 absolute right-5 select-none text-stone-200 text-xs">
           <time class="block" datetime="2022-01-17">01/2022</time>
           <code class="block font-semibold rtl:text-right">v5.6.0</code>
-        </div>
+        </a>
 
       </address>
     </header>
@@ -442,12 +430,11 @@
 
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Database Design</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Algorithm</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Wordpress</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Bug Hunter</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5 hidden">Cloud Storage</li>
+            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Microservice</li>
 
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Cloud Development</li>
-            <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Microservice</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">Architecture</li>
             <li itemprop="name" class="bg-cyan-600 rounded text-white px-1.5 m-0.5">iLO</li>
 
