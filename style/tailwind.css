@@ -8,6 +8,10 @@ body{
 .printArea{
 	-webkit-print-color-adjust: exact;
   background-color: #fff;
+  position: relative;
+}
+img{
+  @apply select-none;
 }
 @media screen{
   body{
