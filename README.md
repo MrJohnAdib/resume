@@ -11,4 +11,17 @@ If you want to change style, yout need to run tailwind cli with below command
 
 ```npm run build```
 
+
+If you're using windows maybe you get below error
+
+```'NODE_ENV' is not recognized as an internal or external command```
+
+
+So, try to install win node env with below command
+
+```npm install -g win-node-env```
+
+
+
+
 So it works! well done.
