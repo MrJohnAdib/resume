@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-  font-family: 'Muli Regular', ui-sans-serif;
+  font-family: 'Airbnb Cereal App', ui-sans-serif;
 }
 .printArea{
 	-webkit-print-color-adjust: exact;
