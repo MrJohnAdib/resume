@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -480,20 +480,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 1.25rem;
 }
 
-.-top-0\.5 {
-  top: -0.125rem;
-}
-
-.-top-0 {
-  top: -0px;
-}
-
 .top-0 {
   top: 0px;
 }
 
 .left-36 {
   left: 9rem;
+}
+
+.-top-0\.5 {
+  top: -0.125rem;
+}
+
+.-top-0 {
+  top: -0px;
 }
 
 .m-6 {
@@ -510,14 +510,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.25rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mx-6 {
@@ -581,20 +581,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2rem;
 }
 
-.h-px {
-  height: 1px;
-}
-
-.h-1 {
-  height: 0.25rem;
-}
-
 .h-12 {
   height: 3rem;
 }
 
 .h-28 {
   height: 7rem;
+}
+
+.h-px {
+  height: 1px;
+}
+
+.h-1 {
+  height: 0.25rem;
 }
 
 .h-36 {
@@ -696,6 +696,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border {
   border-width: 1px;
+}
+
+.bg-stone-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 249 / var(--tw-bg-opacity));
 }
 
 .bg-cyan-600 {
