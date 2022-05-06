@@ -520,6 +520,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -529,12 +534,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 3rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .-mt-8 {
@@ -543,6 +544,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mr-6 {
   margin-right: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mb-2 {
@@ -798,6 +803,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.625;
 }
 
+.leading-normal {
+  line-height: 1.5;
+}
+
 .leading-snug {
   line-height: 1.375;
 }
@@ -837,6 +846,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-stone-200 {
   --tw-text-opacity: 1;
   color: rgb(231 229 228 / var(--tw-text-opacity));
+}
+
+.text-stone-400 {
+  --tw-text-opacity: 1;
+  color: rgb(168 162 158 / var(--tw-text-opacity));
 }
 
 .text-stone-500 {
@@ -895,8 +909,19 @@ img {
 [data-fill]{
   cursor: pointer;
   position: relative;
-  display: inline-block;
   z-index: 1;
+}
+
+[data-fill]:not([data-fill-val]):after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(240,249,144, 0.5);
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -2;
 }
 
 [data-fill]:before{
@@ -952,24 +977,24 @@ img {
   }
 }
 
-.selection\:bg-pink-200 *::-moz-selection {
+.selection\:bg-sky-200 *::-moz-selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(251 207 232 / var(--tw-bg-opacity));
+  background-color: rgb(186 230 253 / var(--tw-bg-opacity));
 }
 
-.selection\:bg-pink-200 *::selection {
+.selection\:bg-sky-200 *::selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(251 207 232 / var(--tw-bg-opacity));
+  background-color: rgb(186 230 253 / var(--tw-bg-opacity));
 }
 
-.selection\:bg-pink-200::-moz-selection {
+.selection\:bg-sky-200::-moz-selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(251 207 232 / var(--tw-bg-opacity));
+  background-color: rgb(186 230 253 / var(--tw-bg-opacity));
 }
 
-.selection\:bg-pink-200::selection {
+.selection\:bg-sky-200::selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(251 207 232 / var(--tw-bg-opacity));
+  background-color: rgb(186 230 253 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-cyan-800:hover {
