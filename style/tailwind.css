@@ -13,6 +13,29 @@ body{
 img{
   @apply select-none;
 }
+
+[data-fill]{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+[data-fill]:before{
+  content: "";
+  display: block;
+  position: absolute;
+  @apply transition;
+  @apply -inset-1;
+  @apply -skew-y-3;
+  z-index: -1;
+}
+[data-fill]:hover:before{
+  background-color: rgba(236,72,153, 1);
+}
+[data-fill]:hover{
+  color: #fff;
+}
+
 @media screen{
   body{
     background-color: #f3f4f6;

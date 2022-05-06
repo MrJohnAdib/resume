@@ -7,6 +7,11 @@ $(document).ready(function(){
     // get new value from propmt
     var newVal = window.prompt(fieldTitle, fieldValue);
 
+    if(!newVal)
+    {
+      newVal = "[" + fieldTitle + "]";
+    }
+
     $(this).text(newVal);
   });
 
