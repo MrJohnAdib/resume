@@ -17,7 +17,6 @@ img{
 [data-fill]{
   cursor: pointer;
   position: relative;
-  display: inline-block;
   z-index: 1;
 }
 [data-fill]:before{
