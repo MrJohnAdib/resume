@@ -15,7 +15,7 @@ $(document).ready(function(){
     }
 
     // replace with new text on all part of docs
-    $(fieldSelector).text(newVal);
+    $(fieldSelector).text(newVal).attr('data-fill-val', newVal);
   });
 
 });

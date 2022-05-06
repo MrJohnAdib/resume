@@ -19,6 +19,14 @@ img{
   position: relative;
   z-index: 1;
 }
+[data-fill]:not([data-fill-val]):after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(240,249,144, 0.5);
+  @apply inset-0;
+  z-index: -2;
+}
 [data-fill]:before{
   content: "";
   display: block;
