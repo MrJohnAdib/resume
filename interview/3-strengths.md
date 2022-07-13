@@ -1,6 +1,5 @@
 I have an important strength that if you ask any of my friends I think it's the first thing they mention. When I look for something, I get it.
 
-I saw in the text of your email that you mentioned the word ambitious. This is also one of my strengths.
 
 I learn quickly and I love learning.
 
