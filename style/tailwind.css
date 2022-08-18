@@ -49,8 +49,8 @@ img{
     padding: 20px;
   }
   .printArea{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px #D3D3D3 solid;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 20%);
+    /* border: 1px #D3D3D3 solid; */
     border-radius: 5px;
     margin:0 auto 10px;
     overflow: visible;
