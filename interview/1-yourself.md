@@ -1,9 +1,11 @@
 Hello. nice to meet you
 I am Javad. A full stack engineer.
 
-About 15 years ago, when I went to university, I always had a problem with reserving food in the university. The capacity was always full. That's why one night I said I have to solve this problem. So I was on the system until tomorrow afternoon and I wrote a robot that would go and reserve food for me.
+About 15 years ago, when I moved to a new city for university, I got my first job on the web. Designing a WordPress website. In those years, I designed more than 40 websites. Of course, before university, I used to program Windows with c# and vb.
 
-That's how I got to know PHP. I worked with a lot of languages these years but PHP has been one of my favorite programming languages ever since.
+After university, due to working with many programming languages, some of which I didn't even mention in my resume, I practically became a full stack developer. But in my last two jobs, even though I am full stack, my focus was more on the frontend.
+
+In recent years, I have especially focused on clean coding and improving my skills and learning more deeply.
 
 Much of my experience has come from working with professionals and my friends and teamwork. I like to learn and the most important thing is that I learned how to learn. So I do not worry about what you are looking for or what technology you are using now. Just say the word and I will learn it in a short time.
 
