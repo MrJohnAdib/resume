@@ -1,9 +1,6 @@
-Hello. nice to meet you
-I am Javad. A full stack engineer.
-
 About 15 years ago, when I moved to a new city for university, I got my first job on the web. Designing a WordPress website. In those years, I designed more than 40 websites. Of course, before university, I used to program Windows with c# and vb.
 
-After university, due to working with many programming languages, some of which I didn't even mention in my resume, I practically became a full stack developer. But in my last two jobs, even though I am full stack, my focus was more on the frontend.
+After university, due to working with many programming languages on frontend and backend, some of which I didn't even mention in my resume, I practically became a full stack developer. But PHP has always been my main and favorite language
 
 In recent years, I have especially focused on clean coding and improving my skills and learning more deeply.
 
