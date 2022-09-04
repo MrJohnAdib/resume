@@ -1,4 +1,4 @@
-About 15 years ago, when I moved to a new city for university, I got my first job on the web. Designing a WordPress website. In those years, I designed more than 40 websites. Of course, before university, I used to program Windows with c# and vb.
+Let me start with a flashback 15 years ago, when I moved to a new city for university, I got my first job on the web. Designing a WordPress website. In those years, I designed more than 40 websites. Of course, before university, I used to program Windows with c# and vb.
 
 After university, due to working with many programming languages on frontend and backend, some of which I didn't even mention in my resume, I practically became a full stack developer. But PHP has always been my main and favorite language
 
