@@ -2,32 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  font-family: 'Airbnb Cereal App', ui-sans-serif;
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../fonts/Vazirmatn/Vazirmatn[wght].woff2") format("woff2 supports variations"),
+    url("../fonts/Vazirmatn/Vazirmatn[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
-.printArea{
-	-webkit-print-color-adjust: exact;
+
+body {
+  font-family: "Airbnb Cereal App", ui-sans-serif;
+}
+html[lang="fa"] body {
+  font-family: "Vazirmatn", ui-serif;
+}
+.printArea {
+  -webkit-print-color-adjust: exact;
   background-color: #fff;
   position: relative;
 }
-img{
+img {
   @apply select-none;
 }
 
-[data-fill]{
+[data-fill] {
   cursor: pointer;
   position: relative;
   z-index: 1;
 }
-[data-fill]:not([data-fill-val]):after{
+[data-fill]:not([data-fill-val]):after {
   content: "";
   display: block;
   position: absolute;
-  background-color: rgba(240,249,144, 0.5);
+  background-color: rgba(240, 249, 144, 0.5);
   @apply inset-0;
   z-index: -2;
 }
-[data-fill]:before{
+[data-fill]:before {
   content: "";
   display: block;
   position: absolute;
@@ -36,30 +48,30 @@ img{
   @apply -skew-y-3;
   z-index: -1;
 }
-[data-fill]:hover:before{
-  background-color: rgba(236,72,153, 1);
+[data-fill]:hover:before {
+  background-color: rgba(236, 72, 153, 1);
 }
-[data-fill]:hover{
+[data-fill]:hover {
   color: #fff;
 }
 
-@media screen{
-  body{
+@media screen {
+  body {
     background-color: #f3f4f6;
     padding: 20px;
   }
-  .printArea{
+  .printArea {
     box-shadow: 0 0 5px rgba(0, 0, 0, 20%);
     /* border: 1px #D3D3D3 solid; */
     border-radius: 5px;
-    margin:0 auto 10px;
+    margin: 0 auto 10px;
     overflow: visible;
     max-width: 100%;
-  	width: 210mm;
+    width: 210mm;
     min-width: 210mm;
-  	min-height: 296mm;
-  	height: 296mm;
-  	overflow-x: auto;
+    min-height: 296mm;
+    height: 296mm;
+    overflow-x: auto;
   }
 }
 
