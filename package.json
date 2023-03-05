@@ -1,9 +1,9 @@
 {
-  "name": "MrAdibResume",
-  "version": "1.1.0",
+  "name": "mr-adib-resume",
+  "version": "2.0.0",
   "description": "",
   "dependencies": {
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "latest"
   },
   "keywords": [
     "MrAdib",
@@ -13,9 +13,10 @@
   "author": "Javad Adib",
   "license": "MIT",
   "devDependencies": {
-    "cssnano": "^5.1.13",
-    "postcss": "^8.4.16",
-    "postcss-cli": "^10.0.0"
+    "cssnano": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest",
+    "win-node-env": "latest"
   },
   "scripts": {
     "dev": "NODE_ENV=development npx tailwindcss -i ./style/tailwind.css -o ./style/style.css --watch",
