@@ -16,6 +16,7 @@
     "cssnano": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",
+    "prettier": "latest",
     "win-node-env": "latest"
   },
   "scripts": {
