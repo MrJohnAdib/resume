@@ -982,7 +982,8 @@ video {
 @font-face {
   font-family: "Vazirmatn";
 
-  src: url("../fonts/Vazirmatn/Vazirmatn[wght].woff2") format("woff2 supports variations"),
+  src: url("../fonts/Vazirmatn/Vazirmatn[wght].woff2")
+      format("woff2 supports variations"),
     url("../fonts/Vazirmatn/Vazirmatn[wght].woff2") format("woff2-variations");
 
   font-weight: 100 900;
