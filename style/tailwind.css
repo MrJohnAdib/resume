@@ -27,6 +27,10 @@ img {
   @apply select-none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 [data-fill] {
   cursor: pointer;
   position: relative;
