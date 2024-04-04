@@ -599,10 +599,6 @@ video {
   margin-left: 1rem;
 }
 
-.mr-4 {
-  margin-right: 1rem;
-}
-
 .mr-6 {
   margin-right: 1.5rem;
 }
@@ -621,6 +617,10 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
 }
 
 .block {
@@ -841,16 +841,16 @@ video {
   line-height: 1rem;
 }
 
+.font-light {
+  font-weight: 300;
+}
+
 .font-black {
   font-weight: 900;
 }
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-light {
-  font-weight: 300;
 }
 
 .font-semibold {
@@ -982,7 +982,8 @@ video {
 @font-face {
   font-family: "Vazirmatn";
 
-  src: url("../fonts/Vazirmatn/Vazirmatn[wght].woff2") format("woff2 supports variations"),
+  src: url("../fonts/Vazirmatn/Vazirmatn[wght].woff2")
+      format("woff2 supports variations"),
     url("../fonts/Vazirmatn/Vazirmatn[wght].woff2") format("woff2-variations");
 
   font-weight: 100 900;

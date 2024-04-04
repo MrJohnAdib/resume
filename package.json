@@ -10,7 +10,7 @@
     "tailwind",
     "resume"
   ],
-  "author": "Javad Adib",
+  "author": "John Adib",
   "license": "MIT",
   "devDependencies": {
     "cssnano": "latest",
