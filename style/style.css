@@ -1065,6 +1065,8 @@ abbr {
 @media print {
   @page {
     size: A4;
+
+    margin-top: 0;
   }
 }
 
