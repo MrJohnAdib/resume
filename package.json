@@ -16,8 +16,7 @@
     "cssnano": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",
-    "prettier": "latest",
-    "win-node-env": "latest"
+    "prettier": "latest"
   },
   "scripts": {
     "dev": "NODE_ENV=development npx tailwindcss -i ./style/tailwind.css -o ./style/style.css --watch",
