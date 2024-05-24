@@ -1,0 +1,77 @@
+{
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/coverage": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.next": true,
+        "**/storybook-static": true,
+        "**/build-storybook.log": true,
+    },
+    "search.exclude": {
+        "**/package-lock.json": true,
+    },
+    "editor.rulers": [
+        80,
+        100,
+        120
+    ],
+    // remove trailing whitespace
+    "files.trimTrailingWhitespace": true,
+    // set eslint as the default formatter
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    // required
+    "editor.formatOnPaste": false,
+    // required
+    "editor.formatOnType": false,
+    // optional
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.formatDocument": "explicit",
+        "source.addMissingImports": "explicit",
+        "source.organizeImports": "explicit",
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll": "explicit"
+    },
+    "eslint.enable": true,
+    "eslint.run": "onSave",
+    "eslint.validate": [
+        "javascript",
+        "json",
+        "typescript",
+        "typescriptreact",
+        "yaml",
+    ],
+    "eslint.codeActionsOnSave.rules": [
+        "*semi*",
+        "*"
+    ],
+    // required to format on save
+    "editor.formatOnSaveMode": "file",
+    "eslint.format.enable": true,
+    // optional but recommended
+    "files.autoSave": "onFocusChange",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+    "[yamlgithubactionsworkflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+}
