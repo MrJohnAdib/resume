@@ -9,7 +9,7 @@
       name="keywords"
       content="John Adib,MrAdib,Adib,Cover Letter, Senior Full Stack Engineer"
     />
-    <meta name="date" content="2022-08-26" />
+    <meta name="date" content="2024-05-25" />
 
     <meta property="og:title" content="John Adib - Cover Letter" />
     <meta property="og:type" content="document" />
@@ -47,7 +47,7 @@
                   John Adib
                 </h1>
               </div>
-              <nav class="text-xs flex justify-end text-stone-700">
+              <nav class="text-xs flex justify-end gap-2 text-stone-700">
                 <a
                   target="_blank"
                   class="flex leading-4 rounded-lg bg-cyan-600 hover:bg-cyan-800 focus:bg-cyan-900 transition h-8 w-8 p-2"
@@ -58,7 +58,7 @@
                 </a>
                 <a
                   target="_blank"
-                  class="flex leading-4 mx-1 rounded-lg bg-cyan-600 hover:bg-cyan-800 focus:bg-cyan-900 transition h-8 w-8 p-2"
+                  class="flex leading-4 rounded-lg bg-cyan-600 hover:bg-cyan-800 focus:bg-cyan-900 transition h-8 w-8 p-2"
                   href="https://github.com/JohnAdib"
                   title="@JohnAdib"
                 >
@@ -66,19 +66,17 @@
                 </a>
                 <a
                   target="_blank"
-                  class="flex leading-4 mx-1 rounded-lg bg-cyan-600 hover:bg-cyan-800 focus:bg-cyan-900 transition h-8 w-8 p-2 hidden"
+                  class="flex leading-4 rounded-lg bg-cyan-600 hover:bg-cyan-800 focus:bg-cyan-900 transition h-8 w-8 p-2 hidden"
                   href="https://twitter.com/MrAdib"
                   title="@MrAdib"
                 >
                   <img src="./img/twitter.svg" alt="twitter" />
                 </a>
-                <a
-                  target="_blank"
-                  class="flex leading-4 rounded-lg bg-cyan-600 hover:bg-cyan-800 focus:bg-cyan-900 transition h-8 w-8 p-2"
-                  href="https://www.linkedin.com/in/MrAdib/"
-                  title="@MrAdib"
-                >
-                  <img src="./img/linkedin.svg" alt="linkedin" />
+                <a target="_blank"
+                  class="flex leading-4 rounded-lg bg-cyan-600 hover:bg-cyan-800 focus:bg-cyan-900 transition"
+                  href="https://www.linkedin.com/in/MrAdib/" title="@MrAdib">
+                  <img src="./img/linkedin.svg" alt="linkedin" class="h-8 w-8 p-2" />
+                  <span class="bg-white bg-opacity-30 px-2 leading-8 text-white font-xs">linkedin.com/in/MrAdib</span>
                 </a>
               </nav>
             </div>
@@ -91,7 +89,8 @@
           </div>
         </div>
         <address
-          class="bg-stone-100 leading-10 px-6 text-xs flex items-center justify-center text-stone-600 not-italic"
+          id="contactBox"
+          class="bg-stone-100 leading-10 px-6 text-xs flex gap-4 items-center justify-center text-stone-600 not-italic"
         >
           <div class="flex items-center px-4">
             <img src="./img/email.svg" alt="email" />
@@ -104,23 +103,23 @@
             >
           </div>
 
-          <div class="flex items-center px-4">
+          <div class="flex items-center hidden" id="phoneBox">
             <img src="./img/tel.svg" alt="tel" />
             <a
               class="px-1"
               href="tel:+447908232973"
               itemprop="telephone"
               tabindex="-1"
-              >+44-7908-232973</a
+              >+44 7908 232973</a
             >
           </div>
 
-          <div class="flex items-center px-4">
+          <div class="flex items-center">
             <img src="./img/location.svg" alt="location" />
             <div class="px-1" itemprop="address">London, UK</div>
           </div>
 
-          <div class="flex items-center px-4 hidden">
+          <div class="flex items-center hidden">
             <img src="./img/website.svg" alt="website" />
             <a
               target="_blank"
@@ -138,7 +137,7 @@
             class="leading-none absolute right-5 select-none text-stone-200 text-xs"
             tabindex="-1"
           >
-            <code class="block font-light rtl:text-right">v2.4.4</code>
+            <code class="block font-light rtl:text-right">v2.5.0</code>
           </a>
         </address>
       </header>
@@ -219,5 +218,10 @@
     </div>
     <script src="./script/jquery-3.6.0.min.js"></script>
     <script async src="./script/script.js"></script>
+    <script>
+      document.querySelector('#contactBox').addEventListener('click', () => {
+        document.querySelector('#phoneBox').classList.remove('hidden');
+      });
+    </script>
   </body>
 </html>
