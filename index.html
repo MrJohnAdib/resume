@@ -8,7 +8,7 @@
   <meta name="description" content="Senior Lead Full Stack Engineer | Trust me. I'm an engineer." />
   <meta name="keywords"
     content="John Adib, MrAdib, Adib,Resume, CV, Lead Software Engineer, Senior Full Stack PHP Developer, Senior Software Engineer" />
-  <meta name="date" content="2024-04-05" />
+  <meta name="date" content="2024-05-25" />
 
   <meta property="og:title" content="John Adib - Resume" />
   <meta property="og:type" content="document" />
@@ -25,8 +25,8 @@
   <meta name="author" content="John Adib" />
   <link href="https://MrAdib.com" rel="author" />
   <link href="./img/favicon.png" type="image/png" rel="icon" />
-  <link rel="stylesheet" href="./fonts/AirbnbCereal/style.css" />
-  <link rel="stylesheet" href="./style/style.min.css" />
+  <link rel="stylesheet" href="./fonts/AirbnbCereal/style.css?v=2" />
+  <link rel="stylesheet" href="./style/style.min.css?v=2" />
 </head>
 
 <body>
@@ -84,7 +84,7 @@
 
             <a target="_blank" href="https://resume.MrAdib.com/" dir="ltr" class="select-none text-stone-200 text-xs"
               tabindex="-1">
-              <code class="block font-light rtl:text-center">v11.7.0</code>
+              <code class="block font-light rtl:text-center">v11.7.1</code>
             </a>
           </div>
 
@@ -121,14 +121,14 @@
           </p>
         </div>
       </div>
-      <div class="bg-stone-100 leading-10 px-6 gap-6 text-xs flex items-center justify-center text-stone-600 not-italic">
+      <div id="contactBox" class="bg-stone-100 leading-10 px-6 gap-6 text-xs flex items-center justify-center text-stone-600 not-italic">
         <div class="flex items-center">
           <img src="./img/email.svg" alt="email" />
           <a class="px-1" href="mailto:mr.john.adib+resume@gmail.com" itemprop="email"
             tabindex="-1">mr.john.adib@gmail.com</a>
         </div>
 
-        <div class="flex items-center hidden1">
+        <div class="flex items-center hidden" id="phoneBox">
           <img src="./img/tel.svg" alt="tel" />
           <a class="px-1" href="tel:+447908232973" itemprop="telephone" tabindex="-1">+44 7908 232973</a>
         </div>
@@ -1071,6 +1071,11 @@
       </div>
     </main>
   </div>
+  <script>
+    document.querySelector('#contactBox').addEventListener('click', () => {
+      document.querySelector('#phoneBox').classList.remove('hidden');
+    });
+  </script>
 </body>
 
 </html>
