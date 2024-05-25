@@ -1,2 +1,0 @@
-Honestly, I saw your job application on LinkedIn. I checked your site and social networks. I fell in love with your Instagram and the amazing energy of the team.
-I was looking for a place where I could be effective.
