@@ -37,3 +37,60 @@ function replaceDataOnClick(event) {
 document.querySelectorAll('[data-fill]').forEach(function (element) {
   element.addEventListener('click', replaceDataOnClick);
 });
+
+function getResumeVersion() {
+  return document.querySelector('#version').textContent;
+}
+
+function getPdfLink() {
+  const resumeVersion = getResumeVersion();
+  const folderPath = './pdf/';
+  const resumeFilePrefix = 'MrAdib-Resume-';
+  const pdfLink = `${folderPath}${resumeFilePrefix}${resumeVersion}.pdf`;
+
+  return pdfLink;
+}
+
+function isFileExists(url) {
+  try{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    const isExists = http.status != 404;
+    return isExists;
+  }
+  catch(err){
+    return false;
+  }
+}
+
+function setPdfButtonLink(link) {
+  const pdfBtn = document.querySelector('#pdf-btn');
+  const pdfBtnIsHidden = pdfBtn.classList.contains('hidden');
+  if (!link) {
+    pdfBtn.setAttribute('href', '#');
+    if(!pdfBtnIsHidden) {
+      pdfBtn.classList.add('hidden');
+    }
+    return;
+  }
+  pdfBtn.setAttribute('href', link);
+  if(pdfBtnIsHidden) {
+    pdfBtn.classList.remove('hidden');
+  }
+}
+
+function showPdfButton() {
+  const pdfLink = getPdfLink();
+  const isPdfExists = isFileExists(pdfLink);
+  if (isPdfExists) {
+    setPdfButtonLink(pdfLink);
+  }
+  else {
+    setPdfButtonLink(null);
+  }
+}
+
+// on load page show pdf button
+showPdfButton();
+
