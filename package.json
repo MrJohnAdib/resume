@@ -19,7 +19,6 @@
     "prettier": "latest"
   },
   "scripts": {
-    "dev": "NODE_ENV=development npx tailwindcss -i ./style/tailwind.css -o ./style/style.css --watch",
-    "build": "NODE_ENV=production npx tailwindcss -i ./style/tailwind.css -o ./style/style.min.css --watch --minify"
+    "build": "npx tailwindcss -i ./style/tailwind.css -o ./style/style.min.css --watch --minify"
   }
 }
