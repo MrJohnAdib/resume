@@ -106,6 +106,12 @@ function showPdfButton() {
     return;
   }
 
+  // if current page url, show the button with sample link
+  if(window.location.protocol === 'file:') {
+    setPdfButtonLink("#pdf-not-available-in-local");
+    return;
+  }
+
   // If pdf file not exists at all hide the pdf button
   setPdfButtonLink(null);
 }
