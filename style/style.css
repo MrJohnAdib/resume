@@ -1209,6 +1209,7 @@ abbr {
 
   .pageContainer{
     padding: 40px 20px;
+    overflow: auto;
   }
 
   .printArea {
