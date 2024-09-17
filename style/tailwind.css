@@ -63,7 +63,9 @@ abbr {
 @media screen {
   body {
     background-color: #f3f4f6;
-    padding: 20px;
+  }
+  .pageContainer{
+    padding: 40px 20px;
   }
   .printArea {
     box-shadow: 0 0 5px rgba(0, 0, 0, 20%);
@@ -81,6 +83,9 @@ abbr {
 }
 
 @media print {
+  #banner{
+    display: none;
+  }
   @page {
     size: A4;
     margin-top: 0;
