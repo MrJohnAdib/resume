@@ -56,7 +56,6 @@ function getPdfLink(resumeVersion) {
   const folderPath = './pdf/';
   const resumeFilePrefix = 'MrAdib-Resume-';
   const pdfLink = `${folderPath}${resumeFilePrefix}${resumeVersion}.pdf`;
-
   return pdfLink;
 }
 
@@ -69,7 +68,7 @@ function isFileExists(url) {
     return isExists;
   }
   catch(err){
-    console.log("Error while checking file exists ", err);
+    console.error("Error while checking file exists ", url, err);
     return false;
   }
 }
@@ -103,7 +102,7 @@ function showPdfButton() {
   const latestPdfLink = getPdfLink(latestResumeVersion);
   const isLatestPdfExists = isFileExists(latestPdfLink);
   if (isLatestPdfExists) {
-    setPdfButtonLink(isLatestPdfExists);
+    setPdfButtonLink(latestPdfLink);
     return;
   }
 
@@ -113,4 +112,3 @@ function showPdfButton() {
 
 // on load page show pdf button
 showPdfButton();
-
