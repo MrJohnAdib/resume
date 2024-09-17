@@ -39,10 +39,10 @@
     </div>
     <div class="flex flex-wrap items-center gap-x-4 gap-y-2 grow">
       <p class="text-xs md:text-sm leading-normal md:leading-7 text-gray-900">
-        This resume is crafted using <strong class="font-semibold">HTML, CSS, and a touch of JavaScript</strong>. Feel free to print, or share it!
+        This resume is crafted using <strong class="font-semibold">HTML, CSS, and a touch of JavaScript</strong>. Feel free to download, print, or share it!
       </p>
-      <a id="pdf-btn" href="https://resume.mradib.com/" target="_blank" class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 hidden">
-        PDF <span aria-hidden="true">&rarr;</span>
+      <a id="pdf-btn" href="https://resume.mradib.com/" target="_blank" class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-xs md:text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 hidden">
+        Download PDF <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </div>
@@ -102,7 +102,11 @@
 
             <a target="_blank" href="https://resume.MrAdib.com/" dir="ltr" class="select-none text-stone-200 text-xs"
               tabindex="-1">
-              <code id="version" class="block font-light rtl:text-center">v12.6.2</code>
+              <code
+                id="version"
+                class="block font-light rtl:text-center"
+                data-latest-pdf="v12.5.0"
+              >v12.6.3</code>
             </a>
           </div>
 
@@ -1168,7 +1172,7 @@
     </main>
   </div>
   </div>
-  <script async src="./script/script.js?v=3"></script>
+  <script async src="./script/script.js?v=4"></script>
 </body>
 
 </html>

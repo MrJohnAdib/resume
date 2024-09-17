@@ -38,12 +38,21 @@ document.querySelectorAll('[data-fill]').forEach(function (element) {
   element.addEventListener('click', replaceDataOnClick);
 });
 
-function getResumeVersion() {
-  return document.querySelector('#version').textContent;
+function removeDotsFromVersion(version) {
+  return version.replace(/\./g, '');
 }
 
-function getPdfLink() {
-  const resumeVersion = getResumeVersion();
+function getResumeVersion() {
+  const ver = document.querySelector('#version').textContent;
+  return removeDotsFromVersion(ver);
+}
+
+function getResumeLatestPdfVersion() {
+  const ver = document.querySelector('#version').attributes['data-latest-pdf'].value;
+  return removeDotsFromVersion(ver);
+}
+
+function getPdfLink(resumeVersion) {
   const folderPath = './pdf/';
   const resumeFilePrefix = 'MrAdib-Resume-';
   const pdfLink = `${folderPath}${resumeFilePrefix}${resumeVersion}.pdf`;
@@ -60,6 +69,7 @@ function isFileExists(url) {
     return isExists;
   }
   catch(err){
+    console.log("Error while checking file exists ", err);
     return false;
   }
 }
@@ -81,14 +91,24 @@ function setPdfButtonLink(link) {
 }
 
 function showPdfButton() {
-  const pdfLink = getPdfLink();
+  const resumeVersion = getResumeVersion();
+  const pdfLink = getPdfLink(resumeVersion);
   const isPdfExists = isFileExists(pdfLink);
   if (isPdfExists) {
     setPdfButtonLink(pdfLink);
+    return;
   }
-  else {
-    setPdfButtonLink(null);
+
+  const latestResumeVersion = getResumeLatestPdfVersion();
+  const latestPdfLink = getPdfLink(latestResumeVersion);
+  const isLatestPdfExists = isFileExists(latestPdfLink);
+  if (isLatestPdfExists) {
+    setPdfButtonLink(isLatestPdfExists);
+    return;
   }
+
+  // If pdf file not exists at all hide the pdf button
+  setPdfButtonLink(null);
 }
 
 // on load page show pdf button
