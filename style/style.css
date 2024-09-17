@@ -976,6 +976,11 @@ video {
   line-height: 1rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -1038,6 +1043,14 @@ video {
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-loose {
+  line-height: 2;
+}
+
+.leading-tight {
+  line-height: 1.25;
 }
 
 .text-black {
@@ -1304,6 +1317,21 @@ abbr {
   .sm\:before\:flex-1::before {
     content: var(--tw-content);
     flex: 1 1 0%;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .md\:leading-6 {
+    line-height: 1.5rem;
+  }
+
+  .md\:leading-7 {
+    line-height: 1.75rem;
   }
 }
 
