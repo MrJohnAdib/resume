@@ -87,6 +87,9 @@ abbr {
   #banner{
     display: none;
   }
+  #phoneBox{
+    display: flex!important;
+  }
   @page {
     size: A4;
     margin-top: 0;
