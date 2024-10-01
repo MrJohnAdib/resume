@@ -64,10 +64,6 @@ abbr {
   body {
     background-color: #f3f4f6;
   }
-  .pageContainer{
-    padding: 40px 20px;
-    overflow: auto;
-  }
   .printArea {
     box-shadow: 0 0 5px rgba(0, 0, 0, 20%);
     border-radius: 5px;
