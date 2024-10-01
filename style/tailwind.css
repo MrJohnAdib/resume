@@ -70,16 +70,13 @@ abbr {
   }
   .printArea {
     box-shadow: 0 0 5px rgba(0, 0, 0, 20%);
-    /* border: 1px #D3D3D3 solid; */
     border-radius: 5px;
     margin: 0 auto 10px;
-    overflow: visible;
     max-width: 100%;
     width: 210mm;
     min-width: 210mm;
     min-height: 296mm;
     height: 296mm;
-    overflow-x: auto;
   }
 }
 
