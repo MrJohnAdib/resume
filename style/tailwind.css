@@ -3,20 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Vazirmatn";
-  src: url("../fonts/Vazirmatn/Vazirmatn[wght].woff2")
-      format("woff2 supports variations"),
-    url("../fonts/Vazirmatn/Vazirmatn[wght].woff2") format("woff2-variations");
+  font-family: 'Vazirmatn';
+  src:
+    url('../fonts/Vazirmatn/Vazirmatn[wght].woff2')
+      format('woff2 supports variations'),
+    url('../fonts/Vazirmatn/Vazirmatn[wght].woff2') format('woff2-variations');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: "Airbnb Cereal App", ui-sans-serif;
+  font-family: 'Airbnb Cereal App', ui-sans-serif;
 }
-html[lang="fa"] body {
-  font-family: "Vazirmatn", ui-serif;
+html[lang='fa'] body {
+  font-family: 'Vazirmatn', ui-serif;
 }
 #printArea {
   -webkit-print-color-adjust: exact;
@@ -28,7 +29,7 @@ img {
 }
 
 abbr {
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 [data-fill] {
@@ -37,7 +38,7 @@ abbr {
   z-index: 1;
 }
 [data-fill]:not([data-fill-val]):after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   background-color: rgba(240, 249, 144, 0.5);
@@ -45,7 +46,7 @@ abbr {
   z-index: -2;
 }
 [data-fill]:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   @apply transition;
@@ -64,7 +65,7 @@ abbr {
   body {
     background-color: #f3f4f6;
   }
-  #pageContainer{
+  #pageContainer {
     padding: 24px;
   }
   #printArea {
@@ -80,11 +81,11 @@ abbr {
 }
 
 @media print {
-  #banner{
+  #banner {
     display: none;
   }
-  #phoneBox{
-    display: flex!important;
+  #phoneBox {
+    display: flex !important;
   }
   @page {
     size: A4;
