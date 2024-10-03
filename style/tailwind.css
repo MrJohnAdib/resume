@@ -5,8 +5,7 @@
 @font-face {
   font-family: 'Vazirmatn';
   src:
-    url('../fonts/Vazirmatn/Vazirmatn[wght].woff2')
-      format('woff2 supports variations'),
+    url('../fonts/Vazirmatn/Vazirmatn[wght].woff2') format('woff2 supports variations'),
     url('../fonts/Vazirmatn/Vazirmatn[wght].woff2') format('woff2-variations');
   font-weight: 100 900;
   font-style: normal;
@@ -64,13 +63,15 @@ abbr {
 @media screen {
   body {
     background-color: #f3f4f6;
+    @apply dark:bg-gray-800;
   }
   #pageContainer {
     padding: 24px;
   }
   #printArea {
     box-shadow: 0 0 5px rgba(0, 0, 0, 20%);
-    border-radius: 5px;
+    border-radius: 10px;
+    overflow: hidden;
     margin: 0 auto 10px;
     max-width: 100%;
     width: 210mm;
