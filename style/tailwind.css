@@ -91,5 +91,6 @@ abbr {
   @page {
     size: A4;
     margin-top: 0;
+    margin: 0;
   }
 }
