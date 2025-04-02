@@ -83,4 +83,10 @@
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "runOnSave.commands": [
+        {
+            "match": "\\.html$",
+            "command": "npm run build && open http://localhost:3000"
+        }
+    ]
 }

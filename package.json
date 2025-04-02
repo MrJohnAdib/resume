@@ -19,6 +19,7 @@
     "prettier": "latest"
   },
   "scripts": {
+    "prebuild": "open ./index.html",
     "build": "npx tailwindcss -i ./style/tailwind.css -o ./style/style.min.css --watch --minify",
     "format": "prettier --write ."
   }
