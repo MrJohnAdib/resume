@@ -48,7 +48,7 @@
 	"editor.cursorSmoothCaretAnimation": "on",
 	"[markdown]": {
 		"editor.formatOnSave": true,
-		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"[typescript]": {
 		"editor.formatOnSave": true,
@@ -74,6 +74,9 @@
 		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[postcss]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	}
 }
