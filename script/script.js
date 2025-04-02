@@ -59,7 +59,16 @@ function getPdfLink(resumeVersion) {
 	return pdfLink;
 }
 
+function isLocalFile() {
+	return window.location.protocol === "file:";
+}
+
 function isFileExists(url) {
+	// if the url of the page is file://, return true
+	if (isLocalFile()) {
+		return false;
+	}
+
 	try {
 		const http = new XMLHttpRequest();
 		http.open("HEAD", url, false);
@@ -71,9 +80,9 @@ function isFileExists(url) {
 		return false;
 	}
 }
+const pdfBtn = document.querySelector("#pdf-btn");
 
 function setPdfButtonLink(link) {
-	const pdfBtn = document.querySelector("#pdf-btn");
 	const pdfBtnIsHidden = pdfBtn.classList.contains("hidden");
 	if (!link) {
 		pdfBtn.setAttribute("href", "#");
@@ -106,8 +115,12 @@ function showPdfButton() {
 	}
 
 	// if current page url, show the button with sample link
-	if (window.location.protocol === "file:") {
-		setPdfButtonLink("#pdf-not-available-in-local");
+	if (isLocalFile()) {
+		setPdfButtonLink("#direct-print");
+		pdfBtn.target = "";
+		pdfBtn.onclick = () => {
+			window.print();
+		};
 		return;
 	}
 
@@ -115,12 +128,40 @@ function showPdfButton() {
 	setPdfButtonLink(null);
 }
 
+function consoleMessage() {
+	console.log("What are you searching for here? 😎");
+	console.log(
+		"If you need more info about me, check out my website at https://mradib.com",
+	);
+	console.log(
+		"If you like it, you can fork this one-page resume repository or give me a star on GitHub https://github.com/MrJohnAdib/resume",
+	);
+	console.log(`
+
+		888b     d888                d8888      888 d8b 888
+		8888b   d8888               d88888      888 Y8P 888
+		88888b.d88888              d88P888      888     888
+		888Y88888P888 888d888     d88P 888  .d88888 888 88888b.       .d8888b  .d88b.  88888b.d88b.
+		888 Y888P 888 888P"      d88P  888 d88" 888 888 888 "88b     d88P"    d88""88b 888 "888 "88b
+		888  Y8P  888 888       d88P   888 888  888 888 888  888     888      888  888 888  888  888
+		888   "   888 888      d8888888888 Y88b 888 888 888 d88P d8b Y88b.    Y88..88P 888  888  888
+		888       888 888     d88P     888  "Y88888 888 88888P"  Y8P  "Y8888P  "Y88P"  888  888  888
+
+		oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+		`);
+}
+
 // on load page show pdf button
+consoleMessage();
 showPdfButton();
 
 window.addEventListener("beforeprint", () => {
 	window.originalTitle = document.title;
-	document.title = `MrAdib-Resume-${getResumeVersion()}-web`;
+	let documentTitle = `MrAdib-Resume-${getResumeVersion()}`;
+	if (!isLocalFile()) {
+		documentTitle += "-web";
+	}
+	document.title = documentTitle;
 });
 
 window.addEventListener("afterprint", () => {
