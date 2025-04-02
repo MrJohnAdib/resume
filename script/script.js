@@ -1,12 +1,12 @@
-var myDate = new Date().toLocaleString("en-us", {
+const myDate = new Date().toLocaleString("en-us", {
 	day: "numeric",
 	month: "short",
 	year: "numeric",
 });
-document.querySelectorAll("[data-fill-current]").forEach((el) => {
+for (const el of document.querySelectorAll("[data-fill-current]")) {
 	el.textContent = myDate;
 	el.setAttribute("date", myDate);
-});
+}
 
 document.querySelector("#contactBox").addEventListener("click", () => {
 	document.querySelector("#phoneBox").classList.remove("hidden");
@@ -27,15 +27,15 @@ function replaceDataOnClick(event) {
 	}
 
 	// Replace with new text on all parts of the document
-	document.querySelectorAll(fieldSelector).forEach((field) => {
+	for (const field of document.querySelectorAll(fieldSelector)) {
 		field.textContent = newVal;
 		field.setAttribute("data-fill-val", newVal);
-	});
+	}
 }
 
-document.querySelectorAll("[data-fill]").forEach((element) => {
+for (const element of document.querySelectorAll("[data-fill]")) {
 	element.addEventListener("click", replaceDataOnClick);
-});
+}
 
 function removeDotsFromVersion(version) {
 	return version.replace(/\./g, "");
@@ -61,10 +61,10 @@ function getPdfLink(resumeVersion) {
 
 function isFileExists(url) {
 	try {
-		var http = new XMLHttpRequest();
+		const http = new XMLHttpRequest();
 		http.open("HEAD", url, false);
 		http.send();
-		const isExists = http.status != 404;
+		const isExists = http.status !== 404;
 		return isExists;
 	} catch (err) {
 		console.error("Error while checking file exists ", url, err);
