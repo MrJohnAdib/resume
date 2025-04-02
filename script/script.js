@@ -117,3 +117,14 @@ function showPdfButton() {
 
 // on load page show pdf button
 showPdfButton();
+
+window.addEventListener("beforeprint", () => {
+	window.originalTitle = document.title;
+	document.title = `MrAdib-Resume-${getResumeVersion()}-web`;
+});
+
+window.addEventListener("afterprint", () => {
+	if (window.originalTitle) {
+		document.title = window.originalTitle;
+	}
+});
