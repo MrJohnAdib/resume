@@ -13,6 +13,7 @@
   "author": "John Adib",
   "license": "MIT",
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "cssnano": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",
@@ -21,6 +22,12 @@
   "scripts": {
     "prebuild": "open ./index.html",
     "build": "npx tailwindcss -i ./style/tailwind.css -o ./style/style.min.css --watch --minify",
-    "format": "prettier --write ."
+    "check": "biome check",
+    "check:fix": "biome check --write",
+    "format": "biome format .",
+    "format:fix": "biome format . --write",
+    "lint:": "biome lint",
+    "lint:fix": "biome lint --fix",
+    "lint:fix:unsafe": "biome lint --fix --unsafe"
   }
 }
