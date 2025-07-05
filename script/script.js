@@ -169,3 +169,56 @@ window.addEventListener("afterprint", () => {
 		document.title = window.originalTitle;
 	}
 });
+
+function calculateDuration() {
+	const durationElements = document.querySelectorAll("[data-duration]");
+
+	for (const element of durationElements) {
+		const nextSibling = element.nextElementSibling;
+		const timeElements = nextSibling
+			? nextSibling.querySelectorAll("time[datetime]")
+			: [];
+		if (timeElements.length >= 2) {
+			const startTime = timeElements[0].getAttribute("datetime");
+			const endTime = timeElements[1].getAttribute("datetime");
+			if (endTime !== "present") {
+				continue;
+			}
+			const startDate = new Date(startTime);
+			const endDate = new Date();
+			const adjustedStartDate = new Date(
+				startDate.getFullYear(),
+				startDate.getMonth(),
+				1,
+			);
+			const adjustedEndDate = new Date(
+				endDate.getFullYear(),
+				endDate.getMonth() + 1,
+				1,
+			);
+			const years =
+				adjustedEndDate.getFullYear() - adjustedStartDate.getFullYear();
+			const months = adjustedEndDate.getMonth() - adjustedStartDate.getMonth();
+			const totalMonths = years * 12 + months;
+			const calculatedYears = Math.floor(totalMonths / 12);
+			const calculatedMonths = totalMonths % 12;
+
+			let durationText = "";
+
+			if (calculatedYears > 0) {
+				durationText =
+					calculatedYears === 1 ? "1 year" : `${calculatedYears} years`;
+
+				if (calculatedMonths > 0) {
+					durationText +=
+						calculatedMonths === 1 ? " 1 month" : ` ${calculatedMonths} months`;
+				}
+			} else {
+				durationText =
+					calculatedMonths === 1 ? "1 month" : `${calculatedMonths} months`;
+			}
+			element.textContent = `(${durationText})`;
+		}
+	}
+}
+calculateDuration();
