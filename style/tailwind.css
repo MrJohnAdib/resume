@@ -59,6 +59,9 @@ abbr {
 [data-fill]:hover {
 	color: #fff;
 }
+[data-ai]::selection {
+	background: #fff;
+}
 
 @media screen {
 	body {
