@@ -330,40 +330,92 @@ export class ResumeRenderer {
     `;
   }
 
-  // Render complete resume
+  // Split experience into pages (3-4 jobs per page)
+  private splitExperienceIntoPages(): string[][] {
+    const section = this.data.sections.experience;
+    if (!section.show) return [];
+
+    const visibleItems = section.items.filter(item => item.show);
+    const pages: string[][] = [];
+    const itemsPerPage = 3; // Adjust based on content density
+
+    for (let i = 0; i < visibleItems.length; i += itemsPerPage) {
+      const pageItems = visibleItems.slice(i, i + itemsPerPage);
+      pages.push(pageItems.map(item => this.renderExperienceItem(item)));
+    }
+
+    return pages;
+  }
+
+  // Render complete resume with A4 page breaks
   render(): string {
     // Standard 1-column tech resume layout (multi-page)
     if (this.data.layout.columns === 1) {
+      const experiencePages = this.splitExperienceIntoPages();
+      const hasExperience = experiencePages.length > 0;
+
       return `
-        ${this.renderHeader()}
-        <main class="max-w-4xl mx-auto px-12 py-6 bg-white">
-          ${this.renderExperience()}
-          <div class="mt-6"></div>
-          ${this.renderSkills()}
-          <div class="mt-6"></div>
-          ${this.renderEducation()}
-          <div class="mt-6"></div>
-          ${this.renderAwards()}
-          <div class="mt-6"></div>
-          ${this.renderVolunteer()}
-        </main>
+        <!-- Page 1: Header + First Experience Items -->
+        <div class="page">
+          ${this.renderHeader()}
+          ${hasExperience ? `
+            <main class="px-12 py-6">
+              <article class="mb-6">
+                <h2 class="text-cyan-700 text-2xl font-semibold mb-3 pb-2 border-b-2 border-stone-200">
+                  ${this.data.sections.experience.title}
+                </h2>
+                <div class="space-y-4">
+                  ${experiencePages[0].join('')}
+                </div>
+              </article>
+            </main>
+          ` : ''}
+        </div>
+
+        <!-- Page 2: Continuing Experience -->
+        ${experiencePages.length > 1 ? `
+          <div class="page">
+            <main class="px-12 py-12">
+              <article class="mb-6">
+                <h2 class="text-cyan-700 text-2xl font-semibold mb-3 pb-2 border-b-2 border-stone-200">
+                  ${this.data.sections.experience.title} (continued)
+                </h2>
+                <div class="space-y-4">
+                  ${experiencePages.slice(1).flat().join('')}
+                </div>
+              </article>
+            </main>
+          </div>
+        ` : ''}
+
+        <!-- Page 3: Skills, Education, Awards, Volunteer -->
+        <div class="page">
+          <main class="px-12 py-12">
+            ${this.renderSkills()}
+            ${this.renderEducation()}
+            ${this.renderAwards()}
+            ${this.renderVolunteer()}
+          </main>
+        </div>
       `;
     }
 
-    // 2-column layout (if needed)
+    // 2-column layout (single page)
     return `
-      ${this.renderHeader()}
-      <main class="grid grid-cols-2 gap-6 mx-6 my-6 bg-white">
-        <div>
-          ${this.renderExperience()}
-        </div>
-        <div>
-          ${this.renderSkills()}
-          ${this.renderAwards()}
-          ${this.renderEducation()}
-          ${this.renderVolunteer()}
-        </div>
-      </main>
+      <div class="page">
+        ${this.renderHeader()}
+        <main class="grid grid-cols-2 gap-6 px-6 py-6">
+          <div>
+            ${this.renderExperience()}
+          </div>
+          <div>
+            ${this.renderSkills()}
+            ${this.renderAwards()}
+            ${this.renderEducation()}
+            ${this.renderVolunteer()}
+          </div>
+        </main>
+      </div>
     `;
   }
 }

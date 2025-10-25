@@ -21,25 +21,38 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000` - You'll see a clean 1-column resume ready to span multiple pages!
+Open `http://localhost:3000` - You'll see **visual A4 pages** showing exactly how your resume will print!
 
 ## Key Features
 
+✅ **Visual A4 Pages** - See exactly how content breaks across pages (210mm × 297mm)
 ✅ **1-Column Standard Layout** - Professional tech resume format
-✅ **Multi-Page Ready** - Content flows naturally across 3+ pages
-✅ **Clean Modern Design** - Professional styling with clear hierarchy
+✅ **Smart Content Distribution** - Automatic page breaks with 3 jobs per page
+✅ **Page Numbers** - Visual indicators on screen (hidden when printing)
 ✅ **Fully Customizable** - Control every element via JSON
 ✅ **Flexible Date Formats** - MM/YYYY, year only, or hidden
-✅ **Print-Optimized** - Perfect PDF exports with smart page breaks
+✅ **Print-Optimized** - Perfect PDF exports with proper pagination
 
-## What's Included
+## Page Structure
 
-- **Professional Header**: Centered name, title, contact info, summary
-- **Experience Section**: Full job history with bullets and tech stack
-- **Skills Grid**: 2-column grid layout for easy scanning
-- **Education**: Degree, institution, dates, optional thesis/coursework
-- **Awards**: Achievements with icons and descriptions
-- **Volunteer**: Community involvement and mentorship
+### Page 1 (Header + Experience)
+- Centered professional header
+- Contact information with links
+- Professional summary
+- First 3 job experiences
+
+### Page 2 (Continuing Experience)
+- Remaining job history
+- Full bullet points per role
+- Optional tech stack per job
+
+### Page 3 (Additional Sections)
+- Skills in 2-column grid
+- Education history
+- Awards and honors
+- Volunteer work
+
+**Note**: Pages adjust automatically based on content. Customize items per page in [src/renderer.ts](src/renderer.ts).
 
 ## Customization
 
@@ -85,6 +98,8 @@ All content is in [public/data.json](public/data.json) - just edit and save!
    - Background graphics: **Enabled**
    - Scale: **100%**
 3. Save as PDF
+
+**What you see is what you get!** The visual page breaks on screen match exactly what will print.
 
 ## Documentation
 

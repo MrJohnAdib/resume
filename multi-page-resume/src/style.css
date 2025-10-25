@@ -42,25 +42,60 @@ abbr {
 
 /* Screen-only styles */
 @media screen {
-  #pageContainer {
-    padding: 24px;
+  body {
+    background-color: #f3f4f6;
   }
 
-  #printArea {
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin: 0 auto 10px;
-    max-width: 100%;
-    min-height: 296mm; /* A4 height */
-    min-width: 210mm; /* A4 width */
+  #pageContainer {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* A4 Page visualization */
+  .page {
     width: 210mm;
-    overflow: visible;
+    min-height: 297mm;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  /* Page number indicator (screen only) */
+  .page::after {
+    content: "Page " counter(page);
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 10px;
+    color: #999;
+    counter-increment: page;
+  }
+
+  body {
+    counter-reset: page;
+  }
+
+  /* #printArea will contain all pages */
+  #printArea {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 210mm;
   }
 
   /* Dark mode support */
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #1f2937;
+    }
+
+    .page {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
   }
 }
@@ -75,13 +110,14 @@ abbr {
   }
 
   /* Show phone number in print */
-  #phoneBox {
-    display: flex !important;
+  #phoneBox,
+  #phoneNumber {
+    display: inline !important;
   }
 
   /* Page setup */
   @page {
-    size: A4;
+    size: A4 portrait;
     margin: 0;
   }
 
@@ -93,15 +129,31 @@ abbr {
 
   #pageContainer {
     padding: 0;
+    gap: 0;
   }
 
   #printArea {
-    box-shadow: none;
-    border-radius: 0;
+    gap: 0;
     width: 100%;
-    min-width: auto;
-    max-width: 100%;
-    overflow: visible;
+  }
+
+  /* Remove visual page styling for print */
+  .page {
+    box-shadow: none;
+    min-height: auto;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  /* Hide page numbers in print */
+  .page::after {
+    display: none !important;
+  }
+
+  /* Last page shouldn't force a break */
+  .page:last-child {
+    page-break-after: auto;
+    break-after: auto;
   }
 
   /* Page break control */
@@ -121,7 +173,7 @@ abbr {
     break-inside: avoid;
   }
 
-  section {
+  article > div > div {
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -132,15 +184,11 @@ abbr {
     break-after: avoid;
   }
 
-  /* Adjust margins for print */
-  header {
-    margin-top: 0;
-  }
-
   /* Ensure colors are printed */
   * {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    color-adjust: exact;
   }
 }
 
