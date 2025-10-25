@@ -1,29 +1,29 @@
 {
-  "name": "multi-page-resume",
-  "version": "1.0.0",
-  "description": "Fully customizable multi-page resume built with TypeScript, Vite, and Tailwind CSS",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "keywords": [
-    "resume",
-    "cv",
-    "typescript",
-    "vite",
-    "tailwind",
-    "customizable"
-  ],
-  "author": "John Adib",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^20.10.0",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.8"
-  }
+	"name": "multi-page-resume",
+	"version": "1.0.0",
+	"description": "Fully customizable multi-page resume built with TypeScript, Vite, and Tailwind CSS",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"keywords": [
+		"resume",
+		"cv",
+		"typescript",
+		"vite",
+		"tailwind",
+		"customizable"
+	],
+	"author": "John Adib",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "24.9.1",
+		"autoprefixer": "^10.4.21",
+		"postcss": "^8.5.6",
+		"tailwindcss": "4.1.16",
+		"typescript": "^5.9.3",
+		"vite": "7.1.12"
+	}
 }
