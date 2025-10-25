@@ -117,65 +117,45 @@ export class ResumeRenderer {
     const { name, title, summary, links, contact, avatar } = this.data.header;
 
     return `
-      <header class="bg-stone-50 mb-4">
-        <div class="flex m-6 mb-4">
-          ${avatar.show && avatar.url ? `
-            <div class="basis-36 w-36 h-36 flex-none mr-6">
-              <img src="${avatar.url}" alt="${name}" class="rounded-lg" />
+      <header class="bg-white border-b-2 border-stone-200 pb-4 mb-6">
+        <div class="max-w-4xl mx-auto px-12 pt-8">
+          <div class="text-center">
+            <h1 class="text-black text-4xl font-bold">${name}</h1>
+            <h2 class="text-cyan-600 text-xl mt-2">${title}</h2>
+          </div>
+
+          ${contact.show ? `
+            <div class="flex items-center justify-center gap-4 mt-4 text-sm text-stone-600 flex-wrap">
+              ${contact.email ? `
+                <a href="mailto:${contact.email}" class="hover:text-cyan-600">${contact.email}</a>
+              ` : ''}
+              ${contact.phone ? `
+                <span id="phoneBox" class="hidden print:inline">|</span>
+                <a href="tel:${contact.phone}" id="phoneNumber" class="hover:text-cyan-600 hidden print:inline">${contact.phone}</a>
+              ` : ''}
+              ${contact.location ? `
+                <span>|</span>
+                <span>${contact.location}</span>
+              ` : ''}
+              ${links.filter(l => l.show).length > 0 ? links.filter(l => l.show).map(link => `
+                <span>|</span>
+                <a href="${link.url}" target="_blank" class="hover:text-cyan-600">${link.label}</a>
+              `).join('') : ''}
             </div>
           ` : ''}
-          <div class="basis-auto w-full">
-            <div class="flex items-start justify-between">
-              <div class="grow">
-                <h1 class="text-black text-3xl font-light leading-8">${name}</h1>
-                <h2 class="text-cyan-600 text-xl leading-7 mt-1">${title}</h2>
-              </div>
-              ${links.filter(l => l.show).length > 0 ? `
-                <nav class="text-xs flex gap-2 flex-wrap justify-end">
-                  ${links.filter(l => l.show).map(link => `
-                    <a target="_blank"
-                       class="flex leading-4 rounded-lg bg-cyan-600 hover:bg-cyan-800 transition"
-                       href="${link.url}">
-                      ${link.icon ? `<img src="${link.icon}" alt="${link.label}" class="h-8 w-8 p-2" />` : ''}
-                      <span class="bg-white bg-opacity-30 px-2 leading-8 text-white text-xs">${link.label}</span>
-                    </a>
-                  `).join('')}
-                </nav>
-              ` : ''}
+
+          ${contact.badge ? `
+            <div class="text-center mt-3 text-sm text-cyan-700 font-medium">
+              ${contact.badge}
             </div>
-            <div class="text-stone-700 text-sm leading-snug mt-1 space-y-1">
-              ${summary.map(p => `<p>${p}</p>`).join('')}
+          ` : ''}
+
+          ${summary.length > 0 ? `
+            <div class="mt-4 text-stone-700 text-sm leading-relaxed">
+              ${summary.map(p => `<p class="mb-2">${p}</p>`).join('')}
             </div>
-          </div>
+          ` : ''}
         </div>
-        ${contact.show ? `
-          <div class="bg-stone-100 leading-10 px-6 gap-6 text-xs flex items-center justify-center text-stone-600">
-            ${contact.email ? `
-              <div class="flex items-center">
-                <img src="./img/email.svg" alt="email" class="h-4 w-4 mr-1" />
-                <a href="mailto:${contact.email}">${contact.email}</a>
-              </div>
-            ` : ''}
-            ${contact.phone ? `
-              <div class="flex items-center" id="phoneBox">
-                <img src="./img/tel.svg" alt="phone" class="h-4 w-4 mr-1" />
-                <a href="tel:${contact.phone}">${contact.phone}</a>
-              </div>
-            ` : ''}
-            ${contact.location ? `
-              <div class="flex items-center">
-                <img src="./img/location.svg" alt="location" class="h-4 w-4 mr-1" />
-                <span>${contact.location}</span>
-              </div>
-            ` : ''}
-            ${contact.badge ? `
-              <div class="flex items-center">
-                <img src="./img/star.svg" alt="badge" class="h-4 w-4 mr-1" />
-                <span>${contact.badge}</span>
-              </div>
-            ` : ''}
-          </div>
-        ` : ''}
       </header>
     `;
   }
@@ -189,35 +169,40 @@ export class ResumeRenderer {
     if (visibleItems.length === 0) return '';
 
     return `
-      <article class="mb-4">
-        <h2 class="text-cyan-600 text-xl leading-5 mb-2 underline underline-offset-2">
+      <article class="mb-6">
+        <h2 class="text-cyan-700 text-2xl font-semibold mb-3 pb-2 border-b-2 border-stone-200">
           ${section.title}
         </h2>
-        ${visibleItems.map(item => this.renderExperienceItem(item)).join('')}
+        <div class="space-y-4">
+          ${visibleItems.map(item => this.renderExperienceItem(item)).join('')}
+        </div>
       </article>
     `;
   }
 
   private renderExperienceItem(item: Experience): string {
     return `
-      <section class="mb-2">
-        <h3 class="font-light text-base leading-5">${item.title}</h3>
-        <div class="flex items-center flex-wrap gap-x-2">
-          <h4 class="text-sm text-stone-500">
-            ${item.companyUrl ? `<a href="${item.companyUrl}" target="_blank">${item.company}</a>` : item.company}
-          </h4>
-          ${item.employmentType ? `<span class="text-xs text-stone-500">${item.employmentType}</span>` : ''}
-          ${item.location ? `<span class="text-xs text-stone-500">${item.location}</span>` : ''}
-          ${this.renderDateRange(item.dates)}
+      <div>
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-semibold text-stone-800">${item.title}</h3>
+            <div class="text-sm text-stone-600">
+              ${item.companyUrl ? `<a href="${item.companyUrl}" target="_blank" class="hover:text-cyan-600">${item.company}</a>` : item.company}
+              ${item.employmentType ? ` • ${item.employmentType}` : ''}
+              ${item.location ? ` • ${item.location}` : ''}
+            </div>
+          </div>
+          <div class="text-sm text-stone-600 text-right whitespace-nowrap ml-4">
+            ${this.renderDateRange(item.dates)}
+          </div>
         </div>
         ${this.renderBulletPoints(item.bulletPoints)}
         ${item.techStack?.show && item.techStack.items.length > 0 ? `
-          <div class="leading-[14px] text-xs text-stone-600 mt-2">
-            <h3 class="font-light inline-block text-stone-700">Tech Stack: </h3>
-            ${this.renderTechStack(item.techStack.items)}
+          <div class="text-sm text-stone-600 mt-2">
+            <span class="font-semibold">Technologies:</span> ${this.renderTechStack(item.techStack.items)}
           </div>
         ` : ''}
-      </section>
+      </div>
     `;
   }
 
@@ -230,16 +215,18 @@ export class ResumeRenderer {
     if (visibleCategories.length === 0) return '';
 
     return `
-      <article class="mb-4">
-        <h2 class="text-cyan-600 text-xl leading-5 mb-2 underline underline-offset-2">
+      <article class="mb-6">
+        <h2 class="text-cyan-700 text-2xl font-semibold mb-3 pb-2 border-b-2 border-stone-200">
           ${section.title}
         </h2>
-        ${visibleCategories.map(category => `
-          <section class="leading-5 text-xs mb-1">
-            <h3 class="font-light inline-block text-stone-700">${category.title}: </h3>
-            ${this.renderTechStack(category.items)}
-          </section>
-        `).join('')}
+        <div class="grid grid-cols-2 gap-x-8 gap-y-2">
+          ${visibleCategories.map(category => `
+            <div class="text-sm">
+              <span class="font-semibold text-stone-800">${category.title}:</span>
+              <span class="text-stone-600"> ${this.renderTechStack(category.items)}</span>
+            </div>
+          `).join('')}
+        </div>
       </article>
     `;
   }
@@ -253,23 +240,23 @@ export class ResumeRenderer {
     if (visibleItems.length === 0) return '';
 
     return `
-      <article class="mb-4">
-        <h2 class="text-cyan-600 text-xl leading-5 mb-2 underline underline-offset-2">
+      <article class="mb-6">
+        <h2 class="text-cyan-700 text-2xl font-semibold mb-3 pb-2 border-b-2 border-stone-200">
           ${section.title}
         </h2>
-        ${visibleItems.map(item => `
-          <section class="mb-2">
-            <div class="flex items-center justify-between">
-              <h4 class="text-base leading-5 font-light">
-                ${item.icon ? `${item.icon} ` : ''}${item.title}
-              </h4>
+        <div class="space-y-3">
+          ${visibleItems.map(item => `
+            <div>
+              <div class="flex justify-between items-start">
+                <h4 class="font-semibold text-stone-800">
+                  ${item.icon ? `${item.icon} ` : ''}${item.title}
+                </h4>
+                <div class="text-sm text-stone-600">${this.renderDateRange(item.date)}</div>
+              </div>
+              <div class="text-sm text-stone-600 mt-1">${item.description}</div>
             </div>
-            <div class="flex flex-wrap justify-between text-xs">
-              <div class="text-stone-600">${item.description}</div>
-              ${this.renderDateRange(item.date)}
-            </div>
-          </section>
-        `).join('')}
+          `).join('')}
+        </div>
       </article>
     `;
   }
@@ -283,29 +270,29 @@ export class ResumeRenderer {
     if (visibleItems.length === 0) return '';
 
     return `
-      <article class="mb-4">
-        <h2 class="text-cyan-600 text-xl leading-5 mb-2 underline underline-offset-2">
+      <article class="mb-6">
+        <h2 class="text-cyan-700 text-2xl font-semibold mb-3 pb-2 border-b-2 border-stone-200">
           ${section.title}
         </h2>
-        ${visibleItems.map(item => `
-          <section class="mb-2">
-            <h4 class="text-base leading-5 font-light">${item.degree}</h4>
-            <div class="flex flex-wrap items-center gap-x-2 text-xs">
-              <h5 class="text-sm text-stone-600">${item.institution}</h5>
-              ${item.location ? `<span class="text-stone-500">${item.location}</span>` : ''}
-              ${this.renderDateRange(item.dates)}
-            </div>
-            ${item.thesis?.show && item.thesis.title ? `
-              <div class="text-xs text-stone-600 mt-1">${item.thesis.title}</div>
-            ` : ''}
-            ${item.coursework?.show && item.coursework.items.length > 0 ? `
-              <div class="text-xs text-stone-600 mt-1">
-                <span class="font-light text-stone-700">Relevant Coursework: </span>
-                ${this.renderTechStack(item.coursework.items)}
+        <div class="space-y-3">
+          ${visibleItems.map(item => `
+            <div>
+              <div class="flex justify-between items-start">
+                <h4 class="font-semibold text-stone-800">${item.degree}</h4>
+                <div class="text-sm text-stone-600">${this.renderDateRange(item.dates)}</div>
               </div>
-            ` : ''}
-          </section>
-        `).join('')}
+              <div class="text-sm text-stone-600">${item.institution}${item.location ? `, ${item.location}` : ''}</div>
+              ${item.thesis?.show && item.thesis.title ? `
+                <div class="text-sm text-stone-600 mt-1 italic">${item.thesis.title}</div>
+              ` : ''}
+              ${item.coursework?.show && item.coursework.items.length > 0 ? `
+                <div class="text-sm text-stone-600 mt-1">
+                  <span class="font-semibold">Relevant Coursework:</span> ${this.renderTechStack(item.coursework.items)}
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
       </article>
     `;
   }
@@ -319,34 +306,54 @@ export class ResumeRenderer {
     if (visibleItems.length === 0) return '';
 
     return `
-      <article class="mb-4">
-        <h2 class="text-cyan-600 text-xl leading-5 mb-2 underline underline-offset-2">
+      <article class="mb-6">
+        <h2 class="text-cyan-700 text-2xl font-semibold mb-3 pb-2 border-b-2 border-stone-200">
           ${section.title}
         </h2>
-        ${visibleItems.map(item => `
-          <section class="mb-2">
-            <h3 class="font-light text-base leading-5">${item.title}</h3>
-            <div class="flex items-center flex-wrap gap-x-2">
-              <h4 class="text-sm text-stone-500">
-                ${item.organizationUrl ? `<a href="${item.organizationUrl}" target="_blank">${item.organization}</a>` : item.organization}
-              </h4>
-              ${item.location ? `<span class="text-xs text-stone-500">${item.location}</span>` : ''}
-              ${this.renderDateRange(item.dates)}
+        <div class="space-y-4">
+          ${visibleItems.map(item => `
+            <div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-semibold text-stone-800">${item.title}</h3>
+                  <div class="text-sm text-stone-600">
+                    ${item.organizationUrl ? `<a href="${item.organizationUrl}" target="_blank" class="hover:text-cyan-600">${item.organization}</a>` : item.organization}
+                  </div>
+                </div>
+                <div class="text-sm text-stone-600 text-right">${this.renderDateRange(item.dates)}</div>
+              </div>
+              ${this.renderBulletPoints(item.bulletPoints)}
             </div>
-            ${this.renderBulletPoints(item.bulletPoints)}
-          </section>
-        `).join('')}
+          `).join('')}
+        </div>
       </article>
     `;
   }
 
   // Render complete resume
   render(): string {
-    const layoutClass = this.data.layout.columns === 2 ? 'grid grid-cols-2 gap-4' : '';
+    // Standard 1-column tech resume layout (multi-page)
+    if (this.data.layout.columns === 1) {
+      return `
+        ${this.renderHeader()}
+        <main class="max-w-4xl mx-auto px-12 py-6 bg-white">
+          ${this.renderExperience()}
+          <div class="mt-6"></div>
+          ${this.renderSkills()}
+          <div class="mt-6"></div>
+          ${this.renderEducation()}
+          <div class="mt-6"></div>
+          ${this.renderAwards()}
+          <div class="mt-6"></div>
+          ${this.renderVolunteer()}
+        </main>
+      `;
+    }
 
+    // 2-column layout (if needed)
     return `
       ${this.renderHeader()}
-      <main class="mx-6 mb-4 ${layoutClass}">
+      <main class="grid grid-cols-2 gap-6 mx-6 my-6 bg-white">
         <div>
           ${this.renderExperience()}
         </div>
