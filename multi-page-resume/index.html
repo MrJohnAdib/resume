@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <meta name="description" content="Professional Resume" />
+    <meta name="author" content="John Adib" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+
+    <!-- Font -->
+    <link rel="stylesheet" href="../fonts/AirbnbCereal/style.css" />
+  </head>
+  <body>
+    <!-- Banner for download button -->
+    <div id="banner">
+      <div class="flex items-center justify-between max-w-7xl mx-auto gap-4 flex-wrap">
+        <p class="text-sm text-stone-700">
+          This resume is built with <strong>TypeScript, Vite, and Tailwind CSS</strong>.
+          Fully customizable via JSON configuration.
+          <a
+            href="https://github.com/johnAdib/resume"
+            target="_blank"
+            class="text-cyan-600 hover:text-cyan-800 underline ml-2"
+          >
+            Check the GitHub repo!
+          </a>
+        </p>
+        <button
+          id="pdf-btn"
+          class="flex-none"
+        >
+          Download PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- Main container -->
+    <div id="pageContainer" class="overflow-auto">
+      <div id="printArea" data-size="A4">
+        <!-- Resume content will be inserted here by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Main script -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

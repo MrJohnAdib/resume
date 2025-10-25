@@ -1,0 +1,686 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "lastUpdated": "2025-10-25",
+    "author": "John Adib",
+    "title": "John Adib - Senior Lead Software Engineer - Resume",
+    "description": "17+ years of experience delivering high-value scalable web solutions driving measurable business growth."
+  },
+  "layout": {
+    "columns": 1,
+    "pageSize": "A4"
+  },
+  "header": {
+    "show": true,
+    "name": "John Adib",
+    "title": "Senior Lead Software Engineer",
+    "summary": [
+      "17+ years of experience delivering high-value scalable web solutions driving measurable business growth.",
+      "Led cross-functional teams and set data-driven technical vision for 5+ multi-million-dollar projects from inception to launch."
+    ],
+    "avatar": {
+      "show": false,
+      "url": "./img/Javad-Adib-2016-Avatar.jpg"
+    },
+    "links": [
+      {
+        "show": true,
+        "url": "https://mradib.com",
+        "label": "MrAdib.com",
+        "icon": "./img/website.svg"
+      },
+      {
+        "show": true,
+        "url": "https://github.com/JohnAdib",
+        "label": "github.com/JohnAdib",
+        "icon": "./img/github.svg"
+      },
+      {
+        "show": true,
+        "url": "https://www.linkedin.com/in/MrAdib/",
+        "label": "linkedin.com/in/MrAdib",
+        "icon": "./img/linkedin.svg"
+      }
+    ],
+    "contact": {
+      "show": true,
+      "email": "mr.john.adib@gmail.com",
+      "phone": "+44 7393 633 145",
+      "location": "London",
+      "badge": "UK Global Talent Visa Holder"
+    }
+  },
+  "sections": {
+    "experience": {
+      "show": true,
+      "title": "Professional Experience",
+      "items": [
+        {
+          "show": true,
+          "title": "Senior Software Development Engineer",
+          "company": "Zapp",
+          "companyUrl": "https://justzapp.com",
+          "employmentType": "Full-time",
+          "location": "London",
+          "dates": {
+            "start": "2024-12-16",
+            "end": "present",
+            "format": "full",
+            "showDuration": true
+          },
+          "bulletPoints": [
+            {
+              "show": true,
+              "text": "Migrated CI/CD from CircleCI to GitHub Actions, achieving instant, 100% reliable deployments and 80% faster deploys."
+            },
+            {
+              "show": true,
+              "text": "Resolved hundreds of lint warnings across four services, raising quality standards and reducing tech debt."
+            },
+            {
+              "show": true,
+              "text": "Improved platform performance, cutting load times across all pages by 60% and boosting Homepage LCP by 80%."
+            },
+            {
+              "show": false,
+              "text": "Established E2E tests covering 100% sensitive flows in CI/CD, reducing validation time and boosting release confidence."
+            }
+          ],
+          "techStack": {
+            "show": true,
+            "items": [
+              { "show": true, "name": "TypeScript" },
+              { "show": true, "name": "NodeJS" },
+              { "show": true, "name": "GCP" },
+              { "show": true, "name": "Pub/Sub" },
+              { "show": true, "name": "CircleCI" },
+              { "show": true, "name": "Algolia" },
+              { "show": true, "name": "GitHub Actions" },
+              { "show": true, "name": "Material UI" },
+              { "show": true, "name": "Firebase" },
+              { "show": true, "name": "Firestore" },
+              { "show": true, "name": "Next.js" },
+              { "show": true, "name": "React.js" },
+              { "show": true, "name": "Playwright" },
+              { "show": true, "name": "NestJS" },
+              { "show": true, "name": "Terraform" },
+              { "show": true, "name": "Vitest" },
+              { "show": true, "name": "Jest" }
+            ]
+          }
+        },
+        {
+          "show": true,
+          "title": "Senior Lead Software Engineer",
+          "company": "Loopla",
+          "companyUrl": "https://loopla.com/",
+          "employmentType": "Full-time",
+          "location": "London",
+          "dates": {
+            "start": "2022-12-11",
+            "end": "2024-12-15",
+            "format": "full",
+            "showDuration": false
+          },
+          "bulletPoints": [
+            {
+              "show": true,
+              "text": "Led development of a booking platform with 10+ distinct designs and drove OKRs to establish a new revenue stream."
+            },
+            {
+              "show": false,
+              "text": "Automated deployment process with CI/CD, cut time from months to less than 10 minutes and ensured zero downtime."
+            },
+            {
+              "show": true,
+              "text": "Refactored E2E tests and designed 35+ Cypress tests, enhanced pipeline efficiency, performance and reliability."
+            },
+            {
+              "show": true,
+              "text": "Architected a pixel-perfect UI with Atomic Design, utilized Storybook with 1,000+ tests for high quality and scalability."
+            }
+          ],
+          "techStack": {
+            "show": true,
+            "items": [
+              { "show": true, "name": "TypeScript" },
+              { "show": true, "name": "NodeJS" },
+              { "show": true, "name": "GCP" },
+              { "show": true, "name": "Docker" },
+              { "show": true, "name": "Terraform" },
+              { "show": true, "name": "PHP" },
+              { "show": true, "name": "GitHub Actions" },
+              { "show": true, "name": "PostgreSQL" },
+              { "show": true, "name": "MongoDB" },
+              { "show": true, "name": "Prisma" },
+              { "show": true, "name": "React.js" },
+              { "show": true, "name": "Tailwind" },
+              { "show": true, "name": "Next.js" },
+              { "show": true, "name": "Express" },
+              { "show": true, "name": "Vue.js" },
+              { "show": true, "name": "Jest" },
+              { "show": true, "name": "Cypress" },
+              { "show": true, "name": "Playwright" },
+              { "show": true, "name": "Storybook" }
+            ]
+          }
+        },
+        {
+          "show": true,
+          "title": "Co-Founder & CTO",
+          "company": "Jibres",
+          "companyUrl": "https://jibres.com",
+          "employmentType": "Full-time",
+          "dates": {
+            "start": "2019-12-06",
+            "end": "2022-11",
+            "format": "full",
+            "showDuration": false
+          },
+          "bulletPoints": [
+            {
+              "show": true,
+              "text": "Implemented an integrated cloud eCommerce solution for 1,200+ businesses containing website, app, POS software, CRM, CMS, accounting software, ticketing, and form builder."
+            },
+            {
+              "show": true,
+              "text": "Launched an automated app factory that generated a native android shopping app without coding in less than 10 minutes."
+            }
+          ],
+          "techStack": {
+            "show": false,
+            "items": []
+          }
+        },
+        {
+          "show": true,
+          "title": "Head of Engineering",
+          "company": "Ermile",
+          "companyUrl": "https://ermile.com/",
+          "employmentType": "Full-time",
+          "dates": {
+            "start": "2018-08-07",
+            "end": "2019-12-06",
+            "format": "full",
+            "showDuration": false
+          },
+          "bulletPoints": [
+            {
+              "show": true,
+              "text": "Led engineering team that delivered educational management system serving 500,000+ students and 2,000+ teachers."
+            }
+          ],
+          "techStack": {
+            "show": false,
+            "items": []
+          }
+        },
+        {
+          "show": true,
+          "title": "Principal Software Engineer",
+          "company": "Tejarak",
+          "dates": {
+            "start": "2017-09-07",
+            "end": "2018-08-06",
+            "format": "full",
+            "showDuration": false
+          },
+          "employmentType": "Full-time",
+          "bulletPoints": [
+            {
+              "show": true,
+              "text": "Built NFC-powered attendance system with interactive display and mobile check-ins, launched MVP in 2 months."
+            }
+          ],
+          "techStack": {
+            "show": false,
+            "items": []
+          }
+        },
+        {
+          "show": true,
+          "title": "Co-Founder & CEO",
+          "company": "Sarshomar",
+          "companyUrl": "https://sarshomar.com/",
+          "employmentType": "Full-time",
+          "dates": {
+            "start": "2015-06-22",
+            "end": "2017-09-07",
+            "format": "full",
+            "showDuration": false
+          },
+          "bulletPoints": [
+            {
+              "show": true,
+              "text": "Spearheaded a 15 members cross-functional startup team. Launched a flagship product that hit 1M users in just a month."
+            }
+          ],
+          "techStack": {
+            "show": false,
+            "items": []
+          }
+        },
+        {
+          "show": true,
+          "title": "Software Engineer",
+          "company": "Mixa",
+          "employmentType": "Full-time",
+          "dates": {
+            "start": "2011-08-22",
+            "end": "2015-06-22",
+            "format": "full",
+            "showDuration": false
+          },
+          "bulletPoints": [
+            {
+              "show": true,
+              "text": "Established a cloud archive solution that annually saves +1M documents and avoids waste of tons of paper."
+            }
+          ],
+          "techStack": {
+            "show": false,
+            "items": []
+          }
+        },
+        {
+          "show": true,
+          "title": "Frontend Developer UI/UX",
+          "company": "Freelancer",
+          "employmentType": "Freelance",
+          "dates": {
+            "start": "2008-09-22",
+            "end": "2011-08-22",
+            "format": "full",
+            "showDuration": false
+          },
+          "bulletPoints": [
+            {
+              "show": true,
+              "text": "Designed and deployed 40+ WordPress websites, improved user experience, and achieved a high SEO rank."
+            }
+          ],
+          "techStack": {
+            "show": false,
+            "items": []
+          }
+        }
+      ]
+    },
+    "skills": {
+      "show": true,
+      "title": "Skills",
+      "data": {
+        "show": true,
+        "categories": [
+          {
+            "show": true,
+            "title": "Tech Stack",
+            "items": [
+              { "show": true, "name": "TypeScript" },
+              { "show": true, "name": "Node.js" },
+              { "show": true, "name": "PHP" },
+              { "show": true, "name": "Python" },
+              { "show": true, "name": "Rust" },
+              { "show": true, "name": "Bash" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "AI & LLM",
+            "items": [
+              { "show": true, "name": "OpenAI" },
+              { "show": true, "name": "Gemini" },
+              { "show": true, "name": "Vertex AI" },
+              { "show": true, "name": "Llama" },
+              { "show": true, "name": "RAG" },
+              { "show": true, "name": "Claude" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Database",
+            "items": [
+              { "show": true, "name": "MySQL" },
+              { "show": true, "name": "PostgreSQL" },
+              { "show": true, "name": "MongoDB" },
+              { "show": true, "name": "Firestore" },
+              { "show": true, "name": "JSON" },
+              { "show": true, "name": "YAML" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "ORM",
+            "items": [
+              { "show": true, "name": "Prisma" },
+              { "show": true, "name": "TypeORM" },
+              { "show": true, "name": "Drizzle" },
+              { "show": true, "name": "Doctrine" },
+              { "show": true, "name": "Eloquent" },
+              { "show": true, "name": "Mongoose" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Distributed Cache",
+            "items": [
+              { "show": true, "name": "Redis" },
+              { "show": true, "name": "Memcached" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "API",
+            "items": [
+              { "show": true, "name": "SOAP" },
+              { "show": true, "name": "REST" },
+              { "show": true, "name": "GraphQL" },
+              { "show": true, "name": "WebSocket" },
+              { "show": true, "name": "Protobuf" },
+              { "show": true, "name": "tRPC" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Web Framework",
+            "items": [
+              { "show": true, "name": "Express.js" },
+              { "show": true, "name": "NestJS" },
+              { "show": true, "name": "Hono" },
+              { "show": true, "name": "Next.js" },
+              { "show": true, "name": "Nuxt.js" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Front-end JS Library",
+            "items": [
+              { "show": true, "name": "Vanilla JS" },
+              { "show": true, "name": "React.js" },
+              { "show": true, "name": "Vue.js" },
+              { "show": true, "name": "React Native" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Test Suites",
+            "items": [
+              { "show": true, "name": "Cypress" },
+              { "show": true, "name": "Playwright" },
+              { "show": true, "name": "Storybook" },
+              { "show": true, "name": "Jest" },
+              { "show": true, "name": "Vitest" },
+              { "show": true, "name": "PHPUnit" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "CSS Framework",
+            "items": [
+              { "show": true, "name": "Tailwind CSS" },
+              { "show": true, "name": "Bootstrap" },
+              { "show": true, "name": "Material UI" },
+              { "show": true, "name": "Semantic UI" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Version Control System",
+            "items": [
+              { "show": true, "name": "Git" },
+              { "show": true, "name": "GitHub" },
+              { "show": true, "name": "GitLab" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Infra",
+            "items": [
+              { "show": true, "name": "Terraform" },
+              { "show": true, "name": "Cloud Run" },
+              { "show": true, "name": "Kubernetes" },
+              { "show": true, "name": "Firebase" },
+              { "show": true, "name": "AWS" },
+              { "show": true, "name": "GCP" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Security",
+            "items": [
+              { "show": true, "name": "OWASP" },
+              { "show": true, "name": "CORS" },
+              { "show": true, "name": "XSS" },
+              { "show": true, "name": "CSRF" },
+              { "show": true, "name": "DDoS" },
+              { "show": true, "name": "CSP" },
+              { "show": true, "name": "JWT" },
+              { "show": true, "name": "OAuth2" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Servers and CDN",
+            "items": [
+              { "show": true, "name": "Nginx" },
+              { "show": true, "name": "Apache" },
+              { "show": true, "name": "APISIX" },
+              { "show": true, "name": "Cloudflare" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "CI/CD Automation",
+            "items": [
+              { "show": true, "name": "Docker" },
+              { "show": true, "name": "GH Actions" },
+              { "show": true, "name": "Turborepo" },
+              { "show": true, "name": "Monorepo" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Messaging and Monitoring",
+            "items": [
+              { "show": true, "name": "RabbitMQ" },
+              { "show": true, "name": "Elasticsearch" },
+              { "show": true, "name": "Datadog" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Agile Methodologies",
+            "items": [
+              { "show": true, "name": "Scrum" },
+              { "show": true, "name": "Kanban" },
+              { "show": true, "name": "DDD" },
+              { "show": true, "name": "KPI" },
+              { "show": true, "name": "OKR" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Engineering Principles",
+            "items": [
+              { "show": true, "name": "SoC" },
+              { "show": true, "name": "SOLID" },
+              { "show": true, "name": "OOP" },
+              { "show": true, "name": "TDD" },
+              { "show": true, "name": "DRY" },
+              { "show": true, "name": "EDA" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Core Web Essentials",
+            "items": [
+              { "show": true, "name": "HTML" },
+              { "show": true, "name": "CSS" },
+              { "show": true, "name": "JavaScript" },
+              { "show": true, "name": "Crawl" },
+              { "show": true, "name": "SEO" }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Miscellaneous",
+            "items": [
+              { "show": true, "name": "QA" },
+              { "show": true, "name": "NPM" },
+              { "show": true, "name": "PWA" },
+              { "show": true, "name": "AJAX" },
+              { "show": true, "name": "CLI" },
+              { "show": true, "name": "MVC" },
+              { "show": true, "name": "SSR" },
+              { "show": true, "name": "SSG" }
+            ]
+          }
+        ]
+      }
+    },
+    "awards": {
+      "show": true,
+      "title": "Awards and Honors",
+      "data": {
+        "show": true,
+        "items": [
+          {
+            "show": true,
+            "icon": "🏅",
+            "title": "The World's Most Influential Mentor",
+            "organization": "ADPList100",
+            "description": "Honored in ADPList100 for Software Engineering mentorship",
+            "date": {
+              "start": "2024-12",
+              "format": "year"
+            }
+          },
+          {
+            "show": true,
+            "icon": "🥇",
+            "title": "#1 Mentor in Europe - ADPList Mentor of Year",
+            "organization": "ADPList",
+            "description": "Recognized for impactful contributions to mentorship",
+            "date": {
+              "start": "2024-12",
+              "format": "year"
+            }
+          },
+          {
+            "show": true,
+            "icon": "🎖️",
+            "title": "UK Global Talent Visa - Tech Nation",
+            "organization": "UK Government",
+            "description": "Endorsed as an exceptional talent and global leader in tech",
+            "date": {
+              "start": "2024",
+              "format": "year"
+            }
+          },
+          {
+            "show": true,
+            "icon": "🎖️",
+            "title": "Recognized as a National Elite",
+            "organization": "IR National Elites Foundation",
+            "description": "Awarded by IR National Elites Foundation for excellence",
+            "date": {
+              "start": "2013",
+              "format": "year"
+            }
+          }
+        ]
+      }
+    },
+    "education": {
+      "show": true,
+      "title": "Education",
+      "data": {
+        "show": true,
+        "items": [
+          {
+            "show": true,
+            "degree": "M.S. in Information Technology Management",
+            "institution": "Azad University",
+            "location": "Tehran, IR",
+            "dates": {
+              "start": "2015-09-23",
+              "end": "2025-02-18",
+              "format": "year"
+            },
+            "thesis": {
+              "show": false,
+              "title": "Critical success factors in SME e-business - FinTech case study"
+            },
+            "coursework": {
+              "show": false,
+              "items": []
+            }
+          },
+          {
+            "show": true,
+            "degree": "B.S. in Computer Software Engineering",
+            "institution": "Azad University",
+            "location": "Nour, IR",
+            "dates": {
+              "start": "2008-09-22",
+              "end": "2014-02-19",
+              "format": "year"
+            },
+            "thesis": {
+              "show": false
+            },
+            "coursework": {
+              "show": false,
+              "items": []
+            }
+          }
+        ]
+      }
+    },
+    "volunteer": {
+      "show": true,
+      "title": "Volunteer work",
+      "data": {
+        "show": true,
+        "items": [
+          {
+            "show": true,
+            "title": "Judge - 2025 CODiE Awards",
+            "organization": "CODiE Awards",
+            "organizationUrl": "https://codieawards.com/",
+            "dates": {
+              "start": "2025-01",
+              "end": "2025-12",
+              "format": "full",
+              "showDuration": false
+            },
+            "bulletPoints": [
+              {
+                "show": true,
+                "text": "Selected as a 2025 judge to evaluate top global software products, recognizing innovation and excellence in technology."
+              }
+            ]
+          },
+          {
+            "show": true,
+            "title": "Mentor - Software Engineering & Career Growth",
+            "organization": "ADPList",
+            "organizationUrl": "https://adplist.org/mentors/john-adib",
+            "dates": {
+              "start": "2024-06",
+              "end": "present",
+              "format": "full",
+              "showDuration": false
+            },
+            "bulletPoints": [
+              {
+                "show": true,
+                "text": "Mentored 500+ sessions, advising on roadmaps, best practices, and strategic decisions in technical and professional domains."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for theming */
+:root {
+  --color-primary: #0891b2;
+  --color-secondary: #44403c;
+  --color-accent: #06b6d4;
+  --color-background: #ffffff;
+  --color-text: #1c1917;
+  --color-text-light: #78716c;
+  --color-border: #e7e5e4;
+  --font-family: 'Airbnb Cereal App', ui-sans-serif, system-ui;
+  --font-family-heading: var(--font-family);
+}
+
+/* Global styles */
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background-color: #f3f4f6;
+}
+
+/* Print area container */
+#printArea {
+  background-color: var(--color-background);
+  position: relative;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Image styles */
+img {
+  user-select: none;
+}
+
+/* Abbreviation styles */
+abbr {
+  text-decoration: none !important;
+}
+
+/* Screen-only styles */
+@media screen {
+  #pageContainer {
+    padding: 24px;
+  }
+
+  #printArea {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 10px;
+    max-width: 100%;
+    min-height: 296mm; /* A4 height */
+    min-width: 210mm; /* A4 width */
+    width: 210mm;
+    overflow: visible;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1f2937;
+    }
+  }
+}
+
+/* Print styles */
+@media print {
+  /* Hide elements that shouldn't be printed */
+  #banner,
+  #pdf-btn,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Show phone number in print */
+  #phoneBox {
+    display: flex !important;
+  }
+
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  #pageContainer {
+    padding: 0;
+  }
+
+  #printArea {
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    min-width: auto;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  /* Page break control */
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Ensure sections don't break awkwardly */
+  article {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep headings with following content */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Adjust margins for print */
+  header {
+    margin-top: 0;
+  }
+
+  /* Ensure colors are printed */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Banner styles */
+#banner {
+  background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#pdf-btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#pdf-btn:hover {
+  background-color: #0e7490;
+}
+
+#pdf-btn:active {
+  transform: translateY(1px);
+}
+
+/* Link styles */
+a {
+  color: var(--color-primary);
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
