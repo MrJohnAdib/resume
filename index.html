@@ -266,8 +266,8 @@
                   <code
                     id="version"
                     class="block font-light rtl:text-center"
-                    data-latest-pdf="v23.3.0"
-                    >v23.3.0</code
+                    data-latest-pdf="v24.1.0"
+                    >v24.1.0</code
                   >
                 </a>
               </div>
@@ -1138,46 +1138,6 @@
                 itemscope
                 itemtype="https://schema.org/ListItem"
               >
-                <h3 class="font-light inline-block text-stone-700">Database</h3>
-                <span itemprop="name">MySQL</span>,
-                <span itemprop="name">PostgreSQL</span>,
-                <span itemprop="name">MongoDB</span>,
-                <span itemprop="name">Firestore</span>,
-                <span itemprop="name">JSON</span>,
-                <span itemprop="name">YAML</span>.
-              </section>
-
-              <section
-                class="leading-5 text-xs"
-                itemscope
-                itemtype="https://schema.org/ListItem"
-              >
-                <h3 class="font-light inline-block text-stone-700">ORM</h3>
-                <span itemprop="name">Prisma</span>,
-                <span itemprop="name">TypeORM</span>,
-                <span itemprop="name">Drizzle</span>,
-                <!-- <span itemprop="name">Doctrine</span>, -->
-                <!-- <span itemprop="name" class="text-stone-600">Eloquent</span>, -->
-                <span itemprop="name">Mongoose</span>.
-              </section>
-
-              <section
-                class="leading-5 text-xs"
-                itemscope
-                itemtype="https://schema.org/ListItem"
-              >
-                <h3 class="font-light inline-block text-stone-700">
-                  Distributed Cache
-                </h3>
-                <span itemprop="name">Redis</span>,
-                <span itemprop="name">Memcached</span>.
-              </section>
-
-              <section
-                class="leading-5 text-xs"
-                itemscope
-                itemtype="https://schema.org/ListItem"
-              >
                 <h3 class="font-light inline-block text-stone-700">API</h3>
                 <span itemprop="name">SOAP</span>,
                 <span itemprop="name">REST</span>,
@@ -1195,11 +1155,12 @@
                 <h3 class="font-light inline-block text-stone-700">
                   Web Framework
                 </h3>
-                <!-- <span itemprop="name">Express.js</span>, -->
+                <span itemprop="name">Express.js</span>,
                 <span itemprop="name">NestJS</span>,
+                <span itemprop="name">Fastify</span>,
                 <span itemprop="name">Hono</span>,
-                <span itemprop="name">Next.js</span>,
-                <span itemprop="name">Nuxt.js</span>.
+                <span itemprop="name">Next.js</span>.
+                <!-- <span itemprop="name">Nuxt.js</span>. -->
               </section>
 
               <section
@@ -1213,9 +1174,9 @@
                 <span itemprop="name">Vanilla JS</span>,
                 <!-- <span itemprop="name">jQuery</span>, -->
                 <!-- <span itemprop="name">Alpine.js</span>, -->
-                <span itemprop="name">React.js</span>,
                 <span itemprop="name">Vue.js</span>,
-                <span itemprop="name">React Native</span>.
+                <span itemprop="name">React.js</span>.
+                <!-- <span itemprop="name">React Native</span>. -->
               </section>
 
               <section
@@ -1223,15 +1184,14 @@
                 itemscope
                 itemtype="https://schema.org/ListItem"
               >
-                <h3 class="font-light inline-block text-stone-700">
-                  Test Suites
-                </h3>
-                <span itemprop="name">Cypress</span>,
-                <span itemprop="name">Playwright</span>,
-                <span itemprop="name">Storybook</span>,
-                <span itemprop="name">Jest</span>,
-                <!-- <span itemprop="name">PHPUnit</span>, -->
-                <span itemprop="name">Vitest</span>.
+                <h3 class="font-light inline-block text-stone-700">Mobile</h3>
+                <span itemprop="name">React Native</span>,
+                <span itemprop="name">Expo</span>,
+                <span itemprop="name">EAS</span>,
+                <abbr itemprop="name" title="Over-the-Air">OTA</abbr>,
+                <span itemprop="name">Sentry</span>,
+                <span itemprop="name">Mixpanel</span>,
+                <span itemprop="name">AppsFlyer</span>.
               </section>
 
               <section
@@ -1247,6 +1207,23 @@
                 <span itemprop="name">Bootstrap</span>,
                 <span itemprop="name">Material UI</span>.
                 <!-- <span itemprop="name">Semantic UI</span>. -->
+              </section>
+
+              <section
+                class="leading-5 text-xs"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <h3 class="font-light inline-block text-stone-700">
+                  Test Suites
+                </h3>
+                <span itemprop="name">Cypress</span>,
+                <span itemprop="name">Playwright</span>,
+                <span itemprop="name">Storybook</span>,
+                <span itemprop="name">Jest</span>,
+                <span itemprop="name">Maestro</span>,
+                <!-- <span itemprop="name">PHPUnit</span>, -->
+                <span itemprop="name">Vitest</span>.
               </section>
 
               <section
@@ -1283,11 +1260,11 @@
                 itemtype="https://schema.org/ListItem"
               >
                 <h3 class="font-light inline-block text-stone-700">Infra</h3>
-                <abbr itemprop="name">Terraform</abbr>,
-                <abbr itemprop="name">Cloud Run</abbr>,
-                <abbr itemprop="name">Kubernetes</abbr>,
-                <abbr itemprop="name">Firebase</abbr>,
-                <abbr itemprop="name">Edge</abbr>,
+                <span itemprop="name">Terraform</span>,
+                <span itemprop="name">Cloud Run</span>,
+                <span itemprop="name">Kubernetes</span>,
+                <span itemprop="name">Firebase</span>,
+                <span itemprop="name">Edge</span>,
                 <!-- <abbr itemprop="name" title="Digital Ocean">DO</abbr>, -->
                 <abbr
                   itemprop="name"
@@ -1299,7 +1276,7 @@
               </section>
 
               <section
-                class="leading-5 text-xs"
+                class="leading-5 text-xs hidden"
                 itemscope
                 itemtype="https://schema.org/ListItem"
               >
@@ -1324,6 +1301,46 @@
                 <abbr itemprop="name" title="Content Security Policy">CSP</abbr
                 >, <abbr itemprop="name" title="JSON Web Token">JWT</abbr>,
                 <span itemprop="name">OAuth2</span>.
+              </section>
+
+              <section
+                class="leading-5 text-xs"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <h3 class="font-light inline-block text-stone-700">Database</h3>
+                <span itemprop="name">MySQL</span>,
+                <span itemprop="name">PostgreSQL</span>,
+                <span itemprop="name">MongoDB</span>,
+                <span itemprop="name">Firestore</span>,
+                <span itemprop="name">JSON</span>,
+                <span itemprop="name">YAML</span>.
+              </section>
+
+              <section
+                class="leading-5 text-xs"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <h3 class="font-light inline-block text-stone-700">ORM</h3>
+                <span itemprop="name">Prisma</span>,
+                <span itemprop="name">TypeORM</span>,
+                <span itemprop="name">Drizzle</span>,
+                <!-- <span itemprop="name">Doctrine</span>, -->
+                <!-- <span itemprop="name" class="text-stone-600">Eloquent</span>, -->
+                <span itemprop="name">Mongoose</span>.
+              </section>
+
+              <section
+                class="leading-5 text-xs"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <h3 class="font-light inline-block text-stone-700">
+                  Distributed Cache
+                </h3>
+                <span itemprop="name">Redis</span>,
+                <span itemprop="name">Memcached</span>.
               </section>
 
               <section
