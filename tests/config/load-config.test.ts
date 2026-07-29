@@ -15,7 +15,10 @@ test("loads the complete modular repository configuration", async () => {
 		layout: { sections: Array<{ column: string }> };
 	};
 
-	assert.equal(result.site.metadata.title, "John Adib - Resume");
+	assert.equal(
+		result.site.metadata.title,
+		"John Adib - Engineering Leader & Mentor - Resume",
+	);
 	assert.equal(result.person.identity.name, "John Adib");
 	assert.equal(
 		result.sections.experience.items[0]?.id,

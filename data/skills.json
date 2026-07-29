@@ -161,7 +161,7 @@
 				},
 				{
 					"label": "XSS",
-					"title": "Cross-Origin Resource Sharing"
+					"title": "Cross-Site Scripting"
 				},
 				{
 					"label": "CSRF",
@@ -379,7 +379,7 @@
 				},
 				{
 					"label": "SSG",
-					"title": "Static-Site Generating"
+					"title": "Static Site Generation"
 				},
 				"Analysis",
 				"Maintenance",
