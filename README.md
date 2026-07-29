@@ -1,8 +1,8 @@
 # Modular Resume
 
-This repository builds John Adib's compact one-page resume from small JSON files.
-The generated page preserves the original screen and print design while keeping
-content, layout selection, templates, and runtime behavior separate.
+This repository builds John Adib's compact one-page resume from JSON. The
+generated page preserves the original screen and print design while keeping
+content, layout, templates, and browser behavior separate.
 
 ## Quick start
 
@@ -19,43 +19,44 @@ Open <http://localhost:4173>. The production site is generated in `dist/`.
 ## Commands
 
 ```bash
-npm run validate     # validate data and cross-file IDs
-npm run schema       # regenerate editor-friendly JSON Schemas
-npm run build        # generate the complete static site and check A4 overflow
-npm test             # run unit, integration, interaction, and visual tests
-npm run check        # lint, format-check, and enforce file length
+npm run validate     # validate every editable JSON file
+npm run schema       # regenerate the editor-friendly JSON Schema
+npm run build        # generate the static site and check A4 overflow
+npm test             # run unit, interaction, and pixel-parity tests
+npm run check        # lint, format-check, type-check, and enforce code size
 ```
 
 ## Structure
 
 ```text
-resume.config.json       Composes the site, person, content, and layout indexes
-data/                    Reusable content and archived legacy values
-layouts/compact/         One-page selection, ordering, and theme
-src/templates/           Small Nunjucks components
+resume.config.json       Connects data to the compact layout
+data/site.json           Metadata, assets, analytics, PDF, and banner
+data/person.json         Identity, contact details, and links
+data/summary.json        Current and hidden summary lines
+data/experience/         One complete JSON file per professional role
+data/volunteering/       One complete JSON file per volunteer role
+data/*.json              Skills, awards, and education
+layouts/compact.json     Page settings and section/role order
+src/templates/           Focused Nunjucks components
 src/runtime/             Browser behavior
-scripts/                 Validation, generation, and build entry points
-tests/fixtures/          Archived original HTML used for parity verification
-dist/                    Generated deployable site
+tests/fixtures/          Original HTML used for visual verification
 ```
 
-Content exists independently of presentation. A record is rendered only when its
-stable ID is selected by the active layout. This replaces ordinary `hidden`
-content toggles; the phone and runtime-disabled PDF button are the only stateful
-exceptions.
+Visible values are the default. Retained alternatives use `hidden: true` beside
+their related content and are omitted from generated HTML. Keys are generated
+from filenames or labels; editable data has no repeated IDs or `current` status.
 
-See [Customization](docs/CUSTOMIZATION.md) for adding and reordering content and
+See [Customization](docs/CUSTOMIZATION.md) for editing and reordering content and
 [Architecture](docs/ARCHITECTURE.md) for the composition model.
 
 ## Deployment
 
-The GitHub Actions workflow validates, builds, tests, and uploads the tested
-`dist/` directory to GitHub Pages on pushes to `main`. Pull requests run the same
-checks without deploying. In a fork, select **GitHub Actions** as the Pages source
-in the repository settings.
+GitHub Actions validates, builds, tests, and uploads the tested `dist/` artifact
+to GitHub Pages on pushes to `main`. Pull requests run the same checks without
+deploying. In a fork, select **GitHub Actions** as the Pages source.
 
-The existing fonts, images, PDFs, CNAME, sitemap, cover letter, Persian resume,
-and auxiliary routes are copied into every build.
+Fonts, images, PDFs, CNAME, sitemap, cover letter, Persian resume, and auxiliary
+routes are copied into every build.
 
 ## License
 

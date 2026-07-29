@@ -1,44 +1,75 @@
 import { z } from "zod";
-import { StableItemSchema } from "./common.ts";
+import { HiddenFields, SlugSchema } from "./common.ts";
 
-export const IdentitySchema = z.object({
-	name: z.string().min(1),
-	title: z.string().min(1),
-	avatar: z.object({
-		enabled: z.boolean(),
-		url: z.string().min(1),
-		alt: z.string(),
-	}),
+const AvatarSourceSchema = z.object({
+	src: z.string().min(1),
+	...HiddenFields,
 });
 
-export const ContactSchema = z.object({
-	email: z.object({
-		label: z.string().min(1),
-		href: z.string().startsWith("mailto:"),
-	}),
-	phone: z.object({
-		label: z.string().min(1),
-		href: z.string().startsWith("tel:"),
-		revealOnContactClick: z.boolean(),
-		showInPrint: z.boolean(),
-	}),
-	location: z.string(),
-	badge: z.string(),
-});
-
-export const LinkSchema = StableItemSchema.extend({
+const LinkSourceSchema = z.object({
 	label: z.string().min(1),
 	url: z.string().url(),
-	title: z.string(),
 	icon: z.string().min(1),
+	title: z.string().min(1).optional(),
+	...HiddenFields,
 });
 
-export const LinksSchema = z.object({ items: z.array(LinkSchema) });
-export const SummarySchema = z.object({ items: z.array(z.string().min(1)) });
+export const PersonSourceSchema = z.object({
+	identity: z.object({
+		name: z.string().min(1),
+		title: z.string().min(1),
+		avatar: AvatarSourceSchema.optional(),
+	}),
+	contact: z.object({
+		email: z.object({
+			label: z.string().min(1),
+			address: z.string().email(),
+		}),
+		phone: z.string().min(1),
+		location: z.string().min(1),
+		badge: z.string().min(1),
+	}),
+	links: z.array(LinkSourceSchema).min(1),
+});
+
+export const SummarySourceSchema = z.array(
+	z.union([
+		z.string().min(1),
+		z.object({ text: z.string().min(1), ...HiddenFields }),
+	]),
+);
 
 export const PersonSchema = z.object({
-	identity: IdentitySchema,
-	contact: ContactSchema,
-	links: LinksSchema,
-	summary: SummarySchema,
+	identity: z.object({
+		name: z.string(),
+		title: z.string(),
+		avatar: z
+			.object({
+				url: z.string(),
+				alt: z.string(),
+				...HiddenFields,
+			})
+			.optional(),
+	}),
+	contact: z.object({
+		email: z.object({ label: z.string(), href: z.string() }),
+		phone: z.object({ label: z.string(), href: z.string() }),
+		location: z.string(),
+		badge: z.string(),
+	}),
+	links: z.object({
+		items: z.array(
+			z.object({
+				id: SlugSchema,
+				label: z.string(),
+				url: z.string(),
+				icon: z.string(),
+				title: z.string().optional(),
+				...HiddenFields,
+			}),
+		),
+	}),
+	summary: z.object({
+		items: z.array(z.object({ text: z.string(), ...HiddenFields })),
+	}),
 });

@@ -1,7 +1,6 @@
 import { readFile } from "node:fs/promises";
 import type { ZodType } from "zod";
 import { parseWithSource } from "../schema/errors.ts";
-import { markSourceTree } from "./source.ts";
 
 export async function readJson<T>(file: string): Promise<T> {
 	try {
@@ -16,8 +15,5 @@ export async function readValidated<T>(
 	file: string,
 	schema: ZodType<T>,
 ): Promise<T> {
-	return markSourceTree(
-		parseWithSource(schema, await readJson(file), file),
-		file,
-	);
+	return parseWithSource(schema, await readJson(file), file);
 }

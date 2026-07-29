@@ -1,9 +1,0 @@
-{
-	"id": "head-of-engineering",
-	"status": "current",
-	"files": {
-		"profile": "profile.json",
-		"bullets": "bullets.json",
-		"technologies": "technologies.json"
-	}
-}

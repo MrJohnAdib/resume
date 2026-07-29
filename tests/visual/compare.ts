@@ -21,6 +21,12 @@ async function screenshot(page: Page, url: string, options: CompareOptions) {
 	await page.goto(url);
 	await page.emulateMedia({ media: options.media ?? "screen" });
 	await page.evaluate(() => document.fonts.ready);
+	await page.evaluate(
+		() =>
+			new Promise<void>((resolve) =>
+				requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+			),
+	);
 	if (options.revealPhone) await page.locator("#contactBox").click();
 	if (options.selector === null) {
 		return page.screenshot({ animations: "disabled", fullPage: true });
@@ -41,13 +47,10 @@ export async function comparePages(
 			viewport: options.viewport ?? { width: 1440, height: 1300 },
 			colorScheme: options.colorScheme ?? "light",
 		});
-		const legacyPage = await context.newPage();
-		const generatedPage = await context.newPage();
-		const legacy = PNG.sync.read(
-			await screenshot(legacyPage, legacyUrl, options),
-		);
+		const page = await context.newPage();
+		const legacy = PNG.sync.read(await screenshot(page, legacyUrl, options));
 		const generated = PNG.sync.read(
-			await screenshot(generatedPage, generatedUrl, options),
+			await screenshot(page, generatedUrl, options),
 		);
 		assert.equal(generated.width, legacy.width);
 		assert.equal(generated.height, legacy.height);

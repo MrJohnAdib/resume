@@ -1,1 +1,1 @@
-<h2 class="text-cyan-600 text-xl leading-5 mb-1.5 underline underline-offset-2">{{ section.title }}</h2>
+<h2 class="text-cyan-600 text-xl leading-5 mb-1.5 underline underline-offset-2">{% if section.href %}<a href="{{ section.href }}" target="_blank" rel="noopener">{{ section.title }}</a>{% else %}{{ section.title }}{% endif %}</h2>

@@ -1,5 +1,0 @@
-{
-	"id": "distributed-cache",
-	"fields": ["title", "items"],
-	"items": ["redis", "memcached"]
-}

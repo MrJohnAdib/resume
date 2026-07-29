@@ -1,0 +1,116 @@
+{
+	"title": "Awards and Honors",
+	"href": "https://mradib.com/awards",
+	"items": [
+		{
+			"title": "🏅 The World’s Most Influential Mentor",
+			"location": "UK",
+			"description": "Honored in ADPList100 among leading global mentors",
+			"date": {
+				"datetime": "2026-04",
+				"label": "2026"
+			},
+			"datePlacement": "before"
+		},
+		{
+			"title": "🏅 The World’s Most Influential Mentor",
+			"location": "UK",
+			"description": "Honored in ADPList100 from 5,000+ global nominations",
+			"date": {
+				"datetime": "2024-12",
+				"label": "2024"
+			},
+			"hidden": true
+		},
+		{
+			"title": "🥇 #1 Mentor in Europe - ADPList Mentor of Year",
+			"location": "UK",
+			"description": "Recognized for impactful contributions to mentorship",
+			"date": {
+				"datetime": "2024-12",
+				"label": "2024"
+			}
+		},
+		{
+			"title": "🎖️ UK Global Talent Visa - Tech Nation",
+			"location": "UK",
+			"description": "Endorsed as an exceptional talent and global leader in tech",
+			"date": {
+				"datetime": "2024",
+				"label": "2024"
+			}
+		},
+		{
+			"title": "Super Mentor - Top 1% Mentor in Engineering",
+			"location": "UK",
+			"description": "Mentorship on ADPList, awarded 4x in a row Jul–Oct",
+			"date": {
+				"datetime": "2024",
+				"label": "2024"
+			},
+			"hidden": true
+		},
+		{
+			"title": "Best Website Builder and App Builder Service",
+			"location": "IR",
+			"description": "Winner at IR Web and Mobile Festival",
+			"date": {
+				"datetime": "2022",
+				"label": "2022"
+			},
+			"hidden": true
+		},
+		{
+			"title": "🎖️ Recognized as a National Elite",
+			"location": "IR",
+			"description": "Awarded by IR National Elites Foundation for excellence",
+			"date": {
+				"datetime": "2013",
+				"label": "2013"
+			}
+		},
+		{
+			"title": "The Best Corporate, Tourism Website",
+			"location": "IR",
+			"description": [
+				{
+					"type": "text",
+					"value": "5"
+				},
+				{
+					"type": "sup",
+					"value": "th"
+				},
+				{
+					"type": "text",
+					"value": " IR Web Festival"
+				}
+			],
+			"date": {
+				"datetime": "2012",
+				"label": "2012"
+			},
+			"hidden": true
+		},
+		{
+			"title": "🏆 Silver Medal & Medallion for Excellence",
+			"location": "Yazd, IR",
+			"description": "WorldSkills IR - IT Software Solutions for Business",
+			"date": {
+				"datetime": "2010-09-18",
+				"label": "2010"
+			},
+			"hidden": true
+		},
+		{
+			"title": "Medallion for Excellence",
+			"location": "Mashhad, IR",
+			"description": "WorldSkills IR - IT Software Applications",
+			"date": {
+				"datetime": "2007-07",
+				"label": "2007"
+			},
+			"hidden": true
+		}
+	]
+}

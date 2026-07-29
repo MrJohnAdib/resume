@@ -1,79 +1,44 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { type ZodType, z } from "zod";
+import { z } from "zod";
 import { ResumeConfigSchema } from "../src/schema/config.ts";
+import { LayoutSourceSchema } from "../src/schema/layout.ts";
 import {
-	LayoutSelectionSchema,
-	PageSchema,
-	SectionOrderSchema,
-	ThemeSchema,
-	TypographySchema,
-} from "../src/schema/layout.ts";
-import {
-	ContactSchema,
-	IdentitySchema,
-	LinksSchema,
-	SummarySchema,
+	PersonSourceSchema,
+	SummarySourceSchema,
 } from "../src/schema/person.ts";
-import { ResumeSchema } from "../src/schema/resume.ts";
-import { AwardItemSchema } from "../src/schema/section-awards.ts";
-import { EducationItemSchema } from "../src/schema/section-education.ts";
-import {
-	ExperienceBulletsSchema,
-	ExperienceItemSchema,
-	ExperienceProfileSchema,
-	ExperienceTechnologiesSchema,
-} from "../src/schema/section-experience.ts";
-import { SkillGroupSchema } from "../src/schema/section-skills.ts";
-import { VolunteeringItemSchema } from "../src/schema/section-volunteering.ts";
-import {
-	AnalyticsSchema,
-	AssetsSchema,
-	BannerSchema,
-	ConsoleSchema,
-	MetadataSchema,
-	PdfSchema,
-} from "../src/schema/site.ts";
+import { RoleSourceSchema } from "../src/schema/role.ts";
+import { AwardsSourceSchema } from "../src/schema/section-awards.ts";
+import { EducationSourceSchema } from "../src/schema/section-education.ts";
+import { SkillsSourceSchema } from "../src/schema/section-skills.ts";
+import { SiteSourceSchema } from "../src/schema/site.ts";
 
-const schemas: Record<string, ZodType> = {
-	"resume-config": ResumeConfigSchema,
-	"composed-resume": ResumeSchema,
-	"site-metadata": MetadataSchema,
-	"site-analytics": AnalyticsSchema,
-	"site-assets": AssetsSchema,
-	"site-pdf": PdfSchema,
-	"site-banner": BannerSchema,
-	"site-console": ConsoleSchema,
-	"person-identity": IdentitySchema,
-	"person-contact": ContactSchema,
-	"person-links": LinksSchema,
-	"person-summary": SummarySchema,
-	"layout-page": PageSchema,
-	"layout-theme": ThemeSchema,
-	"layout-typography": TypographySchema,
-	"layout-section-order": SectionOrderSchema,
-	"layout-selection": LayoutSelectionSchema,
-	"section-experience": ExperienceItemSchema,
-	"experience-profile": ExperienceProfileSchema,
-	"experience-bullets": ExperienceBulletsSchema,
-	"experience-technologies": ExperienceTechnologiesSchema,
-	"section-skills": SkillGroupSchema,
-	"section-awards": AwardItemSchema,
-	"section-education": EducationItemSchema,
-	"section-volunteering": VolunteeringItemSchema,
-};
+const options = { target: "draft-2020-12" as const, io: "input" as const };
+
+function definition(schema: z.ZodType) {
+	const generated = z.toJSONSchema(schema, options) as Record<string, unknown>;
+	generated.$schema = undefined;
+	return generated;
+}
 
 async function main() {
-	const root = path.resolve("schema");
-	await mkdir(root, { recursive: true });
-	await Promise.all(
-		Object.entries(schemas).map(([name, schema]) =>
-			writeFile(
-				path.join(root, `${name}.schema.json`),
-				`${JSON.stringify(z.toJSONSchema(schema), null, "\t")}\n`,
-			),
-		),
-	);
+	const output = path.resolve("schema/resume.schema.json");
+	const schema = z.toJSONSchema(ResumeConfigSchema, options) as Record<
+		string,
+		unknown
+	>;
+	schema.$defs = {
+		site: definition(SiteSourceSchema),
+		person: definition(PersonSourceSchema),
+		summary: definition(SummarySourceSchema),
+		skills: definition(SkillsSourceSchema),
+		awards: definition(AwardsSourceSchema),
+		education: definition(EducationSourceSchema),
+		role: definition(RoleSourceSchema),
+		layout: definition(LayoutSourceSchema),
+	};
+	await mkdir(path.dirname(output), { recursive: true });
+	await writeFile(output, `${JSON.stringify(schema, null, "\t")}\n`);
 }
 
 main().catch((error) => {

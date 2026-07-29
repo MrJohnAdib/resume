@@ -1,5 +1,0 @@
-{
-	"id": "api",
-	"fields": ["title", "items"],
-	"items": ["soap", "rest", "graphql", "websocket", "trpc"]
-}

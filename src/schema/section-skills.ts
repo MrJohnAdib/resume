@@ -1,12 +1,34 @@
 import { z } from "zod";
-import { StableItemSchema, TechnologySchema } from "./common.ts";
+import { HiddenFields, StableItemSchema } from "./common.ts";
 
-const SkillSchema = TechnologySchema.extend({
-	title: z.string(),
-	separatorAfter: z.string(),
+const SkillSourceSchema = z.union([
+	z.string().min(1),
+	z.object({
+		label: z.string().min(1),
+		title: z.string().min(1).optional(),
+		separatorAfter: z.string().min(1).optional(),
+		...HiddenFields,
+	}),
+]);
+
+export const SkillsSourceSchema = z.object({
+	title: z.string().min(1),
+	groups: z.array(
+		z.object({
+			title: z.string().min(1),
+			items: z.array(SkillSourceSchema).min(1).optional(),
+			...HiddenFields,
+		}),
+	),
 });
 
 export const SkillGroupSchema = StableItemSchema.extend({
 	title: z.string().min(1),
-	items: z.array(SkillSchema),
+	items: z.array(
+		StableItemSchema.extend({
+			label: z.string().min(1),
+			title: z.string().optional(),
+			separatorAfter: z.string(),
+		}),
+	),
 });

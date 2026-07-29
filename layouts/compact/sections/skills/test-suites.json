@@ -1,5 +1,0 @@
-{
-	"id": "test-suites",
-	"fields": ["title", "items"],
-	"items": ["cypress", "playwright", "storybook", "jest", "maestro", "vitest"]
-}

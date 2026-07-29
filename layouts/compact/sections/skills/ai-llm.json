@@ -1,5 +1,0 @@
-{
-	"id": "ai-llm",
-	"fields": ["title", "items"],
-	"items": ["openai", "gemini", "vertex-ai", "llama", "rag", "claude"]
-}

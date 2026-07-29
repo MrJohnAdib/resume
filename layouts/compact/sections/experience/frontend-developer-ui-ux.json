@@ -1,8 +1,0 @@
-{
-	"id": "frontend-developer-ui-ux",
-	"fields": ["title", "organization", "employmentType", "duration", "dates"],
-	"bullets": [
-		"designed-and-deployed-40-wordpress-websites-improved-user-experience"
-	],
-	"technologies": []
-}

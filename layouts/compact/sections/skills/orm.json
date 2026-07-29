@@ -1,5 +1,0 @@
-{
-	"id": "orm",
-	"fields": ["title", "items"],
-	"items": ["prisma", "typeorm", "drizzle", "mongoose"]
-}

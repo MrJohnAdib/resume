@@ -5,7 +5,7 @@
 		{% include "banner.njk" %}
 		<div id="pageContainer" class="overflow-auto">
 			<div id="printArea" data-size="{{ layout.page.size }}"
-				data-layout-label="{{ layout.page.label }}" data-overflow-policy="{{ layout.page.overflowPolicy }}"
+				data-layout-label="{{ layout.page.label }}" data-overflow-policy="error"
 				data-page-width="{{ layout.page.width }}" data-page-height="{{ layout.page.height }}">
 				{% include "header.njk" %}
 				<main class="flex space-x-4 mx-6 mt-4 mb-4 bg-white">

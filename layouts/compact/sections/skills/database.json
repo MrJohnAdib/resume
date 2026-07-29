@@ -1,5 +1,0 @@
-{
-	"id": "database",
-	"fields": ["title", "items"],
-	"items": ["mysql", "postgresql", "mongodb", "firestore", "json", "yaml"]
-}

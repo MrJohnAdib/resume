@@ -1,8 +1,0 @@
-{
-	"id": "software-engineer",
-	"fields": ["title", "organization", "employmentType", "duration", "dates"],
-	"bullets": [
-		"established-a-cloud-archive-solution-that-annually-saves-1m-documents-a"
-	],
-	"technologies": []
-}

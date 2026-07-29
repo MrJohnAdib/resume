@@ -12,7 +12,7 @@ test("loads the complete modular repository configuration", async () => {
 		site: { metadata: { title: string } };
 		person: { identity: { name: string } };
 		sections: { experience: { items: Array<{ id: string }> } };
-		layout: { sectionOrder: Array<{ column: string }> };
+		layout: { sections: Array<{ column: string }> };
 	};
 
 	assert.equal(result.site.metadata.title, "John Adib - Resume");
@@ -21,13 +21,13 @@ test("loads the complete modular repository configuration", async () => {
 		result.sections.experience.items[0]?.id,
 		"engineering-manager-promoted-from-senior",
 	);
-	assert.equal(result.layout.sectionOrder[0]?.column, "left");
+	assert.equal(result.layout.sections[0]?.column, "left");
 });
 
 test("reports the source file and JSON path for entry errors", async () => {
 	const root = await mkdtemp(path.join(tmpdir(), "resume-config-"));
 	const file = path.join(root, "resume.config.json");
-	await writeFile(file, JSON.stringify({ schemaVersion: "1.0.0" }));
+	await writeFile(file, JSON.stringify({}));
 
 	await assert.rejects(
 		() => loadResumeConfig(file),

@@ -86,9 +86,6 @@ abbr {
 	#phoneBox {
 		display: flex !important;
 	}
-	#phoneBox[data-show-in-print="false"] {
-		display: none !important;
-	}
 	@page {
 		size: A4;
 		margin-top: 0;

@@ -1,9 +1,0 @@
-{
-	"id": "computer-lecturer",
-	"status": "alternate",
-	"files": {
-		"profile": "profile.json",
-		"bullets": "bullets.json",
-		"technologies": "technologies.json"
-	}
-}

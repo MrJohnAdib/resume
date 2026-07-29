@@ -12,7 +12,14 @@ function validCalendarDate(value: string) {
 	);
 }
 
-export const ContentStatusSchema = z.enum(["current", "alternate", "archived"]);
+export const HiddenFields = { hidden: z.literal(true).optional() };
+export const SlugSchema = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+export const DateValueSchema = z
+	.string()
+	.regex(
+		/^(?:\d{4}(?:-(?:0[1-9]|1[0-2])(?:-(?:0[1-9]|[12]\d|3[01]))?)?|present)$/,
+	)
+	.refine(validCalendarDate, "Invalid calendar date");
 
 export const InlineNodeSchema = z.discriminatedUnion("type", [
 	z.object({ type: z.literal("text"), value: z.string() }),
@@ -20,49 +27,33 @@ export const InlineNodeSchema = z.discriminatedUnion("type", [
 	z.object({ type: z.literal("sup"), value: z.string() }),
 ]);
 
-export const RichTextSchema = z.union([z.string(), z.array(InlineNodeSchema)]);
+export const RichTextSchema = z.union([
+	z.string().min(1),
+	z.array(InlineNodeSchema).min(1),
+]);
 
 export const DateLabelSchema = z.object({
-	datetime: z
-		.string()
-		.regex(
-			/^(?:\d{4}(?:-(?:0[1-9]|1[0-2])(?:-(?:0[1-9]|[12]\d|3[01]))?)?|present)$/,
-		)
-		.refine(validCalendarDate, "Invalid calendar date"),
-	label: z.string(),
+	datetime: DateValueSchema,
+	label: z.string().min(1),
 });
 
-export const DateRangeSchema = z.object({
-	start: DateLabelSchema,
-	end: DateLabelSchema,
+export const StableItemSchema = z.object({
+	id: SlugSchema,
+	...HiddenFields,
 });
 
-export const OrganizationSchema = z
-	.object({
-		name: z.string().min(1),
-		url: z.string(),
-		linkEnabled: z.boolean().optional(),
-	})
-	.loose();
-
-export const StableItemSchema = z
-	.object({
-		id: z
-			.string()
-			.min(1)
-			.regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
-		status: ContentStatusSchema.optional(),
-	})
-	.loose();
+export const BulletSourceSchema = z.union([
+	z.string().min(1),
+	z.object({
+		text: z.string().min(1),
+		annotations: z.array(InlineNodeSchema).min(1).optional(),
+		...HiddenFields,
+	}),
+]);
 
 export const BulletSchema = StableItemSchema.extend({
 	text: RichTextSchema,
-	annotations: z.array(InlineNodeSchema).optional(),
-});
-
-export const TechnologySchema = z.object({
-	id: z.string().min(1),
-	label: z.string().min(1),
+	annotations: z.array(InlineNodeSchema).min(1).optional(),
 });
 
 export type RichText = z.infer<typeof RichTextSchema>;

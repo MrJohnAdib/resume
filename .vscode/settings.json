@@ -11,6 +11,44 @@
 	"search.exclude": {
 		"**/package-lock.json": true
 	},
+	"json.schemas": [
+		{
+			"fileMatch": ["/resume.config.json"],
+			"url": "./schema/resume.schema.json"
+		},
+		{
+			"fileMatch": ["/data/site.json"],
+			"url": "./schema/resume.schema.json#/$defs/site"
+		},
+		{
+			"fileMatch": ["/data/person.json"],
+			"url": "./schema/resume.schema.json#/$defs/person"
+		},
+		{
+			"fileMatch": ["/data/summary.json"],
+			"url": "./schema/resume.schema.json#/$defs/summary"
+		},
+		{
+			"fileMatch": ["/data/skills.json"],
+			"url": "./schema/resume.schema.json#/$defs/skills"
+		},
+		{
+			"fileMatch": ["/data/awards.json"],
+			"url": "./schema/resume.schema.json#/$defs/awards"
+		},
+		{
+			"fileMatch": ["/data/education.json"],
+			"url": "./schema/resume.schema.json#/$defs/education"
+		},
+		{
+			"fileMatch": ["/data/experience/*.json", "/data/volunteering/*.json"],
+			"url": "./schema/resume.schema.json#/$defs/role"
+		},
+		{
+			"fileMatch": ["/layouts/*.json"],
+			"url": "./schema/resume.schema.json#/$defs/layout"
+		}
+	],
 	"editor.rulers": [80, 100, 120],
 	// remove trailing whitespace
 	"files.trimTrailingWhitespace": true,

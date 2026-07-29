@@ -1,9 +1,0 @@
-{
-	"id": "co-founder-cto",
-	"fields": ["title", "organization", "employmentType", "duration", "dates"],
-	"bullets": [
-		"implemented-an-integrated-cloud-ecommerce-solution-for-1-200-businesses",
-		"launched-an-automated-app-factory-that-generated-a-native-android-shoppi"
-	],
-	"technologies": []
-}

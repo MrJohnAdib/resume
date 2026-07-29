@@ -1,0 +1,64 @@
+{
+	"metadata": {
+		"language": "en",
+		"direction": "ltr",
+		"title": "John Adib - Resume",
+		"description": "Senior Solution Architect | Veteran software engineer with 17+ years of experience in developing cutting-edge web solutions. ⭐️ UK Global Talent Visa Holder",
+		"keywords": "John Adib, Javad Adib, MrAdib, Adib, Resume, CV, CTO, Principal Software Enginner, Solution Architect, Senior Lead Software Engineer, Senior Full Stack Developer, Senior Software Engineer",
+		"date": "2026-07-17",
+		"author": "John Adib",
+		"authorUrl": "https://MrAdib.com",
+		"url": "https://resume.MrAdib.com/",
+		"image": "https://resume.mradib.com/img/cover-v4.jpg",
+		"socialTitle": "John Adib - Senior Solution Architect - Resume",
+		"socialDescription": "Veteran software engineer with 17+ years of experience in developing cutting-edge web solutions. ⭐️ UK Global Talent Visa Holder",
+		"twitterCard": "summary_large_image",
+		"alternatives": [
+			{
+				"keywords": "some keywords!",
+				"hidden": true
+			}
+		]
+	},
+	"analytics": {
+		"measurementId": "G-WXH57T5405"
+	},
+	"assets": {
+		"favicon": "./img/favicon.png",
+		"fontStylesheet": "./fonts/AirbnbCereal/style.css?v=19",
+		"resumeStylesheet": "./style/style.min.css?v=19",
+		"themeStylesheet": "./style/theme.css?v=1",
+		"runtimeScript": "./script/resume.js?v=7",
+		"icons": {
+			"email": "./img/email.svg",
+			"telephone": "./img/tel.svg",
+			"location": "./img/location.svg",
+			"badge": "./img/star.svg"
+		}
+	},
+	"pdf": {
+		"version": "v24.4.0",
+		"latestVersion": "v24.4.0",
+		"folder": "./pdf/",
+		"filePrefix": "MrAdib-Resume-",
+		"buttonLabel": "Download PDF"
+	},
+	"banner": {
+		"messageBefore": "This resume is crafted using",
+		"technology": "HTML, CSS, and a touch of JavaScript",
+		"messageAfter": ". Feel free to download, print, share, or",
+		"linkLabel": "check the GitHub repo!",
+		"linkUrl": "https://github.com/johnAdib/resume",
+		"gradientFrom": "#ff80b5",
+		"gradientTo": "#9089fc",
+		"clipPath": "polygon(74.8% 41.9%,97.2% 73.2%,100% 34.9%,92.5% 0.4%,87.5% 0%,75% 28.6%,58.5% 54.6%,50.1% 56.8%,46.9% 44%,48.3% 17.4%,24.7% 53.9%,0% 27.9%,11.9% 74.2%,24.9% 54.1%,68.6% 100%,74.8% 41.9%)"
+	},
+	"console": {
+		"messages": [
+			"What are you searching for here? 😎",
+			"If you need more info about me, check out my website at https://mradib.com",
+			"If you like it, you can fork this one-page resume repository or give me a star on GitHub https://github.com/MrJohnAdib/resume"
+		],
+		"art": "\n\n\t\t888b     d888                d8888      888 d8b 888\n\t\t8888b   d8888               d88888      888 Y8P 888\n\t\t88888b.d88888              d88P888      888     888\n\t\t888Y88888P888 888d888     d88P 888  .d88888 888 88888b.       .d8888b  .d88b.  88888b.d88b.\n\t\t888 Y888P 888 888P\"      d88P  888 d88\" 888 888 888 \"88b     d88P\"    d88\"\"88b 888 \"888 \"88b\n\t\t888  Y8P  888 888       d88P   888 888  888 888 888  888     888      888  888 888  888  888\n\t\t888   \"   888 888      d8888888888 Y88b 888 888 888 d88P d8b Y88b.    Y88..88P 888  888  888\n\t\t888       888 888     d88P     888  \"Y88888 888 88888P\"  Y8P  \"Y8888P  \"Y88P\"  888  888  888\n\n\t\toooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\n\t\t"
+	}
+}

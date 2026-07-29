@@ -1,0 +1,402 @@
+{
+	"title": "Skills",
+	"groups": [
+		{
+			"title": "Tech Stack",
+			"items": ["TypeScript", "Node.js", "Python", "Bash"]
+		},
+		{
+			"title": "Additional Programming Languages",
+			"items": ["Python", "Rust", "Bash", "PHP", "C", "C++", "C#", "VB.NET"],
+			"hidden": true
+		},
+		{
+			"title": "AI & LLM",
+			"items": [
+				"OpenAI",
+				"Gemini",
+				"Vertex AI",
+				"Llama",
+				{
+					"label": "RAG",
+					"title": "Retrieval-Augmented Generation"
+				},
+				"Claude"
+			]
+		},
+		{
+			"title": "API",
+			"items": [
+				"SOAP",
+				"REST",
+				"GraphQL",
+				"WebSocket",
+				"tRPC",
+				{
+					"label": "Protobuf",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Web Framework",
+			"items": [
+				"Express.js",
+				"NestJS",
+				"Fastify",
+				"Hono",
+				"Next.js",
+				{
+					"label": "Nuxt.js",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Front-end JS Library",
+			"items": [
+				"Vanilla JS",
+				"Vue.js",
+				"React.js",
+				{
+					"label": "jQuery",
+					"hidden": true
+				},
+				{
+					"label": "Alpine.js",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Mobile",
+			"items": [
+				"React Native",
+				"Expo",
+				"EAS",
+				{
+					"label": "OTA",
+					"title": "Over-the-Air"
+				},
+				"Sentry",
+				"Mixpanel",
+				"AppsFlyer"
+			]
+		},
+		{
+			"title": "CSS Framework",
+			"items": [
+				"Tailwind CSS",
+				"Shadcn",
+				"Bootstrap",
+				"Material UI",
+				{
+					"label": "Semantic UI",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Test Suites",
+			"items": [
+				"Cypress",
+				"Playwright",
+				"Storybook",
+				"Jest",
+				"Maestro",
+				"Vitest",
+				{
+					"label": "PHPUnit",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Build Tools",
+			"items": ["Sass", "Grunt", "Gulp", "Gradle", "Webpack"],
+			"hidden": true
+		},
+		{
+			"title": "Version Control System",
+			"items": ["Git", "GitHub", "GitLab"],
+			"hidden": true
+		},
+		{
+			"title": "Infra",
+			"items": [
+				"Terraform",
+				"Cloud Run",
+				"Kubernetes",
+				"Firebase",
+				"Edge",
+				{
+					"label": "AWS",
+					"title": "Amazon Web Services"
+				},
+				{
+					"label": "GCP",
+					"title": "Google Cloud Platform"
+				},
+				{
+					"label": "DO",
+					"title": "Digital Ocean",
+					"hidden": true
+				},
+				{
+					"label": "Secret Manager",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Security",
+			"items": [
+				{
+					"label": "OWASP",
+					"title": "Open Web Application Security Project"
+				},
+				{
+					"label": "CORS",
+					"title": "Cross-Origin Resource Sharing"
+				},
+				{
+					"label": "XSS",
+					"title": "Cross-Origin Resource Sharing"
+				},
+				{
+					"label": "CSRF",
+					"title": "Cross-Site Request Forgery"
+				},
+				{
+					"label": "DDoS",
+					"title": "Distributed Denial of Service"
+				},
+				{
+					"label": "CSP",
+					"title": "Content Security Policy"
+				},
+				{
+					"label": "JWT",
+					"title": "JSON Web Token"
+				},
+				"OAuth2"
+			],
+			"hidden": true
+		},
+		{
+			"title": "Database",
+			"items": [
+				"MySQL",
+				"PostgreSQL",
+				"MongoDB",
+				"Firestore",
+				"JSON",
+				"YAML",
+				{
+					"label": "RDBMS",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "ORM",
+			"items": [
+				"Prisma",
+				"TypeORM",
+				"Drizzle",
+				"Mongoose",
+				{
+					"label": "Doctrine",
+					"hidden": true
+				},
+				{
+					"label": "Eloquent",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Distributed Cache",
+			"items": ["Redis", "Memcached"]
+		},
+		{
+			"title": "Servers and CDN",
+			"items": ["Nginx", "Apache", "APISIX", "Cloudflare"],
+			"hidden": true
+		},
+		{
+			"title": "CI/CD Automation",
+			"items": [
+				"Docker",
+				{
+					"label": "GH Actions",
+					"title": "GitHub Actions",
+					"separatorAfter": " "
+				},
+				"Turborepo",
+				"Monorepo",
+				{
+					"label": "Docker Compose",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Messaging and Monitoring",
+			"items": [
+				"RabbitMQ",
+				"Elasticsearch",
+				"Pub/Sub",
+				{
+					"label": "Datadog",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Server Configuration Framework UI",
+			"items": ["cPanel", "DirectAdmin"],
+			"hidden": true
+		},
+		{
+			"title": "Network",
+			"items": [
+				"DNS",
+				"DHCP",
+				"HTTP",
+				"SSL",
+				"TLS",
+				"SMTP",
+				"FTP",
+				"MIME",
+				"SSH"
+			],
+			"hidden": true
+		},
+		{
+			"title": "OS",
+			"items": [
+				"Windows",
+				"Ubuntu",
+				"Debian",
+				"CentOS",
+				"macOS",
+				"VMware ESXi"
+			],
+			"hidden": true
+		},
+		{
+			"title": "Agile Methodologies",
+			"items": [
+				"Scrum",
+				"Kanban",
+				{
+					"label": "DDD",
+					"title": "Domain Driven Design"
+				},
+				{
+					"label": "KPI",
+					"title": "Key Performance Indicator"
+				},
+				{
+					"label": "OKR",
+					"title": "Objectives and Key Results"
+				},
+				"Scrumban"
+			],
+			"hidden": true
+		},
+		{
+			"title": "Engineering Principles",
+			"items": [
+				{
+					"label": "SoC",
+					"title": "Separation of Concerns"
+				},
+				{
+					"label": "SOLID",
+					"title": "Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion"
+				},
+				{
+					"label": "OOP",
+					"title": "Object Oriented Programming"
+				},
+				{
+					"label": "TDD",
+					"title": "Test Driven Development"
+				},
+				{
+					"label": "DRY",
+					"title": "Don't Repeat Yourself"
+				},
+				{
+					"label": "EDA",
+					"title": "Event Driven Architecture"
+				},
+				{
+					"label": "YAGNI",
+					"title": "You Aren't Gonna Need It",
+					"hidden": true
+				},
+				{
+					"label": "KISS",
+					"title": "Keep It Simple Stupid",
+					"hidden": true
+				}
+			]
+		},
+		{
+			"title": "Collaboration Tool",
+			"items": ["Jira", "Linear", "Trello", "Zoom", "Slack"],
+			"hidden": true
+		},
+		{
+			"title": "Graphic Design Tool",
+			"items": ["Photoshop", "Illustrator", "InDesign", "Figma"],
+			"hidden": true
+		},
+		{
+			"title": "Office Specialist",
+			"items": ["Word", "Excel", "Access", "PowerPoint", "VBA"],
+			"hidden": true
+		},
+		{
+			"title": "Core Web Essentials",
+			"items": ["HTML", "CSS", "JavaScript", "Crawl", "SEO"]
+		},
+		{
+			"title": "Miscellaneous",
+			"items": [
+				"QA",
+				"NPM",
+				"PWA",
+				"AJAX",
+				"CLI",
+				"MVC",
+				{
+					"label": "SSR",
+					"title": "Server-Side Rendering"
+				},
+				{
+					"label": "SSG",
+					"title": "Static-Site Generating"
+				},
+				"Analysis",
+				"Maintenance",
+				"XHTML",
+				"Composer",
+				"LEMP",
+				"LAMP",
+				{
+					"label": "SPA",
+					"title": "Single-Page Application"
+				}
+			],
+			"hidden": true
+		},
+		{
+			"title": "This resume is made with HTML and Tailwind CSS",
+			"hidden": true
+		}
+	]
+}

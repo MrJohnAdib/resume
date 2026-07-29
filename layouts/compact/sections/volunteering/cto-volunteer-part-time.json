@@ -1,7 +1,0 @@
-{
-	"id": "cto-volunteer-part-time",
-	"fields": ["title", "organization", "duration", "dates"],
-	"bullets": [
-		"founded-and-scaled-the-entire-technical-ecosystem-from-zero-engineered"
-	]
-}

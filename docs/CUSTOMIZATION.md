@@ -2,43 +2,52 @@
 
 ## Edit personal details
 
-Site settings live in `data/site/`. Identity, contact details, links, and summary
-live in `data/person/`. Edit values there; do not put resume copy in templates.
+Edit `data/person.json` for identity, contact details, and links. Edit
+`data/summary.json` for summary lines and `data/site.json` for metadata, assets,
+PDF naming, analytics, banner, and console copy.
 
-## Add an item
+Do not add IDs, `status: current`, empty values, or behavior flags. Avatar alt
+text is generated from the person's name. The phone link is generated from its
+label, and contact click plus print reveal are automatic.
 
-1. Copy a similar file or item directory under `data/sections/<family>/`.
-2. Give the record a unique, stable `id`.
-3. Add its path to that family's `index.json`.
-4. Add a small selection file under
-   `layouts/compact/sections/<family>/`.
-5. Reference that selection from the layout section's `index.json`.
-6. Run `npm run validate`.
+## Add a role
 
-Experience records keep their stable `id` and optional `status` in the record's
-`index.json`, with separate profile, bullets, and technology files. Their layout
-selections choose explicit `fields`, `bullets`, and `technologies` IDs. Skills
-use `items`; education can use `coursework`. Other section families use the same
-stable-ID pattern and accept any number of records.
-
-## Reorder or omit content
-
-Change top-to-bottom section order in:
+Copy one similar JSON file into `data/experience/` or `data/volunteering/`. The
+filename becomes its generated key, so use a descriptive lowercase filename:
 
 ```text
-layouts/compact/section-order.json
+data/experience/staff-software-engineer.json
 ```
 
-Change item order in the relevant layout section `index.json`. Change selected
-fields, bullets, or technologies in the item's selection file. Content that is
-not selected remains available in `data/` but is omitted from generated HTML.
-The `current`, `alternate`, and `archived` statuses are descriptive only and
-never make content render implicitly.
+Keep the role, organization, dates, bullets, and technologies together in that
+one file. Plain bullet and technology values are strings. Omit unavailable
+properties instead of writing empty strings or arrays.
 
-Change header-link order and selection in `layouts/compact/links.json`. A link's
-status does not select it.
+Add the filename without `.json` to the matching `roles` array in
+`layouts/compact.json`. That array controls role order.
 
-## Preview and verify
+## Reorder sections
+
+Move entries in `layouts/compact.json` under `sections`. Their array order is
+top-to-bottom within each column:
+
+```json
+{ "type": "experience", "column": "left" }
+```
+
+Skills, awards, and education use their array order in `data/skills.json`,
+`data/awards.json`, and `data/education.json`.
+
+## Retain an inactive value
+
+Add `"hidden": true` only to an exceptional role, bullet, skill group, link,
+award, course, or summary line. It remains near related content but is omitted
+from every rendered layout unless a future layout explicitly includes it.
+
+Do not use CSS classes to hide ordinary resume content. The phone box is the
+only allowlisted stateful hidden element.
+
+## Preview and diagnose
 
 ```bash
 npm run dev
@@ -48,21 +57,10 @@ npm test
 npm run check
 ```
 
-`npm run build` fails when the compact layout exceeds one A4 page and reports the
-section and item ID nearest the overflow. Validation errors include the source
-file and JSON path when a reference is missing or an ID is duplicated.
+Validation errors identify the source file and JSON path. Missing or unordered
+role filenames are reported directly. `npm run build` reports the section and
+generated item key if compact output exceeds the original A4 baseline.
 
-The file-length check fails when a hand-written source, template, test, or data
-file reaches 100 lines. Split a large record into focused files instead of
-disabling the check.
-
-Generated schemas for each editable domain are in `schema/`. Runtime settings
-such as PDF naming, phone behavior, and console messages live in `data/site/`
-and `data/person/`; browser modules contain behavior rather than personal values.
-
-## Archived values
-
-Alternative summaries and permanently hidden legacy values are retained under
-`data/archive/`. Do not add archived files to a layout unless the content should
-be visible. `npm run migrate:legacy` is a maintenance tool for reproducing the
-initial extraction from the archived HTML fixture, not a normal editing step.
+The editable contract is generated at `schema/resume.schema.json`. Hand-written
+code, templates, tests, layouts, and documentation must stay below 100 lines.
+Consolidated content files may be longer so the repository stays easy to browse.

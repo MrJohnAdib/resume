@@ -1,0 +1,17 @@
+{
+	"title": "Computer Lecturer",
+	"organization": {
+		"name": "Teacher"
+	},
+	"employmentType": "Part-time",
+	"location": "IR",
+	"duration": "(11 years 4 months)",
+	"dates": {
+		"start": "2006-06",
+		"end": "2017-09"
+	},
+	"bullets": [
+		"Created tens of hours of free video tutorials, which resulted in the acquisition of skills by thousands of Persian speakers."
+	],
+	"hidden": true
+}

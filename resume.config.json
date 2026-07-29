@@ -1,8 +1,20 @@
 {
-	"$schema": "./schema/resume-config.schema.json",
-	"schemaVersion": "1.0.0",
-	"site": "data/site/index.json",
-	"person": "data/person/index.json",
-	"sections": "data/sections/index.json",
-	"layout": "layouts/compact/index.json"
+	"$schema": "./schema/resume.schema.json",
+	"site": "data/site.json",
+	"person": "data/person.json",
+	"summary": "data/summary.json",
+	"sections": {
+		"experience": {
+			"title": "Professional Experience",
+			"directory": "data/experience"
+		},
+		"skills": "data/skills.json",
+		"awards": "data/awards.json",
+		"education": "data/education.json",
+		"volunteering": {
+			"title": "Volunteer work",
+			"directory": "data/volunteering"
+		}
+	},
+	"layout": "layouts/compact.json"
 }

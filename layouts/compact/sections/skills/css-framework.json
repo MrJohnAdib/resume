@@ -1,5 +1,0 @@
-{
-	"id": "css-framework",
-	"fields": ["title", "items"],
-	"items": ["tailwind-css", "shadcn", "bootstrap", "material-ui"]
-}

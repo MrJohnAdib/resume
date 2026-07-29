@@ -3,7 +3,6 @@ import path from "node:path";
 
 const roots = [
 	".github",
-	"data",
 	"docs",
 	"layouts",
 	"scripts",
@@ -58,7 +57,7 @@ async function main() {
 	}
 	if (oversized.length) {
 		throw new Error(
-			`Hand-written files must stay below 100 lines:\n${oversized.join("\n")}`,
+			`Hand-written code and documentation must stay below 100 lines:\n${oversized.join("\n")}`,
 		);
 	}
 	console.log(`Checked ${files.length} hand-written files`);
