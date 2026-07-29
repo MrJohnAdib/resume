@@ -1,0 +1,22 @@
+{
+	"title": "Senior Lead Software Engineer",
+	"organization": {
+		"name": "Loopla",
+		"url": "https://loopla.com/",
+		"linkEnabled": true
+	},
+	"employmentType": "Full-time",
+	"location": "London",
+	"duration": "(2 years 1 month)",
+	"dynamicDuration": false,
+	"dates": {
+		"start": {
+			"datetime": "2022-12-11",
+			"label": "12/2022"
+		},
+		"end": {
+			"datetime": "2024-12-15",
+			"label": "12/2024"
+		}
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"minLength": 1
+		},
+		"fields": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"minLength": 1
+			}
+		},
+		"bullets": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"minLength": 1
+			}
+		},
+		"coursework": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"minLength": 1
+			}
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"minLength": 1
+			}
+		},
+		"technologies": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"minLength": 1
+			}
+		}
+	},
+	"required": [
+		"id",
+		"fields"
+	],
+	"additionalProperties": false
+}

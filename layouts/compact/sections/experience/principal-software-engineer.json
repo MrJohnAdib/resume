@@ -1,0 +1,8 @@
+{
+	"id": "principal-software-engineer",
+	"fields": ["title", "organization", "employmentType", "duration", "dates"],
+	"bullets": [
+		"delivered-an-nfc-powered-attendance-system-with-interactive-display-and"
+	],
+	"technologies": []
+}

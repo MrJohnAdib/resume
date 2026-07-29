@@ -1,0 +1,5 @@
+{
+	"id": "core-web-essentials",
+	"fields": ["title", "items"],
+	"items": ["html", "css", "javascript", "crawl", "seo"]
+}

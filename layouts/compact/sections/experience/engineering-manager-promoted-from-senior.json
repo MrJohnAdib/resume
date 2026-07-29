@@ -1,0 +1,13 @@
+{
+	"id": "engineering-manager-promoted-from-senior",
+	"fields": ["title", "organization", "employmentType", "duration", "dates"],
+	"bullets": [
+		"shifted-ios-and-android-app-releases-from-monthly-to-weekly-a-4x-faster",
+		"deployed-3-ai-reviewers-as-an-automated-guardrail-on-every-pr-enforcing",
+		"developed-a-reusable-design-system-with-90-tested-components-integrated",
+		"shipped-enterprise-auth-panel-using-ai-tools-with-passkey-edge-deployme",
+		"migrated-ci-cd-from-circleci-to-github-actions-achieving-instant-100",
+		"improved-platform-performance-cutting-load-times-across-all-pages-by-60"
+	],
+	"technologies": []
+}

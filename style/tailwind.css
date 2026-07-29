@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @font-face {
 	font-family: "Vazirmatn";
 	src: url("../fonts/Vazirmatn/Vazirmatn[wght].woff2")
@@ -11,7 +10,6 @@
 	font-style: normal;
 	font-display: swap;
 }
-
 body {
 	font-family: "Airbnb Cereal App", ui-sans-serif;
 }
@@ -26,11 +24,9 @@ html[lang="fa"] body {
 img {
 	@apply select-none;
 }
-
 abbr {
 	text-decoration: none !important;
 }
-
 [data-fill] {
 	cursor: pointer;
 	position: relative;
@@ -62,7 +58,6 @@ abbr {
 [data-ai]::selection {
 	background: #fff;
 }
-
 @media screen {
 	body {
 		background-color: #f3f4f6;
@@ -90,6 +85,9 @@ abbr {
 	}
 	#phoneBox {
 		display: flex !important;
+	}
+	#phoneBox[data-show-in-print="false"] {
+		display: none !important;
 	}
 	@page {
 		size: A4;

@@ -1,0 +1,19 @@
+{
+	"id": "distributed-cache",
+	"status": "current",
+	"title": "Distributed Cache",
+	"items": [
+		{
+			"id": "redis",
+			"label": "Redis",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "memcached",
+			"label": "Memcached",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

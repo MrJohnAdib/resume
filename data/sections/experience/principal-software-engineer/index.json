@@ -1,0 +1,9 @@
+{
+	"id": "principal-software-engineer",
+	"status": "current",
+	"files": {
+		"profile": "profile.json",
+		"bullets": "bullets.json",
+		"technologies": "technologies.json"
+	}
+}

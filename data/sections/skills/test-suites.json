@@ -1,0 +1,43 @@
+{
+	"id": "test-suites",
+	"status": "current",
+	"title": "Test Suites",
+	"items": [
+		{
+			"id": "cypress",
+			"label": "Cypress",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "playwright",
+			"label": "Playwright",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "storybook",
+			"label": "Storybook",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "jest",
+			"label": "Jest",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "maestro",
+			"label": "Maestro",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "vitest",
+			"label": "Vitest",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"id": "miscellaneous",
+	"status": "alternate",
+	"title": "Miscellaneous",
+	"items": [
+		{
+			"id": "qa",
+			"label": "QA",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "npm",
+			"label": "NPM",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "pwa",
+			"label": "PWA",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "ajax",
+			"label": "AJAX",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "cli",
+			"label": "CLI",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "mvc",
+			"label": "MVC",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "ssr",
+			"label": "SSR",
+			"title": "Server-Side Rendering",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "ssg",
+			"label": "SSG",
+			"title": "Static-Site Generating",
+			"separatorAfter": "."
+		}
+	]
+}

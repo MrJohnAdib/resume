@@ -1,0 +1,53 @@
+<header itemscope itemtype="https://schema.org/Person" class="overflow-hidden bg-stone-50">
+	<div class="flex m-6 mb-4">
+		<div class="basis-auto w-full">
+			<div class="flex">
+				<div class="grow">
+					<h1 class="text-black text-3xl font-light- leading-8" itemprop="name">{{ person.identity.name }}</h1>
+				</div>
+				<nav class="text-xs flex gap-2 justify-end text-stone-700">
+					{% for link in person.links.items %}
+					<a target="_blank" class="flex leading-4 rounded-lg bg-cyan-600 hover:bg-cyan-800 focus:bg-cyan-900 transition"
+						href="{{ link.url }}" title="{{ link.title }}">
+						<img src="{{ link.icon }}" alt="{{ link.id }}" class="h-8 w-8 p-2" />
+						<span class="bg-white bg-opacity-30 px-2 leading-8 text-white font-xs">{{ link.label }}</span>
+					</a>
+					{% endfor %}
+				</nav>
+			</div>
+			<div class="flex items-center">
+				<div class="grow">
+					<h2 class="text-cyan-600 text-xl leading-7 hover:text-cyan-800 transition" itemprop="jobTitle">
+						{{ person.identity.title }}
+					</h2>
+				</div>
+				<a target="_blank" href="{{ site.metadata.url }}" dir="ltr"
+					class="select-none text-stone-100 hover:text-cyan-800 transition text-xs" tabindex="-1">
+					<code id="version" class="block font-light rtl:text-center"
+						data-latest-pdf="{{ site.pdf.latestVersion }}">{{ site.pdf.version }}</code>
+				</a>
+			</div>
+			<p class="text-stone-700 text-sm leading-snug mt-1" itemprop="knowsAbout">
+				{% for item in person.summary.items %}<span>{{ item }}</span>{% if not loop.last %} {% endif %}{% endfor %}
+			</p>
+		</div>
+	</div>
+	<div id="contactBox" class="bg-stone-100 leading-10 px-6 gap-6 text-xs flex items-center justify-center text-stone-600 not-italic">
+		<div class="flex items-center">
+			<img src="{{ site.assets.icons.email }}" alt="email" />
+			<a class="px-1" href="{{ person.contact.email.href }}" itemprop="email" tabindex="-1">{{ person.contact.email.label }}</a>
+		</div>
+		<div class="flex items-center hidden" id="phoneBox" data-show-in-print="{{ person.contact.phone.showInPrint }}">
+			<img src="{{ site.assets.icons.telephone }}" alt="tel" />
+			<a class="px-1" href="{{ person.contact.phone.href }}" itemprop="telephone" tabindex="-1">{{ person.contact.phone.label }}</a>
+		</div>
+		<div class="flex items-center">
+			<img src="{{ site.assets.icons.location }}" alt="location" />
+			<div class="px-1" itemprop="address">{{ person.contact.location }}</div>
+		</div>
+		<div class="flex items-center">
+			<img src="{{ site.assets.icons.badge }}" alt="star" />
+			<div class="px-1">{{ person.contact.badge }}</div>
+		</div>
+	</div>
+</header>

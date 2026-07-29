@@ -1,0 +1,5 @@
+{
+	"id": "messaging-and-monitoring",
+	"fields": ["title", "items"],
+	"items": ["rabbitmq", "elasticsearch", "pub-sub"]
+}

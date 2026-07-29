@@ -1,0 +1,5 @@
+{
+	"id": "tech-stack",
+	"fields": ["title", "items"],
+	"items": ["typescript", "node-js", "python", "bash"]
+}

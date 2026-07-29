@@ -1,0 +1,49 @@
+{
+	"id": "infra",
+	"status": "current",
+	"title": "Infra",
+	"items": [
+		{
+			"id": "terraform",
+			"label": "Terraform",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "cloud-run",
+			"label": "Cloud Run",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "kubernetes",
+			"label": "Kubernetes",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "firebase",
+			"label": "Firebase",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "edge",
+			"label": "Edge",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "aws",
+			"label": "AWS",
+			"title": "Amazon Web Services",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "gcp",
+			"label": "GCP",
+			"title": "Google Cloud Platform",
+			"separatorAfter": "."
+		}
+	]
+}

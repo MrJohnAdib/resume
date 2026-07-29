@@ -1,0 +1,37 @@
+{
+	"id": "office-specialist",
+	"status": "alternate",
+	"title": "Office Specialist",
+	"items": [
+		{
+			"id": "word",
+			"label": "Word",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "excel",
+			"label": "Excel",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "access",
+			"label": "Access",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "powerpoint",
+			"label": "PowerPoint",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "vba",
+			"label": "VBA",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

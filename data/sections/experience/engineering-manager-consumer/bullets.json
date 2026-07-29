@@ -1,0 +1,14 @@
+[
+	{
+		"id": "shifted-ios-and-android-app-releases-from-monthly-to-weekly-a-4x-faster",
+		"status": "current",
+		"text": "Shifted iOS and Android app releases from monthly to weekly, a 4x faster cadence, shortening lead time and cycle time.",
+		"annotations": []
+	},
+	{
+		"id": "deployed-3-ai-reviewers-as-an-automated-guardrail-on-every-pr-enforcing",
+		"status": "current",
+		"text": "Deployed 3 AI reviewers as an automated guardrail on every PR, enforcing a consistent quality bar and reducing wait time.",
+		"annotations": []
+	}
+]

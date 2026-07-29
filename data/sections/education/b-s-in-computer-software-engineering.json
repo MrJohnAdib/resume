@@ -1,0 +1,99 @@
+{
+	"id": "b-s-in-computer-software-engineering",
+	"status": "current",
+	"degree": "B.S. in Computer Software Engineering",
+	"institution": "Azad University",
+	"employmentType": "Part-time",
+	"location": "Nour, IR",
+	"dates": [
+		{
+			"datetime": "2008-09-22",
+			"label": "2008"
+		},
+		{
+			"datetime": "2014-02-19",
+			"label": "2014"
+		},
+		{
+			"datetime": "2014-02-19",
+			"label": "2014"
+		}
+	],
+	"coursework": [
+		{
+			"id": "fundamentals-of-programming",
+			"status": "alternate",
+			"label": "Fundamentals of Programming"
+		},
+		{
+			"id": "advanced-programming",
+			"status": "current",
+			"label": "Advanced Programming"
+		},
+		{
+			"id": "discrete-mathematics",
+			"status": "alternate",
+			"label": "Discrete mathematics"
+		},
+		{
+			"id": "data-structure",
+			"status": "current",
+			"label": "Data Structure"
+		},
+		{
+			"id": "design-and-implementation-of-programming-languages",
+			"status": "alternate",
+			"label": "Design and Implementation of Programming Languages"
+		},
+		{
+			"id": "algorithm-design",
+			"status": "current",
+			"label": "Algorithm Design"
+		},
+		{
+			"id": "software-engineering",
+			"status": "alternate",
+			"label": "Software Engineering"
+		},
+		{
+			"id": "database-design",
+			"status": "current",
+			"label": "Database Design"
+		},
+		{
+			"id": "artificial-intelligence",
+			"status": "alternate",
+			"label": "Artificial intelligence"
+		},
+		{
+			"id": "computer-architecture",
+			"status": "alternate",
+			"label": "Computer Architecture"
+		},
+		{
+			"id": "compiler-design-fundamentals",
+			"status": "alternate",
+			"label": "Compiler Design Fundamentals"
+		},
+		{
+			"id": "microprocessor",
+			"status": "alternate",
+			"label": "Microprocessor"
+		},
+		{
+			"id": "computer-networks",
+			"status": "alternate",
+			"label": "Computer Networks"
+		},
+		{
+			"id": "expert-system",
+			"status": "alternate",
+			"label": "Expert System"
+		},
+		{
+			"id": "internet-engineering",
+			"status": "current",
+			"label": "Internet Engineering"
+		}
+	]
+}

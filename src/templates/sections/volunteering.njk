@@ -1,0 +1,39 @@
+<article class="mb-2.5" data-section-id="{{ section.id }}">
+	{% include "section-heading.njk" %}
+	{% for item in section.items %}
+	<section class="mb-1" data-item-id="{{ item.id }}" itemscope itemtype="https://schema.org/Organization">
+		{% if "title" in item.fields %}<h3 class="font-light text-base leading-5">{{ item.title }}</h3>{% endif %}
+		<div class="flex items-center">
+			{% if "organization" in item.fields %}
+			<h4 class="flex items-center font-light text-sm leading-4">
+				{% if item.organization.url %}
+				<a class="text-stone-500" itemprop="name" target="_blank" href="{{ item.organization.url }}">{{ item.organization.name }}</a>
+				{% else %}
+				<span class="text-stone-500" itemprop="name">{{ item.organization.name }}</span>
+				{% endif %}
+			</h4>
+			{% endif %}
+			<div class="grow flex items-center mx-1 text-xs"></div>
+			{% if "location" in item.fields %}<div class="grow text-xs text-stone-500">{{ item.location }}</div>{% endif %}
+			{% if "duration" in item.fields %}
+			<div class="text-xs text-stone-700"{% if item.dynamicDuration %} data-duration{% endif %}>{{ item.duration }}</div>
+			{% endif %}
+			{% if "dates" in item.fields %}
+			<div class="flex items-center text-xs">
+				<div dir="ltr" class="text-stone-700 text-xs px-1">
+					<time datetime="{{ item.dates.start.datetime }}">{{ item.dates.start.label }}</time> -
+					<time datetime="{{ item.dates.end.datetime }}">{{ item.dates.end.label }}</time>
+				</div>
+			</div>
+			{% endif %}
+		</div>
+		{% if item.bullets.length %}
+		<ul class="list-disc list-outside leading-[14px] text-xs text-gray-300 ml-4" itemprop="description">
+			{% for bullet in item.bullets %}
+			<li><span class="text-stone-500 mt-1.5 block">{{ bullet.text }}</span></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</section>
+	{% endfor %}
+</article>

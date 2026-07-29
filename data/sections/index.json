@@ -1,0 +1,7 @@
+{
+	"experience": "experience/index.json",
+	"skills": "skills/index.json",
+	"awards": "awards/index.json",
+	"education": "education/index.json",
+	"volunteering": "volunteering/index.json"
+}

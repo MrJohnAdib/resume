@@ -1,0 +1,63 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"email": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "string",
+					"minLength": 1
+				},
+				"href": {
+					"type": "string",
+					"pattern": "^mailto:.*"
+				}
+			},
+			"required": [
+				"label",
+				"href"
+			],
+			"additionalProperties": false
+		},
+		"phone": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "string",
+					"minLength": 1
+				},
+				"href": {
+					"type": "string",
+					"pattern": "^tel:.*"
+				},
+				"revealOnContactClick": {
+					"type": "boolean"
+				},
+				"showInPrint": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"label",
+				"href",
+				"revealOnContactClick",
+				"showInPrint"
+			],
+			"additionalProperties": false
+		},
+		"location": {
+			"type": "string"
+		},
+		"badge": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"email",
+		"phone",
+		"location",
+		"badge"
+	],
+	"additionalProperties": false
+}

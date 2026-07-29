@@ -1,0 +1,96 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string",
+			"minLength": 1
+		},
+		"organization": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string",
+					"minLength": 1
+				},
+				"url": {
+					"type": "string"
+				},
+				"linkEnabled": {
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"name",
+				"url"
+			],
+			"additionalProperties": {}
+		},
+		"employmentType": {
+			"type": "string"
+		},
+		"location": {
+			"type": "string"
+		},
+		"duration": {
+			"type": "string"
+		},
+		"dynamicDuration": {
+			"type": "boolean"
+		},
+		"dates": {
+			"type": "object",
+			"properties": {
+				"start": {
+					"type": "object",
+					"properties": {
+						"datetime": {
+							"type": "string",
+							"pattern": "^(?:\\d{4}(?:-(?:0[1-9]|1[0-2])(?:-(?:0[1-9]|[12]\\d|3[01]))?)?|present)$"
+						},
+						"label": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"datetime",
+						"label"
+					],
+					"additionalProperties": false
+				},
+				"end": {
+					"type": "object",
+					"properties": {
+						"datetime": {
+							"type": "string",
+							"pattern": "^(?:\\d{4}(?:-(?:0[1-9]|1[0-2])(?:-(?:0[1-9]|[12]\\d|3[01]))?)?|present)$"
+						},
+						"label": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"datetime",
+						"label"
+					],
+					"additionalProperties": false
+				}
+			},
+			"required": [
+				"start",
+				"end"
+			],
+			"additionalProperties": false
+		}
+	},
+	"required": [
+		"title",
+		"organization",
+		"employmentType",
+		"location",
+		"duration",
+		"dynamicDuration",
+		"dates"
+	],
+	"additionalProperties": false
+}

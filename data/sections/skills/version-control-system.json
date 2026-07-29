@@ -1,0 +1,25 @@
+{
+	"id": "version-control-system",
+	"status": "alternate",
+	"title": "Version Control System",
+	"items": [
+		{
+			"id": "git",
+			"label": "Git",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "github",
+			"label": "GitHub",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "gitlab",
+			"label": "GitLab",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

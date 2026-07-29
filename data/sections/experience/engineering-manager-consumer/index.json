@@ -1,0 +1,9 @@
+{
+	"id": "engineering-manager-consumer",
+	"status": "alternate",
+	"files": {
+		"profile": "profile.json",
+		"bullets": "bullets.json",
+		"technologies": "technologies.json"
+	}
+}

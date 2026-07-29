@@ -1,0 +1,49 @@
+{
+	"id": "mobile",
+	"status": "current",
+	"title": "Mobile",
+	"items": [
+		{
+			"id": "react-native",
+			"label": "React Native",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "expo",
+			"label": "Expo",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "eas",
+			"label": "EAS",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "ota",
+			"label": "OTA",
+			"title": "Over-the-Air",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "sentry",
+			"label": "Sentry",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "mixpanel",
+			"label": "Mixpanel",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "appsflyer",
+			"label": "AppsFlyer",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

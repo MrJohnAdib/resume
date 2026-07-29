@@ -1,0 +1,8 @@
+{
+	"$schema": "./schema/resume-config.schema.json",
+	"schemaVersion": "1.0.0",
+	"site": "data/site/index.json",
+	"person": "data/person/index.json",
+	"sections": "data/sections/index.json",
+	"layout": "layouts/compact/index.json"
+}

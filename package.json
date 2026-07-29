@@ -2,34 +2,51 @@
 	"name": "mr-adib-resume",
 	"version": "3.0.0",
 	"description": "",
-	"dependencies": {
-		"tailwindcss": "latest"
-	},
-	"keywords": [
-		"MrAdib",
-		"tailwind",
-		"resume"
-	],
+	"keywords": ["MrAdib", "tailwind", "resume"],
 	"author": "John Adib",
 	"license": "MIT",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"@playwright/test": "^1.62.0",
+		"@types/node": "^26.1.2",
+		"@types/nunjucks": "^3.2.6",
+		"@types/pngjs": "^6.0.5",
+		"cheerio": "^1.2.0",
 		"cssnano": "latest",
-		"postcss": "latest",
+		"domhandler": "^5.0.3",
+		"http-server": "^14.1.1",
+		"nunjucks": "^3.2.4",
+		"pixelmatch": "^7.2.0",
+		"pngjs": "^7.0.0",
+		"postcss": "8.5.23",
 		"postcss-cli": "latest",
-		"prettier": "latest"
+		"prettier": "latest",
+		"tailwindcss": "3.4.19",
+		"tsx": "^4.23.1",
+		"typescript": "^7.0.2",
+		"zod": "^4.4.3"
 	},
 	"scripts": {
-		"dev": "npm run build",
-		"prebuild": "open ./index.html",
-		"build": "npx tailwindcss -i ./style/tailwind.css -o ./style/style.min.css --watch --minify",
-		"check": "biome check",
-		"check:fix": "biome check --write",
+		"build": "tsx scripts/build.ts",
+		"build:html": "tsx scripts/render-command.ts",
+		"check": "npm run check:files && npm run typecheck && biome check biome.json package.json resume.config.json scripts src tests data layouts",
+		"check:assets": "tsx scripts/check-assets.ts",
+		"check:files": "tsx scripts/check-file-length.ts",
+		"check:fix": "biome check --write biome.json package.json resume.config.json scripts src tests data layouts",
+		"dev": "npm run build && http-server dist -p 4173 -c-1",
 		"format": "biome format .",
 		"format:fix": "biome format . --write",
 		"lint": "biome lint",
 		"lint:fix": "biome lint --fix",
-		"lint:fix:unsafe": "biome lint --fix --unsafe"
+		"lint:fix:unsafe": "biome lint --fix --unsafe",
+		"migrate:legacy": "tsx scripts/migrate-legacy.ts",
+		"schema": "tsx scripts/generate-schema.ts",
+		"test": "node --import tsx --test tests/**/*.test.ts",
+		"typecheck": "tsc --noEmit",
+		"validate": "tsx scripts/validate.ts"
 	},
-	"packageManager": "pnpm@10.30.0+sha512.2b5753de015d480eeb88f5b5b61e0051f05b4301808a82ec8b840c9d2adf7748eb352c83f5c1593ca703ff1017295bc3fdd3119abb9686efc96b9fcb18200937"
+	"engines": {
+		"node": ">=22"
+	},
+	"packageManager": "npm@11.8.0"
 }

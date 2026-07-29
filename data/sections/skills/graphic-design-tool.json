@@ -1,0 +1,31 @@
+{
+	"id": "graphic-design-tool",
+	"status": "alternate",
+	"title": "Graphic Design Tool",
+	"items": [
+		{
+			"id": "photoshop",
+			"label": "Photoshop",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "illustrator",
+			"label": "Illustrator",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "indesign",
+			"label": "InDesign",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "figma",
+			"label": "Figma",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

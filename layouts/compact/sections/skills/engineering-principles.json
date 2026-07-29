@@ -1,0 +1,5 @@
+{
+	"id": "engineering-principles",
+	"fields": ["title", "items"],
+	"items": ["soc", "solid", "oop", "tdd", "dry", "eda"]
+}

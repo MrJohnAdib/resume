@@ -1,0 +1,22 @@
+{
+	"title": "Software Engineer",
+	"organization": {
+		"name": "Mixa",
+		"url": "",
+		"linkEnabled": false
+	},
+	"employmentType": "Full-time",
+	"location": "IR",
+	"duration": "(3 years 11 months)",
+	"dynamicDuration": false,
+	"dates": {
+		"start": {
+			"datetime": "2011-08-22",
+			"label": "08/2011"
+		},
+		"end": {
+			"datetime": "2015-06-22",
+			"label": "06/2015"
+		}
+	}
+}

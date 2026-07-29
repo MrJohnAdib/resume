@@ -1,0 +1,31 @@
+{
+	"id": "servers-and-cdn",
+	"status": "alternate",
+	"title": "Servers and CDN",
+	"items": [
+		{
+			"id": "nginx",
+			"label": "Nginx",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "apache",
+			"label": "Apache",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "apisix",
+			"label": "APISIX",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "cloudflare",
+			"label": "Cloudflare",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

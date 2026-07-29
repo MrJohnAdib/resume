@@ -1,0 +1,22 @@
+{
+	"title": "Principal Software Engineer",
+	"organization": {
+		"name": "Tejarak",
+		"url": "https://tejarak.com/",
+		"linkEnabled": false
+	},
+	"employmentType": "Full-time",
+	"location": "IR",
+	"duration": "(1 year)",
+	"dynamicDuration": false,
+	"dates": {
+		"start": {
+			"datetime": "2017-09-07",
+			"label": "09/2017"
+		},
+		"end": {
+			"datetime": "2018-08-06",
+			"label": "08/2018"
+		}
+	}
+}

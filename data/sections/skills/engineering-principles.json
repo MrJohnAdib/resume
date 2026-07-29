@@ -1,0 +1,43 @@
+{
+	"id": "engineering-principles",
+	"status": "current",
+	"title": "Engineering Principles",
+	"items": [
+		{
+			"id": "soc",
+			"label": "SoC",
+			"title": "Separation of Concerns",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "solid",
+			"label": "SOLID",
+			"title": "Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "oop",
+			"label": "OOP",
+			"title": "Object Oriented Programming",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "tdd",
+			"label": "TDD",
+			"title": "Test Driven Development",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "dry",
+			"label": "DRY",
+			"title": "Don't Repeat Yourself",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "eda",
+			"label": "EDA",
+			"title": "Event Driven Architecture",
+			"separatorAfter": "."
+		}
+	]
+}

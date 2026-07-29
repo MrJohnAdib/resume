@@ -1,0 +1,8 @@
+{
+	"version": "v24.4.0",
+	"latestVersion": "v24.4.0",
+	"folder": "./pdf/",
+	"filePrefix": "MrAdib-Resume-",
+	"buttonLabel": "Download PDF",
+	"localAction": "print"
+}

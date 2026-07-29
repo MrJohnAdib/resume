@@ -1,0 +1,78 @@
+[
+	{
+		"id": "typescript",
+		"label": "TypeScript"
+	},
+	{
+		"id": "nodejs",
+		"label": "NodeJS"
+	},
+	{
+		"id": "gcp",
+		"label": "GCP"
+	},
+	{
+		"id": "docker",
+		"label": "Docker"
+	},
+	{
+		"id": "terraform",
+		"label": "Terraform"
+	},
+	{
+		"id": "php",
+		"label": "PHP"
+	},
+	{
+		"id": "github-actions",
+		"label": "GitHub Actions"
+	},
+	{
+		"id": "postgresql",
+		"label": "PostgreSQL"
+	},
+	{
+		"id": "mongodb",
+		"label": "MongoDB"
+	},
+	{
+		"id": "prisma",
+		"label": "Prisma"
+	},
+	{
+		"id": "react-js",
+		"label": "React.js"
+	},
+	{
+		"id": "tailwind",
+		"label": "Tailwind"
+	},
+	{
+		"id": "next-js",
+		"label": "Next.js"
+	},
+	{
+		"id": "express",
+		"label": "Express"
+	},
+	{
+		"id": "vue-js",
+		"label": "Vue.js"
+	},
+	{
+		"id": "jest",
+		"label": "Jest"
+	},
+	{
+		"id": "cypress",
+		"label": "Cypress"
+	},
+	{
+		"id": "playwright",
+		"label": "Playwright"
+	},
+	{
+		"id": "storybook",
+		"label": "Storybook"
+	}
+]

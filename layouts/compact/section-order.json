@@ -1,0 +1,22 @@
+[
+	{
+		"id": "experience",
+		"column": "left"
+	},
+	{
+		"id": "skills",
+		"column": "right"
+	},
+	{
+		"id": "awards",
+		"column": "right"
+	},
+	{
+		"id": "education",
+		"column": "right"
+	},
+	{
+		"id": "volunteering",
+		"column": "right"
+	}
+]

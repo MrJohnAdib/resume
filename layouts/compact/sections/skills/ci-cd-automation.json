@@ -1,0 +1,5 @@
+{
+	"id": "ci-cd-automation",
+	"fields": ["title", "items"],
+	"items": ["docker", "gh-actions", "turborepo", "monorepo"]
+}

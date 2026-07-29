@@ -1,0 +1,13 @@
+<article class="mb-1 text-stone-600" data-section-id="{{ section.id }}">
+	{% include "section-heading.njk" %}
+	{% for category in section.items %}
+	<section class="leading-5 text-xs" data-item-id="{{ category.id }}" itemscope itemtype="https://schema.org/ListItem">
+		{% if "title" in category.fields %}<h3 class="font-light inline-block text-stone-700">{{ category.title }}</h3>{% if "items" in category.fields %} {% endif %}{% endif %}
+		{% if "items" in category.fields %}
+		{% for item in category.items %}
+			{% if item.title %}<abbr itemprop="name" title="{{ item.title }}">{{ item.label }}</abbr>{% else %}<span itemprop="name">{{ item.label }}</span>{% endif %}{{ item.separatorAfter }}
+		{% endfor %}
+		{% endif %}
+	</section>
+	{% endfor %}
+</article>

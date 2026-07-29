@@ -1,0 +1,43 @@
+{
+	"id": "ai-llm",
+	"status": "current",
+	"title": "AI & LLM",
+	"items": [
+		{
+			"id": "openai",
+			"label": "OpenAI",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "gemini",
+			"label": "Gemini",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "vertex-ai",
+			"label": "Vertex AI",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "llama",
+			"label": "Llama",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "rag",
+			"label": "RAG",
+			"title": "Retrieval-Augmented Generation",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "claude",
+			"label": "Claude",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

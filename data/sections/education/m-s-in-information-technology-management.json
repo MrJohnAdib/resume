@@ -1,0 +1,84 @@
+{
+	"id": "m-s-in-information-technology-management",
+	"status": "current",
+	"degree": "M.S. in Information Technology Management",
+	"institution": "Azad University",
+	"employmentType": "Part-time",
+	"location": "Tehran, IR",
+	"dates": [
+		{
+			"datetime": "2015-09-23",
+			"label": "2015"
+		},
+		{
+			"datetime": "2025",
+			"label": "2025"
+		},
+		{
+			"datetime": "2025-02-18",
+			"label": "2025"
+		}
+	],
+	"thesis": {
+		"id": "thesis",
+		"status": "alternate",
+		"text": "Critical success factors in SME e-business - FinTech case study"
+	},
+	"coursework": [
+		{
+			"id": "fuzzy-logic-and-ai",
+			"status": "current",
+			"label": "Fuzzy Logic and AI"
+		},
+		{
+			"id": "organizational-resource-planning",
+			"status": "alternate",
+			"label": "Organizational Resource Planning"
+		},
+		{
+			"id": "knowledge-management",
+			"status": "alternate",
+			"label": "Knowledge Management"
+		},
+		{
+			"id": "digital-marketing",
+			"status": "current",
+			"label": "Digital Marketing"
+		},
+		{
+			"id": "business-process-re-engineering",
+			"status": "current",
+			"label": "Business Process Re-engineering"
+		},
+		{
+			"id": "e-business",
+			"status": "current",
+			"label": "E-business"
+		},
+		{
+			"id": "advanced-organizational-behavior-management",
+			"status": "alternate",
+			"label": "Advanced Organizational Behavior Management"
+		},
+		{
+			"id": "principles-of-organization-and-management",
+			"status": "alternate",
+			"label": "Principles of Organization and Management"
+		},
+		{
+			"id": "advanced-management-theories",
+			"status": "alternate",
+			"label": "Advanced Management Theories"
+		},
+		{
+			"id": "supply-chain-management",
+			"status": "alternate",
+			"label": "Supply Chain Management"
+		},
+		{
+			"id": "statistical-analysis",
+			"status": "current",
+			"label": "Statistical Analysis"
+		}
+	]
+}

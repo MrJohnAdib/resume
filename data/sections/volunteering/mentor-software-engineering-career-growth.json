@@ -1,0 +1,28 @@
+{
+	"id": "mentor-software-engineering-career-growth",
+	"status": "current",
+	"title": "Mentor - Software Engineering & Career Growth",
+	"organization": {
+		"name": "ADPList",
+		"url": "https://adplist.org/mentors/john-adib"
+	},
+	"location": "IR",
+	"duration": "(2 years 2 months)",
+	"dynamicDuration": true,
+	"dates": {
+		"start": {
+			"datetime": "2024-06",
+			"label": "06/2024"
+		},
+		"end": {
+			"datetime": "present",
+			"label": "Present"
+		}
+	},
+	"bullets": [
+		{
+			"id": "mentored-580-sessions-advising-on-roadmaps-best-practices-and-strate",
+			"text": "Mentored 580+ sessions, advising on roadmaps, best practices, and strategic decisions in technical and professional domains."
+		}
+	]
+}

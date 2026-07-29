@@ -1,0 +1,9 @@
+{
+	"id": "senior-lead-software-engineer",
+	"fields": ["title", "organization", "employmentType", "duration", "dates"],
+	"bullets": [
+		"led-development-of-a-booking-platform-with-10-distinct-designs-and-drov",
+		"architected-a-pixel-perfect-ui-with-atomic-design-utilized-storybook-wi"
+	],
+	"technologies": []
+}

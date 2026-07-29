@@ -1,0 +1,49 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"enabled": {
+			"type": "boolean"
+		},
+		"messageBefore": {
+			"type": "string"
+		},
+		"technology": {
+			"type": "string"
+		},
+		"messageAfter": {
+			"type": "string"
+		},
+		"linkLabel": {
+			"type": "string"
+		},
+		"linkUrl": {
+			"type": "string",
+			"format": "uri"
+		},
+		"gradientFrom": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"gradientTo": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"clipPath": {
+			"type": "string",
+			"minLength": 1
+		}
+	},
+	"required": [
+		"enabled",
+		"messageBefore",
+		"technology",
+		"messageAfter",
+		"linkLabel",
+		"linkUrl",
+		"gradientFrom",
+		"gradientTo",
+		"clipPath"
+	],
+	"additionalProperties": false
+}

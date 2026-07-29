@@ -1,0 +1,61 @@
+{
+	"id": "network",
+	"status": "alternate",
+	"title": "Network",
+	"items": [
+		{
+			"id": "dns",
+			"label": "DNS",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "dhcp",
+			"label": "DHCP",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "http",
+			"label": "HTTP",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "ssl",
+			"label": "SSL",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "tls",
+			"label": "TLS",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "smtp",
+			"label": "SMTP",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "ftp",
+			"label": "FTP",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "mime",
+			"label": "MIME",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "ssh",
+			"label": "SSH",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

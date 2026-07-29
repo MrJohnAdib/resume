@@ -1,0 +1,5 @@
+{
+	"id": "front-end-js-library",
+	"fields": ["title", "items"],
+	"items": ["vanilla-js", "vue-js", "react-js"]
+}

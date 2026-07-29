@@ -1,0 +1,64 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"primary": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"primaryHover": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"primaryFocus": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"pageBackground": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"headerBackground": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"contactBackground": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"screenBackground": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"screenBackgroundDark": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"text": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"heading": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		},
+		"muted": {
+			"type": "string",
+			"pattern": "^#[0-9a-f]{6}$"
+		}
+	},
+	"required": [
+		"primary",
+		"primaryHover",
+		"primaryFocus",
+		"pageBackground",
+		"headerBackground",
+		"contactBackground",
+		"screenBackground",
+		"screenBackgroundDark",
+		"text",
+		"heading",
+		"muted"
+	],
+	"additionalProperties": false
+}

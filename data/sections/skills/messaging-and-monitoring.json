@@ -1,0 +1,25 @@
+{
+	"id": "messaging-and-monitoring",
+	"status": "current",
+	"title": "Messaging and Monitoring",
+	"items": [
+		{
+			"id": "rabbitmq",
+			"label": "RabbitMQ",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "elasticsearch",
+			"label": "Elasticsearch",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "pub-sub",
+			"label": "Pub/Sub",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

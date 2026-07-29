@@ -1,0 +1,20 @@
+[
+	{
+		"id": "built-and-led-a-15-member-cross-functional-startup-launched-a-flagship",
+		"status": "current",
+		"text": "Built and led a 15-member cross-functional startup, launched a flagship product that rapidly scaled to 1M users in month one.",
+		"annotations": []
+	},
+	{
+		"id": "spearheaded-a-15-member-cross-functional-startup-team-launched-a-flagsh",
+		"status": "alternate",
+		"text": "Spearheaded a 15-member cross-functional startup team. Launched a flagship product that hit 1M users in just a month.",
+		"annotations": []
+	},
+	{
+		"id": "built-siftal-ui-framework-dash-as-php-framework-with-mvc-pattern-2x-a",
+		"status": "alternate",
+		"text": "Built Siftal UI framework, Dash as PHP framework with MVC pattern, 2x a development speed by consolidated SPA.",
+		"annotations": []
+	}
+]

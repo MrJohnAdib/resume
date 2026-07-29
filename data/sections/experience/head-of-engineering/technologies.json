@@ -1,0 +1,70 @@
+[
+	{
+		"id": "php",
+		"label": "PHP"
+	},
+	{
+		"id": "mysql",
+		"label": "MySQL"
+	},
+	{
+		"id": "javascript",
+		"label": "JavaScript"
+	},
+	{
+		"id": "jquery",
+		"label": "jQuery"
+	},
+	{
+		"id": "gulp",
+		"label": "Gulp"
+	},
+	{
+		"id": "html-5",
+		"label": "HTML 5"
+	},
+	{
+		"id": "css-3",
+		"label": "CSS 3"
+	},
+	{
+		"id": "scss",
+		"label": "SCSS"
+	},
+	{
+		"id": "sass",
+		"label": "Sass"
+	},
+	{
+		"id": "ssr",
+		"label": "SSR"
+	},
+	{
+		"id": "nginx",
+		"label": "Nginx"
+	},
+	{
+		"id": "git",
+		"label": "Git"
+	},
+	{
+		"id": "scrumban",
+		"label": "Scrumban"
+	},
+	{
+		"id": "trello",
+		"label": "Trello"
+	},
+	{
+		"id": "json",
+		"label": "JSON"
+	},
+	{
+		"id": "twig",
+		"label": "Twig"
+	},
+	{
+		"id": "ajax",
+		"label": "AJAX"
+	}
+]

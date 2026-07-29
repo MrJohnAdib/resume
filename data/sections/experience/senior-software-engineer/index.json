@@ -1,0 +1,9 @@
+{
+	"id": "senior-software-engineer",
+	"status": "alternate",
+	"files": {
+		"profile": "profile.json",
+		"bullets": "bullets.json",
+		"technologies": "technologies.json"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"title": "Senior Software Engineer",
+	"organization": {
+		"name": "Zapp",
+		"url": "https://justzapp.com",
+		"linkEnabled": true
+	},
+	"employmentType": "Full-time",
+	"location": "London",
+	"duration": "(1 year 5 months)",
+	"dynamicDuration": true,
+	"dates": {
+		"start": {
+			"datetime": "2024-12-16",
+			"label": "12/2024"
+		},
+		"end": {
+			"datetime": "2026-04-12",
+			"label": "04/2026"
+		}
+	}
+}

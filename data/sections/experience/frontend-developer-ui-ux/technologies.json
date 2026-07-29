@@ -1,0 +1,30 @@
+[
+	{
+		"id": "php",
+		"label": "PHP"
+	},
+	{
+		"id": "javascript",
+		"label": "JavaScript"
+	},
+	{
+		"id": "mysql",
+		"label": "MySQL"
+	},
+	{
+		"id": "html",
+		"label": "HTML"
+	},
+	{
+		"id": "css",
+		"label": "CSS"
+	},
+	{
+		"id": "cpanel",
+		"label": "cPanel"
+	},
+	{
+		"id": "apache",
+		"label": "Apache"
+	}
+]

@@ -1,0 +1,98 @@
+[
+	{
+		"id": "php",
+		"label": "PHP"
+	},
+	{
+		"id": "symfony",
+		"label": "Symfony"
+	},
+	{
+		"id": "restful-api",
+		"label": "RESTful API"
+	},
+	{
+		"id": "phpunit",
+		"label": "PHPUnit"
+	},
+	{
+		"id": "redis",
+		"label": "Redis"
+	},
+	{
+		"id": "mysql",
+		"label": "MySQL"
+	},
+	{
+		"id": "javascript",
+		"label": "JavaScript"
+	},
+	{
+		"id": "react",
+		"label": "React"
+	},
+	{
+		"id": "elk",
+		"label": "ELK"
+	},
+	{
+		"id": "git",
+		"label": "Git"
+	},
+	{
+		"id": "nodejs",
+		"label": "NodeJS"
+	},
+	{
+		"id": "express",
+		"label": "Express"
+	},
+	{
+		"id": "vanilla-js",
+		"label": "Vanilla JS"
+	},
+	{
+		"id": "sass",
+		"label": "Sass"
+	},
+	{
+		"id": "tailwind",
+		"label": "Tailwind"
+	},
+	{
+		"id": "xml",
+		"label": "XML"
+	},
+	{
+		"id": "nginx",
+		"label": "Nginx"
+	},
+	{
+		"id": "scrum",
+		"label": "Scrum"
+	},
+	{
+		"id": "jira",
+		"label": "Jira"
+	},
+	{
+		"id": "seo",
+		"label": "SEO"
+	},
+	{
+		"id": "pwa",
+		"label": "PWA"
+	},
+	{
+		"id": "docker",
+		"label": "Docker"
+	},
+	{
+		"id": "cli",
+		"label": "CLI"
+	},
+	{
+		"id": "yaml",
+		"label": "YAML"
+	}
+]

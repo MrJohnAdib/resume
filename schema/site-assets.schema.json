@@ -1,0 +1,63 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"favicon": {
+			"type": "string",
+			"minLength": 1
+		},
+		"fontStylesheet": {
+			"type": "string",
+			"minLength": 1
+		},
+		"resumeStylesheet": {
+			"type": "string",
+			"minLength": 1
+		},
+		"themeStylesheet": {
+			"type": "string",
+			"minLength": 1
+		},
+		"runtimeScript": {
+			"type": "string",
+			"minLength": 1
+		},
+		"icons": {
+			"type": "object",
+			"properties": {
+				"email": {
+					"type": "string",
+					"minLength": 1
+				},
+				"telephone": {
+					"type": "string",
+					"minLength": 1
+				},
+				"location": {
+					"type": "string",
+					"minLength": 1
+				},
+				"badge": {
+					"type": "string",
+					"minLength": 1
+				}
+			},
+			"required": [
+				"email",
+				"telephone",
+				"location",
+				"badge"
+			],
+			"additionalProperties": false
+		}
+	},
+	"required": [
+		"favicon",
+		"fontStylesheet",
+		"resumeStylesheet",
+		"themeStylesheet",
+		"runtimeScript",
+		"icons"
+	],
+	"additionalProperties": false
+}

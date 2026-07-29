@@ -1,0 +1,64 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"pattern": "^[a-z0-9-]+$"
+		},
+		"label": {
+			"type": "string",
+			"minLength": 1
+		},
+		"size": {
+			"type": "string",
+			"minLength": 1
+		},
+		"width": {
+			"type": "string",
+			"pattern": "^\\d+(?:\\.\\d+)?(?:mm|px|rem|%)$"
+		},
+		"height": {
+			"type": "string",
+			"pattern": "^\\d+(?:\\.\\d+)?(?:mm|px|rem|%)$"
+		},
+		"screenPadding": {
+			"type": "string",
+			"pattern": "^\\d+(?:\\.\\d+)?(?:mm|px|rem|%)$"
+		},
+		"outerMargin": {
+			"type": "string",
+			"pattern": "^\\d+(?:\\.\\d+)?(?:mm|px|rem|%)$"
+		},
+		"columnGap": {
+			"type": "string",
+			"pattern": "^\\d+(?:\\.\\d+)?(?:mm|px|rem|%)$"
+		},
+		"leftColumn": {
+			"type": "string",
+			"pattern": "^\\d+(?:\\.\\d+)?(?:mm|px|rem|%)$"
+		},
+		"rightColumn": {
+			"type": "string",
+			"pattern": "^\\d+(?:\\.\\d+)?(?:mm|px|rem|%)$"
+		},
+		"overflowPolicy": {
+			"type": "string",
+			"const": "error"
+		}
+	},
+	"required": [
+		"id",
+		"label",
+		"size",
+		"width",
+		"height",
+		"screenPadding",
+		"outerMargin",
+		"columnGap",
+		"leftColumn",
+		"rightColumn",
+		"overflowPolicy"
+	],
+	"additionalProperties": false
+}

@@ -1,0 +1,44 @@
+[
+	{
+		"id": "developed-a-reusable-design-system-with-90-tested-components-integrated",
+		"status": "current",
+		"text": "Developed a reusable design system with 90 tested components, integrated into 5 services in production.",
+		"annotations": []
+	},
+	{
+		"id": "shipped-enterprise-auth-panel-using-ai-tools-with-passkey-edge-deployme",
+		"status": "current",
+		"text": "Shipped enterprise auth panel using AI tools with passkey, edge deployment in 3 environments, and 10+ RBAC roles.",
+		"annotations": []
+	},
+	{
+		"id": "migrated-ci-cd-from-circleci-to-github-actions-achieving-instant-100",
+		"status": "current",
+		"text": "Migrated CI/CD from CircleCI to GitHub Actions, achieving instant, 100% reliable deployments and 80% faster deploys.",
+		"annotations": [
+			{
+				"type": "abbr",
+				"value": "80%",
+				"title": "Reduced from >10 minutes to 2 minutes"
+			}
+		]
+	},
+	{
+		"id": "resolved-hundreds-of-lint-warnings-across-four-services-raising-quality",
+		"status": "alternate",
+		"text": "Resolved hundreds of lint warnings across four services, raising quality standards and reducing tech debt.",
+		"annotations": []
+	},
+	{
+		"id": "improved-platform-performance-cutting-load-times-across-all-pages-by-60",
+		"status": "current",
+		"text": "Improved platform performance, cutting load times across all pages by 60% and boosting Homepage LCP by 80%.",
+		"annotations": []
+	},
+	{
+		"id": "established-e2e-tests-covering-100-sensitive-flows-in-ci-cd-reducing-v",
+		"status": "alternate",
+		"text": "Established E2E tests covering 100% sensitive flows in CI/CD, reducing validation time and boosting release confidence.",
+		"annotations": []
+	}
+]

@@ -1,0 +1,9 @@
+{
+	"id": "co-founder-cto",
+	"status": "current",
+	"files": {
+		"profile": "profile.json",
+		"bullets": "bullets.json",
+		"technologies": "technologies.json"
+	}
+}

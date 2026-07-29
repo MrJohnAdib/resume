@@ -1,0 +1,31 @@
+{
+	"id": "tech-stack",
+	"status": "current",
+	"title": "Tech Stack",
+	"items": [
+		{
+			"id": "typescript",
+			"label": "TypeScript",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "node-js",
+			"label": "Node.js",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "python",
+			"label": "Python",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "bash",
+			"label": "Bash",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

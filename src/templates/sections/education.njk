@@ -1,0 +1,29 @@
+<article class="mb-2.5" data-section-id="{{ section.id }}">
+	{% include "section-heading.njk" %}
+	{% for item in section.items %}
+	<section class="{% if not loop.last %}mb-1{% endif %}" data-item-id="{{ item.id }}"
+		itemscope itemtype="https://schema.org/CollegeOrUniversity">
+		<div class="flex items-center">
+			{% if "degree" in item.fields %}<h4 class="grow text-base leading-5 font-light">{{ item.degree }}</h4>{% endif %}
+		</div>
+		<div class="flex flex-wrap text-xs">
+			{% if "institution" in item.fields %}<h4 class="flex items-center text-sm leading-4 text-stone-600">{{ item.institution }}</h4>{% endif %}
+			{% if "employmentType" in item.fields %}<div class="grow text-xs text-stone-500">{{ item.employmentType }}</div>{% endif %}
+			{% if "location" in item.fields %}<div class="grow text-xs text-stone-500">{{ item.location }}</div>{% endif %}
+			<div class="grow flex items-center mx-1 text-xs"></div>
+			{% if "dates" in item.fields %}
+			<div dir="ltr" class="grow-0 text-stone-900">
+				{% for date in item.dates %}<time datetime="{{ date.datetime }}">{{ date.label }}</time>{% if not loop.last %} - {% endif %}{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+		{% if "thesis" in item.fields and item.thesis %}<div class="text-xs">{{ item.thesis.text | richText }}</div>{% endif %}
+		{% if "coursework" in item.fields and item.coursework.length %}
+		<div class="text-xs text-stone-600">
+			<h3 class="font-light inline-block text-stone-700">Relevant Coursework</h3>
+			{% for course in item.coursework %}<span>{{ course.label }}</span>{% if not loop.last %}, {% else %}.{% endif %}{% endfor %}
+		</div>
+		{% endif %}
+	</section>
+	{% endfor %}
+</article>

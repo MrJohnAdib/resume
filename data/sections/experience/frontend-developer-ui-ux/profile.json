@@ -1,0 +1,22 @@
+{
+	"title": "Frontend Developer UI/UX",
+	"organization": {
+		"name": "Freelancer",
+		"url": "",
+		"linkEnabled": false
+	},
+	"employmentType": "Freelance",
+	"location": "IR",
+	"duration": "(3 years)",
+	"dynamicDuration": false,
+	"dates": {
+		"start": {
+			"datetime": "2008-09-22",
+			"label": "09/2008"
+		},
+		"end": {
+			"datetime": "2011-08-22",
+			"label": "08/2011"
+		}
+	}
+}

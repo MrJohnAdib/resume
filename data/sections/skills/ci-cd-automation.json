@@ -1,0 +1,31 @@
+{
+	"id": "ci-cd-automation",
+	"status": "current",
+	"title": "CI/CD Automation",
+	"items": [
+		{
+			"id": "docker",
+			"label": "Docker",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "gh-actions",
+			"label": "GH Actions",
+			"title": "GitHub Actions",
+			"separatorAfter": " "
+		},
+		{
+			"id": "turborepo",
+			"label": "Turborepo",
+			"title": "",
+			"separatorAfter": ", "
+		},
+		{
+			"id": "monorepo",
+			"label": "Monorepo",
+			"title": "",
+			"separatorAfter": "."
+		}
+	]
+}

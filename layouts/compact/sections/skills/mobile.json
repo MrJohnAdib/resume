@@ -1,0 +1,13 @@
+{
+	"id": "mobile",
+	"fields": ["title", "items"],
+	"items": [
+		"react-native",
+		"expo",
+		"eas",
+		"ota",
+		"sentry",
+		"mixpanel",
+		"appsflyer"
+	]
+}
