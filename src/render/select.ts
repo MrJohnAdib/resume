@@ -56,9 +56,11 @@ export function createCompactView(resume: Resume) {
 		},
 		runtimeConfig: {
 			pdf: resume.site.pdf,
-			console: resume.site.console,
 		},
 		leftSections: sections.filter(({ column }) => column === "left"),
 		rightSections: sections.filter(({ column }) => column === "right"),
 	};
 }
+
+export type CompactView = ReturnType<typeof createCompactView>;
+export type ViewSection = CompactView["leftSections"][number];

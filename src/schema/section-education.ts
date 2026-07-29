@@ -12,19 +12,14 @@ const CourseSourceSchema = z.union([
 ]);
 
 export const EducationSourceSchema = z.object({
-	title: z.string().min(1),
-	items: z.array(
-		z.object({
-			degree: z.string().min(1),
-			institution: z.string().min(1),
-			employmentType: z.string().min(1).optional(),
-			location: z.string().min(1).optional(),
-			dates: z.array(DateLabelSchema).min(1).optional(),
-			thesis: z.object({ text: RichTextSchema, ...HiddenFields }).optional(),
-			coursework: z.array(CourseSourceSchema).min(1).optional(),
-			...HiddenFields,
-		}),
-	),
+	degree: z.string().min(1),
+	institution: z.string().min(1),
+	employmentType: z.string().min(1).optional(),
+	location: z.string().min(1).optional(),
+	dates: z.array(DateLabelSchema).min(1).optional(),
+	thesis: z.object({ text: RichTextSchema, ...HiddenFields }).optional(),
+	coursework: z.array(CourseSourceSchema).min(1).optional(),
+	...HiddenFields,
 });
 
 export const EducationItemSchema = StableItemSchema.extend({

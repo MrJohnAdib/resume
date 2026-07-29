@@ -1,0 +1,14 @@
+{
+	"title": "Web Framework",
+	"items": [
+		"Express.js",
+		"NestJS",
+		"Fastify",
+		"Hono",
+		"Next.js",
+		{
+			"label": "Nuxt.js",
+			"hidden": true
+		}
+	]
+}

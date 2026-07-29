@@ -1,25 +1,37 @@
 import type { z } from "zod";
-import type { SiteSourceSchema } from "../schema/site.ts";
+import type {
+	AnalyticsSourceSchema,
+	BannerSourceSchema,
+	MetadataSourceSchema,
+	ReleaseSourceSchema,
+} from "../schema/site.ts";
+import { pdfDefaults, siteAssets } from "./site-defaults.ts";
 
-export function normalizeSite(site: z.infer<typeof SiteSourceSchema>) {
-	if (!site.analytics || !site.banner || !site.console) {
-		throw new Error(
-			"The compact layout requires analytics, banner, and console",
-		);
-	}
+type SiteSources = {
+	metadata: z.infer<typeof MetadataSourceSchema>;
+	release: z.infer<typeof ReleaseSourceSchema>;
+	analytics: z.infer<typeof AnalyticsSourceSchema>;
+	banner: z.infer<typeof BannerSourceSchema>;
+};
+
+export function normalizeSite(source: SiteSources) {
 	return {
-		...site,
+		metadata: {
+			...source.metadata,
+			keywords: source.metadata.keywords.join(", "),
+			date: source.release.date,
+		},
+		assets: siteAssets,
+		pdf: {
+			...pdfDefaults,
+			version: source.release.version,
+			latestVersion: source.release.latestVersion,
+		},
 		analytics: {
-			...site.analytics,
-			enabled: true,
+			...source.analytics,
+			enabled: true as const,
 			provider: "google" as const,
 		},
-		banner: { ...site.banner, enabled: true as const },
-		console: {
-			...site.console,
-			enabled: true as const,
-			art: site.console.art.split("\n"),
-		},
-		pdf: { localAction: "print" as const, ...site.pdf },
+		banner: { ...source.banner, enabled: true as const },
 	};
 }

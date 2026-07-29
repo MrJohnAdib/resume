@@ -24,9 +24,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - run: npm run schema
-      - name: Verify generated schemas are current
-        run: git diff --exit-code -- schema
       - run: npm run check
       - run: npm run build
       - run: npm test

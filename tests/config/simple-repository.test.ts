@@ -18,11 +18,11 @@ test("loads generated keys and automatic presentation behavior", async () => {
 
 	assert.equal(
 		resume.sections.experience.items[0]?.id,
-		"engineering-manager-promoted-from-senior",
+		"2024-zapp-engineering-manager",
 	);
 	assert.equal(
 		resume.sections.experience.items.find(
-			({ id }) => id === "engineering-manager-consumer",
+			({ id }) => id === "2026-zapp-consumer-engineering-manager",
 		)?.hidden,
 		true,
 	);
@@ -30,7 +30,7 @@ test("loads generated keys and automatic presentation behavior", async () => {
 	assert.equal(resume.person.contact.phone.href, "tel:+447393633145");
 	assert.equal(resume.sections.awards.href, "https://mradib.com/awards");
 	assert.equal(
-		resume.sections.experience.items.find(({ id }) => id === "co-founder-ceo")
+		resume.sections.experience.items.find(({ id }) => id === "2015-sarshomar")
 			?.dates?.end.label,
 		"09/2017",
 	);
@@ -39,12 +39,13 @@ test("loads generated keys and automatic presentation behavior", async () => {
 
 test("keeps editable data concise and free of repeated metadata", async () => {
 	const roleFile = path.resolve(
-		"data/experience/engineering-manager-promoted-from-senior.json",
+		"data/experience/2024-zapp-engineering-manager.json",
 	);
 	const role = JSON.parse(await readFile(roleFile, "utf8"));
 
 	assert.equal(hasKey(role, "id"), false);
 	assert.equal(hasKey(role, "status"), false);
+	assert.equal(hasKey(role, "duration"), false);
 	assert.equal(
 		role.bullets.some((bullet: unknown) => typeof bullet === "string"),
 		true,

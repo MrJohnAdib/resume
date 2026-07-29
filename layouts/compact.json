@@ -1,37 +1,4 @@
 {
-	"page": {
-		"label": "Compact",
-		"size": "A4",
-		"width": "210mm",
-		"height": "296mm",
-		"screenPadding": "24px",
-		"outerMargin": "1.5rem",
-		"columnGap": "1rem",
-		"leftColumn": "50%",
-		"rightColumn": "50%"
-	},
-	"theme": {
-		"primary": "#0891b2",
-		"primaryHover": "#155e75",
-		"primaryFocus": "#164e63",
-		"pageBackground": "#ffffff",
-		"headerBackground": "#fafaf9",
-		"contactBackground": "#f5f5f4",
-		"screenBackground": "#f3f4f6",
-		"screenBackgroundDark": "#1f2937",
-		"text": "#57534e",
-		"heading": "#000000",
-		"muted": "#78716c"
-	},
-	"typography": {
-		"bodyFont": "\"Airbnb Cereal App\", ui-sans-serif",
-		"rtlFont": "\"Vazirmatn\", ui-serif",
-		"nameSize": "1.875rem",
-		"titleSize": "1.25rem",
-		"bodySize": "0.875rem",
-		"detailSize": "0.75rem",
-		"bodyLineHeight": "1.375"
-	},
 	"sections": [
 		{
 			"type": "experience",
@@ -54,25 +21,69 @@
 			"column": "right"
 		}
 	],
-	"roles": {
+	"order": {
 		"experience": [
-			"engineering-manager-promoted-from-senior",
-			"engineering-manager-consumer",
-			"senior-software-engineer",
-			"senior-lead-software-engineer",
-			"co-founder-cto",
-			"head-of-engineering",
-			"principal-software-engineer",
-			"co-founder-ceo",
-			"computer-lecturer",
-			"software-engineer",
-			"frontend-developer-ui-ux"
+			"2024-zapp-engineering-manager",
+			"2026-zapp-consumer-engineering-manager",
+			"2024-zapp-senior-software-engineer",
+			"2022-loopla",
+			"2019-jibres",
+			"2018-ermile",
+			"2017-tejarak",
+			"2015-sarshomar",
+			"2006-teacher",
+			"2011-mixa",
+			"2008-freelancer"
 		],
+		"skills": [
+			"tech-stack",
+			"additional-programming-languages",
+			"ai-llm",
+			"api",
+			"web-framework",
+			"front-end-js-library",
+			"mobile",
+			"css-framework",
+			"test-suites",
+			"build-tools",
+			"version-control-system",
+			"infra",
+			"security",
+			"database",
+			"orm",
+			"distributed-cache",
+			"servers-and-cdn",
+			"ci-cd-automation",
+			"messaging-and-monitoring",
+			"server-configuration-framework-ui",
+			"network",
+			"os",
+			"agile-methodologies",
+			"engineering-principles",
+			"collaboration-tool",
+			"graphic-design-tool",
+			"office-specialist",
+			"core-web-essentials",
+			"miscellaneous"
+		],
+		"awards": [
+			"2026-worlds-most-influential-mentor",
+			"2024-worlds-most-influential-mentor",
+			"2024-adplist-mentor-of-year",
+			"2024-uk-global-talent",
+			"2024-super-mentor",
+			"2022-best-website-builder",
+			"2013-national-elite",
+			"2012-best-corporate-tourism-website",
+			"2010-worldskills-silver-medal",
+			"2007-worldskills-medallion"
+		],
+		"education": ["masters", "bachelors"],
 		"volunteering": [
-			"mentor-software-engineering-career-growth",
-			"judge-2025-codie-awards",
-			"cto-volunteer-part-time",
-			"expert-software-solutions-for-business"
+			"2024-adplist",
+			"2025-codie-awards",
+			"2017-khadije-charity",
+			"2010-worldskills"
 		]
 	}
 }

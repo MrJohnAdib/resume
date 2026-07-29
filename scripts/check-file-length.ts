@@ -23,7 +23,6 @@ const extensions = new Set([
 	".js",
 	".json",
 	".md",
-	".njk",
 	".ts",
 	".yaml",
 	".yml",

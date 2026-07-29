@@ -45,17 +45,17 @@ function hiddenStrings(value: unknown, hidden = false): string[] {
 	);
 }
 
-test("uses a small set of non-empty editable JSON files", async () => {
+test("uses non-empty editable JSON files below 100 lines", async () => {
 	const dataFiles = await jsonFiles(path.resolve("data"));
 	const layoutFiles = await jsonFiles(path.resolve("layouts"));
-	const schemaFiles = await jsonFiles(path.resolve("schema"));
 
-	assert.ok(dataFiles.length <= 25, `${dataFiles.length} data files`);
+	assert.ok(dataFiles.length > 0);
 	assert.equal(layoutFiles.length, 1);
-	assert.equal(schemaFiles.length, 1);
 	for (const file of dataFiles) {
-		const value = JSON.parse(await readFile(file, "utf8"));
+		const source = await readFile(file, "utf8");
+		const value = JSON.parse(source);
 		assert.equal(emptyValue(value), undefined, file);
+		assert.ok(source.split("\n").length - 1 < 100, file);
 	}
 });
 
@@ -91,7 +91,6 @@ test("keeps meaningful legacy alternatives beside related data", async () => {
 		"LAMP",
 		"Secret Manager",
 		"Single-Page Application",
-		"some keywords!",
 	];
 	for (const value of expected) assert.ok(values.includes(value), value);
 });

@@ -1,8 +1,8 @@
 # Modular Resume
 
-This repository builds John Adib's compact one-page resume from JSON. The
-generated page preserves the original screen and print design while keeping
-content, layout, templates, and browser behavior separate.
+This repository builds John Adib's compact one-page resume from focused JSON
+files. The generated page preserves the original screen and print design while
+keeping content, layout, rendering, and browser behavior separate.
 
 ## Quick start
 
@@ -19,34 +19,37 @@ Open <http://localhost:4173>. The production site is generated in `dist/`.
 ## Commands
 
 ```bash
-npm run validate     # validate every editable JSON file
-npm run schema       # regenerate the editor-friendly JSON Schema
+npm run validate     # validate every editable JSON file with Zod
 npm run build        # generate the static site and check A4 overflow
 npm test             # run unit, interaction, and pixel-parity tests
-npm run check        # lint, format-check, type-check, and enforce code size
+npm run check        # lint, format-check, type-check, and enforce file size
 ```
 
 ## Structure
 
 ```text
-resume.config.json       Connects data to the compact layout
-data/site.json           Metadata, assets, analytics, PDF, and banner
-data/person.json         Identity, contact details, and links
+resume.config.json       Connects focused data to the compact layout
+data/profile.json        Identity, contact details, and links
 data/summary.json        Current and hidden summary lines
+data/site/               Metadata, release, analytics, and banner content
 data/experience/         One complete JSON file per professional role
 data/volunteering/       One complete JSON file per volunteer role
-data/*.json              Skills, awards, and education
-layouts/compact.json     Page settings and section/role order
-src/templates/           Focused Nunjucks components
+data/skills/             One JSON file per skill group
+data/awards/             One JSON file per award
+data/education/          One JSON file per degree
+layouts/compact.json     Section and record order
+src/schema/              Focused Zod validation modules
+src/view/                Small TypeScript HTML components
 src/runtime/             Browser behavior
 tests/fixtures/          Original HTML used for visual verification
 ```
 
 Visible values are the default. Retained alternatives use `hidden: true` beside
-their related content and are omitted from generated HTML. Keys are generated
-from filenames or labels; editable data has no repeated IDs or `current` status.
+their related content and are omitted from generated HTML. IDs are generated
+from filenames or labels; editable data has no repeated IDs, status, or
+hardcoded duration.
 
-See [Customization](docs/CUSTOMIZATION.md) for editing and reordering content and
+See [Customization](docs/CUSTOMIZATION.md) for editing content and
 [Architecture](docs/ARCHITECTURE.md) for the composition model.
 
 ## Deployment

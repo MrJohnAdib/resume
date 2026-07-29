@@ -1,0 +1,12 @@
+{
+	"title": "Messaging and Monitoring",
+	"items": [
+		"RabbitMQ",
+		"Elasticsearch",
+		"Pub/Sub",
+		{
+			"label": "Datadog",
+			"hidden": true
+		}
+	]
+}

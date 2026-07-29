@@ -26,7 +26,6 @@ export const RoleSourceSchema = z.object({
 	organization: OrganizationSourceSchema,
 	employmentType: z.string().min(1).optional(),
 	location: z.string().min(1).optional(),
-	duration: z.string().min(1),
 	dates: z.object({ start: DateSourceSchema, end: DateSourceSchema }),
 	bullets: z.array(BulletSourceSchema).min(1).optional(),
 	technologies: z.array(z.string().min(1)).min(1).optional(),

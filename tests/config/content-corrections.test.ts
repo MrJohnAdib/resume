@@ -9,7 +9,7 @@ async function readJson<T>(file: string): Promise<T> {
 test("keeps the CEO machine date consistent with its visible date", async () => {
 	const role = await readJson<{
 		dates: { end: { value: string; label: string } };
-	}>("data/experience/co-founder-ceo.json");
+	}>("data/experience/2015-sarshomar.json");
 
 	assert.deepEqual(role.dates.end, {
 		value: "2017-09-07",
@@ -18,21 +18,20 @@ test("keeps the CEO machine date consistent with its visible date", async () => 
 });
 
 test("uses current, descriptive resume metadata", async () => {
-	const site = await readJson<{
-		metadata: Record<string, string>;
-	}>("data/site.json");
-	const { metadata } = site;
+	const metadata = await readJson<Record<string, string | string[]>>(
+		"data/site/metadata.json",
+	);
 
 	assert.equal(
 		metadata.title,
 		"John Adib - Engineering Leader & Mentor - Resume",
 	);
 	assert.equal(metadata.socialTitle, metadata.title);
-	assert.match(metadata.description, /Engineering Leader & Mentor/);
-	assert.match(metadata.description, /leading software teams/);
+	assert.match(String(metadata.description), /Engineering Leader & Mentor/);
+	assert.match(String(metadata.description), /leading software teams/);
 	assert.equal(metadata.socialDescription, metadata.description);
-	assert.match(metadata.keywords, /Engineering Leader/);
-	assert.match(metadata.keywords, /Software Engineering Mentor/);
+	assert.ok(metadata.keywords.includes("Engineering Leader"));
+	assert.ok(metadata.keywords.includes("Software Engineering Mentor"));
 	assert.doesNotMatch(
 		Object.values(metadata).join(" "),
 		/Enginner|Senior Solution Architect/,
@@ -40,12 +39,13 @@ test("uses current, descriptive resume metadata", async () => {
 });
 
 test("uses the correct XSS and SSG expansions", async () => {
-	const skills = await readJson<{
-		groups: {
-			items: (string | { label: string; title?: string })[];
-		}[];
-	}>("data/skills.json");
-	const items = skills.groups.flatMap((group) => group.items);
+	const files = ["data/skills/security.json", "data/skills/miscellaneous.json"];
+	const groups = await Promise.all(
+		files.map((file) =>
+			readJson<{ items: (string | { label: string; title?: string })[] }>(file),
+		),
+	);
+	const items = groups.flatMap((group) => group.items);
 	const titled = items.filter(
 		(item): item is { label: string; title?: string } =>
 			typeof item !== "string",

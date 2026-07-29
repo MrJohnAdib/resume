@@ -1,4 +1,3 @@
-import { runtime } from "nunjucks";
 import type { InlineNode, RichText } from "../schema/common.ts";
 
 function escapeHtml(value: string) {
@@ -21,12 +20,12 @@ function renderNode(node: InlineNode) {
 
 export function richText(value: RichText, annotations: InlineNode[] = []) {
 	if (Array.isArray(value)) {
-		return new runtime.SafeString(value.map(renderNode).join(""));
+		return value.map(renderNode).join("");
 	}
 	let html = escapeHtml(value);
 	for (const annotation of annotations) {
 		const text = escapeHtml(annotation.value);
 		html = html.replace(text, renderNode(annotation));
 	}
-	return new runtime.SafeString(html);
+	return html;
 }

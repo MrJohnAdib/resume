@@ -1,14 +1,14 @@
 import type { z } from "zod";
 import type {
-	PersonSourceSchema,
+	ProfileSourceSchema,
 	SummarySourceSchema,
 } from "../schema/person.ts";
 import { generatedKeys } from "./keys.ts";
 
-type PersonSource = z.infer<typeof PersonSourceSchema>;
+type ProfileSource = z.infer<typeof ProfileSourceSchema>;
 type SummarySource = z.infer<typeof SummarySourceSchema>;
 
-export function normalizePerson(person: PersonSource, summary: SummarySource) {
+export function normalizePerson(person: ProfileSource, summary: SummarySource) {
 	const links = generatedKeys(person.links, ({ label }) => label).map(
 		([id, link]) => ({
 			id,

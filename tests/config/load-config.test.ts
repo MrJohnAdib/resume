@@ -22,7 +22,7 @@ test("loads the complete modular repository configuration", async () => {
 	assert.equal(result.person.identity.name, "John Adib");
 	assert.equal(
 		result.sections.experience.items[0]?.id,
-		"engineering-manager-promoted-from-senior",
+		"2024-zapp-engineering-manager",
 	);
 	assert.equal(result.layout.sections[0]?.column, "left");
 });
@@ -34,6 +34,6 @@ test("reports the source file and JSON path for entry errors", async () => {
 
 	await assert.rejects(
 		() => loadResumeConfig(file),
-		new RegExp(`${file.replaceAll("/", "\\/")} at \\$\\.site`),
+		new RegExp(`${file.replaceAll("/", "\\/")} at \\$\\.profile`),
 	);
 });

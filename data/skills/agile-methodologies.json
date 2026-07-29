@@ -1,0 +1,21 @@
+{
+	"title": "Agile Methodologies",
+	"items": [
+		"Scrum",
+		"Kanban",
+		{
+			"label": "DDD",
+			"title": "Domain Driven Design"
+		},
+		{
+			"label": "KPI",
+			"title": "Key Performance Indicator"
+		},
+		{
+			"label": "OKR",
+			"title": "Objectives and Key Results"
+		},
+		"Scrumban"
+	],
+	"hidden": true
+}

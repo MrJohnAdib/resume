@@ -8,7 +8,6 @@ import { loadRoles } from "../../src/config/load-roles.ts";
 const role = {
 	title: "Engineer",
 	organization: { name: "Example" },
-	duration: "(1 year)",
 	dates: { start: "2024-01", end: "2024-12" },
 };
 
@@ -33,6 +32,7 @@ test("role filenames generate keys and layout order is authoritative", async () 
 		roles.map(({ id }) => id),
 		["second", "first"],
 	);
+	assert.equal(roles[0]?.duration, "(1 year)");
 });
 
 test("reports missing and unordered role files", async () => {
@@ -40,10 +40,10 @@ test("reports missing and unordered role files", async () => {
 
 	await assert.rejects(
 		() => loadRoles(directory, ["missing"]),
-		/Missing role "missing"/,
+		/Missing item "missing"/,
 	);
 	await assert.rejects(
 		() => loadRoles(directory, ["first"]),
-		/Role "second" is not ordered/,
+		/Item "second" is not ordered/,
 	);
 });

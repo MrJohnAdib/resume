@@ -1,0 +1,66 @@
+{
+	"degree": "B.S. in Computer Software Engineering",
+	"institution": "Azad University",
+	"employmentType": "Part-time",
+	"dates": [
+		{
+			"datetime": "2008-09-22",
+			"label": "2008"
+		},
+		{
+			"datetime": "2014-02-19",
+			"label": "2014"
+		},
+		{
+			"datetime": "2014-02-19",
+			"label": "2014"
+		}
+	],
+	"coursework": [
+		{
+			"label": "Fundamentals of Programming",
+			"hidden": true
+		},
+		"Advanced Programming",
+		{
+			"label": "Discrete mathematics",
+			"hidden": true
+		},
+		"Data Structure",
+		{
+			"label": "Design and Implementation of Programming Languages",
+			"hidden": true
+		},
+		"Algorithm Design",
+		{
+			"label": "Software Engineering",
+			"hidden": true
+		},
+		"Database Design",
+		{
+			"label": "Artificial intelligence",
+			"hidden": true
+		},
+		{
+			"label": "Computer Architecture",
+			"hidden": true
+		},
+		{
+			"label": "Compiler Design Fundamentals",
+			"hidden": true
+		},
+		{
+			"label": "Microprocessor",
+			"hidden": true
+		},
+		{
+			"label": "Computer Networks",
+			"hidden": true
+		},
+		{
+			"label": "Expert System",
+			"hidden": true
+		},
+		"Internet Engineering"
+	]
+}

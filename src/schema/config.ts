@@ -1,22 +1,26 @@
 import { z } from "zod";
 
+const File = z.string().min(1);
+const Section = z.object({
+	title: z.string().min(1),
+	directory: File,
+});
+
 export const ResumeConfigSchema = z.object({
-	$schema: z.string().optional(),
-	site: z.string().min(1),
-	person: z.string().min(1),
-	summary: z.string().min(1),
-	sections: z.object({
-		experience: z.object({
-			title: z.string().min(1),
-			directory: z.string().min(1),
-		}),
-		skills: z.string().min(1),
-		awards: z.string().min(1),
-		education: z.string().min(1),
-		volunteering: z.object({
-			title: z.string().min(1),
-			directory: z.string().min(1),
-		}),
+	profile: File,
+	summary: File,
+	site: z.object({
+		metadata: File,
+		release: File,
+		analytics: File,
+		banner: File,
 	}),
-	layout: z.string().min(1),
+	sections: z.object({
+		experience: Section,
+		skills: Section,
+		awards: Section.extend({ href: z.string().url() }),
+		education: Section,
+		volunteering: Section,
+	}),
+	layout: File,
 });

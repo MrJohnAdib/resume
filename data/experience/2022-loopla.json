@@ -1,0 +1,46 @@
+{
+	"title": "Senior Lead Software Engineer",
+	"organization": {
+		"name": "Loopla",
+		"url": "https://loopla.com/"
+	},
+	"employmentType": "Full-time",
+	"location": "London",
+	"dates": {
+		"start": "2022-12-11",
+		"end": "2024-12-15"
+	},
+	"bullets": [
+		"Led development of a booking platform with 10+ distinct designs and drove OKRs to establish a new revenue stream.",
+		{
+			"text": "Automated deployment process with CI/CD, cut time from months to less than 10 minutes and ensured zero downtime.",
+			"hidden": true
+		},
+		{
+			"text": "Refactored E2E tests and designed 35+ Cypress tests, enhanced pipeline efficiency, performance and reliability.",
+			"hidden": true
+		},
+		"Architected a pixel-perfect UI with Atomic Design, utilized Storybook with 1,000+ tests for high quality and scalability."
+	],
+	"technologies": [
+		"TypeScript",
+		"NodeJS",
+		"GCP",
+		"Docker",
+		"Terraform",
+		"PHP",
+		"GitHub Actions",
+		"PostgreSQL",
+		"MongoDB",
+		"Prisma",
+		"React.js",
+		"Tailwind",
+		"Next.js",
+		"Express",
+		"Vue.js",
+		"Jest",
+		"Cypress",
+		"Playwright",
+		"Storybook"
+	]
+}

@@ -1,33 +1,49 @@
-export type LayoutTheme = {
-	page: Record<string, string>;
-	theme: Record<string, string>;
-	typography: Record<string, string>;
+const page = {
+	width: "210mm",
+	height: "296mm",
+	screenPadding: "24px",
+	outerMargin: "1.5rem",
+	columnGap: "1rem",
+	leftColumn: "50%",
+	rightColumn: "50%",
+};
+const theme = {
+	primary: "#0891b2",
+	primaryHover: "#155e75",
+	primaryFocus: "#164e63",
+	pageBackground: "#ffffff",
+	headerBackground: "#fafaf9",
+	contactBackground: "#f5f5f4",
+	screenBackground: "#f3f4f6",
+	screenBackgroundDark: "#1f2937",
+	text: "#57534e",
+	heading: "#000000",
+	muted: "#78716c",
+};
+const type = {
+	bodyFont: '"Airbnb Cereal App", ui-sans-serif',
+	rtlFont: '"Vazirmatn", ui-serif',
+	nameSize: "1.875rem",
+	titleSize: "1.25rem",
+	bodySize: "0.875rem",
+	detailSize: "0.75rem",
+	bodyLineHeight: "1.375",
 };
 
-export function renderThemeCss({ page, theme, typography }: LayoutTheme) {
+export function renderThemeCss() {
 	return [
-		`:root{--resume-primary:${theme.primary};`,
-		`--resume-primary-hover:${theme.primaryHover ?? theme.primary};`,
-		`--resume-primary-focus:${theme.primaryFocus ?? theme.primary};`,
-		`--resume-page-width:${page.width};--resume-page-height:${page.height};`,
-		`--resume-screen-background:${theme.screenBackground};`,
-		`--resume-screen-background-dark:${theme.screenBackgroundDark ?? theme.screenBackground};`,
-		`--resume-page-background:${theme.pageBackground};`,
-		`--resume-header-background:${theme.headerBackground};`,
-		`--resume-contact-background:${theme.contactBackground};`,
-		`--resume-text:${theme.text};--resume-heading:${theme.heading};`,
-		`--resume-muted:${theme.muted};--resume-body-font:${typography.bodyFont};`,
-		`--resume-rtl-font:${typography.rtlFont};`,
-		`--resume-name-size:${typography.nameSize};`,
-		`--resume-title-size:${typography.titleSize};`,
-		`--resume-body-size:${typography.bodySize};`,
-		`--resume-detail-size:${typography.detailSize};`,
-		`--resume-body-line-height:${typography.bodyLineHeight};`,
-		`--resume-screen-padding:${page.screenPadding};`,
-		`--resume-outer-margin:${page.outerMargin};`,
-		`--resume-column-gap:${page.columnGap};`,
-		`--resume-left-column:${page.leftColumn};`,
-		`--resume-right-column:${page.rightColumn};}`,
+		`:root{--resume-primary:${theme.primary};--resume-primary-hover:${theme.primaryHover};`,
+		`--resume-primary-focus:${theme.primaryFocus};--resume-page-width:${page.width};`,
+		`--resume-page-height:${page.height};--resume-screen-background:${theme.screenBackground};`,
+		`--resume-screen-background-dark:${theme.screenBackgroundDark};--resume-page-background:${theme.pageBackground};`,
+		`--resume-header-background:${theme.headerBackground};--resume-contact-background:${theme.contactBackground};`,
+		`--resume-text:${theme.text};--resume-heading:${theme.heading};--resume-muted:${theme.muted};`,
+		`--resume-body-font:${type.bodyFont};--resume-rtl-font:${type.rtlFont};`,
+		`--resume-name-size:${type.nameSize};--resume-title-size:${type.titleSize};`,
+		`--resume-body-size:${type.bodySize};--resume-detail-size:${type.detailSize};`,
+		`--resume-body-line-height:${type.bodyLineHeight};--resume-screen-padding:${page.screenPadding};`,
+		`--resume-outer-margin:${page.outerMargin};--resume-column-gap:${page.columnGap};`,
+		`--resume-left-column:${page.leftColumn};--resume-right-column:${page.rightColumn};}`,
 		"body{font-family:var(--resume-body-font)}",
 		"html[lang=fa] body{font-family:var(--resume-rtl-font)}",
 		"#printArea{background-color:var(--resume-page-background)}",

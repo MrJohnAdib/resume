@@ -12,7 +12,7 @@ export async function buildCss(output = path.resolve("dist")) {
 		"-o",
 		path.join(output, "style/style.min.css"),
 		"--content",
-		"./src/templates/**/*.njk,./coverletter.html,./fa/index.html",
+		"./src/view/**/*.ts,./coverletter.html,./fa/index.html",
 		"--minify",
 	]);
 }

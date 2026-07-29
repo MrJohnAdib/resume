@@ -1,0 +1,17 @@
+{
+	"title": "CI/CD Automation",
+	"items": [
+		"Docker",
+		{
+			"label": "GH Actions",
+			"title": "GitHub Actions",
+			"separatorAfter": " "
+		},
+		"Turborepo",
+		"Monorepo",
+		{
+			"label": "Docker Compose",
+			"hidden": true
+		}
+	]
+}

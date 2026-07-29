@@ -1,0 +1,54 @@
+{
+	"degree": "M.S. in Information Technology Management",
+	"institution": "Azad University",
+	"employmentType": "Part-time",
+	"dates": [
+		{
+			"datetime": "2015-09-23",
+			"label": "2015"
+		},
+		{
+			"datetime": "2025",
+			"label": "2025"
+		},
+		{
+			"datetime": "2025-02-18",
+			"label": "2025"
+		}
+	],
+	"thesis": {
+		"text": "Critical success factors in SME e-business - FinTech case study",
+		"hidden": true
+	},
+	"coursework": [
+		"Fuzzy Logic and AI",
+		{
+			"label": "Organizational Resource Planning",
+			"hidden": true
+		},
+		{
+			"label": "Knowledge Management",
+			"hidden": true
+		},
+		"Digital Marketing",
+		"Business Process Re-engineering",
+		"E-business",
+		{
+			"label": "Advanced Organizational Behavior Management",
+			"hidden": true
+		},
+		{
+			"label": "Principles of Organization and Management",
+			"hidden": true
+		},
+		{
+			"label": "Advanced Management Theories",
+			"hidden": true
+		},
+		{
+			"label": "Supply Chain Management",
+			"hidden": true
+		},
+		"Statistical Analysis"
+	]
+}

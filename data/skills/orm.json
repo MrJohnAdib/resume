@@ -1,0 +1,17 @@
+{
+	"title": "ORM",
+	"items": [
+		"Prisma",
+		"TypeORM",
+		"Drizzle",
+		"Mongoose",
+		{
+			"label": "Doctrine",
+			"hidden": true
+		},
+		{
+			"label": "Eloquent",
+			"hidden": true
+		}
+	]
+}

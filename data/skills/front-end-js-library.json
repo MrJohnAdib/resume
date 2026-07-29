@@ -1,0 +1,16 @@
+{
+	"title": "Front-end JS Library",
+	"items": [
+		"Vanilla JS",
+		"Vue.js",
+		"React.js",
+		{
+			"label": "jQuery",
+			"hidden": true
+		},
+		{
+			"label": "Alpine.js",
+			"hidden": true
+		}
+	]
+}

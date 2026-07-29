@@ -1,0 +1,5 @@
+{
+	"title": "OS",
+	"items": ["Windows", "Ubuntu", "Debian", "CentOS", "macOS", "VMware ESXi"],
+	"hidden": true
+}

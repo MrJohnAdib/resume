@@ -1,0 +1,5 @@
+{
+	"title": "Network",
+	"items": ["DNS", "DHCP", "HTTP", "SSL", "TLS", "SMTP", "FTP", "MIME", "SSH"],
+	"hidden": true
+}

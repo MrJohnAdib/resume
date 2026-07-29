@@ -1,0 +1,37 @@
+{
+	"title": "Principal Software Engineer",
+	"organization": {
+		"name": "Tejarak",
+		"website": {
+			"href": "https://tejarak.com/",
+			"hidden": true
+		}
+	},
+	"employmentType": "Full-time",
+	"dates": {
+		"start": "2017-09-07",
+		"end": "2018-08-06"
+	},
+	"bullets": [
+		"Delivered an NFC-powered attendance system with interactive display and mobile check-ins, launched MVP in 2 months."
+	],
+	"technologies": [
+		"PHP",
+		"MySQL",
+		"JavaScript",
+		"jQuery",
+		"Gulp",
+		"HTML 5",
+		"CSS 3",
+		"SCSS",
+		"Sass",
+		"SSR",
+		"Nginx",
+		"Git",
+		"Scrumban",
+		"Trello",
+		"JSON",
+		"Twig",
+		"AJAX"
+	]
+}

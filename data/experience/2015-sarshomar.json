@@ -1,0 +1,43 @@
+{
+	"title": "Co-Founder & CEO",
+	"organization": {
+		"name": "Sarshomar",
+		"url": "https://sarshomar.com/"
+	},
+	"employmentType": "Full-time",
+	"dates": {
+		"start": "2015-06-22",
+		"end": {
+			"value": "2017-09-07",
+			"label": "09/2017"
+		}
+	},
+	"bullets": [
+		"Built and led a 15-member cross-functional startup, launched a flagship product that rapidly scaled to 1M users in month one.",
+		{
+			"text": "Spearheaded a 15-member cross-functional startup team. Launched a flagship product that hit 1M users in just a month.",
+			"hidden": true
+		},
+		{
+			"text": "Built Siftal UI framework, Dash as PHP framework with MVC pattern, 2x a development speed by consolidated SPA.",
+			"hidden": true
+		}
+	],
+	"technologies": [
+		"PHP",
+		"MySQL",
+		"JavaScript",
+		"jQuery",
+		"Grunt",
+		"HTML5",
+		"CSS3",
+		"Sass",
+		"Apache",
+		"GitHub",
+		"Kanban",
+		"Trello",
+		"JSON",
+		"AJAX",
+		"A/B Testing"
+	]
+}

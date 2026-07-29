@@ -14,7 +14,7 @@ const LinkSourceSchema = z.object({
 	...HiddenFields,
 });
 
-export const PersonSourceSchema = z.object({
+export const ProfileSourceSchema = z.object({
 	identity: z.object({
 		name: z.string().min(1),
 		title: z.string().min(1),

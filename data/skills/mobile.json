@@ -1,0 +1,15 @@
+{
+	"title": "Mobile",
+	"items": [
+		"React Native",
+		"Expo",
+		"EAS",
+		{
+			"label": "OTA",
+			"title": "Over-the-Air"
+		},
+		"Sentry",
+		"Mixpanel",
+		"AppsFlyer"
+	]
+}

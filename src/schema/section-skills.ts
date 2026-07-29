@@ -11,15 +11,10 @@ const SkillSourceSchema = z.union([
 	}),
 ]);
 
-export const SkillsSourceSchema = z.object({
+export const SkillGroupSourceSchema = z.object({
 	title: z.string().min(1),
-	groups: z.array(
-		z.object({
-			title: z.string().min(1),
-			items: z.array(SkillSourceSchema).min(1).optional(),
-			...HiddenFields,
-		}),
-	),
+	items: z.array(SkillSourceSchema).min(1),
+	...HiddenFields,
 });
 
 export const SkillGroupSchema = StableItemSchema.extend({

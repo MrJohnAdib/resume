@@ -1,16 +1,30 @@
 {
-	"$schema": "./schema/resume.schema.json",
-	"site": "data/site.json",
-	"person": "data/person.json",
+	"profile": "data/profile.json",
 	"summary": "data/summary.json",
+	"site": {
+		"metadata": "data/site/metadata.json",
+		"release": "data/site/release.json",
+		"analytics": "data/site/analytics.json",
+		"banner": "data/site/banner.json"
+	},
 	"sections": {
 		"experience": {
 			"title": "Professional Experience",
 			"directory": "data/experience"
 		},
-		"skills": "data/skills.json",
-		"awards": "data/awards.json",
-		"education": "data/education.json",
+		"skills": {
+			"title": "Skills",
+			"directory": "data/skills"
+		},
+		"awards": {
+			"title": "Awards and Honors",
+			"href": "https://mradib.com/awards",
+			"directory": "data/awards"
+		},
+		"education": {
+			"title": "Education",
+			"directory": "data/education"
+		},
 		"volunteering": {
 			"title": "Volunteer work",
 			"directory": "data/volunteering"

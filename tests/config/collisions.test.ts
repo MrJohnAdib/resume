@@ -3,40 +3,6 @@ import test from "node:test";
 import { generatedKeys } from "../../src/config/keys.ts";
 import { LayoutSourceSchema } from "../../src/schema/layout.ts";
 
-const page = {
-	label: "Compact",
-	size: "A4",
-	width: "210mm",
-	height: "296mm",
-	screenPadding: "24px",
-	outerMargin: "1rem",
-	columnGap: "1rem",
-	leftColumn: "50%",
-	rightColumn: "50%",
-};
-const theme = {
-	primary: "#000000",
-	primaryHover: "#000000",
-	primaryFocus: "#000000",
-	pageBackground: "#ffffff",
-	headerBackground: "#ffffff",
-	contactBackground: "#ffffff",
-	screenBackground: "#ffffff",
-	screenBackgroundDark: "#000000",
-	text: "#000000",
-	heading: "#000000",
-	muted: "#000000",
-};
-const typography = {
-	bodyFont: "sans-serif",
-	rtlFont: "sans-serif",
-	nameSize: "1rem",
-	titleSize: "1rem",
-	bodySize: "1rem",
-	detailSize: "1rem",
-	bodyLineHeight: "1",
-};
-
 test("rejects colliding generated keys", () => {
 	assert.throws(
 		() => generatedKeys(["Same", "Same"], (value) => value),
@@ -48,17 +14,17 @@ test("rejects colliding generated keys", () => {
 	);
 });
 
-test("rejects repeated sections and roles in a layout", () => {
+test("rejects repeated sections and items in a layout", () => {
 	const source = {
-		page,
-		theme,
-		typography,
 		sections: [
 			{ type: "experience", column: "left" },
 			{ type: "experience", column: "right" },
 		],
-		roles: {
+		order: {
 			experience: ["first", "first"],
+			skills: ["skills"],
+			awards: ["award"],
+			education: ["education"],
 			volunteering: ["volunteer"],
 		},
 	};
