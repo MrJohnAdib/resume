@@ -31,7 +31,7 @@ test("assigns sections and records to their configured pages", async () => {
 		'data-item-id="2026-zapp-consumer-engineering-manager"',
 	);
 	assert.ok(consumer > 0 && consumer < page2);
-	assert.ok(html.indexOf('data-item-id="2017-tejarak"') < page2);
+	assert.ok(html.indexOf('data-item-id="2019-jibres"') < page2);
 	const sarshomar = html.indexOf('data-item-id="2015-sarshomar"');
 	assert.ok(sarshomar > page2 && sarshomar < page3);
 	const skills = html.indexOf('data-section-id="skills"');

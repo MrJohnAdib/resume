@@ -15,11 +15,7 @@
 		}
 	],
 	"records": {
-		"experience": [
-			"2024-zapp-engineering-manager",
-			"2022-loopla",
-			"2019-jibres"
-		],
+		"experience": ["2024-zapp-engineering-manager", "2022-loopla"],
 		"skills": ["tech-stack", "ai-llm", "web-framework", "mobile", "infra"],
 		"education": ["masters", "bachelors"]
 	},
