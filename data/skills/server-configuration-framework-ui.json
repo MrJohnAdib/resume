@@ -1,0 +1,5 @@
+{
+	"title": "Server Configuration Framework UI",
+	"items": ["cPanel", "DirectAdmin"],
+	"hidden": true
+}

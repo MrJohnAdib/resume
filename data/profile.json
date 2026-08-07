@@ -1,0 +1,45 @@
+{
+	"identity": {
+		"name": "John Adib",
+		"title": "Engineering Leader & Mentor",
+		"avatar": {
+			"src": "./img/Javad-Adib-2016-Avatar.jpg",
+			"hidden": true
+		}
+	},
+	"contact": {
+		"email": {
+			"label": "mr.john.adib@gmail.com",
+			"address": "mr.john.adib+resume@gmail.com"
+		},
+		"phone": "+44 7393 633 145",
+		"location": "London",
+		"badge": "UK Settled Status"
+	},
+	"links": [
+		{
+			"label": "MrAdib.com",
+			"url": "https://mradib.com",
+			"icon": "./img/website.svg"
+		},
+		{
+			"label": "github.com/JohnAdib",
+			"url": "https://github.com/JohnAdib",
+			"icon": "./img/github.svg",
+			"title": "@JohnAdib"
+		},
+		{
+			"label": "twitter.com/MrAdib",
+			"url": "https://twitter.com/MrAdib",
+			"icon": "./img/twitter.svg",
+			"title": "@MrAdib",
+			"hidden": true
+		},
+		{
+			"label": "linkedin.com/in/MrAdib",
+			"url": "https://www.linkedin.com/in/MrAdib/",
+			"icon": "./img/linkedin.svg",
+			"title": "@MrAdib"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"title": "Miscellaneous",
+	"items": [
+		"QA",
+		"NPM",
+		"PWA",
+		"AJAX",
+		"CLI",
+		"MVC",
+		{
+			"label": "SSR",
+			"title": "Server-Side Rendering"
+		},
+		{
+			"label": "SSG",
+			"title": "Static Site Generation"
+		},
+		"Analysis",
+		"Maintenance",
+		"XHTML",
+		"Composer",
+		"LEMP",
+		"LAMP",
+		{
+			"label": "SPA",
+			"title": "Single-Page Application"
+		}
+	],
+	"hidden": true
+}

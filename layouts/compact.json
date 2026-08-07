@@ -1,0 +1,89 @@
+{
+	"sections": [
+		{
+			"type": "experience",
+			"column": "left"
+		},
+		{
+			"type": "skills",
+			"column": "right"
+		},
+		{
+			"type": "awards",
+			"column": "right"
+		},
+		{
+			"type": "education",
+			"column": "right"
+		},
+		{
+			"type": "volunteering",
+			"column": "right"
+		}
+	],
+	"order": {
+		"experience": [
+			"2024-zapp-engineering-manager",
+			"2026-zapp-consumer-engineering-manager",
+			"2024-zapp-senior-software-engineer",
+			"2022-loopla",
+			"2019-jibres",
+			"2018-ermile",
+			"2017-tejarak",
+			"2015-sarshomar",
+			"2006-teacher",
+			"2011-mixa",
+			"2008-freelancer"
+		],
+		"skills": [
+			"tech-stack",
+			"additional-programming-languages",
+			"ai-llm",
+			"api",
+			"web-framework",
+			"front-end-js-library",
+			"mobile",
+			"css-framework",
+			"test-suites",
+			"build-tools",
+			"version-control-system",
+			"infra",
+			"security",
+			"database",
+			"orm",
+			"distributed-cache",
+			"servers-and-cdn",
+			"ci-cd-automation",
+			"messaging-and-monitoring",
+			"server-configuration-framework-ui",
+			"network",
+			"os",
+			"agile-methodologies",
+			"engineering-principles",
+			"collaboration-tool",
+			"graphic-design-tool",
+			"office-specialist",
+			"core-web-essentials",
+			"miscellaneous"
+		],
+		"awards": [
+			"2026-worlds-most-influential-mentor",
+			"2024-worlds-most-influential-mentor",
+			"2024-adplist-mentor-of-year",
+			"2024-uk-global-talent",
+			"2024-super-mentor",
+			"2022-best-website-builder",
+			"2013-national-elite",
+			"2012-best-corporate-tourism-website",
+			"2010-worldskills-silver-medal",
+			"2007-worldskills-medallion"
+		],
+		"education": ["masters", "bachelors"],
+		"volunteering": [
+			"2024-adplist",
+			"2025-codie-awards",
+			"2017-khadije-charity",
+			"2010-worldskills"
+		]
+	}
+}

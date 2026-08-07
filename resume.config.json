@@ -1,0 +1,34 @@
+{
+	"profile": "data/profile.json",
+	"summary": "data/summary.json",
+	"site": {
+		"metadata": "data/site/metadata.json",
+		"release": "data/site/release.json",
+		"analytics": "data/site/analytics.json",
+		"banner": "data/site/banner.json"
+	},
+	"sections": {
+		"experience": {
+			"title": "Professional Experience",
+			"directory": "data/experience"
+		},
+		"skills": {
+			"title": "Skills",
+			"directory": "data/skills"
+		},
+		"awards": {
+			"title": "Awards and Honors",
+			"href": "https://mradib.com/awards",
+			"directory": "data/awards"
+		},
+		"education": {
+			"title": "Education",
+			"directory": "data/education"
+		},
+		"volunteering": {
+			"title": "Volunteer work",
+			"directory": "data/volunteering"
+		}
+	},
+	"layout": "layouts/compact.json"
+}

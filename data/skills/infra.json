@@ -1,0 +1,27 @@
+{
+	"title": "Infra",
+	"items": [
+		"Terraform",
+		"Cloud Run",
+		"Kubernetes",
+		"Firebase",
+		"Edge",
+		{
+			"label": "AWS",
+			"title": "Amazon Web Services"
+		},
+		{
+			"label": "GCP",
+			"title": "Google Cloud Platform"
+		},
+		{
+			"label": "DO",
+			"title": "Digital Ocean",
+			"hidden": true
+		},
+		{
+			"label": "Secret Manager",
+			"hidden": true
+		}
+	]
+}

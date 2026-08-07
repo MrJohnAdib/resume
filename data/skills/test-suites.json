@@ -1,0 +1,15 @@
+{
+	"title": "Test Suites",
+	"items": [
+		"Cypress",
+		"Playwright",
+		"Storybook",
+		"Jest",
+		"Maestro",
+		"Vitest",
+		{
+			"label": "PHPUnit",
+			"hidden": true
+		}
+	]
+}

@@ -1,0 +1,5 @@
+{
+	"title": "Collaboration Tool",
+	"items": ["Jira", "Linear", "Trello", "Zoom", "Slack"],
+	"hidden": true
+}

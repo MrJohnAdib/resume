@@ -1,0 +1,13 @@
+{
+	"title": "CSS Framework",
+	"items": [
+		"Tailwind CSS",
+		"Shadcn",
+		"Bootstrap",
+		"Material UI",
+		{
+			"label": "Semantic UI",
+			"hidden": true
+		}
+	]
+}

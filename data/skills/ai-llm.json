@@ -1,0 +1,14 @@
+{
+	"title": "AI & LLM",
+	"items": [
+		"OpenAI",
+		"Gemini",
+		"Vertex AI",
+		"Llama",
+		{
+			"label": "RAG",
+			"title": "Retrieval-Augmented Generation"
+		},
+		"Claude"
+	]
+}
