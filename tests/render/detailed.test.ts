@@ -61,7 +61,7 @@ test("links assets and metadata for the /cv/ route", async () => {
 	const html = await renderDetailed();
 
 	assert.match(html, /href="\.\.\/style\/style\.min\.css\?v=19"/);
-	assert.match(html, /href="\.\.\/style\/detailed\.css\?v=1"/);
+	assert.match(html, /href="\.\.\/style\/detailed\.css\?v=2"/);
 	assert.match(html, /src="\.\.\/script\/resume\.js\?v=7"/);
 	assert.match(
 		html,

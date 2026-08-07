@@ -2,6 +2,7 @@ import { z } from "zod";
 import {
 	DateLabelSchema,
 	HiddenFields,
+	LayoutFields,
 	RichTextSchema,
 	StableItemSchema,
 } from "./common.ts";
@@ -17,7 +18,9 @@ export const EducationSourceSchema = z.object({
 	employmentType: z.string().min(1).optional(),
 	location: z.string().min(1).optional(),
 	dates: z.array(DateLabelSchema).min(1).optional(),
-	thesis: z.object({ text: RichTextSchema, ...HiddenFields }).optional(),
+	thesis: z
+		.object({ text: RichTextSchema, ...HiddenFields, ...LayoutFields })
+		.optional(),
 	coursework: z.array(CourseSourceSchema).min(1).optional(),
 	...HiddenFields,
 });

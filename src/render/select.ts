@@ -48,6 +48,10 @@ export function selectSection(
 			(item.items ?? []) as Array<RecordValue & Selectable>,
 			layout,
 		),
+		thesis: visible(
+			(item.thesis ? [item.thesis] : []) as Array<RecordValue & Selectable>,
+			layout,
+		)[0],
 		technologies: item.technologies ?? [],
 	}));
 	return { id, title: section.title, href: section.href, items };
