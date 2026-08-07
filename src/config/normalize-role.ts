@@ -69,5 +69,6 @@ export function normalizeRole(id: string, role: SourceRole) {
 		bullets,
 		technologies,
 		...(role.hidden ? { hidden: true as const } : {}),
+		...(role.layouts ? { layouts: role.layouts } : {}),
 	};
 }

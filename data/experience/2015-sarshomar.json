@@ -20,7 +20,7 @@
 		},
 		{
 			"text": "Built Siftal UI framework, Dash as PHP framework with MVC pattern, 2x a development speed by consolidated SPA.",
-			"hidden": true
+			"layouts": ["detailed"]
 		}
 	],
 	"technologies": [

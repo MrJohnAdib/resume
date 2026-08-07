@@ -25,12 +25,12 @@
 		},
 		{
 			"text": "Resolved hundreds of lint warnings across four services, raising quality standards and reducing tech debt.",
-			"hidden": true
+			"layouts": ["detailed"]
 		},
 		"Improved platform performance, cutting load times across all pages by 60% and boosting Homepage LCP by 80%.",
 		{
 			"text": "Established E2E tests covering 100% sensitive flows in CI/CD, reducing validation time and boosting release confidence.",
-			"hidden": true
+			"layouts": ["detailed"]
 		}
 	],
 	"technologies": [

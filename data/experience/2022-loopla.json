@@ -14,11 +14,11 @@
 		"Led development of a booking platform with 10+ distinct designs and drove OKRs to establish a new revenue stream.",
 		{
 			"text": "Automated deployment process with CI/CD, cut time from months to less than 10 minutes and ensured zero downtime.",
-			"hidden": true
+			"layouts": ["detailed"]
 		},
 		{
 			"text": "Refactored E2E tests and designed 35+ Cypress tests, enhanced pipeline efficiency, performance and reliability.",
-			"hidden": true
+			"layouts": ["detailed"]
 		},
 		"Architected a pixel-perfect UI with Atomic Design, utilized Storybook with 1,000+ tests for high quality and scalability."
 	],

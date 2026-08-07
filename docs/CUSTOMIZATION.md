@@ -50,7 +50,10 @@ data/education/doctorate.json
 
 Add `"hidden": true` only to an exceptional role, bullet, skill group, link,
 award, course, or summary line. It stays available in data but is omitted from
-the compact HTML.
+every generated layout.
+
+Add `"layouts": ["detailed"]` to a role or bullet that belongs only to the
+named layouts. Content without the field appears in every layout.
 
 Do not use CSS hiding for ordinary resume content. The phone box is the only
 allowlisted stateful hidden element.

@@ -29,7 +29,9 @@ against the current date.
 
 Visible content needs no presentation metadata. `hidden: true` is the sparse
 exception for retained alternatives and inactive records. Hidden content is
-omitted from generated HTML. The phone is the only initially hidden runtime
+omitted from generated HTML in every layout. An optional `layouts` list on a
+bullet or role scopes it to the named layouts; content without the field
+appears everywhere. The layout name comes from the layout filename. The phone is the only initially hidden runtime
 element because contact click and print reveal it.
 
 Small TypeScript view functions render escaped HTML without a template engine.
@@ -48,4 +50,5 @@ below 100 lines.
 ## Layout names
 
 `compact` is the current one-page layout. `detailed` is reserved for a future
-three-page layout that can select more of the same data.
+three-page layout that can select more of the same data. Bullets already
+tagged `"layouts": ["detailed"]` surface only when that layout ships.

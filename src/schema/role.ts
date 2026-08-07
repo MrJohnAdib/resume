@@ -5,6 +5,7 @@ import {
 	DateLabelSchema,
 	DateValueSchema,
 	HiddenFields,
+	LayoutFields,
 	StableItemSchema,
 } from "./common.ts";
 
@@ -30,6 +31,7 @@ export const RoleSourceSchema = z.object({
 	bullets: z.array(BulletSourceSchema).min(1).optional(),
 	technologies: z.array(z.string().min(1)).min(1).optional(),
 	...HiddenFields,
+	...LayoutFields,
 });
 
 export const RoleSchema = StableItemSchema.extend({

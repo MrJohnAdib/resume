@@ -51,7 +51,18 @@ test("keeps editable data concise and free of repeated metadata", async () => {
 		true,
 	);
 	assert.equal(
-		role.bullets.some((bullet: { hidden?: boolean }) => bullet.hidden === true),
+		role.bullets.some((bullet: { layouts?: string[] }) =>
+			bullet.layouts?.includes("detailed"),
+		),
+		true,
+	);
+
+	const alternativesFile = path.resolve("data/experience/2015-sarshomar.json");
+	const alternatives = JSON.parse(await readFile(alternativesFile, "utf8"));
+	assert.equal(
+		alternatives.bullets.some(
+			(bullet: { hidden?: boolean }) => bullet.hidden === true,
+		),
 		true,
 	);
 });

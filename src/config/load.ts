@@ -27,7 +27,10 @@ export async function loadResumeConfig(entryFile: string) {
 	const entry = await readValidated(entryFile, ResumeConfigSchema);
 	const root = path.dirname(entryFile);
 	const resolve = (source: string) => path.resolve(root, source);
-	const layout = await readValidated(resolve(entry.layout), LayoutSourceSchema);
+	const layout = {
+		name: path.basename(entry.layout, ".json"),
+		...(await readValidated(resolve(entry.layout), LayoutSourceSchema)),
+	};
 	const section = entry.sections;
 	const [
 		metadata,

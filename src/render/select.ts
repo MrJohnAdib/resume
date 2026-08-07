@@ -11,29 +11,38 @@ const fields: Record<SectionId, string[]> = {
 	volunteering: ["title", "organization", "duration", "dates"],
 };
 
-function visible<T extends { hidden?: true }>(items: T[]) {
-	return items.filter(({ hidden }) => !hidden);
+type Selectable = { hidden?: true; layouts?: string[] };
+
+function visible<T extends Selectable>(items: T[], layout: string) {
+	return items.filter(
+		({ hidden, layouts }) => !hidden && (!layouts || layouts.includes(layout)),
+	);
 }
 
 function selectSection(resume: Resume, id: SectionId) {
+	const layout = resume.layout.name;
 	const section = resume.sections[id] as {
 		title: string;
 		href?: string;
 		items: RecordValue[];
 	};
 	const items = visible(
-		section.items as Array<RecordValue & { hidden?: true }>,
+		section.items as Array<RecordValue & Selectable>,
+		layout,
 	).map((item) => ({
 		...item,
 		fields: fields[id],
 		bullets: visible(
-			(item.bullets ?? []) as Array<RecordValue & { hidden?: true }>,
+			(item.bullets ?? []) as Array<RecordValue & Selectable>,
+			layout,
 		),
 		coursework: visible(
-			(item.coursework ?? []) as Array<RecordValue & { hidden?: true }>,
+			(item.coursework ?? []) as Array<RecordValue & Selectable>,
+			layout,
 		),
 		items: visible(
-			(item.items ?? []) as Array<RecordValue & { hidden?: true }>,
+			(item.items ?? []) as Array<RecordValue & Selectable>,
+			layout,
 		),
 		technologies: item.technologies ?? [],
 	}));
@@ -45,8 +54,10 @@ export function createCompactView(resume: Resume) {
 		...selectSection(resume, type),
 		column,
 	}));
-	const links = visible(resume.person.links.items);
-	const summary = visible(resume.person.summary.items).map(({ text }) => text);
+	const links = visible(resume.person.links.items, resume.layout.name);
+	const summary = visible(resume.person.summary.items, resume.layout.name).map(
+		({ text }) => text,
+	);
 	return {
 		...resume,
 		person: {

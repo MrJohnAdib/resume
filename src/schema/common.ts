@@ -14,6 +14,9 @@ function validCalendarDate(value: string) {
 
 export const HiddenFields = { hidden: z.literal(true).optional() };
 export const SlugSchema = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+export const LayoutFields = {
+	layouts: z.array(SlugSchema).min(1).optional(),
+};
 export const DateValueSchema = z
 	.string()
 	.regex(
@@ -40,6 +43,7 @@ export const DateLabelSchema = z.object({
 export const StableItemSchema = z.object({
 	id: SlugSchema,
 	...HiddenFields,
+	...LayoutFields,
 });
 
 export const BulletSourceSchema = z.union([
@@ -48,6 +52,7 @@ export const BulletSourceSchema = z.union([
 		text: z.string().min(1),
 		annotations: z.array(InlineNodeSchema).min(1).optional(),
 		...HiddenFields,
+		...LayoutFields,
 	}),
 ]);
 

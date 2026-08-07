@@ -31,4 +31,6 @@ export const LayoutSourceSchema = z.object({
 	}),
 });
 
-export type Layout = z.infer<typeof LayoutSourceSchema>;
+export const LayoutSchema = LayoutSourceSchema.extend({ name: SlugSchema });
+
+export type Layout = z.infer<typeof LayoutSchema>;
