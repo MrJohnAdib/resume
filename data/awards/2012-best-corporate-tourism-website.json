@@ -18,5 +18,5 @@
 		"datetime": "2012",
 		"label": "2012"
 	},
-	"hidden": true
+	"layouts": ["detailed"]
 }

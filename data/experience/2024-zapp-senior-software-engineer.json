@@ -52,5 +52,5 @@
 		"Vitest",
 		"Jest"
 	],
-	"hidden": true
+	"layouts": ["detailed"]
 }

@@ -27,9 +27,10 @@ test("assigns sections and records to their configured pages", async () => {
 	const page2 = html.indexOf('data-page="2"');
 	const page3 = html.indexOf('data-page="3"');
 
-	assert.ok(
-		html.indexOf('data-item-id="2024-zapp-engineering-manager"') < page2,
+	const consumer = html.indexOf(
+		'data-item-id="2026-zapp-consumer-engineering-manager"',
 	);
+	assert.ok(consumer > 0 && consumer < page2);
 	assert.ok(html.indexOf('data-item-id="2019-jibres"') < page2);
 	const tejarak = html.indexOf('data-item-id="2017-tejarak"');
 	assert.ok(tejarak > page2 && tejarak < page3);
@@ -47,13 +48,13 @@ test("shows detailed-only content and keeps hidden records hidden", async () => 
 	assert.doesNotMatch(html, /Tehran|Nour|Yazd|Mashhad/);
 	assert.match(html, /data-item-id="2006-teacher"/);
 	assert.match(html, /data-item-id="2010-worldskills"/);
+	assert.match(html, /data-item-id="2024-zapp-senior-software-engineer"/);
+	assert.match(html, /data-item-id="2026-zapp-consumer-engineering-manager"/);
+	assert.match(html, /data-item-id="2010-worldskills-silver-medal"/);
+	assert.doesNotMatch(html, /data-item-id="2024-zapp-engineering-manager"/);
 	assert.doesNotMatch(
 		html,
-		/data-item-id="2024-zapp-senior-software-engineer"/,
-	);
-	assert.doesNotMatch(
-		html,
-		/data-item-id="2026-zapp-consumer-engineering-manager"/,
+		/data-item-id="2024-worlds-most-influential-mentor"/,
 	);
 });
 

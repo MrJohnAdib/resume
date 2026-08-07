@@ -2,6 +2,7 @@ import { z } from "zod";
 import {
 	DateLabelSchema,
 	HiddenFields,
+	LayoutFields,
 	RichTextSchema,
 	StableItemSchema,
 } from "./common.ts";
@@ -13,6 +14,7 @@ export const AwardSourceSchema = z.object({
 	date: DateLabelSchema,
 	datePlacement: z.literal("before").optional(),
 	...HiddenFields,
+	...LayoutFields,
 });
 
 export const AwardItemSchema = StableItemSchema.extend({

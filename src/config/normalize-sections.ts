@@ -30,8 +30,12 @@ export function normalizeSkill(id: string, group: SkillGroup) {
 			...(typeof item !== "string" && item.hidden
 				? { hidden: true as const }
 				: {}),
+			...(typeof item !== "string" && item.layouts
+				? { layouts: item.layouts }
+				: {}),
 		})),
 		...(group.hidden ? { hidden: true as const } : {}),
+		...(group.layouts ? { layouts: group.layouts } : {}),
 	};
 }
 

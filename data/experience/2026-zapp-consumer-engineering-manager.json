@@ -14,5 +14,5 @@
 		"Shifted iOS and Android app releases from monthly to weekly, a 4x faster cadence, shortening lead time and cycle time.",
 		"Deployed 3 AI reviewers as an automated guardrail on every PR, enforcing a consistent quality bar and reducing wait time."
 	],
-	"hidden": true
+	"layouts": ["detailed"]
 }

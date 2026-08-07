@@ -9,7 +9,7 @@ import {
 
 const CourseSourceSchema = z.union([
 	z.string().min(1),
-	z.object({ label: z.string().min(1), ...HiddenFields }),
+	z.object({ label: z.string().min(1), ...HiddenFields, ...LayoutFields }),
 ]);
 
 export const EducationSourceSchema = z.object({
@@ -23,6 +23,7 @@ export const EducationSourceSchema = z.object({
 		.optional(),
 	coursework: z.array(CourseSourceSchema).min(1).optional(),
 	...HiddenFields,
+	...LayoutFields,
 });
 
 export const EducationItemSchema = StableItemSchema.extend({

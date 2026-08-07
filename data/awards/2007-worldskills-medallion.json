@@ -5,5 +5,5 @@
 		"datetime": "2007-07",
 		"label": "2007"
 	},
-	"hidden": true
+	"layouts": ["detailed"]
 }

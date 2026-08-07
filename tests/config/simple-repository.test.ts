@@ -20,11 +20,11 @@ test("loads generated keys and automatic presentation behavior", async () => {
 		resume.sections.experience.items[0]?.id,
 		"2024-zapp-engineering-manager",
 	);
-	assert.equal(
+	assert.deepEqual(
 		resume.sections.experience.items.find(
 			({ id }) => id === "2026-zapp-consumer-engineering-manager",
-		)?.hidden,
-		true,
+		)?.layouts,
+		["detailed"],
 	);
 	assert.equal(resume.person.identity.avatar?.alt, resume.person.identity.name);
 	assert.equal(resume.person.contact.phone.href, "tel:+447393633145");
