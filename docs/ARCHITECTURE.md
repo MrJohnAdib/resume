@@ -15,6 +15,7 @@ education/*.json ──── one degree per file
 order.json ────────── shared record order for every layout
 compact.json ──────── one-page section columns
 detailed.json ─────── three-page section pages and breaks
+one.json ──────────── one-page CV-format record selection
 ```
 
 The loader validates every file with a small Zod module and reports its source
@@ -51,8 +52,10 @@ below 100 lines.
 
 ## Layout names
 
-`compact` is the two-column one-page layout at `/`. `detailed` is the
-one-column three-page layout at `/cv/` with its own metadata and stylesheet.
-Both share `layouts/order.json`; `detailed` assigns sections to pages and
-splits experience with `pageBreaks`. Bullets tagged `"layouts": ["detailed"]`
-surface only there. The build measures every A4 sheet for overflow.
+`compact` is the two-column one-page layout at `/`. `detailed` at `/cv/` and
+`one` at `/one/` share the CV-format components in `src/view/cv` and one
+stylesheet, so every bullet, role, and heading renders identically. Page-mode
+layouts assign sections to pages, split records with `pageBreaks`, and select
+a record subset with `records`. Items tagged `"layouts": [...]` appear only
+in the named layouts. The build measures every A4 sheet at true page width
+for overflow.

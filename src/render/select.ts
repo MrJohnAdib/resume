@@ -30,30 +30,33 @@ export function selectSection(
 		href?: string;
 		items: RecordValue[];
 	};
+	const chosen = resume.layout.records?.[id];
 	const items = visible(
-		section.items as Array<RecordValue & Selectable>,
+		section.items as Array<RecordValue & Selectable & { id: string }>,
 		layout,
-	).map((item) => ({
-		...item,
-		fields: fieldMap[id],
-		bullets: visible(
-			(item.bullets ?? []) as Array<RecordValue & Selectable>,
-			layout,
-		),
-		coursework: visible(
-			(item.coursework ?? []) as Array<RecordValue & Selectable>,
-			layout,
-		),
-		items: visible(
-			(item.items ?? []) as Array<RecordValue & Selectable>,
-			layout,
-		),
-		thesis: visible(
-			(item.thesis ? [item.thesis] : []) as Array<RecordValue & Selectable>,
-			layout,
-		)[0],
-		technologies: item.technologies ?? [],
-	}));
+	)
+		.filter((item) => !chosen || chosen.includes(item.id))
+		.map((item) => ({
+			...item,
+			fields: fieldMap[id],
+			bullets: visible(
+				(item.bullets ?? []) as Array<RecordValue & Selectable>,
+				layout,
+			),
+			coursework: visible(
+				(item.coursework ?? []) as Array<RecordValue & Selectable>,
+				layout,
+			),
+			items: visible(
+				(item.items ?? []) as Array<RecordValue & Selectable>,
+				layout,
+			),
+			thesis: visible(
+				(item.thesis ? [item.thesis] : []) as Array<RecordValue & Selectable>,
+				layout,
+			)[0],
+			technologies: item.technologies ?? [],
+		}));
 	return { id, title: section.title, href: section.href, items };
 }
 

@@ -1,12 +1,12 @@
-import type { DetailedView } from "../../render/detailed-select.ts";
+import type { CvView } from "../../render/cv-select.ts";
 import { escapeHtml as e } from "../html.ts";
 
-function contact({ person }: DetailedView) {
+function contact({ person }: CvView) {
 	const phone = `<span id="phoneBox" class="hidden"><a href="${e(person.contact.phone.href)}" itemprop="telephone" tabindex="-1">${e(person.contact.phone.label)}</a><span class="cv-sep">·</span></span>`;
 	return `<div id="contactBox" class="cv-contact">${phone}<span itemprop="address">${e(person.contact.location)}</span><span class="cv-sep">·</span><span>${e(person.contact.badge)}</span></div>`;
 }
 
-function links({ person, site }: DetailedView) {
+function links({ person, site }: CvView) {
 	const email = `<a href="${e(person.contact.email.href)}" itemprop="email" tabindex="-1">${e(person.contact.email.label)}</a>`;
 	const items = person.links.items.map(
 		(link) =>
@@ -16,7 +16,7 @@ function links({ person, site }: DetailedView) {
 	return `<div class="cv-links">${[email, ...items].join('<span class="cv-sep">·</span>')}${version}</div>`;
 }
 
-export function renderCvHeader(view: DetailedView) {
+export function renderCvHeader(view: CvView) {
 	const { person } = view;
 	const summary = person.summary.items
 		.map((item) => `<span>${e(item)}</span>`)

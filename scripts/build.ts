@@ -2,7 +2,7 @@ import { rm } from "node:fs/promises";
 import path from "node:path";
 import { checkBuiltAssets } from "../src/build/assets.ts";
 import { buildCss } from "./build-css.ts";
-import { checkDetailedLayout } from "./check-detailed-layout.ts";
+import { checkCvLayout } from "./check-cv-layout.ts";
 import { checkLayout } from "./check-layout.ts";
 import { copyStatic } from "./copy-static.ts";
 import { renderSite } from "./render.ts";
@@ -15,7 +15,7 @@ async function main() {
 	await buildCss(output);
 	await checkBuiltAssets(output);
 	await checkLayout(output);
-	await checkDetailedLayout(output);
+	await checkCvLayout(output);
 	console.log(`Built ${path.relative(process.cwd(), output)}`);
 }
 

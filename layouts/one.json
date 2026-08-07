@@ -1,0 +1,27 @@
+{
+	"metadata": "data/site/metadata-one.json",
+	"sections": [
+		{
+			"type": "experience",
+			"page": 1
+		},
+		{
+			"type": "skills",
+			"page": 1
+		},
+		{
+			"type": "education",
+			"page": 1
+		}
+	],
+	"records": {
+		"experience": [
+			"2024-zapp-engineering-manager",
+			"2022-loopla",
+			"2019-jibres"
+		],
+		"skills": ["tech-stack", "ai-llm", "web-framework", "mobile", "infra"],
+		"education": ["masters", "bachelors"]
+	},
+	"order": "order.json"
+}

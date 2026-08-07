@@ -56,7 +56,7 @@ function paginate(resume: Resume) {
 		.map(([number, sections]) => ({ number, sections }));
 }
 
-export function createDetailedView(resume: Resume) {
+export function createCvView(resume: Resume) {
 	const links = visible(resume.person.links.items, resume.layout.name);
 	const summary = visible(resume.person.summary.items, resume.layout.name).map(
 		({ text }) => text,
@@ -75,4 +75,4 @@ export function createDetailedView(resume: Resume) {
 	};
 }
 
-export type DetailedView = ReturnType<typeof createDetailedView>;
+export type CvView = ReturnType<typeof createCvView>;

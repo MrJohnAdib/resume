@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { renderDetailedCss } from "../../src/render/theme-detailed.ts";
+import { renderCvCss } from "../../src/render/theme-cv.ts";
 import { renderThemeCss } from "../../src/render/theme.ts";
 
 test("renders semantic compact layout settings as CSS variables", () => {
@@ -12,9 +12,9 @@ test("renders semantic compact layout settings as CSS variables", () => {
 });
 
 test("renders detailed sheet CSS with safe page breaks", () => {
-	const css = renderDetailedCss();
+	const css = renderCvCss();
 
-	assert.match(css, /#printArea\[data-layout=detailed\]\{display:flex/);
+	assert.match(css, /#printArea\[data-layout=cv\]\{display:flex/);
 	assert.match(css, /\.page\{box-shadow:none.*break-after:page\}/);
 	assert.match(
 		css,

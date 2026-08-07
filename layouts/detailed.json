@@ -11,7 +11,7 @@
 		},
 		{
 			"type": "awards",
-			"page": 2
+			"page": 3
 		},
 		{
 			"type": "education",
@@ -24,7 +24,7 @@
 	],
 	"pageBreaks": {
 		"experience": {
-			"2006-teacher": 2
+			"2015-sarshomar": 2
 		}
 	},
 	"order": "order.json"

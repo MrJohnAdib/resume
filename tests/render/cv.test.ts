@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import path from "node:path";
 import test from "node:test";
 import { loadResumeConfig } from "../../src/config/load.ts";
-import { renderDetailedResume } from "../../src/render/detailed.ts";
+import { renderCvResume } from "../../src/render/cv.ts";
 import { validateResume } from "../../src/schema/validate.ts";
 
 async function renderDetailed() {
@@ -10,7 +10,7 @@ async function renderDetailed() {
 		path.resolve("resume.config.json"),
 		"layouts/detailed.json",
 	);
-	return renderDetailedResume(validateResume(loaded));
+	return renderCvResume(validateResume(loaded));
 }
 
 test("renders three pages with the header only on page one", async () => {
@@ -32,13 +32,11 @@ test("assigns sections and records to their configured pages", async () => {
 	);
 	assert.ok(consumer > 0 && consumer < page2);
 	assert.ok(html.indexOf('data-item-id="2017-tejarak"') < page2);
-	const teacher = html.indexOf('data-item-id="2006-teacher"');
-	assert.ok(teacher > page2 && teacher < page3);
-	for (const id of ["skills", "awards"]) {
-		const section = html.indexOf(`data-section-id="${id}"`);
-		assert.ok(section > page2 && section < page3, id);
-	}
-	for (const id of ["education", "volunteering"]) {
+	const sarshomar = html.indexOf('data-item-id="2015-sarshomar"');
+	assert.ok(sarshomar > page2 && sarshomar < page3);
+	const skills = html.indexOf('data-section-id="skills"');
+	assert.ok(skills > page2 && skills < page3);
+	for (const id of ["awards", "education", "volunteering"]) {
 		assert.ok(html.indexOf(`data-section-id="${id}"`) > page3, id);
 	}
 });
@@ -64,7 +62,7 @@ test("links assets and metadata for the /cv/ route", async () => {
 	const html = await renderDetailed();
 
 	assert.match(html, /href="\.\.\/style\/style\.min\.css\?v=19"/);
-	assert.match(html, /href="\.\.\/style\/detailed\.css\?v=4"/);
+	assert.match(html, /href="\.\.\/style\/cv\.css\?v=1"/);
 	assert.match(html, /src="\.\.\/script\/resume\.js\?v=7"/);
 	assert.match(
 		html,

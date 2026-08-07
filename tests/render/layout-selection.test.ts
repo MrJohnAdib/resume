@@ -3,7 +3,7 @@ import path from "node:path";
 import test from "node:test";
 import { loadResumeConfig } from "../../src/config/load.ts";
 import { renderCompactResume } from "../../src/render/compact.ts";
-import { renderDetailedResume } from "../../src/render/detailed.ts";
+import { renderCvResume } from "../../src/render/cv.ts";
 import { validateResume } from "../../src/schema/validate.ts";
 
 async function loadResume(layout?: string) {
@@ -35,7 +35,7 @@ test("omits layout-scoped bullets from other layouts", async () => {
 
 test("selects layout-scoped bullets when their layout is active", async () => {
 	const resume = await loadResume("layouts/detailed.json");
-	const html = renderDetailedResume(resume);
+	const html = renderCvResume(resume);
 	assert.match(html, /Established E2E tests covering 100% sensitive flows/);
 	assert.match(html, /Automated deployment process with CI\/CD/);
 	assert.match(html, /Improved platform performance/);

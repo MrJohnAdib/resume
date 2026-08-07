@@ -8,4 +8,8 @@
     <loc>https://resume.mradib.com/cv/</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://resume.mradib.com/one/</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>

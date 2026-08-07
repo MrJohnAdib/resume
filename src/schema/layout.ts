@@ -63,6 +63,16 @@ export const LayoutSourceSchema = z.object({
 		})
 		.partial()
 		.optional(),
+	records: z
+		.object({
+			experience: Order,
+			skills: Order,
+			awards: Order,
+			education: Order,
+			volunteering: Order,
+		})
+		.partial()
+		.optional(),
 	metadata: z.string().min(1).optional(),
 });
 

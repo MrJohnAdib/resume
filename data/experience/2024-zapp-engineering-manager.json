@@ -54,5 +54,5 @@
 		"Vitest",
 		"Jest"
 	],
-	"layouts": ["compact"]
+	"layouts": ["compact", "one"]
 }

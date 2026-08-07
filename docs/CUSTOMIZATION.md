@@ -53,7 +53,8 @@ award, course, or summary line. It stays available in data but is omitted from
 every generated layout.
 
 Add `"layouts": ["detailed"]` to a role or bullet that belongs only to the
-named layouts. Content without the field appears in every layout.
+named layouts. Content without the field appears in every layout. A layout
+can also list a `records` subset per section, like `layouts/one.json`.
 
 Do not use CSS hiding for ordinary resume content. The phone box is the only
 allowlisted stateful hidden element.

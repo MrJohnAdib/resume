@@ -2,9 +2,9 @@ import type { CompactView } from "../render/select.ts";
 import { escapeHtml as e } from "./html.ts";
 
 function extraStylesheet(assets: CompactView["site"]["assets"]) {
-	if (!assets.detailedStylesheet) return "";
+	if (!assets.cvStylesheet) return "";
 	return `
-	<link rel="stylesheet" href="${e(assets.detailedStylesheet)}" />`;
+	<link rel="stylesheet" href="${e(assets.cvStylesheet)}" />`;
 }
 
 export function renderHead({ metadata, assets }: CompactView["site"]) {

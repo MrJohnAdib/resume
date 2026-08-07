@@ -1,6 +1,7 @@
 export const layoutRoutes: Record<string, string> = {
 	compact: "",
 	detailed: "cv/",
+	one: "one/",
 };
 
 export function layoutBase(layoutName: string) {
@@ -20,9 +21,7 @@ export function siteAssets(base = "./") {
 			location: `${base}img/location.svg`,
 			badge: `${base}img/star.svg`,
 		},
-		...(base === "./"
-			? {}
-			: { detailedStylesheet: `${base}style/detailed.css?v=4` }),
+		...(base === "./" ? {} : { cvStylesheet: `${base}style/cv.css?v=1` }),
 	};
 }
 

@@ -40,6 +40,7 @@ data/education/          One JSON file per degree
 layouts/order.json       Shared record order for every layout
 layouts/compact.json     One-page layout served at /
 layouts/detailed.json    Three-page layout served at /cv/
+layouts/one.json         One-page CV-format layout served at /one/
 src/schema/              Focused Zod validation modules
 src/view/                Small TypeScript HTML components
 src/runtime/             Browser behavior
