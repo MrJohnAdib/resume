@@ -44,8 +44,9 @@ test("shows detailed-only content and keeps hidden records hidden", async () => 
 	const html = await renderDetailed();
 
 	assert.match(html, /Relevant Coursework/);
-	assert.doesNotMatch(html, /Tehran|Nour|, IR\b/);
-	assert.doesNotMatch(html, /data-item-id="2006-teacher"/);
+	assert.doesNotMatch(html, /Tehran|Nour|Yazd|Mashhad/);
+	assert.match(html, /data-item-id="2006-teacher"/);
+	assert.match(html, /data-item-id="2010-worldskills"/);
 	assert.doesNotMatch(
 		html,
 		/data-item-id="2024-zapp-senior-software-engineer"/,

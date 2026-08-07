@@ -29,6 +29,8 @@ test("omits layout-scoped bullets from other layouts", async () => {
 		/Established E2E tests covering 100% sensitive flows/,
 	);
 	assert.doesNotMatch(html, /Automated deployment process with CI\/CD/);
+	assert.doesNotMatch(html, /data-item-id="2006-teacher"/);
+	assert.doesNotMatch(html, /data-item-id="2010-worldskills"/);
 });
 
 test("selects layout-scoped bullets when their layout is active", async () => {
