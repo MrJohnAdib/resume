@@ -1,7 +1,7 @@
 import type { CompactView } from "../render/select.ts";
 import { escapeHtml as e } from "./html.ts";
 
-export function renderHeader(view: CompactView) {
+export function renderHeader(view: Pick<CompactView, "site" | "person">) {
 	const { site, person } = view;
 	const links = person.links.items
 		.map(

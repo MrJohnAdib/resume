@@ -28,7 +28,7 @@ npm run check        # lint, format-check, type-check, and enforce file size
 ## Structure
 
 ```text
-resume.config.json       Connects focused data to the compact layout
+resume.config.json       Connects focused data to the layouts
 data/profile.json        Identity, contact details, and links
 data/summary.json        Current and hidden summary lines
 data/site/               Metadata, release, analytics, and banner content
@@ -37,7 +37,9 @@ data/volunteering/       One complete JSON file per volunteer role
 data/skills/             One JSON file per skill group
 data/awards/             One JSON file per award
 data/education/          One JSON file per degree
-layouts/compact.json     Section and record order
+layouts/order.json       Shared record order for every layout
+layouts/compact.json     One-page layout served at /
+layouts/detailed.json    Three-page layout served at /cv/
 src/schema/              Focused Zod validation modules
 src/view/                Small TypeScript HTML components
 src/runtime/             Browser behavior

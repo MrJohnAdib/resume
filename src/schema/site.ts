@@ -46,6 +46,7 @@ export const SiteSchema = z.object({
 		resumeStylesheet: Asset,
 		themeStylesheet: Asset,
 		runtimeScript: Asset,
+		detailedStylesheet: Asset.optional(),
 		icons: z.object({
 			email: Asset,
 			telephone: Asset,

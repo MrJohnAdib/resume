@@ -1,25 +1,31 @@
 {
+	"metadata": "data/site/metadata-cv.json",
 	"sections": [
 		{
 			"type": "experience",
-			"column": "left"
+			"page": 1
 		},
 		{
 			"type": "skills",
-			"column": "right"
+			"page": 3
 		},
 		{
 			"type": "awards",
-			"column": "right"
+			"page": 3
 		},
 		{
 			"type": "education",
-			"column": "right"
+			"page": 3
 		},
 		{
 			"type": "volunteering",
-			"column": "right"
+			"page": 3
 		}
 	],
+	"pageBreaks": {
+		"experience": {
+			"2019-jibres": 2
+		}
+	},
 	"order": "order.json"
 }

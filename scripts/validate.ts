@@ -1,10 +1,10 @@
 import path from "node:path";
-import { loadResumeConfig } from "../src/config/load.ts";
+import { loadResumeLayouts } from "../src/config/load-layouts.ts";
 import { validateResume } from "../src/schema/validate.ts";
 
 async function main() {
 	const file = path.resolve(process.argv[2] ?? "resume.config.json");
-	validateResume(await loadResumeConfig(file));
+	for (const resume of await loadResumeLayouts(file)) validateResume(resume);
 	console.log(`Validated ${path.relative(process.cwd(), file)}`);
 }
 

@@ -26,7 +26,7 @@ test("uses focused profile, site, skill, award, and education files", async () =
 		.sort();
 
 	assert.deepEqual(rootFiles, ["profile.json", "summary.json"]);
-	assert.equal((await jsonFiles("data/site")).length, 4);
+	assert.equal((await jsonFiles("data/site")).length, 5);
 	assert.ok((await jsonFiles("data/skills")).length > 10);
 	assert.ok((await jsonFiles("data/awards")).length > 1);
 	assert.ok((await jsonFiles("data/education")).length > 1);

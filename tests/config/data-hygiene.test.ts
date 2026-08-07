@@ -50,7 +50,7 @@ test("uses non-empty editable JSON files below 100 lines", async () => {
 	const layoutFiles = await jsonFiles(path.resolve("layouts"));
 
 	assert.ok(dataFiles.length > 0);
-	assert.equal(layoutFiles.length, 1);
+	assert.equal(layoutFiles.length, 3);
 	for (const file of dataFiles) {
 		const source = await readFile(file, "utf8");
 		const value = JSON.parse(source);

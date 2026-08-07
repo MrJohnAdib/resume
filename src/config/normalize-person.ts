@@ -8,11 +8,18 @@ import { generatedKeys } from "./keys.ts";
 type ProfileSource = z.infer<typeof ProfileSourceSchema>;
 type SummarySource = z.infer<typeof SummarySourceSchema>;
 
-export function normalizePerson(person: ProfileSource, summary: SummarySource) {
+export function normalizePerson(
+	person: ProfileSource,
+	summary: SummarySource,
+	base = "./",
+) {
+	const rebase = (source: string) =>
+		source.startsWith("./") ? `${base}${source.slice(2)}` : source;
 	const links = generatedKeys(person.links, ({ label }) => label).map(
 		([id, link]) => ({
 			id,
 			...link,
+			icon: rebase(link.icon),
 			title: link.title ?? link.label,
 		}),
 	);
@@ -24,7 +31,7 @@ export function normalizePerson(person: ProfileSource, summary: SummarySource) {
 			...(avatar
 				? {
 						avatar: {
-							url: avatar.src,
+							url: rebase(avatar.src),
 							alt: person.identity.name,
 							...(avatar.hidden ? { hidden: true as const } : {}),
 						},

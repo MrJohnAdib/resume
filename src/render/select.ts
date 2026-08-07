@@ -1,7 +1,7 @@
 import type { Resume } from "../schema/resume.ts";
 
 type RecordValue = Record<string, unknown>;
-type SectionId = keyof Resume["sections"];
+export type SectionId = keyof Resume["sections"];
 
 const fields: Record<SectionId, string[]> = {
 	experience: ["title", "organization", "employmentType", "duration", "dates"],
@@ -13,13 +13,17 @@ const fields: Record<SectionId, string[]> = {
 
 type Selectable = { hidden?: true; layouts?: string[] };
 
-function visible<T extends Selectable>(items: T[], layout: string) {
+export function visible<T extends Selectable>(items: T[], layout: string) {
 	return items.filter(
 		({ hidden, layouts }) => !hidden && (!layouts || layouts.includes(layout)),
 	);
 }
 
-function selectSection(resume: Resume, id: SectionId) {
+export function selectSection(
+	resume: Resume,
+	id: SectionId,
+	fieldMap = fields,
+) {
 	const layout = resume.layout.name;
 	const section = resume.sections[id] as {
 		title: string;
@@ -31,7 +35,7 @@ function selectSection(resume: Resume, id: SectionId) {
 		layout,
 	).map((item) => ({
 		...item,
-		fields: fields[id],
+		fields: fieldMap[id],
 		bullets: visible(
 			(item.bullets ?? []) as Array<RecordValue & Selectable>,
 			layout,

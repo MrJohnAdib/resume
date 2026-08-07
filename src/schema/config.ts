@@ -22,5 +22,5 @@ export const ResumeConfigSchema = z.object({
 		education: Section,
 		volunteering: Section,
 	}),
-	layout: File,
+	layouts: z.array(File).min(1),
 });

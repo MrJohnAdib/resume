@@ -8,7 +8,7 @@ Edit `data/profile.json` for identity, contact details, and links. Edit
 Site data is intentionally small:
 
 - `data/site/metadata.json` contains SEO and social metadata. Keywords are an
-  array.
+  array. `data/site/metadata-cv.json` is the `/cv/` variant.
 - `data/site/release.json` contains the update date and PDF versions.
 - `data/site/analytics.json` contains the analytics measurement ID.
 - `data/site/banner.json` contains banner copy and its repository link.
@@ -31,12 +31,12 @@ Append a short role only when the organization and year are not unique. Set
 role. Omit `location` when it is not useful.
 
 Add the filename without `.json` to the matching array under `order` in
-`layouts/compact.json`. That array controls display order.
+`layouts/order.json`. That shared file controls display order in every layout.
 
 ## Skills, awards, and education
 
 Each skill group, award, and degree has one file in its section directory.
-Add its filename without `.json` to the matching compact order.
+Add its filename without `.json` to the matching array in `layouts/order.json`.
 
 Skill filenames describe the group. Award filenames begin with the award year:
 

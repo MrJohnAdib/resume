@@ -5,7 +5,7 @@ import type {
 	MetadataSourceSchema,
 	ReleaseSourceSchema,
 } from "../schema/site.ts";
-import { pdfDefaults, siteAssets } from "./site-defaults.ts";
+import { layoutBase, pdfDefaults, siteAssets } from "./site-defaults.ts";
 
 type SiteSources = {
 	metadata: z.infer<typeof MetadataSourceSchema>;
@@ -14,16 +14,17 @@ type SiteSources = {
 	banner: z.infer<typeof BannerSourceSchema>;
 };
 
-export function normalizeSite(source: SiteSources) {
+export function normalizeSite(source: SiteSources, layoutName = "compact") {
+	const base = layoutBase(layoutName);
 	return {
 		metadata: {
 			...source.metadata,
 			keywords: source.metadata.keywords.join(", "),
 			date: source.release.date,
 		},
-		assets: siteAssets,
+		assets: siteAssets(base),
 		pdf: {
-			...pdfDefaults,
+			...pdfDefaults(base),
 			version: source.release.version,
 			latestVersion: source.release.latestVersion,
 		},

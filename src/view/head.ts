@@ -1,6 +1,12 @@
 import type { CompactView } from "../render/select.ts";
 import { escapeHtml as e } from "./html.ts";
 
+function extraStylesheet(assets: CompactView["site"]["assets"]) {
+	if (!assets.detailedStylesheet) return "";
+	return `
+	<link rel="stylesheet" href="${e(assets.detailedStylesheet)}" />`;
+}
+
 export function renderHead({ metadata, assets }: CompactView["site"]) {
 	return `<head>
 	<meta charset="utf-8" />
@@ -24,6 +30,6 @@ export function renderHead({ metadata, assets }: CompactView["site"]) {
 	<link href="${e(assets.favicon)}" type="image/png" rel="icon" />
 	<link rel="stylesheet" href="${e(assets.fontStylesheet)}" />
 	<link rel="stylesheet" href="${e(assets.resumeStylesheet)}" />
-	<link rel="stylesheet" href="${e(assets.themeStylesheet)}" />
+	<link rel="stylesheet" href="${e(assets.themeStylesheet)}" />${extraStylesheet(assets)}
 </head>`;
 }

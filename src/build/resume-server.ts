@@ -21,6 +21,7 @@ export async function startResumeServer(
 		try {
 			const url = new URL(request.url ?? "/", "http://localhost");
 			let file = path.join(output, url.pathname);
+			if (url.pathname.endsWith("/")) file = path.join(file, "index.html");
 			if (url.pathname === "/legacy") file = baseline;
 			if (url.pathname === "/legacy-style/style.min.css") {
 				file = path.resolve("style/style.min.css");

@@ -1,7 +1,7 @@
 import { cp, mkdir } from "node:fs/promises";
 import path from "node:path";
 
-const directories = ["fonts", "img", "pdf", "fa", "multi-page-resume"];
+const directories = ["fonts", "img", "pdf", "fa"];
 const files = [
 	"CNAME",
 	"LICENSE",

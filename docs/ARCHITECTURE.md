@@ -12,7 +12,9 @@ volunteering/*.json ─ one complete volunteer role per file
 skills/*.json ─────── one skill group per file
 awards/*.json ─────── one award per file
 education/*.json ──── one degree per file
-compact.json ──────── section and record order
+order.json ────────── shared record order for every layout
+compact.json ──────── one-page section columns
+detailed.json ─────── three-page section pages and breaks
 ```
 
 The loader validates every file with a small Zod module and reports its source
@@ -49,6 +51,8 @@ below 100 lines.
 
 ## Layout names
 
-`compact` is the current one-page layout. `detailed` is reserved for a future
-three-page layout that can select more of the same data. Bullets already
-tagged `"layouts": ["detailed"]` surface only when that layout ships.
+`compact` is the two-column one-page layout at `/`. `detailed` is the
+one-column three-page layout at `/cv/` with its own metadata and stylesheet.
+Both share `layouts/order.json`; `detailed` assigns sections to pages and
+splits experience with `pageBreaks`. Bullets tagged `"layouts": ["detailed"]`
+surface only there. The build measures every A4 sheet for overflow.

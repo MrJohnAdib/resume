@@ -1,6 +1,5 @@
 import path from "node:path";
 import { ResumeConfigSchema } from "../schema/config.ts";
-import { LayoutSourceSchema } from "../schema/layout.ts";
 import { ProfileSourceSchema, SummarySourceSchema } from "../schema/person.ts";
 import { ResumeSchema } from "../schema/resume.ts";
 import { AwardSourceSchema } from "../schema/section-awards.ts";
@@ -13,6 +12,7 @@ import {
 	ReleaseSourceSchema,
 } from "../schema/site.ts";
 import { loadItems } from "./load-items.ts";
+import { loadLayout } from "./load-layout.ts";
 import { loadRoles } from "./load-roles.ts";
 import { normalizePerson } from "./normalize-person.ts";
 import {
@@ -22,15 +22,13 @@ import {
 } from "./normalize-sections.ts";
 import { normalizeSite } from "./normalize-site.ts";
 import { readValidated } from "./read-json.ts";
+import { layoutBase } from "./site-defaults.ts";
 
-export async function loadResumeConfig(entryFile: string) {
+export async function loadResumeConfig(entryFile: string, layoutFile?: string) {
 	const entry = await readValidated(entryFile, ResumeConfigSchema);
 	const root = path.dirname(entryFile);
 	const resolve = (source: string) => path.resolve(root, source);
-	const layout = {
-		name: path.basename(entry.layout, ".json"),
-		...(await readValidated(resolve(entry.layout), LayoutSourceSchema)),
-	};
+	const layout = await loadLayout(resolve(layoutFile ?? entry.layouts[0]));
 	const section = entry.sections;
 	const [
 		metadata,
@@ -45,7 +43,10 @@ export async function loadResumeConfig(entryFile: string) {
 		awards,
 		education,
 	] = await Promise.all([
-		readValidated(resolve(entry.site.metadata), MetadataSourceSchema),
+		readValidated(
+			resolve(layout.metadata ?? entry.site.metadata),
+			MetadataSourceSchema,
+		),
 		readValidated(resolve(entry.site.release), ReleaseSourceSchema),
 		readValidated(resolve(entry.site.analytics), AnalyticsSourceSchema),
 		readValidated(resolve(entry.site.banner), BannerSourceSchema),
@@ -76,8 +77,8 @@ export async function loadResumeConfig(entryFile: string) {
 		),
 	]);
 	return ResumeSchema.parse({
-		site: normalizeSite({ metadata, release, analytics, banner }),
-		person: normalizePerson(profile, summary),
+		site: normalizeSite({ metadata, release, analytics, banner }, layout.name),
+		person: normalizePerson(profile, summary, layoutBase(layout.name)),
 		sections: {
 			experience: { title: section.experience.title, items: experience },
 			skills: { title: section.skills.title, items: skills },

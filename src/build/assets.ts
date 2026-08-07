@@ -68,9 +68,7 @@ async function assetFiles(root: string, directory = root): Promise<string[]> {
 	const files: string[] = [];
 	for (const entry of entries) {
 		const target = path.join(directory, entry.name);
-		const experimental =
-			directory === root && entry.name === "multi-page-resume";
-		if (entry.isDirectory() && !experimental) {
+		if (entry.isDirectory()) {
 			files.push(...(await assetFiles(root, target)));
 		}
 		if (
