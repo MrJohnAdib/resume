@@ -22,7 +22,7 @@ export function siteAssets(base = "./") {
 		},
 		...(base === "./"
 			? {}
-			: { detailedStylesheet: `${base}style/detailed.css?v=3` }),
+			: { detailedStylesheet: `${base}style/detailed.css?v=4` }),
 	};
 }
 

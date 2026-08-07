@@ -15,7 +15,7 @@ export function renderDetailedCss() {
 		".cv-summary{text-align:left;border-top:1.5px solid #57534e;margin-top:7px;",
 		"padding-top:7px;font-size:13px;line-height:1.45}",
 		".cv-main{font-size:13px;line-height:1.4}",
-		".cv-heading{font-variant:small-caps;letter-spacing:.05em;font-size:16px;",
+		".cv-heading{font-size:15px;",
 		"color:var(--cv-accent);border-bottom:1px solid var(--cv-rule);",
 		"margin:10px 0 6px;padding-bottom:2px}",
 		".cv-heading a{color:inherit}",
