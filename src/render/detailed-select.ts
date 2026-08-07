@@ -33,6 +33,11 @@ function paginate(resume: Resume) {
 	const pages = new Map<number, ViewSection[]>();
 	for (const { type, page } of resume.layout.sections) {
 		const section = { ...selectSection(resume, type, detailedFields) };
+		if (type === "experience") {
+			section.items = section.items.map((item, index) =>
+				index < 3 ? item : { ...item, technologies: [] },
+			);
+		}
 		const breaks = resume.layout.pageBreaks?.[type] ?? {};
 		const buckets = new Map<number, typeof section.items>();
 		let current = page ?? 1;

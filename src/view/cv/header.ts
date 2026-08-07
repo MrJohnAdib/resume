@@ -2,8 +2,8 @@ import type { DetailedView } from "../../render/detailed-select.ts";
 import { escapeHtml as e } from "../html.ts";
 
 function contact({ person }: DetailedView) {
-	const phone = `<span id="phoneBox" class="hidden"><a href="${e(person.contact.phone.href)}" itemprop="telephone" tabindex="-1">${e(person.contact.phone.label)}</a> ◊ </span>`;
-	return `<div id="contactBox" class="cv-contact">${phone}<span itemprop="address">${e(person.contact.location)}</span> ◊ <span>${e(person.contact.badge)}</span></div>`;
+	const phone = `<span id="phoneBox" class="hidden"><a href="${e(person.contact.phone.href)}" itemprop="telephone" tabindex="-1">${e(person.contact.phone.label)}</a><span class="cv-sep">·</span></span>`;
+	return `<div id="contactBox" class="cv-contact">${phone}<span itemprop="address">${e(person.contact.location)}</span><span class="cv-sep">·</span><span>${e(person.contact.badge)}</span></div>`;
 }
 
 function links({ person, site }: DetailedView) {
@@ -13,7 +13,7 @@ function links({ person, site }: DetailedView) {
 			`<a target="_blank" href="${e(link.url)}" title="${e(link.title)}">${e(link.label)}</a>`,
 	);
 	const version = `<span id="version" class="hidden" data-latest-pdf="${e(site.pdf.latestVersion)}">${e(site.pdf.version)}</span>`;
-	return `<div class="cv-links">${[email, ...items].join(" ◊ ")}${version}</div>`;
+	return `<div class="cv-links">${[email, ...items].join('<span class="cv-sep">·</span>')}${version}</div>`;
 }
 
 export function renderCvHeader(view: DetailedView) {

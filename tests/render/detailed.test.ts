@@ -31,9 +31,9 @@ test("assigns sections and records to their configured pages", async () => {
 		'data-item-id="2026-zapp-consumer-engineering-manager"',
 	);
 	assert.ok(consumer > 0 && consumer < page2);
-	assert.ok(html.indexOf('data-item-id="2019-jibres"') < page2);
-	const tejarak = html.indexOf('data-item-id="2017-tejarak"');
-	assert.ok(tejarak > page2 && tejarak < page3);
+	assert.ok(html.indexOf('data-item-id="2017-tejarak"') < page2);
+	const teacher = html.indexOf('data-item-id="2006-teacher"');
+	assert.ok(teacher > page2 && teacher < page3);
 	const skills = html.indexOf('data-section-id="skills"');
 	assert.ok(skills > page2 && skills < page3);
 	for (const id of ["awards", "education", "volunteering"]) {
@@ -62,7 +62,7 @@ test("links assets and metadata for the /cv/ route", async () => {
 	const html = await renderDetailed();
 
 	assert.match(html, /href="\.\.\/style\/style\.min\.css\?v=19"/);
-	assert.match(html, /href="\.\.\/style\/detailed\.css\?v=2"/);
+	assert.match(html, /href="\.\.\/style\/detailed\.css\?v=3"/);
 	assert.match(html, /src="\.\.\/script\/resume\.js\?v=7"/);
 	assert.match(
 		html,

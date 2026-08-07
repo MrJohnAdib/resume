@@ -17,8 +17,9 @@ function organization(item: Item) {
 }
 
 function dates(item: Item) {
+	const duration = `<span class="cv-duration"${item.dynamicDuration ? " data-duration" : ""}>${e(item.duration)}</span>`;
 	const range = `<time datetime="${e(item.dates.start.datetime)}">${e(item.dates.start.label)}</time> — <time datetime="${e(item.dates.end.datetime)}">${e(item.dates.end.label)}</time>`;
-	return `<div class="cv-dates" dir="ltr">${range}</div>`;
+	return `<div class="cv-dates" dir="ltr">${duration} ${range}</div>`;
 }
 
 function renderItem(item: Item) {
