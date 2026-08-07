@@ -30,10 +30,12 @@ test("assigns sections and records to their configured pages", async () => {
 	assert.ok(
 		html.indexOf('data-item-id="2024-zapp-engineering-manager"') < page2,
 	);
-	assert.ok(html.indexOf('data-item-id="2022-loopla"') < page2);
-	const jibres = html.indexOf('data-item-id="2019-jibres"');
-	assert.ok(jibres > page2 && jibres < page3);
-	for (const id of ["skills", "awards", "education", "volunteering"]) {
+	assert.ok(html.indexOf('data-item-id="2019-jibres"') < page2);
+	const tejarak = html.indexOf('data-item-id="2017-tejarak"');
+	assert.ok(tejarak > page2 && tejarak < page3);
+	const skills = html.indexOf('data-section-id="skills"');
+	assert.ok(skills > page2 && skills < page3);
+	for (const id of ["awards", "education", "volunteering"]) {
 		assert.ok(html.indexOf(`data-section-id="${id}"`) > page3, id);
 	}
 });

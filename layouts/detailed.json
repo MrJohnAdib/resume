@@ -7,7 +7,7 @@
 		},
 		{
 			"type": "skills",
-			"page": 3
+			"page": 2
 		},
 		{
 			"type": "awards",
@@ -24,7 +24,7 @@
 	],
 	"pageBreaks": {
 		"experience": {
-			"2019-jibres": 2
+			"2017-tejarak": 2
 		}
 	},
 	"order": "order.json"

@@ -2,16 +2,16 @@ import type { DetailedView } from "../render/detailed-select.ts";
 import { jsonScript } from "../render/json-script.ts";
 import { renderAnalytics } from "./analytics.ts";
 import { renderBanner } from "./banner.ts";
+import { renderCvHeader } from "./cv/header.ts";
+import { renderCvSection } from "./cv/sections.ts";
 import { renderHead } from "./head.ts";
-import { renderHeader } from "./header.ts";
 import { escapeHtml as e } from "./html.ts";
-import { renderSection } from "./sections/index.ts";
 
 function renderSheet(view: DetailedView, page: DetailedView["pages"][number]) {
 	return `<div class="page" data-page="${page.number}">
-					${page.number === 1 ? renderHeader(view) : ""}
-					<main class="mx-6 my-4 bg-white">
-						${page.sections.map(renderSection).join("")}
+					${page.number === 1 ? renderCvHeader(view) : ""}
+					<main class="cv-main">
+						${page.sections.map(renderCvSection).join("")}
 					</main>
 				</div>`;
 }
