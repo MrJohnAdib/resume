@@ -41,8 +41,8 @@ test("assigns sections and records to their configured pages", async () => {
 test("shows detailed-only content and keeps hidden records hidden", async () => {
 	const html = await renderDetailed();
 
-	assert.match(html, /Tehran, IR/);
-	assert.match(html, /Nour, IR/);
+	assert.match(html, /Relevant Coursework/);
+	assert.doesNotMatch(html, /Tehran|Nour|, IR\b/);
 	assert.doesNotMatch(html, /data-item-id="2006-teacher"/);
 	assert.doesNotMatch(
 		html,

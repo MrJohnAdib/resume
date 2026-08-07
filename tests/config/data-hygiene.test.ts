@@ -56,6 +56,7 @@ test("uses non-empty editable JSON files below 100 lines", async () => {
 		const value = JSON.parse(source);
 		assert.equal(emptyValue(value), undefined, file);
 		assert.ok(source.split("\n").length - 1 < 100, file);
+		assert.doesNotMatch(source, /Tehran|Mashhad|Yazd|Nour, IR/, file);
 	}
 });
 
