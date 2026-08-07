@@ -25,6 +25,9 @@
 	"pageBreaks": {
 		"experience": {
 			"2018-ermile": 2
+		},
+		"skills": {
+			"distributed-cache": 3
 		}
 	},
 	"order": "order.json"

@@ -11,7 +11,11 @@
 	},
 	"bullets": [
 		"Implemented an integrated cloud eCommerce solution for 1,200+ businesses containing website, app, POS software, CRM, CMS, accounting software, ticketing, and form builder.",
-		"Launched an automated app factory that generated a native android shopping app without coding in less than 10 minutes."
+		"Launched an automated app factory that generated a native android shopping app without coding in less than 10 minutes.",
+		{
+			"text": "Joined a bug bounty program and introduced a new WAF that filters and monitors 99% of attacks.",
+			"layouts": ["detailed"]
+		}
 	],
 	"technologies": [
 		"PHP",

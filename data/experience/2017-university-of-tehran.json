@@ -1,0 +1,16 @@
+{
+	"title": "Information Technology Lecturer",
+	"organization": {
+		"name": "University of Tehran"
+	},
+	"employmentType": "Part-time",
+	"dates": {
+		"start": "2017-11",
+		"end": "2018-10"
+	},
+	"bullets": [
+		"Delivered practical courses on web development covering HTML, CSS, JavaScript, and SEO with hands-on, industry-relevant projects.",
+		"Invited speaker at high-profile tech events and conferences, addressing audiences of 200+ attendees."
+	],
+	"layouts": ["detailed"]
+}

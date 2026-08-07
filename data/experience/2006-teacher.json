@@ -9,7 +9,11 @@
 		"end": "2017-09"
 	},
 	"bullets": [
-		"Created tens of hours of free video tutorials, which resulted in the acquisition of skills by thousands of Persian speakers."
+		"Created tens of hours of free video tutorials, which resulted in the acquisition of skills by thousands of Persian speakers.",
+		{
+			"text": "Taught 2,000+ students web technologies and ICDL across 4 universities, vocational colleges, and private classes.",
+			"layouts": ["detailed"]
+		}
 	],
 	"layouts": ["detailed"]
 }

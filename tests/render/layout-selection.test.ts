@@ -30,6 +30,7 @@ test("omits layout-scoped bullets from other layouts", async () => {
 	);
 	assert.doesNotMatch(html, /Automated deployment process with CI\/CD/);
 	assert.doesNotMatch(html, /data-item-id="2006-teacher"/);
+	assert.doesNotMatch(html, /data-item-id="2017-university-of-tehran"/);
 	assert.doesNotMatch(html, /data-item-id="2010-worldskills"/);
 });
 

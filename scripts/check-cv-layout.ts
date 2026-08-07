@@ -21,7 +21,7 @@ const measureScript = (expectedPages: number) => `(() => {
 		};
 	};
 	return pages.map((sheetPage) => {
-		sheetPage.style.height = sheet.dataset.pageHeight || "296mm";
+		sheetPage.style.height = "294mm";
 		sheetPage.style.overflow = "hidden";
 		return {
 			page: bounds(sheetPage),
