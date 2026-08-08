@@ -16,7 +16,7 @@ export function renderPage(view: CompactView) {
 <html lang="${e(view.site.metadata.language)}" dir="${e(view.site.metadata.direction)}" prefix="og: http://ogp.me/ns#">
 	${renderHead(view.site)}
 	<body>
-		${renderBanner(view.site)}
+		${renderBanner(view.site, view.layout.name)}
 		<div id="pageContainer" class="overflow-auto">
 			<div id="printArea" data-size="A4" data-layout-label="Compact" data-overflow-policy="error" data-page-width="210mm" data-page-height="296mm">
 				${renderHeader(view)}

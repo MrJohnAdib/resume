@@ -24,9 +24,5 @@ export async function copyStatic(output = path.resolve("dist")) {
 	}
 	for (const file of files) await cp(file, path.join(output, file));
 	await mkdir(path.join(output, "script"), { recursive: true });
-	await cp(
-		"tests/fixtures/legacy-script.js",
-		path.join(output, "script/script.js"),
-	);
 	await cp("src/runtime", path.join(output, "script"), { recursive: true });
 }

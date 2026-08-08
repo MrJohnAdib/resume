@@ -3,11 +3,11 @@ import test from "node:test";
 import { comparePages } from "./compare.ts";
 import { startVisualServer } from "./server.ts";
 
-test("compact page is pixel-identical to the legacy resume", async () => {
+test("compact page is pixel-identical to the approved baseline", async () => {
 	const server = await startVisualServer();
 	try {
 		const difference = await comparePages(
-			`${server.url}/legacy`,
+			`${server.url}/baseline`,
 			`${server.url}/generated`,
 		);
 		assert.equal(difference, 0);
@@ -28,7 +28,7 @@ test("responsive, dark, print, phone, and PDF states retain visual parity", asyn
 	try {
 		for (const options of cases) {
 			const difference = await comparePages(
-				`${server.url}/legacy`,
+				`${server.url}/baseline`,
 				`${server.url}/generated`,
 				options,
 			);

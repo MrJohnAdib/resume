@@ -23,6 +23,7 @@
 		"zod": "^4.4.3"
 	},
 	"scripts": {
+		"baseline": "npm run build && cp dist/index.html tests/fixtures/baseline-index.html",
 		"build": "tsx scripts/build.ts",
 		"build:html": "tsx scripts/render-command.ts",
 		"check": "npm run check:files && npm run typecheck && biome check biome.json package.json resume.config.json scripts src tests data layouts",

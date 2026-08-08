@@ -37,7 +37,7 @@ async function screenshot(page: Page, url: string, options: CompareOptions) {
 }
 
 export async function comparePages(
-	legacyUrl: string,
+	baselineUrl: string,
 	generatedUrl: string,
 	options: CompareOptions = {},
 ) {
@@ -48,18 +48,20 @@ export async function comparePages(
 			colorScheme: options.colorScheme ?? "light",
 		});
 		const page = await context.newPage();
-		const legacy = PNG.sync.read(await screenshot(page, legacyUrl, options));
+		const baseline = PNG.sync.read(
+			await screenshot(page, baselineUrl, options),
+		);
 		const generated = PNG.sync.read(
 			await screenshot(page, generatedUrl, options),
 		);
-		assert.equal(generated.width, legacy.width);
-		assert.equal(generated.height, legacy.height);
+		assert.equal(generated.width, baseline.width);
+		assert.equal(generated.height, baseline.height);
 		return pixelmatch(
-			legacy.data,
+			baseline.data,
 			generated.data,
 			undefined,
-			legacy.width,
-			legacy.height,
+			baseline.width,
+			baseline.height,
 			{ threshold: 0 },
 		);
 	} finally {

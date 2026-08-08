@@ -65,7 +65,7 @@ function overflowAmount({ page, items }: Measurement) {
 
 export async function checkLayout(
 	output = path.resolve("dist"),
-	baseline = path.resolve("tests/fixtures/legacy-index.html"),
+	baseline = path.resolve("tests/fixtures/baseline-index.html"),
 ) {
 	const server = await startResumeServer(output, baseline);
 	const browser = await chromium.launch({ headless: true });
@@ -78,8 +78,12 @@ export async function checkLayout(
 			`${server.url}/generated`,
 			"generated",
 		);
-		const legacy = await measure(page, `${server.url}/legacy`, "legacy");
-		if (overflowAmount(generated) <= overflowAmount(legacy) + 1) return;
+		const baselinePage = await measure(
+			page,
+			`${server.url}/baseline`,
+			"baseline",
+		);
+		if (overflowAmount(generated) <= overflowAmount(baselinePage) + 1) return;
 		const overflow = findOverflow(generated.page, generated.items);
 		throw new Error(
 			`Compact layout overflow in section "${overflow?.sectionId ?? "page"}" near item "${overflow?.id ?? "unknown"}"`,

@@ -29,8 +29,7 @@ const extensions = new Set([
 ]);
 const exempt = new Set([
 	"style/style.min.css",
-	"tests/fixtures/legacy-index.html",
-	"tests/fixtures/legacy-script.js",
+	"tests/fixtures/baseline-index.html",
 ]);
 
 async function filesWithin(directory: string): Promise<string[]> {

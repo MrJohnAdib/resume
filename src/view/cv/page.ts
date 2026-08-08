@@ -21,7 +21,7 @@ export function renderCvPage(view: CvView) {
 <html lang="${e(view.site.metadata.language)}" dir="${e(view.site.metadata.direction)}" prefix="og: http://ogp.me/ns#">
 	${renderHead(view.site)}
 	<body>
-		${renderBanner(view.site)}
+		${renderBanner(view.site, view.layout.name)}
 		<div id="pageContainer" class="overflow-auto">
 			<div id="printArea" data-size="A4" data-layout="cv" data-layout-label="${e(view.layout.name)}" data-overflow-policy="error" data-page-width="210mm" data-page-height="296mm">
 				${view.pages.map((page) => renderSheet(view, page)).join("")}

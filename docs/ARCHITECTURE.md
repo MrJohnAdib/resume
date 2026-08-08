@@ -43,9 +43,10 @@ arbitrary HTML. Presentation constants, asset paths, banner geometry, and
 console output live in code rather than editable resume data.
 
 `dist/` is disposable output. The build copies static routes and assets,
-generates HTML and CSS, and compares A4 overflow with the original page. Tests
-compare every pixel on desktop, mobile, dark preference, print, phone-revealed,
-and PDF-button states.
+generates HTML and CSS, and measures every A4 sheet for overflow. Tests
+compare the compact page pixel-for-pixel against an approved baseline
+snapshot across desktop, mobile, dark, print, phone-revealed, and PDF-button
+states; `npm run baseline` re-approves it after an intentional change.
 
 Hand-written code, tests, layouts, documentation, and editable JSON files stay
 below 100 lines.

@@ -59,6 +59,6 @@ test("rejects a baseline with missing local resources", async () => {
 
 	await assert.rejects(
 		() => checkLayout(output, baseline),
-		/legacy layout.*missing\.css/,
+		/baseline layout.*missing\.css/,
 	);
 });

@@ -15,34 +15,18 @@ const contentTypes: Record<string, string> = {
 
 export async function startResumeServer(
 	output = path.resolve("dist"),
-	baseline = path.resolve("tests/fixtures/legacy-index.html"),
+	baseline = path.resolve("tests/fixtures/baseline-index.html"),
 ) {
 	const server = createServer(async (request, response) => {
 		try {
 			const url = new URL(request.url ?? "/", "http://localhost");
 			let file = path.join(output, url.pathname);
 			if (url.pathname.endsWith("/")) file = path.join(file, "index.html");
-			if (url.pathname === "/legacy") file = baseline;
-			if (url.pathname === "/legacy-style/style.min.css") {
-				file = path.resolve("style/style.min.css");
-			}
-			if (url.pathname === "/script/script.js") {
-				file = path.resolve("tests/fixtures/legacy-script.js");
-			}
+			if (url.pathname === "/baseline") file = baseline;
 			if (url.pathname === "/generated") {
 				file = path.join(output, "index.html");
 			}
-			let body = await readFile(file);
-			if (url.pathname === "/legacy") {
-				body = Buffer.from(
-					body
-						.toString()
-						.replace(
-							"./style/style.min.css?v=19",
-							"/legacy-style/style.min.css",
-						),
-				);
-			}
+			const body = await readFile(file);
 			response.setHeader(
 				"content-type",
 				contentTypes[path.extname(file)] ?? "application/octet-stream",
