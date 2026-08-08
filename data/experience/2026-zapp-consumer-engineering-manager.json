@@ -35,7 +35,6 @@
 		"Cloud Run",
 		"Pub/Sub",
 		"Firestore",
-		"BigQuery",
 		"Terraform",
 		"GitHub Actions",
 		"Turborepo",
@@ -44,14 +43,12 @@
 		"Statsig",
 		"Mixpanel",
 		"Adyen",
-		"Clerk",
 		"Algolia",
 		"Maestro",
 		"Playwright",
 		"Vitest",
 		"Storybook",
-		"Chromatic",
-		"Claude Code"
+		"Chromatic"
 	],
 	"layouts": ["detailed"]
 }
