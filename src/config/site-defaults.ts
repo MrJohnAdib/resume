@@ -1,8 +1,20 @@
+import { renderCvCss } from "../render/theme-cv.ts";
+
 export const layoutRoutes: Record<string, string> = {
 	compact: "",
 	detailed: "cv/",
 	one: "one/",
 };
+
+function contentVersion(content: string) {
+	let value = 5381;
+	for (let index = 0; index < content.length; index++) {
+		value = ((value << 5) + value + content.charCodeAt(index)) >>> 0;
+	}
+	return value.toString(36);
+}
+
+const cvCssVersion = contentVersion(renderCvCss());
 
 export function layoutBase(layoutName: string) {
 	return layoutRoutes[layoutName] ? "../" : "./";
@@ -21,7 +33,9 @@ export function siteAssets(base = "./") {
 			location: `${base}img/location.svg`,
 			badge: `${base}img/star.svg`,
 		},
-		...(base === "./" ? {} : { cvStylesheet: `${base}style/cv.css?v=1` }),
+		...(base === "./"
+			? {}
+			: { cvStylesheet: `${base}style/cv.css?v=${cvCssVersion}` }),
 	};
 }
 

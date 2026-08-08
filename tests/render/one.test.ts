@@ -51,7 +51,7 @@ test("selects only the records the layout lists", async () => {
 test("links assets and metadata for the /one/ route", async () => {
 	const html = await renderOne();
 
-	assert.match(html, /href="\.\.\/style\/cv\.css\?v=1"/);
+	assert.match(html, /href="\.\.\/style\/cv\.css\?v=\w+"/);
 	assert.match(
 		html,
 		/property="og:url" content="https:\/\/resume\.MrAdib\.com\/one\/"/,
