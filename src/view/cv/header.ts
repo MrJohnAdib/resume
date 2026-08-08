@@ -13,7 +13,7 @@ function links({ person, site }: CvView) {
 			`<a target="_blank" href="${e(link.url)}" title="${e(link.title)}">${e(link.label)}</a>`,
 	);
 	const version = `<span id="version" class="hidden" data-latest-pdf="${e(site.pdf.latestVersion)}">${e(site.pdf.version)}</span>`;
-	return `<div class="cv-links">${[email, ...items].join('<span class="cv-sep">·</span>')}${version}</div>`;
+	return `<div class="cv-links">${[...items, email].join('<span class="cv-sep">·</span>')}${version}</div>`;
 }
 
 export function renderCvHeader(view: CvView) {
