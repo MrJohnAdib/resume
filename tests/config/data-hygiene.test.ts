@@ -57,7 +57,7 @@ test("uses non-empty editable JSON files below 100 lines", async () => {
 		assert.equal(emptyValue(value), undefined, file);
 		assert.ok(source.split("\n").length - 1 < 100, file);
 		const scrubbed = source.replaceAll("University of Tehran", "");
-		assert.doesNotMatch(scrubbed, /Tehran|Mashhad|Yazd|Nour, IR/, file);
+		assert.doesNotMatch(scrubbed, /Tehran|Mashhad|Yazd|Nour, IR|Javad/, file);
 	}
 });
 
