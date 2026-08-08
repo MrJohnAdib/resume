@@ -1,7 +1,10 @@
 {
 	"title": "API",
 	"items": [
-		"SOAP",
+		{
+			"label": "SOAP",
+			"layouts": ["compact"]
+		},
 		"REST",
 		"GraphQL",
 		"WebSocket",

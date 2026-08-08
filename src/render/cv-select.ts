@@ -45,9 +45,15 @@ function paginate(resume: Resume) {
 			current = breaks[(item as unknown as { id: string }).id] ?? current;
 			buckets.set(current, [...(buckets.get(current) ?? []), item]);
 		}
+		const first = Math.min(...buckets.keys());
 		for (const [number, items] of buckets) {
 			const sections = pages.get(number) ?? [];
-			sections.push({ ...section, items, column: undefined } as ViewSection);
+			sections.push({
+				...section,
+				items,
+				column: undefined,
+				continued: number !== first,
+			} as ViewSection);
 			pages.set(number, sections);
 		}
 	}

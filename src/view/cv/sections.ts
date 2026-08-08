@@ -18,11 +18,14 @@ function heading(section: ViewSection) {
 
 function skillGroup(group: SkillGroup) {
 	const items = group.items
-		.map((item) =>
-			item.title
-				? `<abbr itemprop="name" title="${e(item.title)}">${e(item.label)}</abbr>${e(item.separatorAfter)}`
-				: `<span itemprop="name">${e(item.label)}</span>${e(item.separatorAfter)}`,
-		)
+		.map((item, index) => {
+			const last = index === group.items.length - 1;
+			const separator =
+				last && item.separatorAfter === ", " ? "." : item.separatorAfter;
+			return item.title
+				? `<abbr itemprop="name" title="${e(item.title)}">${e(item.label)}</abbr>${e(separator)}`
+				: `<span itemprop="name">${e(item.label)}</span>${e(separator)}`;
+		})
 		.join("");
 	return `<div class="cv-skill" data-item-id="${e(group.id)}" itemscope itemtype="https://schema.org/ListItem"><h3>${e(group.title)}</h3><div>${items}</div></div>`;
 }
@@ -66,5 +69,6 @@ function body(section: ViewSection) {
 }
 
 export function renderCvSection(section: ViewSection) {
-	return `<article data-section-id="${e(section.id)}">${heading(section)}${body(section)}</article>`;
+	const continued = (section as { continued?: boolean }).continued;
+	return `<article data-section-id="${e(section.id)}">${continued ? "" : heading(section)}${body(section)}</article>`;
 }

@@ -5,8 +5,14 @@
 		"PostgreSQL",
 		"MongoDB",
 		"Firestore",
-		"JSON",
-		"YAML",
+		{
+			"label": "JSON",
+			"layouts": ["compact"]
+		},
+		{
+			"label": "YAML",
+			"layouts": ["compact"]
+		},
 		{
 			"label": "RDBMS",
 			"hidden": true
