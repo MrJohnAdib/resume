@@ -32,13 +32,13 @@ test("selects only the records the layout lists", async () => {
 	for (const id of [
 		"2024-zapp-engineering-manager",
 		"2022-loopla",
+		"2019-jibres",
 		"ai-llm",
 		"masters",
 	]) {
 		assert.match(html, new RegExp(`data-item-id="${id}"`), id);
 	}
 	for (const id of [
-		"2019-jibres",
 		"2018-ermile",
 		"2026-zapp-consumer-engineering-manager",
 		"2006-teacher",

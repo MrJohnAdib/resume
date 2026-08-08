@@ -24,10 +24,7 @@
 	],
 	"pageBreaks": {
 		"experience": {
-			"2018-ermile": 2
-		},
-		"skills": {
-			"distributed-cache": 3
+			"2017-tejarak": 2
 		}
 	},
 	"order": "order.json"
