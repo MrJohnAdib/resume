@@ -11,6 +11,10 @@
 	"bullets": [
 		{
 			"text": "Mentored 580+ sessions, advising on roadmaps, best practices, and strategic decisions in technical and professional domains."
+		},
+		{
+			"text": "Earned 19 monthly and quarterly badges: 13x Top 1% Engineering Mentor, 4x Super Mentor, and 2x Top 10 Front-End Mentor.",
+			"layouts": ["detailed"]
 		}
 	]
 }
