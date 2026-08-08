@@ -49,7 +49,7 @@ test("shows detailed-only content and keeps hidden records hidden", async () => 
 	assert.doesNotMatch(scrubbed, /Tehran|Nour|Yazd|Mashhad/);
 	assert.match(html, /data-item-id="2006-teacher"/);
 	assert.match(html, /data-item-id="2017-university-of-tehran"/);
-	assert.match(html, /Secured a \$1M investment/);
+	assert.doesNotMatch(html, /Secured a \$1M investment/);
 	assert.match(html, /data-item-id="2010-worldskills"/);
 	assert.match(html, /data-item-id="2024-zapp-senior-software-engineer"/);
 	assert.match(html, /data-item-id="2026-zapp-consumer-engineering-manager"/);
