@@ -11,12 +11,12 @@
 		"end": "present"
 	},
 	"bullets": [
-		"Shipped post-checkout order amendment, driving +22.7% revenue on amended orders in its first four days.",
+		"Shipped post-checkout order amendment, driving +22.7% revenue on amended orders.",
+		"Built an 8-skill AI agent suite carrying a ticket to a reviewed pull request, adopted org-wide.",
 		"Shifted iOS and Android app releases from monthly to weekly, shipping nine App Store versions and cutting manual QA by 3-4 days each.",
 		"Led all four SEV1 incidents, sized the worst at £87k, and built the incident management function afterwards.",
-		"Built an 8-skill AI agent suite carrying a ticket to a reviewed pull request, adopted org-wide.",
-		"Deployed 3 AI reviewers as an automated guardrail on every PR, enforcing a consistent quality bar and reducing wait time.",
-		"Authored the levelling and pay bands for the entire engineering job family."
+		"Authored the levelling and pay bands for the entire engineering job family.",
+		"Deployed 3 AI reviewers as an automated guardrail on every PR, enforcing a consistent quality bar and reducing wait time."
 	],
 	"technologies": [
 		"TypeScript",
