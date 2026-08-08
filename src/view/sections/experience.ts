@@ -30,7 +30,7 @@ function renderItem(item: Item, last: boolean) {
 		${hasField(item, "title") ? `<h3 class="font-light text-base leading-5">${e(item.title)}</h3>` : ""}
 		<div class="flex items-center">
 			${organization(item)}
-			${hasField(item, "employmentType") && item.employmentType ? `<div class="grow items-center mx-1 text-xs px-1 text-stone-500">${e(item.employmentType)}</div>` : ""}
+			<div class="grow items-center mx-1 text-xs px-1 text-stone-500">${hasField(item, "employmentType") && item.employmentType ? e(item.employmentType) : ""}</div>
 			${hasField(item, "location") && item.location ? `<div class="grow text-xs text-stone-500">${e(item.location)}</div>` : ""}
 			${hasField(item, "duration") ? `<div class="text-xs text-stone-700"${item.dynamicDuration ? " data-duration" : ""}>${e(item.duration)}</div>` : ""}
 			${hasField(item, "dates") ? `<div class="flex items-center text-xs"><div dir="ltr" class="text-stone-700 text-xs px-1"><time datetime="${e(item.dates.start.datetime)}">${e(item.dates.start.label)}</time> - <time datetime="${e(item.dates.end.datetime)}">${e(item.dates.end.label)}</time></div></div>` : ""}
