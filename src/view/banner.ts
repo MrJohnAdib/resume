@@ -11,6 +11,7 @@ const versions = [
 function switcher(current: string) {
 	const base = layoutBase(current);
 	const links = versions
+		.filter(({ layout }) => layout !== "one" || layout === current)
 		.map(({ layout, label, route }) =>
 			layout === current
 				? `<span class="rounded-full bg-gray-900 dark:bg-gray-100 px-3 py-1 font-semibold text-white dark:text-gray-900">${label}</span>`
