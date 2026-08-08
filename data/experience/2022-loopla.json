@@ -23,7 +23,7 @@
 		"Architected a pixel-perfect UI with Atomic Design, utilized Storybook with 1,000+ tests for high quality and scalability.",
 		{
 			"text": "Migrated the legacy frontend from Vue.js to Next.js and React, improving scalability, performance, and maintainability.",
-			"layouts": ["detailed"]
+			"hidden": true
 		}
 	],
 	"technologies": [
@@ -45,6 +45,7 @@
 		"Jest",
 		"Cypress",
 		"Playwright",
-		"Storybook"
+		"Storybook",
+		"Chromatic"
 	]
 }
