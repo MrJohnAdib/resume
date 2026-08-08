@@ -17,7 +17,7 @@ export function renderCvCss() {
 		".cv-main{font-size:14px;line-height:1.33}",
 		".cv-heading{font-size:17px;",
 		"color:var(--cv-accent);border-bottom:1px solid var(--cv-rule);",
-		"margin:6px 0 4px;padding-bottom:1px}",
+		"margin:14px 0 5px;padding-bottom:2px}",
 		".cv-heading a{color:inherit}",
 		".cv-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}",
 		".cv-role{font-weight:600;font-size:14.5px}",
