@@ -48,5 +48,9 @@
 	{
 		"text": "Mentor.",
 		"hidden": true
+	},
+	{
+		"text": "Leads teams that ship weekly, measure impact, and own reliability end-to-end.",
+		"layouts": ["detailed"]
 	}
 ]

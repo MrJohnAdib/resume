@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { HiddenFields, SlugSchema } from "./common.ts";
+import { HiddenFields, LayoutFields, SlugSchema } from "./common.ts";
 
 const AvatarSourceSchema = z.object({
 	src: z.string().min(1),
@@ -35,7 +35,7 @@ export const ProfileSourceSchema = z.object({
 export const SummarySourceSchema = z.array(
 	z.union([
 		z.string().min(1),
-		z.object({ text: z.string().min(1), ...HiddenFields }),
+		z.object({ text: z.string().min(1), ...HiddenFields, ...LayoutFields }),
 	]),
 );
 
@@ -70,6 +70,8 @@ export const PersonSchema = z.object({
 		),
 	}),
 	summary: z.object({
-		items: z.array(z.object({ text: z.string(), ...HiddenFields })),
+		items: z.array(
+			z.object({ text: z.string(), ...HiddenFields, ...LayoutFields }),
+		),
 	}),
 });
