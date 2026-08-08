@@ -2,8 +2,14 @@
 	"17+ years shipping results at scale.",
 	"Co-founded a product that hit 1M users in 30 days.",
 	"UK Global Talent endorsed.",
-	"World's Most Influential Mentor.",
-	"Tech conference speaker.",
+	{
+		"text": "World's Most Influential Mentor.",
+		"layouts": ["compact"]
+	},
+	{
+		"text": "Tech conference speaker.",
+		"layouts": ["compact"]
+	},
 	"Embraced AI early to multiply team efficiency.",
 	{
 		"text": "Professional software engineer with 17+ years of experience in developing cutting-edge web solutions.",
@@ -51,6 +57,6 @@
 	},
 	{
 		"text": "Leads teams that ship weekly, measure impact, and own reliability end-to-end.",
-		"layouts": ["detailed"]
+		"layouts": ["detailed", "one"]
 	}
 ]
