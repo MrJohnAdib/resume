@@ -5,6 +5,27 @@ import { escapeHtml as e } from "../html.ts";
 
 type Item = Resume["sections"]["experience"]["items"][number];
 
+const months = [
+	"Jan",
+	"Feb",
+	"Mar",
+	"Apr",
+	"May",
+	"Jun",
+	"Jul",
+	"Aug",
+	"Sep",
+	"Oct",
+	"Nov",
+	"Dec",
+];
+
+export function monthLabel(date: { datetime: string; label: string }) {
+	const match = date.datetime.match(/^(\d{4})-(\d{2})/);
+	if (!match) return date.label;
+	return `${months[Number(match[2]) - 1]} ${match[1]}`;
+}
+
 function organization(item: Item) {
 	const name = e(item.organization.name);
 	const content = item.organization.url
@@ -18,7 +39,7 @@ function organization(item: Item) {
 
 function dates(item: Item) {
 	const duration = `<span class="cv-duration"${item.dynamicDuration ? " data-duration" : ""}>${e(item.duration)}</span>`;
-	const range = `<time datetime="${e(item.dates.start.datetime)}">${e(item.dates.start.label)}</time> — <time datetime="${e(item.dates.end.datetime)}">${e(item.dates.end.label)}</time>`;
+	const range = `<time datetime="${e(item.dates.start.datetime)}">${e(monthLabel(item.dates.start))}</time> — <time datetime="${e(item.dates.end.datetime)}">${e(monthLabel(item.dates.end))}</time>`;
 	return `<div class="cv-dates" dir="ltr">${duration} ${range}</div>`;
 }
 
