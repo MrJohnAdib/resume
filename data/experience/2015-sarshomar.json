@@ -17,14 +17,6 @@
 		{
 			"text": "Secured a $1M investment in 2015 and scaled a high-traffic consumer product from the ground up.",
 			"layouts": ["detailed"]
-		},
-		{
-			"text": "Spearheaded a 15-member cross-functional startup team. Launched a flagship product that hit 1M users in just a month.",
-			"hidden": true
-		},
-		{
-			"text": "Built Siftal UI framework, Dash as PHP framework with MVC pattern, 2x a development speed by consolidated SPA.",
-			"layouts": ["detailed"]
 		}
 	],
 	"technologies": [

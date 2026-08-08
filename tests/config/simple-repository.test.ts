@@ -57,7 +57,7 @@ test("keeps editable data concise and free of repeated metadata", async () => {
 		true,
 	);
 
-	const alternativesFile = path.resolve("data/experience/2015-sarshomar.json");
+	const alternativesFile = path.resolve("data/experience/2006-teacher.json");
 	const alternatives = JSON.parse(await readFile(alternativesFile, "utf8"));
 	assert.equal(
 		alternatives.bullets.some(
