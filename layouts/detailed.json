@@ -10,15 +10,15 @@
 			"page": 2
 		},
 		{
-			"type": "education",
+			"type": "volunteering",
 			"page": 2
 		},
 		{
-			"type": "awards",
+			"type": "education",
 			"page": 3
 		},
 		{
-			"type": "volunteering",
+			"type": "awards",
 			"page": 3
 		}
 	],

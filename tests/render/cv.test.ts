@@ -34,11 +34,11 @@ test("assigns sections and records to their configured pages", async () => {
 	assert.ok(html.indexOf('data-item-id="2019-jibres"') < page2);
 	const sarshomar = html.indexOf('data-item-id="2015-sarshomar"');
 	assert.ok(sarshomar > page2 && sarshomar < page3);
-	for (const id of ["skills", "education"]) {
+	for (const id of ["skills", "volunteering"]) {
 		const section = html.indexOf(`data-section-id="${id}"`);
 		assert.ok(section > page2 && section < page3, id);
 	}
-	for (const id of ["awards", "volunteering"]) {
+	for (const id of ["education", "awards"]) {
 		assert.ok(html.indexOf(`data-section-id="${id}"`) > page3, id);
 	}
 });
