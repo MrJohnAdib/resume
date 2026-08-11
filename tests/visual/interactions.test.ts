@@ -14,7 +14,7 @@ test("compact runtime preserves contact, PDF, and print-title behavior", async (
 
 		const pdf = page.locator("#pdf-btn");
 		await assert.doesNotReject(() => pdf.waitFor({ state: "visible" }));
-		assert.match((await pdf.getAttribute("href")) ?? "", /v2440\.pdf$/);
+		assert.match((await pdf.getAttribute("href")) ?? "", /v2510\.pdf$/);
 
 		const phone = page.locator("#phoneBox");
 		assert.equal(
@@ -29,7 +29,7 @@ test("compact runtime preserves contact, PDF, and print-title behavior", async (
 
 		const originalTitle = await page.title();
 		await page.evaluate(() => window.dispatchEvent(new Event("beforeprint")));
-		assert.equal(await page.title(), "MrAdib-Resume-v2440-web");
+		assert.equal(await page.title(), "MrAdib-Resume-v2510-web");
 		await page.evaluate(() => window.dispatchEvent(new Event("afterprint")));
 		assert.equal(await page.title(), originalTitle);
 		assert.deepEqual(errors, []);

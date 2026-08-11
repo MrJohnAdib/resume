@@ -27,6 +27,7 @@ export function normalizeSite(source: SiteSources, layoutName = "compact") {
 			...pdfDefaults(base),
 			version: source.release.version,
 			latestVersion: source.release.latestVersion,
+			...(layoutName === "detailed" ? { titlePrefix: "MrAdib-CV-" } : {}),
 		},
 		analytics: {
 			...source.analytics,

@@ -59,6 +59,7 @@ export const SiteSchema = z.object({
 		latestVersion: z.string(),
 		folder: z.string(),
 		filePrefix: z.string(),
+		titlePrefix: z.string().optional(),
 		buttonLabel: z.string(),
 		localAction: z.literal("print"),
 	}),
