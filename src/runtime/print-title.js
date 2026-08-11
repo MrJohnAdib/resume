@@ -9,8 +9,9 @@ export function setupPrintTitle() {
 	let originalTitle = document.title;
 	window.addEventListener("beforeprint", () => {
 		originalTitle = document.title;
-		const suffix = window.location.protocol === "file:" ? "" : "-web";
 		const pdf = getRuntimeConfig().pdf;
+		const web = window.location.protocol !== "file:";
+		const suffix = web && !pdf.titlePrefix ? "-web" : "";
 		const prefix = pdf.titlePrefix ?? pdf.filePrefix;
 		document.title = `${prefix}${version()}${suffix}`;
 	});
