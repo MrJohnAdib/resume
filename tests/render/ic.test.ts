@@ -21,7 +21,7 @@ test("ic-detailed renders three pages with the IC title", async () => {
 	assert.match(html, /Software Engineer &amp; Tech Lead/);
 	assert.match(html, /Hands-on engineer who ships fast/);
 	assert.doesNotMatch(html, /Leads teams that ship fast/);
-	assert.doesNotMatch(html, /Authored the levelling and pay bands/);
+	assert.match(html, /Authored the levelling and pay bands/);
 	assert.match(html, /data-section-id="talks"/);
 	assert.match(html, /data-item-id="2025-ai-coding-summit"/);
 	assert.match(
