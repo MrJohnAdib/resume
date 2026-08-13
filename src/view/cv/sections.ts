@@ -59,7 +59,7 @@ function body(section: ViewSection) {
 		const groups = section.items as unknown as SkillGroup[];
 		return `<div class="cv-skills">${groups.map(skillGroup).join("")}</div>`;
 	}
-	if (section.id === "awards") {
+	if (section.id === "awards" || section.id === "talks") {
 		return (section.items as unknown as Award[]).map(award).join("");
 	}
 	if (section.id === "education") {

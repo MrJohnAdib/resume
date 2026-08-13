@@ -30,6 +30,8 @@ export async function loadResumeConfig(entryFile: string, layoutFile?: string) {
 	const resolve = (source: string) => path.resolve(root, source);
 	const layout = await loadLayout(resolve(layoutFile ?? entry.layouts[0]));
 	const section = entry.sections;
+	const awardLike = (directory: string, order: string[]) =>
+		loadItems(resolve(directory), order, AwardSourceSchema, normalizeAward);
 	const [
 		metadata,
 		release,
@@ -41,6 +43,7 @@ export async function loadResumeConfig(entryFile: string, layoutFile?: string) {
 		volunteering,
 		skills,
 		awards,
+		talks,
 		education,
 	] = await Promise.all([
 		readValidated(
@@ -63,12 +66,8 @@ export async function loadResumeConfig(entryFile: string, layoutFile?: string) {
 			SkillGroupSourceSchema,
 			normalizeSkill,
 		),
-		loadItems(
-			resolve(section.awards.directory),
-			layout.order.awards,
-			AwardSourceSchema,
-			normalizeAward,
-		),
+		awardLike(section.awards.directory, layout.order.awards),
+		awardLike(section.talks.directory, layout.order.talks),
 		loadItems(
 			resolve(section.education.directory),
 			layout.order.education,
@@ -80,15 +79,12 @@ export async function loadResumeConfig(entryFile: string, layoutFile?: string) {
 		site: normalizeSite({ metadata, release, analytics, banner }, layout.name),
 		person: normalizePerson(profile, summary, layoutBase(layout.name)),
 		sections: {
-			experience: { title: section.experience.title, items: experience },
-			skills: { title: section.skills.title, items: skills },
-			awards: {
-				title: section.awards.title,
-				href: section.awards.href,
-				items: awards,
-			},
-			education: { title: section.education.title, items: education },
-			volunteering: { title: section.volunteering.title, items: volunteering },
+			experience: { ...section.experience, items: experience },
+			skills: { ...section.skills, items: skills },
+			awards: { ...section.awards, items: awards },
+			talks: { ...section.talks, items: talks },
+			education: { ...section.education, items: education },
+			volunteering: { ...section.volunteering, items: volunteering },
 		},
 		layout,
 	});

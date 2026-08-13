@@ -21,6 +21,11 @@
 			"href": "https://mradib.com/awards",
 			"directory": "data/awards"
 		},
+		"talks": {
+			"title": "Talks and Speaking",
+			"href": "https://mradib.com/talks",
+			"directory": "data/talks"
+		},
 		"education": {
 			"title": "Education",
 			"directory": "data/education"
@@ -33,6 +38,8 @@
 	"layouts": [
 		"layouts/compact.json",
 		"layouts/detailed.json",
-		"layouts/one.json"
+		"layouts/one.json",
+		"layouts/ic-detailed.json",
+		"layouts/ic-one.json"
 	]
 }

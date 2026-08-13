@@ -4,6 +4,8 @@ export const layoutRoutes: Record<string, string> = {
 	compact: "",
 	detailed: "cv/",
 	one: "one/",
+	"ic-detailed": "ic-cv/",
+	"ic-one": "ic/",
 };
 
 function contentVersion(content: string) {

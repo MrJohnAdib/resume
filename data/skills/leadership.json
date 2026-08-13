@@ -1,0 +1,16 @@
+{
+	"title": "Leadership",
+	"items": [
+		"Hiring",
+		"Coaching",
+		"Incident Management",
+		{
+			"label": "OKRs",
+			"title": "Objectives and Key Results"
+		},
+		"Levelling",
+		"Roadmaps",
+		"Stakeholder Management"
+	],
+	"layouts": ["detailed", "one"]
+}

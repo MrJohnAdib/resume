@@ -38,7 +38,7 @@ test("assigns sections and records to their configured pages", async () => {
 		const section = html.indexOf(`data-section-id="${id}"`);
 		assert.ok(section > page2 && section < page3, id);
 	}
-	for (const id of ["education", "awards"]) {
+	for (const id of ["education", "talks", "awards"]) {
 		assert.ok(html.indexOf(`data-section-id="${id}"`) > page3, id);
 	}
 });

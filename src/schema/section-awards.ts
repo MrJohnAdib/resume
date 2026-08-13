@@ -9,6 +9,7 @@ import {
 
 export const AwardSourceSchema = z.object({
 	title: z.string().min(1),
+	icon: z.string().min(1).optional(),
 	location: z.string().min(1).optional(),
 	description: RichTextSchema,
 	date: DateLabelSchema,
@@ -19,6 +20,7 @@ export const AwardSourceSchema = z.object({
 
 export const AwardItemSchema = StableItemSchema.extend({
 	title: z.string().min(1),
+	icon: z.string().min(1).optional(),
 	location: z.string().min(1).optional(),
 	description: RichTextSchema,
 	date: DateLabelSchema,

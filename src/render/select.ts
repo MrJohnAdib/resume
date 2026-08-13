@@ -7,6 +7,7 @@ const fields: Record<SectionId, string[]> = {
 	experience: ["title", "organization", "employmentType", "duration", "dates"],
 	skills: ["title", "items"],
 	awards: ["title", "description", "date"],
+	talks: ["title", "description", "date"],
 	education: ["degree", "institution"],
 	volunteering: ["title", "organization", "duration", "dates"],
 };

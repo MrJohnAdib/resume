@@ -1,6 +1,6 @@
 {
-	"title": "Engineering Manager",
-	"metadata": "data/site/metadata-one.json",
+	"title": "Software Engineer & Tech Lead",
+	"metadata": "data/site/metadata-ic-one.json",
 	"sections": [
 		{
 			"type": "experience",
@@ -22,14 +22,7 @@
 			"2019-jibres",
 			"2015-sarshomar"
 		],
-		"skills": [
-			"tech-stack",
-			"leadership",
-			"ai-llm",
-			"web-framework",
-			"mobile",
-			"infra"
-		],
+		"skills": ["tech-stack", "ai-llm", "web-framework", "mobile", "infra"],
 		"education": ["masters", "bachelors"]
 	},
 	"order": "order.json"

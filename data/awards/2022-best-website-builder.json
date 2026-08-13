@@ -5,5 +5,5 @@
 		"datetime": "2022",
 		"label": "2022"
 	},
-	"layouts": ["detailed"]
+	"layouts": ["detailed", "ic-detailed"]
 }

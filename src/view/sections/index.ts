@@ -12,6 +12,7 @@ export function renderSection(section: ViewSection) {
 		case "skills":
 			return renderSkills(section);
 		case "awards":
+		case "talks":
 			return renderAwards(section);
 		case "education":
 			return renderEducation(section);

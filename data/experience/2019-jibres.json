@@ -10,11 +10,11 @@
 		"end": "2022-11"
 	},
 	"bullets": [
-		"Implemented an integrated cloud eCommerce solution for 1,200+ businesses containing website, app, POS software, CRM, CMS, accounting software, ticketing, and form builder.",
-		"Launched an automated app factory that generated a native android shopping app without coding in less than 10 minutes.",
+		"Scaled an integrated cloud eCommerce platform (web, app, POS, CRM, accounting) to 1,200+ businesses.",
+		"Launched an automated app factory that generated a native Android shopping app without coding in less than 10 minutes.",
 		{
-			"text": "Joined a bug bounty program and introduced a new WAF that filters and monitors 99% of attacks.",
-			"layouts": ["detailed"]
+			"text": "Hardened security with WAF filtering and monitoring, blocking 99% of attacks, and ran a public bug-bounty program.",
+			"layouts": ["detailed", "ic-detailed"]
 		}
 	],
 	"technologies": [
@@ -28,7 +28,7 @@
 		"React",
 		"ELK",
 		"Git",
-		"NodeJS",
+		"Node.js",
 		"Express",
 		"Vanilla JS",
 		"Sass",

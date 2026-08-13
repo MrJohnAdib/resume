@@ -14,8 +14,16 @@ type SiteSources = {
 	banner: z.infer<typeof BannerSourceSchema>;
 };
 
+const pdfPrefixes: Record<string, string> = {
+	detailed: "MrAdib-CV-",
+	one: "MrAdib-CV-OnePage-",
+	"ic-detailed": "MrAdib-CV-IC-",
+	"ic-one": "MrAdib-CV-IC-OnePage-",
+};
+
 export function normalizeSite(source: SiteSources, layoutName = "compact") {
 	const base = layoutBase(layoutName);
+	const prefix = pdfPrefixes[layoutName];
 	return {
 		metadata: {
 			...source.metadata,
@@ -27,9 +35,7 @@ export function normalizeSite(source: SiteSources, layoutName = "compact") {
 			...pdfDefaults(base),
 			version: source.release.version,
 			latestVersion: source.release.latestVersion,
-			...(layoutName === "detailed"
-				? { filePrefix: "MrAdib-CV-", titlePrefix: "MrAdib-CV-" }
-				: {}),
+			...(prefix ? { filePrefix: prefix, titlePrefix: prefix } : {}),
 		},
 		analytics: {
 			...source.analytics,

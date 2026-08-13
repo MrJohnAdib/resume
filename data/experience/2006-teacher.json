@@ -15,5 +15,5 @@
 			"hidden": true
 		}
 	],
-	"layouts": ["detailed"]
+	"layouts": ["detailed", "ic-detailed"]
 }

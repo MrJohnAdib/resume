@@ -15,6 +15,7 @@
 	],
 	"skills": [
 		"tech-stack",
+		"leadership",
 		"additional-programming-languages",
 		"ai-llm",
 		"api",
@@ -42,7 +43,16 @@
 		"graphic-design-tool",
 		"office-specialist",
 		"core-web-essentials",
+		"languages",
 		"miscellaneous"
+	],
+	"talks": [
+		"2026-javascript-london",
+		"2026-hack-united-workshop",
+		"2025-techlead-conf-panel",
+		"2025-ai-coding-summit",
+		"2025-lnug",
+		"2025-react-advanced"
 	],
 	"awards": [
 		"2026-worlds-most-influential-mentor",
@@ -60,6 +70,7 @@
 	"volunteering": [
 		"2024-adplist",
 		"2025-codie-awards",
+		"2025-masschallenge",
 		"2017-khadije-charity",
 		"2010-worldskills"
 	]

@@ -17,6 +17,7 @@ const detailedFields: Record<SectionId, string[]> = {
 	],
 	skills: ["title", "items"],
 	awards: ["title", "description", "date"],
+	talks: ["title", "description", "date"],
 	education: [
 		"degree",
 		"institution",
@@ -71,6 +72,10 @@ export function createCvView(resume: Resume) {
 		...resume,
 		person: {
 			...resume.person,
+			identity: {
+				...resume.person.identity,
+				title: resume.layout.title ?? resume.person.identity.title,
+			},
 			links: { items: links },
 			summary: { items: summary },
 		},

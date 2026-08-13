@@ -1,0 +1,17 @@
+{
+	"title": "Mentor - Startup Accelerator",
+	"organization": {
+		"name": "MassChallenge",
+		"url": "https://masschallenge.org/"
+	},
+	"dates": {
+		"start": "2025-06",
+		"end": "present"
+	},
+	"bullets": [
+		{
+			"text": "Mentored startup founders across Switzerland and UK cohorts on product, engineering, and go-to-market strategy."
+		}
+	],
+	"layouts": ["detailed", "ic-detailed"]
+}

@@ -4,8 +4,7 @@
 		"Docker",
 		{
 			"label": "GH Actions",
-			"title": "GitHub Actions",
-			"separatorAfter": " "
+			"title": "GitHub Actions"
 		},
 		"Turborepo",
 		"Monorepo",

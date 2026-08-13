@@ -12,7 +12,7 @@
 	},
 	"bullets": [
 		"Developed a reusable design system with 90 tested components, integrated into 5 services in production.",
-		"Shipped enterprise auth panel using AI tools with passkey, edge deployment in 3 environments, and 10+ RBAC roles.",
+		"Launched an enterprise auth panel with passkeys and 10+ RBAC roles in 3 days using AI tools, edge-deployed across 3 environments.",
 		{
 			"text": "Migrated CI/CD from CircleCI to GitHub Actions, achieving instant, 100% reliable deployments and 80% faster deploys.",
 			"annotations": [
@@ -27,15 +27,15 @@
 			"text": "Resolved hundreds of lint warnings across four services, raising quality standards and reducing tech debt.",
 			"hidden": true
 		},
-		"Improved platform performance, cutting load times across all pages by 60% and boosting Homepage LCP by 80%.",
+		"Boosted platform performance with 60% faster load times across all pages and 80% better homepage LCP.",
 		{
 			"text": "Established E2E tests covering 100% sensitive flows in CI/CD, reducing validation time and boosting release confidence.",
-			"layouts": ["detailed"]
+			"layouts": ["detailed", "ic-detailed"]
 		}
 	],
 	"technologies": [
 		"TypeScript",
-		"NodeJS",
+		"Node.js",
 		"GCP",
 		"Pub/Sub",
 		"CircleCI",
@@ -53,5 +53,5 @@
 		"Jest",
 		"Chromatic"
 	],
-	"layouts": ["detailed"]
+	"layouts": ["detailed", "ic-detailed"]
 }

@@ -17,6 +17,7 @@ export const SectionsSchema = z.object({
 	experience: sectionOf(ExperienceItemSchema),
 	skills: sectionOf(SkillGroupSchema),
 	awards: sectionOf(AwardItemSchema),
+	talks: sectionOf(AwardItemSchema),
 	education: sectionOf(EducationItemSchema),
 	volunteering: sectionOf(VolunteeringItemSchema),
 });

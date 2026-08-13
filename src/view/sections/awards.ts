@@ -19,7 +19,7 @@ function renderItem(item: Item) {
 	}
 	return `<section class="mb-1" data-item-id="${e(item.id)}">
 		<div class="flex items-center">
-			${hasField(item, "title") ? `<h4 class="grow text-base leading-5 font-light">${e(item.title)}</h4>` : ""}
+			${hasField(item, "title") ? `<h4 class="grow text-base leading-5 font-light">${e(item.icon ? `${item.icon} ${item.title}` : item.title)}</h4>` : ""}
 			${hasField(item, "location") && item.location ? `<div class="grow-0 text-stone-500 text-xs">${e(item.location)}</div>` : ""}
 		</div>
 		<div class="flex flex-wrap text-xs">

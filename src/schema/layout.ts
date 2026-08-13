@@ -5,6 +5,7 @@ const SectionType = z.enum([
 	"experience",
 	"skills",
 	"awards",
+	"talks",
 	"education",
 	"volunteering",
 ]);
@@ -50,6 +51,7 @@ export const LayoutSourceSchema = z.object({
 		experience: Order,
 		skills: Order,
 		awards: Order,
+		talks: Order,
 		education: Order,
 		volunteering: Order,
 	}),
@@ -58,6 +60,7 @@ export const LayoutSourceSchema = z.object({
 			experience: PageMap,
 			skills: PageMap,
 			awards: PageMap,
+			talks: PageMap,
 			education: PageMap,
 			volunteering: PageMap,
 		})
@@ -68,11 +71,13 @@ export const LayoutSourceSchema = z.object({
 			experience: Order,
 			skills: Order,
 			awards: Order,
+			talks: Order,
 			education: Order,
 			volunteering: Order,
 		})
 		.partial()
 		.optional(),
+	title: z.string().min(1).optional(),
 	metadata: z.string().min(1).optional(),
 });
 

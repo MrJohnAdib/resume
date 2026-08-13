@@ -42,6 +42,8 @@ export async function checkCvLayout(
 	routes: Array<{ route: string; pages: number }> = [
 		{ route: "cv/", pages: 3 },
 		{ route: "one/", pages: 1 },
+		{ route: "ic-cv/", pages: 3 },
+		{ route: "ic/", pages: 1 },
 	],
 ) {
 	const server = await startResumeServer(output);

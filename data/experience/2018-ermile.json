@@ -13,7 +13,7 @@
 		"Led engineering team that delivered educational management system serving 500,000+ students and 2,000+ teachers.",
 		{
 			"text": "Designed the database from scratch and built 150+ SPA functional modules with server-side rendering.",
-			"layouts": ["detailed"]
+			"layouts": ["detailed", "ic-detailed"]
 		}
 	],
 	"technologies": [

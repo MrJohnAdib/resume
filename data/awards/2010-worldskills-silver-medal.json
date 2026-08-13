@@ -1,9 +1,10 @@
 {
-	"title": "🏆 Silver Medal & Medallion for Excellence",
+	"title": "Silver Medal & Medallion for Excellence",
+	"icon": "🏆",
 	"description": "WorldSkills IR - IT Software Solutions for Business",
 	"date": {
 		"datetime": "2010-09-18",
 		"label": "2010"
 	},
-	"layouts": ["detailed"]
+	"layouts": ["detailed", "ic-detailed"]
 }

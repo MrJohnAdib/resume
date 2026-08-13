@@ -12,4 +12,12 @@
     <loc>https://resume.mradib.com/one/</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://resume.mradib.com/ic-cv/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://resume.mradib.com/ic/</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>

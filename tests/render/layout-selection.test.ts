@@ -39,6 +39,6 @@ test("selects layout-scoped bullets when their layout is active", async () => {
 	const html = renderCvResume(resume);
 	assert.match(html, /Established E2E tests covering 100% sensitive flows/);
 	assert.match(html, /Automated deployment process with CI\/CD/);
-	assert.match(html, /Improved platform performance/);
+	assert.match(html, /Boosted platform performance/);
 	assert.doesNotMatch(html, /Spearheaded a 15-member cross-functional/);
 });
