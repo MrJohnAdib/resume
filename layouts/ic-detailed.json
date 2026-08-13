@@ -30,6 +30,9 @@
 	"pageBreaks": {
 		"experience": {
 			"2017-tejarak": 2
+		},
+		"volunteering": {
+			"2010-worldskills": 3
 		}
 	},
 	"order": "order.json"
