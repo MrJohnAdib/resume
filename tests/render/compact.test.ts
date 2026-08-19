@@ -25,7 +25,7 @@ test("renders selected compact content and omits inactive content", async () => 
 		/<a[^>]*href="https:\/\/mradib\.com\/awards"[^>]*>Awards and Honors<\/a>/,
 	);
 
-	const experience = html.indexOf("Professional Experience");
+	const experience = html.indexOf("Experience");
 	const skills = html.indexOf("Skills");
 	const awards = html.indexOf("Awards and Honors");
 	assert.ok(experience < skills);

@@ -1,7 +1,8 @@
 import { richText } from "../../render/rich-text.ts";
 import type { ViewSection } from "../../render/select.ts";
 import type { Resume } from "../../schema/resume.ts";
-import { escapeHtml as e } from "../html.ts";
+import { copyBreak, escapeHtml as e } from "../html.ts";
+import { renderCvProjects } from "./projects.ts";
 import { renderCvRoles } from "./roles.ts";
 
 type Sections = Resume["sections"];
@@ -33,13 +34,13 @@ function skillGroup(group: SkillGroup) {
 function award(item: Award) {
 	return `<section class="cv-item" data-item-id="${e(item.id)}">
 			<div class="cv-row"><h3 class="cv-role">${e(item.title)}</h3><div class="cv-dates" dir="ltr"><time datetime="${e(item.date.datetime)}">${e(item.date.label)}</time></div></div>
-			<div class="cv-desc">${richText(item.description)}</div>
+			<div class="cv-desc">${richText(item.description)}</div>${copyBreak}
 		</section>`;
 }
 
 function education(item: Education) {
 	const dates = item.dates.length
-		? `<div class="cv-dates" dir="ltr"><time datetime="${e(item.dates[0]?.datetime)}">${e(item.dates[0]?.label)}</time> — <time datetime="${e(item.dates.at(-1)?.datetime)}">${e(item.dates.at(-1)?.label)}</time></div>`
+		? `<div class="cv-dates" dir="ltr"><time datetime="${e(item.dates[0]?.datetime)}">${e(item.dates[0]?.label)}</time> - <time datetime="${e(item.dates.at(-1)?.datetime)}">${e(item.dates.at(-1)?.label)}</time></div>`
 		: "";
 	const thesis = item.thesis
 		? `<div class="cv-desc">${richText(item.thesis.text)}</div>`
@@ -50,14 +51,17 @@ function education(item: Education) {
 	return `<section class="cv-item" data-item-id="${e(item.id)}" itemscope itemtype="https://schema.org/CollegeOrUniversity">
 			<div class="cv-row"><h3 class="cv-role">${e(item.degree)}</h3>${dates}</div>
 			<div class="cv-row cv-sub"><h4 class="cv-org">${e(item.institution)}${item.employmentType ? `<span class="cv-muted"> · ${e(item.employmentType)}</span>` : ""}</h4></div>
-			${thesis}${coursework}
+			${thesis}${coursework}${copyBreak}
 		</section>`;
 }
 
 function body(section: ViewSection) {
 	if (section.id === "skills") {
 		const groups = section.items as unknown as SkillGroup[];
-		return `<div class="cv-skills">${groups.map(skillGroup).join("")}</div>`;
+		return `<div class="cv-skills">${groups.map(skillGroup).join("")}</div>${copyBreak}`;
+	}
+	if (section.id === "projects") {
+		return renderCvProjects(section);
 	}
 	if (section.id === "awards" || section.id === "talks") {
 		return (section.items as unknown as Award[]).map(award).join("");
@@ -70,5 +74,5 @@ function body(section: ViewSection) {
 
 export function renderCvSection(section: ViewSection) {
 	const continued = (section as { continued?: boolean }).continued;
-	return `<article data-section-id="${e(section.id)}">${continued ? "" : heading(section)}${body(section)}</article>`;
+	return `<article data-section-id="${e(section.id)}">${continued ? "" : copyBreak + heading(section)}${body(section)}</article>`;
 }

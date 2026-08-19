@@ -24,7 +24,7 @@ test("loads generated keys and automatic presentation behavior", async () => {
 		resume.sections.experience.items.find(
 			({ id }) => id === "2026-zapp-consumer-engineering-manager",
 		)?.layouts,
-		["detailed", "ic-detailed"],
+		["detailed"],
 	);
 	assert.equal(resume.person.identity.avatar?.alt, resume.person.identity.name);
 	assert.equal(resume.person.contact.phone.href, "tel:+447393633145");

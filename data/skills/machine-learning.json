@@ -1,0 +1,14 @@
+{
+	"title": "Machine Learning",
+	"items": [
+		"YOLO pose",
+		"ArcFace face embeddings",
+		"MediaPipe",
+		"ONNX Runtime",
+		"OpenCV",
+		"active-speaker detection",
+		"Bayesian adaptive testing",
+		"spaced repetition"
+	],
+	"layouts": ["detailed"]
+}

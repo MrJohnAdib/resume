@@ -2,6 +2,7 @@
 	"title": "Co-Founder & CTO",
 	"organization": {
 		"name": "Jibres",
+		"description": "B2B2C omnichannel e-commerce SaaS platform managing 132K+ products across web, mobile and POS",
 		"url": "https://jibres.com"
 	},
 	"employmentType": "Full-time",
@@ -14,7 +15,7 @@
 		"Launched an automated app factory that generated a native Android shopping app without coding in less than 10 minutes.",
 		{
 			"text": "Hardened security with WAF filtering and monitoring, blocking 99% of attacks, and ran a public bug-bounty program.",
-			"layouts": ["detailed", "ic-detailed"]
+			"layouts": ["detailed"]
 		}
 	],
 	"technologies": [

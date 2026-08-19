@@ -7,12 +7,16 @@
 			"page": 1
 		},
 		{
+			"type": "projects",
+			"page": 2
+		},
+		{
 			"type": "skills",
 			"page": 2
 		},
 		{
 			"type": "volunteering",
-			"page": 2
+			"page": 3
 		},
 		{
 			"type": "education",
@@ -29,10 +33,7 @@
 	],
 	"pageBreaks": {
 		"experience": {
-			"2017-tejarak": 2
-		},
-		"volunteering": {
-			"2010-worldskills": 3
+			"2015-sarshomar": 2
 		}
 	},
 	"order": "order.json"

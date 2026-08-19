@@ -11,5 +11,5 @@
 	"bullets": [
 		"Delivered practical courses on web development covering HTML, CSS, JavaScript, and SEO with hands-on, industry-relevant projects."
 	],
-	"layouts": ["detailed", "ic-detailed"]
+	"hidden": true
 }

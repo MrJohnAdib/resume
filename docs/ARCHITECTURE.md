@@ -12,10 +12,10 @@ volunteering/*.json ─ one complete volunteer role per file
 skills/*.json ─────── one skill group per file
 awards/*.json ─────── one award per file
 education/*.json ──── one degree per file
+projects/*.json ───── one independent project entry per file
 order.json ────────── shared record order for every layout
 compact.json ──────── one-page section columns
 detailed.json ─────── three-page section pages and breaks
-one.json ──────────── one-page CV-format record selection
 ```
 
 The loader validates every file with a small Zod module and reports its source
@@ -53,9 +53,8 @@ below 100 lines.
 
 ## Layout names
 
-`compact` is the two-column one-page layout at `/`. `detailed` at `/cv/` and
-`one` at `/one/` share the CV-format components in `src/view/cv` and one
-stylesheet, so every bullet, role, and heading renders identically. Page-mode
+`compact` is the two-column one-page layout at `/`. `detailed` at `/cv/` uses
+the CV-format components in `src/view/cv` and its own stylesheet. Page-mode
 layouts assign sections to pages, split records with `pageBreaks`, and select
 a record subset with `records`. Items tagged `"layouts": [...]` appear only
 in the named layouts. The build measures every A4 sheet at true page width

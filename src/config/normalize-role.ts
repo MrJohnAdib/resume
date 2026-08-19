@@ -50,6 +50,9 @@ export function normalizeRole(id: string, role: SourceRole) {
 		title: role.title,
 		organization: {
 			name: role.organization.name,
+			...(role.organization.description
+				? { description: role.organization.description }
+				: {}),
 			...(role.organization.url
 				? { url: role.organization.url, linkEnabled: true }
 				: {}),

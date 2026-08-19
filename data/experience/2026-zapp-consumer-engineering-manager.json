@@ -1,7 +1,8 @@
 {
-	"title": "Engineering Manager",
+	"title": "Engineering Manager, Consumer",
 	"organization": {
 		"name": "Zapp",
+		"description": "Series B B2C quick-commerce company with £100M+ annual revenue and $300M+ raised",
 		"url": "https://justzapp.com"
 	},
 	"employmentType": "Full-time",
@@ -12,10 +13,10 @@
 	},
 	"bullets": [
 		"Shipped post-checkout Additional Items feature, driving +23% revenue on amended orders.",
-		"Engineered an 8-skill AI agent suite carrying a ticket to a reviewed PR with screenshot and video evidence, adopted org-wide.",
-		"Accelerated iOS and Android release cadence from monthly to weekly, shipping 10+ versions in 5 months.",
+		"Engineered an 8-skill AI coding suite carrying a ticket to a reviewed PR with screenshot and video evidence, adopted org-wide.",
+		"Accelerated iOS and Android release cadence from monthly to weekly, shipping 10+ versions.",
 		"Introduced Maestro end-to-end testing in CI with smoke and nightly runs, growing coverage steadily from zero.",
-		"Led the biggest SEV1 incident in company history, then built the incident function, severity framework, and outage SOP.",
+		"Led the biggest SEV1 in company history, then built the company-wide incident function, severity framework, and SOP.",
 		"Authored the levelling and pay bands for the entire engineering job family."
 	],
 	"technologies": [
@@ -29,8 +30,6 @@
 		"Unistyles",
 		"Tamagui",
 		"Next.js",
-		"GraphQL",
-		"Django",
 		"GCP",
 		"Cloud Run",
 		"Pub/Sub",
@@ -43,12 +42,14 @@
 		"Statsig",
 		"Mixpanel",
 		"Adyen",
-		"Algolia",
 		"Maestro",
 		"Playwright",
 		"Vitest",
 		"Storybook",
-		"Chromatic"
+		"Chromatic",
+		"GraphQL",
+		"Django",
+		"Algolia"
 	],
-	"layouts": ["detailed", "ic-detailed"]
+	"layouts": ["detailed"]
 }

@@ -1,16 +1,37 @@
 [
-	"17+ years shipping results at scale.",
-	"Co-founded a product that hit 1M users in 30 days.",
-	"UK Global Talent endorsed.",
+	{
+		"text": "Engineering leader with deep technical expertise and 17+ years building and scaling products, teams, and platforms.",
+		"layouts": ["detailed"]
+	},
+	{
+		"text": "Engineering leader with deep technical expertise and 17+ years scaling products and teams.",
+		"layouts": ["compact"]
+	},
+	"Co-founded a product that reached 1M users in 30 days.",
+	{
+		"text": "Architects and operates production AI/ML systems and embeds agentic AI into engineering workflows.",
+		"layouts": ["detailed"]
+	},
+	{
+		"text": "Builds AI/ML systems and embeds agentic AI into engineering workflows.",
+		"layouts": ["compact"]
+	},
+	{
+		"text": "Leads teams with end-to-end ownership of delivery, impact, and reliability.",
+		"layouts": ["detailed"]
+	},
+	{
+		"text": "UK Global Talent endorsed and tech conference speaker.",
+		"layouts": ["detailed"]
+	},
 	{
 		"text": "World's Most Influential Mentor.",
-		"layouts": ["compact", "detailed", "ic-detailed", "one", "ic-one"]
+		"hidden": true
 	},
 	{
-		"text": "Tech conference speaker.",
-		"layouts": ["compact", "detailed", "ic-detailed"]
+		"text": "Embraced AI early to multiply team efficiency.",
+		"hidden": true
 	},
-	"Embraced AI early to multiply team efficiency.",
 	{
 		"text": "Professional software engineer with 17+ years of experience in developing cutting-edge web solutions.",
 		"hidden": true
@@ -56,11 +77,7 @@
 		"hidden": true
 	},
 	{
-		"text": "Leads teams that ship fast, measure impact, and own reliability end-to-end.",
-		"layouts": ["detailed", "one"]
-	},
-	{
 		"text": "Hands-on engineer who ships fast, measures impact, and owns reliability end-to-end.",
-		"layouts": ["ic-detailed", "ic-one"]
+		"hidden": true
 	}
 ]

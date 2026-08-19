@@ -1,0 +1,15 @@
+{
+	"title": "AI Infrastructure",
+	"items": [
+		"Gemini",
+		"OpenAI",
+		"Claude",
+		"Ollama",
+		"multi-provider failover",
+		"cost-tiered routing",
+		"rate-limit budgeting",
+		"GPU/CUDA inference",
+		"ElevenLabs TTS"
+	],
+	"layouts": ["detailed"]
+}

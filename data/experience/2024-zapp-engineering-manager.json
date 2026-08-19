@@ -55,5 +55,5 @@
 		"Jest",
 		"Chromatic"
 	],
-	"layouts": ["compact", "one", "ic-one"]
+	"layouts": ["compact"]
 }

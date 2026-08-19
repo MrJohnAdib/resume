@@ -4,16 +4,12 @@ import { escapeHtml as e } from "./html.ts";
 
 const versions = [
 	{ layout: "compact", label: "Compact", route: "" },
-	{ layout: "one", label: "One-Page CV", route: "one/", scoped: true },
 	{ layout: "detailed", label: "Full CV", route: "cv/" },
-	{ layout: "ic-one", label: "One-Page IC CV", route: "ic/", scoped: true },
-	{ layout: "ic-detailed", label: "IC CV", route: "ic-cv/", scoped: true },
 ];
 
 function switcher(current: string) {
 	const base = layoutBase(current);
 	const links = versions
-		.filter(({ layout, scoped }) => !scoped || layout === current)
 		.map(({ layout, label, route }) =>
 			layout === current
 				? `<span class="rounded-full bg-gray-900 dark:bg-gray-100 px-3 py-1 font-semibold text-white dark:text-gray-900">${label}</span>`

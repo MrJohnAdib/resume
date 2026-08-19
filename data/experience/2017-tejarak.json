@@ -2,6 +2,7 @@
 	"title": "Principal Software Engineer",
 	"organization": {
 		"name": "Tejarak",
+		"description": "B2B SaaS startup for workforce attendance and time tracking",
 		"website": {
 			"href": "https://tejarak.com/",
 			"hidden": true

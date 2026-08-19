@@ -37,10 +37,10 @@ data/volunteering/       One complete JSON file per volunteer role
 data/skills/             One JSON file per skill group
 data/awards/             One JSON file per award
 data/education/          One JSON file per degree
+data/projects/           One JSON file per independent project entry
 layouts/order.json       Shared record order for every layout
 layouts/compact.json     One-page layout served at /
 layouts/detailed.json    Three-page layout served at /cv/
-layouts/one.json         One-page CV-format layout served at /one/
 src/schema/              Focused Zod validation modules
 src/view/                Small TypeScript HTML components
 src/runtime/             Browser behavior

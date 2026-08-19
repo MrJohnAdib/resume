@@ -1,8 +1,8 @@
 {
 	"language": "en",
 	"direction": "ltr",
-	"title": "John Adib - Engineering Leader & Mentor - Resume",
-	"description": "London-based Engineering Leader & Mentor with 17+ years of experience building scalable web products, leading software teams, and mentoring engineers.",
+	"title": "John Adib - Engineering Manager - Resume",
+	"description": "London-based Engineering Manager with 17+ years of experience building scalable web products, leading software teams, and mentoring engineers.",
 	"keywords": [
 		"John Adib",
 		"MrAdib",
@@ -19,6 +19,12 @@
 		"Full Stack Engineer",
 		"Web Engineering",
 		"Technical Leadership",
+		"AI Engineering",
+		"Machine Learning",
+		"LLM",
+		"Generative AI",
+		"AI Infrastructure",
+		"MLOps",
 		"JavaScript",
 		"TypeScript",
 		"React",
@@ -29,7 +35,7 @@
 	"authorUrl": "https://MrAdib.com",
 	"url": "https://resume.MrAdib.com/",
 	"image": "https://resume.mradib.com/img/cover-v4.jpg",
-	"socialTitle": "John Adib - Engineering Leader & Mentor - Resume",
-	"socialDescription": "London-based Engineering Leader & Mentor with 17+ years of experience building scalable web products, leading software teams, and mentoring engineers.",
+	"socialTitle": "John Adib - Engineering Manager - Resume",
+	"socialDescription": "London-based Engineering Manager with 17+ years of experience building scalable web products, leading software teams, and mentoring engineers.",
 	"twitterCard": "summary_large_image"
 }
