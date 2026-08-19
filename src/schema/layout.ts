@@ -3,6 +3,7 @@ import { SlugSchema } from "./common.ts";
 
 const SectionType = z.enum([
 	"experience",
+	"projects",
 	"skills",
 	"awards",
 	"talks",
@@ -49,6 +50,7 @@ export const LayoutSourceSchema = z.object({
 	sections: Sections,
 	order: z.object({
 		experience: Order,
+		projects: Order,
 		skills: Order,
 		awards: Order,
 		talks: Order,
@@ -58,6 +60,7 @@ export const LayoutSourceSchema = z.object({
 	pageBreaks: z
 		.object({
 			experience: PageMap,
+			projects: PageMap,
 			skills: PageMap,
 			awards: PageMap,
 			talks: PageMap,
@@ -69,6 +72,7 @@ export const LayoutSourceSchema = z.object({
 	records: z
 		.object({
 			experience: Order,
+			projects: Order,
 			skills: Order,
 			awards: Order,
 			talks: Order,

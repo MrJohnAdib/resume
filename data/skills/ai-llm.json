@@ -3,12 +3,16 @@
 	"items": [
 		"OpenAI",
 		"Gemini",
-		"Vertex AI",
+		{
+			"label": "Vertex AI",
+			"hidden": true
+		},
 		"Llama",
 		{
 			"label": "RAG",
 			"title": "Retrieval-Augmented Generation"
 		},
 		"Claude"
-	]
+	],
+	"layouts": ["compact"]
 }

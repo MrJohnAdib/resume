@@ -1,0 +1,16 @@
+{
+	"title": "AI Engineering",
+	"items": [
+		"LLM orchestration",
+		"agent orchestration",
+		"multi-step state management",
+		"prompt engineering",
+		"structured outputs",
+		"agentic pipelines",
+		{
+			"label": "MCP",
+			"title": "Model Context Protocol"
+		}
+	],
+	"layouts": ["detailed"]
+}

@@ -6,12 +6,12 @@
 	},
 	"dates": {
 		"start": "2025-06",
-		"end": "present"
+		"end": "2025-11"
 	},
 	"bullets": [
 		{
-			"text": "Mentored startup founders across Switzerland and UK cohorts on product, engineering, and go-to-market strategy."
+			"text": "Mentored 12 startups across Switzerland and UK cohorts on product, engineering, and go-to-market strategy."
 		}
 	],
-	"layouts": ["detailed", "ic-detailed"]
+	"layouts": ["detailed"]
 }

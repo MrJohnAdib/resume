@@ -10,7 +10,9 @@
 		},
 		"Levelling",
 		"Roadmaps",
-		"Stakeholder Management"
+		"Prioritization",
+		"Stakeholder Management",
+		"Cross-functional Collaboration"
 	],
-	"layouts": ["detailed", "one"]
+	"layouts": ["detailed"]
 }

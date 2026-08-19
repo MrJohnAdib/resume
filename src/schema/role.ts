@@ -16,6 +16,7 @@ const DateSourceSchema = z.union([
 
 const OrganizationSourceSchema = z.object({
 	name: z.string().min(1),
+	description: z.string().min(1).optional(),
 	url: z.string().url().optional(),
 	website: z
 		.object({ href: z.string().url(), hidden: z.literal(true) })
@@ -38,6 +39,7 @@ export const RoleSchema = StableItemSchema.extend({
 	title: z.string().min(1),
 	organization: z.object({
 		name: z.string().min(1),
+		description: z.string().min(1).optional(),
 		url: z.string().url().optional(),
 		linkEnabled: z.boolean().optional(),
 	}),

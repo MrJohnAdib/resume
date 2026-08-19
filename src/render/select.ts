@@ -5,6 +5,7 @@ export type SectionId = keyof Resume["sections"];
 
 const fields: Record<SectionId, string[]> = {
 	experience: ["title", "organization", "employmentType", "duration", "dates"],
+	projects: ["title", "bullets"],
 	skills: ["title", "items"],
 	awards: ["title", "description", "date"],
 	talks: ["title", "description", "date"],

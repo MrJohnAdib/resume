@@ -15,6 +15,7 @@ const detailedFields: Record<SectionId, string[]> = {
 		"duration",
 		"dates",
 	],
+	projects: ["title", "bullets", "technologies"],
 	skills: ["title", "items"],
 	awards: ["title", "description", "date"],
 	talks: ["title", "description", "date"],

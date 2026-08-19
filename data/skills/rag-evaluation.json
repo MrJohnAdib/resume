@@ -1,0 +1,17 @@
+{
+	"title": "RAG & Evaluation",
+	"items": [
+		{
+			"label": "RAG",
+			"title": "Retrieval-Augmented Generation"
+		},
+		"embeddings",
+		"vector similarity search",
+		"pgvector",
+		"chunking strategies",
+		"LLM-as-judge",
+		"eval harnesses",
+		"hallucination gating"
+	],
+	"layouts": ["detailed"]
+}

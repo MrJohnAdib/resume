@@ -35,8 +35,9 @@ Add the filename without `.json` to the matching array under `order` in
 
 ## Skills, awards, and education
 
-Each skill group, award, and degree has one file in its section directory.
-Add its filename without `.json` to the matching array in `layouts/order.json`.
+Each skill group, award, degree, and project has one file in its section
+directory. Add its filename without `.json` to the matching array in
+`layouts/order.json`.
 
 Skill filenames describe the group. Award filenames begin with the award year:
 
@@ -44,7 +45,11 @@ Skill filenames describe the group. Award filenames begin with the award year:
 data/skills/platform-engineering.json
 data/awards/2027-example-award.json
 data/education/doctorate.json
+data/projects/ai-platform.json
 ```
+
+A project has `bullets` and optional `title` and `technologies`. It carries no
+organization and no dates, so it never reads as employment.
 
 ## Hidden alternatives
 
@@ -54,7 +59,7 @@ every generated layout.
 
 Add `"layouts": ["detailed"]` to a role or bullet that belongs only to the
 named layouts. Content without the field appears in every layout. A layout
-can also list a `records` subset per section, like `layouts/one.json`.
+can also list a `records` subset per section.
 
 Do not use CSS hiding for ordinary resume content. The phone box is the only
 allowlisted stateful hidden element.

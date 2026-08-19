@@ -21,7 +21,10 @@
 			"label": "Fundamentals of Programming",
 			"hidden": true
 		},
-		"Advanced Programming",
+		{
+			"label": "Advanced Programming",
+			"hidden": true
+		},
 		{
 			"label": "Discrete mathematics",
 			"hidden": true
@@ -37,10 +40,7 @@
 			"hidden": true
 		},
 		"Database Design",
-		{
-			"label": "Artificial intelligence",
-			"hidden": true
-		},
+		"Artificial intelligence",
 		{
 			"label": "Computer Architecture",
 			"hidden": true

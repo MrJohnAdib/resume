@@ -1,0 +1,40 @@
+{
+	"bullets": [
+		"Automated a marketing pipeline that publishes 12 posts a day across 4 platforms, now an acquisition channel.",
+		"Shipped 200,000+ live pages across 12 languages, each with an auto-rendered localised preview image.",
+		"Eliminated hallucinated content by gating every AI proposal behind 8 automated verification stages and human approval.",
+		"Reframed 40,000+ video clips to vertical automatically, replacing manual editing with GPU active-speaker tracking.",
+		"Cut inference cost ~6x by routing each workload to the smallest capable model, holding spend flat as generation scaled.",
+		"Authored a full curriculum with an agent fleet, gated by 58 deterministic rules and a 6-pass AI-judge audit.",
+		"Built a Bayesian adaptive assessment engine placing a user in 12 questions, simulation-validated across every band."
+	],
+	"technologies": [
+		"Gemini",
+		"OpenAI",
+		"Ollama",
+		"ElevenLabs",
+		"MCP",
+		"PyTorch",
+		"CUDA",
+		"YOLO-pose",
+		"InsightFace",
+		"ONNX Runtime",
+		"MediaPipe",
+		"OpenCV",
+		"ffmpeg/NVENC",
+		"Remotion",
+		"sharp",
+		"Python",
+		"TypeScript",
+		"Node.js",
+		"Hono",
+		"Drizzle",
+		"Next.js",
+		"Expo",
+		"React Native",
+		"Swift",
+		"Kotlin",
+		"Turborepo"
+	],
+	"layouts": ["detailed"]
+}

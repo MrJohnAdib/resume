@@ -4,5 +4,6 @@
 	"date": {
 		"datetime": "2026-01",
 		"label": "Jan 2026"
-	}
+	},
+	"hidden": true
 }

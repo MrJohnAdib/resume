@@ -18,5 +18,7 @@ export function renderSection(section: ViewSection) {
 			return renderEducation(section);
 		case "volunteering":
 			return renderVolunteering(section);
+		case "projects":
+			return "";
 	}
 }

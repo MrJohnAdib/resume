@@ -13,11 +13,16 @@
 		"2011-mixa",
 		"2008-freelancer"
 	],
+	"projects": ["independent-ai-ml"],
 	"skills": [
-		"tech-stack",
 		"leadership",
-		"additional-programming-languages",
 		"ai-llm",
+		"ai-engineering",
+		"rag-evaluation",
+		"ai-infrastructure",
+		"machine-learning",
+		"tech-stack",
+		"additional-programming-languages",
 		"api",
 		"web-framework",
 		"front-end-js-library",
@@ -43,7 +48,6 @@
 		"graphic-design-tool",
 		"office-specialist",
 		"core-web-essentials",
-		"languages",
 		"miscellaneous"
 	],
 	"talks": [

@@ -17,6 +17,7 @@ export const ResumeConfigSchema = z.object({
 	}),
 	sections: z.object({
 		experience: Section,
+		projects: Section,
 		skills: Section,
 		awards: Section.extend({ href: z.string().url() }),
 		talks: Section.extend({ href: z.string().url() }),

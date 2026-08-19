@@ -6,5 +6,5 @@
 		"datetime": "2010-09-18",
 		"label": "2010"
 	},
-	"layouts": ["detailed", "ic-detailed"]
+	"layouts": ["detailed"]
 }

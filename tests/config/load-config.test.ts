@@ -17,7 +17,7 @@ test("loads the complete modular repository configuration", async () => {
 
 	assert.equal(
 		result.site.metadata.title,
-		"John Adib - Engineering Leader & Mentor - Resume",
+		"John Adib - Engineering Manager - Resume",
 	);
 	assert.equal(result.person.identity.name, "John Adib");
 	assert.equal(

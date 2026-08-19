@@ -34,11 +34,15 @@ test("assigns sections and records to their configured pages", async () => {
 	assert.ok(html.indexOf('data-item-id="2019-jibres"') < page2);
 	const sarshomar = html.indexOf('data-item-id="2015-sarshomar"');
 	assert.ok(sarshomar > page2 && sarshomar < page3);
-	for (const id of ["skills", "volunteering"]) {
+	for (const id of ["projects", "skills"]) {
 		const section = html.indexOf(`data-section-id="${id}"`);
 		assert.ok(section > page2 && section < page3, id);
 	}
-	for (const id of ["education", "talks", "awards"]) {
+	assert.ok(
+		html.indexOf('data-section-id="projects"') <
+			html.indexOf('data-section-id="skills"'),
+	);
+	for (const id of ["volunteering", "education", "talks", "awards"]) {
 		assert.ok(html.indexOf(`data-section-id="${id}"`) > page3, id);
 	}
 });
@@ -50,7 +54,7 @@ test("shows detailed-only content and keeps hidden records hidden", async () => 
 	const scrubbed = html.replaceAll("University of Tehran", "");
 	assert.doesNotMatch(scrubbed, /Tehran|Nour|Yazd|Mashhad/);
 	assert.match(html, /data-item-id="2006-teacher"/);
-	assert.match(html, /data-item-id="2017-university-of-tehran"/);
+	assert.doesNotMatch(html, /data-item-id="2017-university-of-tehran"/);
 	assert.doesNotMatch(html, /Secured a \$1M investment/);
 	assert.match(html, /data-item-id="2010-worldskills"/);
 	assert.match(html, /data-item-id="2024-zapp-senior-software-engineer"/);

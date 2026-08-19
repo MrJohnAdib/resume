@@ -9,8 +9,12 @@
 	},
 	"sections": {
 		"experience": {
-			"title": "Professional Experience",
+			"title": "Experience",
 			"directory": "data/experience"
+		},
+		"projects": {
+			"title": "AI & ML Engineering Projects",
+			"directory": "data/projects"
 		},
 		"skills": {
 			"title": "Skills",
@@ -35,11 +39,5 @@
 			"directory": "data/volunteering"
 		}
 	},
-	"layouts": [
-		"layouts/compact.json",
-		"layouts/detailed.json",
-		"layouts/one.json",
-		"layouts/ic-detailed.json",
-		"layouts/ic-one.json"
-	]
+	"layouts": ["layouts/compact.json", "layouts/detailed.json"]
 }

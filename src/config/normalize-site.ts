@@ -16,9 +16,6 @@ type SiteSources = {
 
 const pdfPrefixes: Record<string, string> = {
 	detailed: "MrAdib-CV-",
-	one: "MrAdib-CV-OnePage-",
-	"ic-detailed": "MrAdib-CV-IC-",
-	"ic-one": "MrAdib-CV-IC-OnePage-",
 };
 
 export function normalizeSite(source: SiteSources, layoutName = "compact") {

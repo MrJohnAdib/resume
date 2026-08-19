@@ -1,9 +1,9 @@
 import type { CvView } from "../../render/cv-select.ts";
-import { escapeHtml as e } from "../html.ts";
+import { copyBreak, escapeHtml as e, separator } from "../html.ts";
 
 function contact({ person }: CvView) {
-	const phone = `<span id="phoneBox" class="hidden"><a href="${e(person.contact.phone.href)}" itemprop="telephone" tabindex="-1">${e(person.contact.phone.label)}</a><span class="cv-sep">·</span></span>`;
-	return `<div id="contactBox" class="cv-contact">${phone}<span itemprop="address">${e(person.contact.location)}</span><span class="cv-sep">·</span><span>${e(person.contact.badge)}</span></div>`;
+	const phone = `<span id="phoneBox" class="hidden"><a href="${e(person.contact.phone.href)}" itemprop="telephone" tabindex="-1">${e(person.contact.phone.label)}</a>${separator}</span>`;
+	return `<div id="contactBox" class="cv-contact">${phone}<span itemprop="address">${e(person.contact.location)}</span>${separator}<span>${e(person.contact.badge)}</span></div>`;
 }
 
 function links({ person, site }: CvView) {
@@ -12,8 +12,8 @@ function links({ person, site }: CvView) {
 		(link) =>
 			`<a target="_blank" href="${e(link.url)}" title="${e(link.title)}">${e(link.label)}</a>`,
 	);
-	const version = `<span id="version" class="hidden" data-latest-pdf="${e(site.pdf.latestVersion)}">${e(site.pdf.version)}</span>`;
-	return `<div class="cv-links">${[...items, email].join('<span class="cv-sep">·</span>')}${version}</div>`;
+	const version = `<a class="cv-version" target="_blank" rel="noopener" href="${e(site.metadata.url)}" dir="ltr" tabindex="-1"><code id="version" data-latest-pdf="${e(site.pdf.latestVersion)}">${e(site.pdf.version)}</code></a>`;
+	return `<div class="cv-links">${[...items, email].join(separator)}${version}</div>`;
 }
 
 export function renderCvHeader(view: CvView) {
@@ -23,9 +23,9 @@ export function renderCvHeader(view: CvView) {
 		.join(" ");
 	return `<header itemscope itemtype="https://schema.org/Person" class="cv-header">
 		<h1 itemprop="name">${e(person.identity.name)}</h1>
-		<h2 itemprop="jobTitle">${e(person.identity.title)}</h2>
+		<h2 itemprop="jobTitle">${e(person.identity.title)}</h2>${copyBreak}
 		${contact(view)}
-		${links(view)}
+		${links(view)}${copyBreak}
 		<p class="cv-summary" itemprop="knowsAbout">${summary}</p>
 	</header>`;
 }

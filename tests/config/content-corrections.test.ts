@@ -22,12 +22,9 @@ test("uses current, descriptive resume metadata", async () => {
 		"data/site/metadata.json",
 	);
 
-	assert.equal(
-		metadata.title,
-		"John Adib - Engineering Leader & Mentor - Resume",
-	);
+	assert.equal(metadata.title, "John Adib - Engineering Manager - Resume");
 	assert.equal(metadata.socialTitle, metadata.title);
-	assert.match(String(metadata.description), /Engineering Leader & Mentor/);
+	assert.match(String(metadata.description), /Engineering Manager/);
 	assert.match(String(metadata.description), /leading software teams/);
 	assert.equal(metadata.socialDescription, metadata.description);
 	assert.ok(metadata.keywords.includes("Engineering Leader"));
