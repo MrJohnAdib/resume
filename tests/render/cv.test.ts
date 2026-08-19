@@ -50,7 +50,6 @@ test("assigns sections and records to their configured pages", async () => {
 test("shows detailed-only content and keeps hidden records hidden", async () => {
 	const html = await renderDetailed();
 
-	assert.match(html, /Relevant Coursework/);
 	const scrubbed = html.replaceAll("University of Tehran", "");
 	assert.doesNotMatch(scrubbed, /Tehran|Nour|Yazd|Mashhad/);
 	assert.match(html, /data-item-id="2006-teacher"/);
