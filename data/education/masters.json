@@ -21,7 +21,10 @@
 		"hidden": true
 	},
 	"coursework": [
-		"Fuzzy Logic and AI",
+		{
+			"label": "Fuzzy Logic and AI",
+			"hidden": true
+		},
 		{
 			"label": "Organizational Resource Planning",
 			"hidden": true
@@ -30,9 +33,18 @@
 			"label": "Knowledge Management",
 			"hidden": true
 		},
-		"Digital Marketing",
-		"Business Process Re-engineering",
-		"E-business",
+		{
+			"label": "Digital Marketing",
+			"hidden": true
+		},
+		{
+			"label": "Business Process Re-engineering",
+			"hidden": true
+		},
+		{
+			"label": "E-business",
+			"hidden": true
+		},
 		{
 			"label": "Advanced Organizational Behavior Management",
 			"hidden": true
@@ -49,6 +61,9 @@
 			"label": "Supply Chain Management",
 			"hidden": true
 		},
-		"Statistical Analysis"
+		{
+			"label": "Statistical Analysis",
+			"hidden": true
+		}
 	]
 }

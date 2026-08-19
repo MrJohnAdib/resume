@@ -29,18 +29,30 @@
 			"label": "Discrete mathematics",
 			"hidden": true
 		},
-		"Data Structure",
+		{
+			"label": "Data Structure",
+			"hidden": true
+		},
 		{
 			"label": "Design and Implementation of Programming Languages",
 			"hidden": true
 		},
-		"Algorithm Design",
+		{
+			"label": "Algorithm Design",
+			"hidden": true
+		},
 		{
 			"label": "Software Engineering",
 			"hidden": true
 		},
-		"Database Design",
-		"Artificial intelligence",
+		{
+			"label": "Database Design",
+			"hidden": true
+		},
+		{
+			"label": "Artificial intelligence",
+			"hidden": true
+		},
 		{
 			"label": "Computer Architecture",
 			"hidden": true
@@ -61,6 +73,9 @@
 			"label": "Expert System",
 			"hidden": true
 		},
-		"Internet Engineering"
+		{
+			"label": "Internet Engineering",
+			"hidden": true
+		}
 	]
 }
