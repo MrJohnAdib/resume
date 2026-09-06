@@ -1,7 +1,13 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { chromium } from "@playwright/test";
 import { startVisualServer } from "./server.ts";
+
+async function pdfVersion() {
+	const release = await readFile("data/site/release.json", "utf8");
+	return (JSON.parse(release).version as string).replaceAll(".", "");
+}
 
 test("compact runtime preserves contact, PDF, and print-title behavior", async () => {
 	const server = await startVisualServer();
@@ -14,7 +20,11 @@ test("compact runtime preserves contact, PDF, and print-title behavior", async (
 
 		const pdf = page.locator("#pdf-btn");
 		await assert.doesNotReject(() => pdf.waitFor({ state: "visible" }));
-		assert.match((await pdf.getAttribute("href")) ?? "", /v2700\.pdf$/);
+		const version = await pdfVersion();
+		assert.match(
+			(await pdf.getAttribute("href")) ?? "",
+			new RegExp(`${version}\\.pdf$`),
+		);
 
 		const phone = page.locator("#phoneBox");
 		assert.equal(
@@ -29,7 +39,7 @@ test("compact runtime preserves contact, PDF, and print-title behavior", async (
 
 		const originalTitle = await page.title();
 		await page.evaluate(() => window.dispatchEvent(new Event("beforeprint")));
-		assert.equal(await page.title(), "MrAdib-Resume-v2700-web");
+		assert.equal(await page.title(), `MrAdib-Resume-${version}-web`);
 		await page.evaluate(() => window.dispatchEvent(new Event("afterprint")));
 		assert.equal(await page.title(), originalTitle);
 		assert.deepEqual(errors, []);

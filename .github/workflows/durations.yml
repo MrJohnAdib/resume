@@ -1,0 +1,78 @@
+name: Refresh ongoing durations
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      - name: Detect duration drift
+        id: drift
+        run: |
+          npm run baseline
+          if git diff --quiet -- tests/fixtures/baseline-index.html; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          git checkout -- tests/fixtures/baseline-index.html
+
+      - name: Bump release
+        if: steps.drift.outputs.changed == 'true'
+        id: bump
+        run: |
+          npm run bump
+          version="$(node -p "require('./data/site/release.json').version")"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate PDFs and baseline
+        if: steps.drift.outputs.changed == 'true'
+        run: |
+          npm run build:pdf
+          npm run baseline
+
+      - name: Verify
+        if: steps.drift.outputs.changed == 'true'
+        run: |
+          npm run check
+          npm test
+
+      - name: Open pull request
+        if: steps.drift.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.bump.outputs.version }}
+        run: |
+          title="Release $VERSION with refreshed ongoing-role durations"
+          branch="durations/$VERSION"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add -A
+          git commit -m "$title"
+          git push -u origin "$branch"
+          gh pr create --base main --head "$branch" --title "$title" --body-file - <<EOF
+          Ongoing roles are dated from the build clock, so the month counts baked
+          into the committed PDFs and the visual baseline drift once a month.
+
+          - \`data/site/release.json\` bumped to $VERSION
+          - \`pdf/\` refreshed at the new version
+          - \`tests/fixtures/baseline-index.html\` regenerated
+
+          \`npm run check\`, \`npm run build\`, and \`npm test\` passed on this branch.
+          EOF
