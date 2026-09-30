@@ -29,7 +29,10 @@ async function main() {
 	await renderSite(output);
 	await buildCss(output);
 	const server = await startResumeServer(output);
-	const browser = await chromium.launch({ headless: true });
+	const browser = await chromium.launch({
+		headless: true,
+		args: ["--font-render-hinting=none"],
+	});
 	try {
 		const page = await browser.newPage({
 			viewport: { width: 1440, height: 1300 },
