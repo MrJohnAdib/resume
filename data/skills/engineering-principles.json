@@ -11,7 +11,8 @@
 		},
 		{
 			"label": "OOP",
-			"title": "Object Oriented Programming"
+			"title": "Object Oriented Programming",
+			"hidden": true
 		},
 		{
 			"label": "TDD",
@@ -19,7 +20,8 @@
 		},
 		{
 			"label": "DRY",
-			"title": "Don't Repeat Yourself"
+			"title": "Don't Repeat Yourself",
+			"hidden": true
 		},
 		{
 			"label": "EDA",
