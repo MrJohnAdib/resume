@@ -16,8 +16,16 @@
 		"Engineered an 8-skill AI coding suite carrying a ticket to a reviewed PR with screenshot and video evidence, adopted org-wide.",
 		"Built a ticket-to-PR AI harness with custom linters, architecture checks and three AI reviewers enforcing shared standards.",
 		"Initiated the transition to product engineering, defining expectations, levelling and pay bands across four roles.",
-		"Accelerated iOS and Android release cadence from monthly to weekly, shipping 10+ versions.",
-		"Scaled mobile QA to 125 Maestro test flows and 7,600+ unit tests, with automated smoke and nightly iOS/Android runs.",
+		"Consolidated 6 apps and 15 packages in a Turborepo monorepo, standardising tooling and CI.",
+		"Replaced 3-day QA freezes with 125 Maestro flows and 7,600+ unit tests, enabling weekly iOS and Android releases.",
+		{
+			"text": "Accelerated iOS and Android release cadence from monthly to weekly, shipping 10+ versions.",
+			"hidden": true
+		},
+		{
+			"text": "Scaled mobile QA to 125 Maestro test flows and 7,600+ unit tests, with automated smoke and nightly iOS/Android runs.",
+			"hidden": true
+		},
 		"Led the biggest SEV1 in company history, then built the company-wide incident function, severity framework, and SOP."
 	],
 	"technologies": [
@@ -38,6 +46,8 @@
 		"Terraform",
 		"GitHub Actions",
 		"Turborepo",
+		"pnpm",
+		"Biome",
 		"incident.io",
 		"Sentry",
 		"Statsig",
@@ -46,6 +56,7 @@
 		"Maestro",
 		"Playwright",
 		"Vitest",
+		"Jest",
 		"Storybook",
 		"Chromatic",
 		"GraphQL",
