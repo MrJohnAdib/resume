@@ -11,12 +11,32 @@
 		"end": "present"
 	},
 	"bullets": [
-		"Shifted iOS and Android app releases from monthly to weekly, a 4x faster cadence, shortening lead time and cycle time.",
-		"Deployed 3 AI reviewers as an automated guardrail on every PR, enforcing a consistent quality bar and reducing wait time.",
-		"Developed a reusable design system with 90 tested components, integrated into 5 services in production.",
-		"Launched an enterprise auth panel with passkeys and 10+ RBAC roles in 3 days using AI tools, edge-deployed across 3 environments.",
+		"Shipped post-checkout Additional Items, increasing revenue on amended orders by 23%.",
+		"Replaced 3-day QA freezes with 125 Maestro flows and 7,600+ unit tests, enabling weekly iOS/Android releases.",
+		"Built an org-wide ticket-to-PR AI harness with custom linters, architecture checks and 3 AI reviewers.",
+		"Initiated the transition to product engineering, defining expectations, levelling and pay bands across 4 roles.",
+		"Migrated 6 apps and 15 packages to Turborepo and GitHub Actions with automated releases.",
+		"Improved web performance with 60% faster page loads and 80% better homepage LCP.",
+		"Led Zapp's largest SEV1, then established company-wide incident management and response playbooks.",
+		{
+			"text": "Shifted iOS and Android app releases from monthly to weekly, a 4x faster cadence, shortening lead time and cycle time.",
+			"hidden": true
+		},
+		{
+			"text": "Deployed 3 AI reviewers as an automated guardrail on every PR, enforcing a consistent quality bar and reducing wait time.",
+			"hidden": true
+		},
+		{
+			"text": "Developed a reusable design system with 90 tested components, integrated into 5 services in production.",
+			"hidden": true
+		},
+		{
+			"text": "Launched an enterprise auth panel with passkeys and 10+ RBAC roles in 3 days using AI tools, edge-deployed across 3 environments.",
+			"hidden": true
+		},
 		{
 			"text": "Migrated CI/CD from CircleCI to GitHub Actions, achieving instant, 100% reliable deployments and 80% faster deploys.",
+			"hidden": true,
 			"annotations": [
 				{
 					"type": "abbr",
@@ -29,7 +49,10 @@
 			"text": "Resolved hundreds of lint warnings across four services, raising quality standards and reducing tech debt.",
 			"hidden": true
 		},
-		"Boosted platform performance with 60% faster load times across all pages and 80% better homepage LCP.",
+		{
+			"text": "Boosted platform performance with 60% faster load times across all pages and 80% better homepage LCP.",
+			"hidden": true
+		},
 		{
 			"text": "Established E2E tests covering 100% sensitive flows in CI/CD, reducing validation time and boosting release confidence.",
 			"layouts": ["detailed"]
