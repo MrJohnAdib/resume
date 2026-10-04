@@ -15,10 +15,10 @@
 		"Shipped post-checkout Additional Items feature, driving +23% revenue on amended orders.",
 		"Engineered an 8-skill AI coding suite carrying a ticket to a reviewed PR with screenshot and video evidence, adopted org-wide.",
 		"Built a ticket-to-PR AI harness with custom linters, architecture checks and three AI reviewers enforcing shared standards.",
+		"Authored and proposed levelling, pay bands and expectations for four engineering roles, defining the Product Engineer role.",
 		"Accelerated iOS and Android release cadence from monthly to weekly, shipping 10+ versions.",
 		"Scaled mobile QA to 125 Maestro test flows and 7,600+ unit tests, with automated smoke and nightly iOS/Android runs.",
-		"Led the biggest SEV1 in company history, then built the company-wide incident function, severity framework, and SOP.",
-		"Authored the levelling and pay bands for the entire engineering job family."
+		"Led the biggest SEV1 in company history, then built the company-wide incident function, severity framework, and SOP."
 	],
 	"technologies": [
 		"TypeScript",
