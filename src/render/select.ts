@@ -59,7 +59,10 @@ export function selectSection(
 			)[0],
 			technologies: item.technologies ?? [],
 		}));
-	return { id, title: section.title, href: section.href, items };
+	const title =
+		resume.layout.sections.find(({ type }) => type === id)?.title ??
+		section.title;
+	return { id, title, href: section.href, items };
 }
 
 export function createCompactView(resume: Resume) {

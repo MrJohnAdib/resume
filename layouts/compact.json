@@ -18,8 +18,16 @@
 		},
 		{
 			"type": "volunteering",
+			"title": "Volunteering",
 			"column": "right"
 		}
 	],
-	"order": "order.json"
+	"order": "order.json",
+	"records": {
+		"volunteering": [
+			"2024-adplist",
+			"2025-codie-awards",
+			"2017-khadije-charity"
+		]
+	}
 }

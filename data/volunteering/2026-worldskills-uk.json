@@ -1,0 +1,23 @@
+{
+	"title": "Associate Coach",
+	"organization": {
+		"name": "WorldSkills UK"
+	},
+	"dates": {
+		"start": {
+			"value": "2026-08-28",
+			"label": "Aug 2026"
+		},
+		"end": "present"
+	},
+	"bullets": [
+		{
+			"text": "Coach technical educators to embed excellence in teaching and assessment using internationally benchmarked standards.",
+			"layouts": ["detailed"]
+		},
+		{
+			"text": "Coach technical educators to embed teaching excellence.",
+			"layouts": ["compact"]
+		}
+	]
+}

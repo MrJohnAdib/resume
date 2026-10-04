@@ -19,6 +19,7 @@ const PageMap = z.record(SlugSchema, z.number().int().min(1));
 
 const SectionEntry = z.object({
 	type: SectionType,
+	title: z.string().min(1).optional(),
 	column: z.enum(["left", "right"]).optional(),
 	page: z.number().int().min(1).optional(),
 });
