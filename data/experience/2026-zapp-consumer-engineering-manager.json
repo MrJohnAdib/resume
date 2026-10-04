@@ -16,7 +16,7 @@
 		"Engineered an 8-skill AI coding suite carrying a ticket to a reviewed PR with screenshot and video evidence, adopted org-wide.",
 		"Built a ticket-to-PR AI harness with custom linters, architecture checks and three AI reviewers enforcing shared standards.",
 		"Initiated the transition to product engineering, defining expectations, levelling and pay bands across four roles.",
-		"Consolidated 6 apps and 15 packages in a Turborepo monorepo, standardising tooling and CI.",
+		"Migrated 6 apps and 15 packages to a Turborepo monorepo and GitHub Actions, automating releases on PR merge.",
 		"Replaced 3-day QA freezes with 125 Maestro flows and 7,600+ unit tests, enabling weekly iOS and Android releases.",
 		{
 			"text": "Accelerated iOS and Android release cadence from monthly to weekly, shipping 10+ versions.",
