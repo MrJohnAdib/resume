@@ -14,7 +14,7 @@
 	"bullets": [
 		"Shipped post-checkout Additional Items feature, driving +23% revenue on amended orders.",
 		"Engineered an 8-skill AI coding suite carrying a ticket to a reviewed PR with screenshot and video evidence, adopted org-wide.",
-		"Built an AI coding harness with custom Maestro and performance linters, architecture checks and three AI reviewers.",
+		"Built a ticket-to-PR AI harness with custom Maestro and performance linters, architecture checks and three AI reviewers.",
 		"Initiated the transition to product engineering, defining expectations, levelling and pay bands across four roles.",
 		"Migrated 6 apps and 15 packages to a Turborepo monorepo and GitHub Actions with automated releases.",
 		"Replaced 3-day QA freezes with 125 Maestro flows and 7,600+ unit tests, enabling weekly iOS and Android releases.",
