@@ -9,6 +9,7 @@
 		"vector similarity search",
 		"pgvector",
 		"chunking strategies",
+		"grounding",
 		"LLM-as-judge",
 		"eval harnesses",
 		"hallucination gating"

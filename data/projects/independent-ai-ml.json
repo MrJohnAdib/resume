@@ -1,19 +1,38 @@
 {
 	"bullets": [
-		"Automated a marketing pipeline that publishes 12 posts a day across 4 platforms, now an acquisition channel.",
+		"Shipped 7 apps across iOS, Android and web in 7 weeks, directing an AI agent fleet as the sole developer.",
+		"Enforced AI-written code architecture with guard tests and 3,000+ test files; auto-deployed 10 Workers on merge.",
+		"Automated operational reviews and support triage with schema-validated LLMs, routing low-confidence cases to humans.",
+		"Exposed 35 role-scoped MCP actions with audit retention and 8 admin tools via an in-browser WebMCP server.",
+		{
+			"text": "Automated a marketing pipeline that publishes 12 posts a day across 4 platforms, now an acquisition channel.",
+			"hidden": true
+		},
 		"Shipped 200,000+ live pages across 12 languages, each with an auto-rendered localised preview image.",
-		"Eliminated hallucinated content by gating every AI proposal behind 8 automated verification stages and human approval.",
+		{
+			"text": "Eliminated hallucinated content by gating every AI proposal behind 8 automated verification stages and human approval.",
+			"hidden": true
+		},
 		"Reframed 40,000+ video clips to vertical automatically, replacing manual editing with GPU active-speaker tracking.",
 		"Cut inference cost ~6x by routing each workload to the smallest capable model, holding spend flat as generation scaled.",
-		"Authored a full curriculum with an agent fleet, gated by 58 deterministic rules and a 6-pass AI-judge audit.",
-		"Built a Bayesian adaptive assessment engine placing a user in 12 questions, simulation-validated across every band."
+		{
+			"text": "Authored a full curriculum with an agent fleet, gated by 58 deterministic rules and a 6-pass AI-judge audit.",
+			"hidden": true
+		},
+		"Built a Bayesian adaptive assessment engine placing a user in 12 questions, simulation-validated across every band.",
+		"Cut asset payload ~90% with a deterministic pipeline compiling 45 AI-generated illustrations into 270 web/native assets.",
+		"Auto-tagged 190+ design templates with vision AI, identifying style, colour and text-safe zones.",
+		"Built SwiftUI iPhone and standalone watchOS apps with offline-first, versioned sync and 100+ automated tests."
 	],
 	"technologies": [
 		"Gemini",
 		"OpenAI",
+		"OpenAI Structured Outputs",
+		"Claude Code",
 		"Ollama",
 		"ElevenLabs",
 		"MCP",
+		"WebMCP",
 		"PyTorch",
 		"CUDA",
 		"YOLO-pose",
@@ -28,11 +47,16 @@
 		"TypeScript",
 		"Node.js",
 		"Hono",
+		"Cloudflare Workers",
+		"D1",
+		"Zod",
 		"Drizzle",
 		"Next.js",
 		"Expo",
 		"React Native",
 		"Swift",
+		"SwiftUI",
+		"watchOS",
 		"Kotlin",
 		"Turborepo"
 	],

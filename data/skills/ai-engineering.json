@@ -3,14 +3,19 @@
 	"items": [
 		"LLM orchestration",
 		"agent orchestration",
-		"multi-step state management",
+		{
+			"label": "multi-step state management",
+			"hidden": true
+		},
 		"prompt engineering",
 		"structured outputs",
+		"human-in-the-loop review",
 		"agentic pipelines",
 		{
 			"label": "MCP",
 			"title": "Model Context Protocol"
-		}
+		},
+		"WebMCP"
 	],
 	"layouts": ["detailed"]
 }
