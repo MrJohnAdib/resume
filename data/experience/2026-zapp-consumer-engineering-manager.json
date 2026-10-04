@@ -14,9 +14,9 @@
 	"bullets": [
 		"Shipped post-checkout Additional Items feature, driving +23% revenue on amended orders.",
 		"Engineered an 8-skill AI coding suite carrying a ticket to a reviewed PR with screenshot and video evidence, adopted org-wide.",
-		"Built a ticket-to-PR AI harness with custom linters, architecture checks and three AI reviewers enforcing shared standards.",
+		"Built an AI coding harness with custom Maestro and performance linters, architecture checks and three AI reviewers.",
 		"Initiated the transition to product engineering, defining expectations, levelling and pay bands across four roles.",
-		"Migrated 6 apps and 15 packages to a Turborepo monorepo and GitHub Actions, automating releases on PR merge.",
+		"Migrated 6 apps and 15 packages to a Turborepo monorepo and GitHub Actions with automated releases.",
 		"Replaced 3-day QA freezes with 125 Maestro flows and 7,600+ unit tests, enabling weekly iOS and Android releases.",
 		{
 			"text": "Accelerated iOS and Android release cadence from monthly to weekly, shipping 10+ versions.",
@@ -26,6 +26,7 @@
 			"text": "Scaled mobile QA to 125 Maestro test flows and 7,600+ unit tests, with automated smoke and nightly iOS/Android runs.",
 			"hidden": true
 		},
+		"Reduced Sentry error-event volume by ~60% with noise filtering, fixes and weekly triage integrated with Linear.",
 		"Led the biggest SEV1 in company history, then built the company-wide incident function, severity framework, and SOP."
 	],
 	"technologies": [
